@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rebecca & Sheena Tattoos | Richmond, Missouri</title>
-<meta name="description" content="Rebecca & Sheena Tattoos — professional tattoo artistry in Richmond, Missouri. Book your next tattoo by text, call, or email.">
+
+<meta name="description" content="Rebecca & Sheena Tattoos — professional tattoo artistry in Richmond, Missouri. View our tattoo portfolio and book by phone, SMS or email.">
 
 <style>
 * {
@@ -19,9 +21,13 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #090909;
-  color: #f5f5f5;
+  background: #080808;
+  color: #ffffff;
   line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -31,32 +37,32 @@ a {
 
 .container {
   width: 92%;
-  max-width: 1150px;
+  max-width: 1200px;
   margin: auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(9,9,9,0.95);
+  background: rgba(8,8,8,0.96);
   border-bottom: 1px solid #292929;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .nav {
   min-height: 72px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
 }
 
 .logo span {
@@ -65,50 +71,64 @@ header {
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 nav a {
-  color: #ddd;
-  font-size: 0.9rem;
-  transition: 0.3s;
+  color: #dddddd;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: .3s;
 }
 
 nav a:hover {
   color: #d4af37;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
-  min-height: 88vh;
+  min-height: 92vh;
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  background:
-    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.88)),
-    url("https://i.ibb.co/nqKcXYp5/IMG-5907.jpg") center/cover;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.28),
+      rgba(0,0,0,.82)
+    ),
+    url("https://i.ibb.co/nqKcXYp5/IMG-5907.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
-  width: 100%;
+  position: relative;
+  z-index: 2;
   padding: 80px 0;
 }
 
-.eyebrow {
+.welcome {
   color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: .8rem;
+  letter-spacing: 5px;
+  font-size: .72rem;
   font-weight: bold;
   margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
-  line-height: 1;
+  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  line-height: .95;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 22px;
+  text-shadow: 0 5px 30px #000;
 }
 
 .hero h1 span {
@@ -116,10 +136,11 @@ nav a:hover {
 }
 
 .hero p {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  color: #ddd;
+  max-width: 680px;
+  margin: 25px auto 32px;
+  color: #eeeeee;
   font-size: 1.05rem;
+  text-shadow: 0 2px 12px #000;
 }
 
 .buttons {
@@ -131,12 +152,13 @@ nav a:hover {
 
 .btn {
   display: inline-block;
-  padding: 14px 24px;
+  padding: 14px 25px;
   border: 1px solid #d4af37;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: .8rem;
+  font-size: .78rem;
   transition: .3s;
 }
 
@@ -146,13 +168,54 @@ nav a:hover {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  opacity: .85;
+  transform: translateY(-3px);
+  opacity: .9;
 }
 
-/* SECTIONS */
+/* ================= PREVIEW STRIP ================= */
+
+.preview {
+  padding: 22px 0 75px;
+  background: #080808;
+}
+
+.preview-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.preview-title small {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.preview-grid img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #252525;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.preview-grid img:hover {
+  transform: scale(1.04);
+  border-color: #d4af37;
+}
+
+/* ================= SECTION TITLES ================= */
+
 section {
-  padding: 85px 0;
+  padding: 90px 0;
 }
 
 .section-title {
@@ -163,37 +226,100 @@ section {
 .section-title small {
   color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
 .section-title h2 {
-  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-size: clamp(2.2rem, 6vw, 3.7rem);
   margin-top: 8px;
 }
 
-/* GALLERY */
+/* ================= GALLERY ================= */
+
+.gallery-section {
+  background: #111111;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
-.gallery img {
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  background: #151515;
+  border: 1px solid #292929;
+  cursor: pointer;
+}
+
+.gallery-card img {
   width: 100%;
-  height: 360px;
+  height: 430px;
   object-fit: cover;
   display: block;
-  cursor: pointer;
-  border: 1px solid #222;
-  transition: .3s;
+  transition: .5s;
 }
 
-.gallery img:hover {
-  transform: scale(1.02);
-  border-color: #d4af37;
+.gallery-card:hover img {
+  transform: scale(1.05);
 }
 
-/* SERVICES */
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.95)
+  );
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .72rem;
+}
+
+/* ================= FEATURED ART ================= */
+
+.featured {
+  background: #080808;
+  text-align: center;
+}
+
+.featured-image {
+  max-width: 950px;
+  margin: auto;
+}
+
+.featured-image img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #333333;
+}
+
+.featured-text {
+  margin-top: 30px;
+}
+
+.featured-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.featured-text p {
+  max-width: 700px;
+  margin: auto;
+  color: #aaaaaa;
+}
+
+/* ================= SERVICES ================= */
+
 .services {
   background: #101010;
 }
@@ -205,21 +331,21 @@ section {
 }
 
 .card {
+  padding: 32px;
   background: #151515;
-  padding: 30px;
-  border: 1px solid #252525;
+  border: 1px solid #292929;
   transition: .3s;
 }
 
 .card:hover {
   border-color: #d4af37;
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
-.card .number {
+.card-number {
   color: #d4af37;
-  font-size: .8rem;
   letter-spacing: 2px;
+  font-size: .8rem;
 }
 
 .card h3 {
@@ -228,49 +354,50 @@ section {
 }
 
 .card p {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 55px;
   align-items: center;
 }
 
 .about-image img {
   width: 100%;
-  display: block;
   border: 1px solid #292929;
 }
 
 .about-text p {
-  color: #bbb;
+  color: #aaaaaa;
   margin: 18px 0;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact {
-  background: #101010;
+  background: #111111;
 }
 
 .contact-box {
   max-width: 850px;
   margin: auto;
+  padding: 48px 28px;
   text-align: center;
   background: #151515;
   border: 1px solid #292929;
-  padding: 45px 25px;
 }
 
 .contact-box h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
 .contact-box > p {
-  color: #aaa;
+  color: #aaaaaa;
   margin-bottom: 30px;
 }
 
@@ -284,14 +411,12 @@ section {
   display: block;
   color: #d4af37;
   text-transform: uppercase;
-  font-size: .75rem;
+  font-size: .72rem;
   letter-spacing: 2px;
-  margin-bottom: 4px;
 }
 
 .contact-link {
-  color: #eee;
-  word-break: break-word;
+  color: #eeeeee;
 }
 
 .contact-link:hover {
@@ -308,14 +433,14 @@ input,
 textarea {
   width: 100%;
   padding: 15px;
-  background: #0c0c0c;
-  border: 1px solid #333;
-  color: white;
+  background: #0b0b0b;
+  border: 1px solid #333333;
+  color: #ffffff;
   font: inherit;
 }
 
 textarea {
-  min-height: 130px;
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -326,7 +451,7 @@ textarea:focus {
 }
 
 button {
-  padding: 15px;
+  padding: 16px;
   border: none;
   background: #d4af37;
   color: #080808;
@@ -336,24 +461,26 @@ button {
   cursor: pointer;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
-  padding: 30px 0;
+  padding: 32px 0;
   text-align: center;
-  border-top: 1px solid #222;
-  color: #777;
-  font-size: .85rem;
+  color: #777777;
+  font-size: .8rem;
+  border-top: 1px solid #222222;
 }
 
-/* LIGHTBOX */
+/* ================= LIGHTBOX ================= */
+
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.94);
+  background: rgba(0,0,0,.97);
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
+  z-index: 3000;
   padding: 20px;
 }
 
@@ -363,27 +490,33 @@ footer {
   object-fit: contain;
 }
 
-.lightbox span {
+.close {
   position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 40px;
+  top: 10px;
+  right: 22px;
+  font-size: 46px;
+  color: #ffffff;
   cursor: pointer;
-  color: white;
 }
 
-/* MOBILE */
-@media (max-width: 800px) {
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
   nav {
     display: none;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gallery img {
-    height: 280px;
+  .gallery-card img {
+    height: 330px;
   }
 
   .service-grid {
@@ -395,28 +528,52 @@ footer {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
+
+  .hero {
+    min-height: 82vh;
+  }
+
+  .hero-content {
+    padding: 70px 0;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preview-grid img {
+    height: 180px;
+  }
+
   .gallery {
     grid-template-columns: 1fr;
   }
 
-  .gallery img {
-    height: 380px;
+  .gallery-card img {
+    height: 430px;
   }
 
   .btn {
     width: 100%;
     max-width: 280px;
   }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
   <div class="container nav">
-    <div class="logo">REBECCA <span>&</span> SHEENA</div>
+
+    <div class="logo">
+      REBECCA <span>&</span> SHEENA
+    </div>
 
     <nav>
       <a href="#gallery">Gallery</a>
@@ -424,226 +581,586 @@ footer {
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
+
 </header>
 
+
+<!-- WELCOME -->
+
 <section class="hero">
+
   <div class="container hero-content">
-    <div class="eyebrow">Richmond, Missouri</div>
+
+    <div class="welcome">
+      Welcome to Rebecca & Sheena Tattoos
+    </div>
 
     <h1>
-      Ink That Tells<br>
-      <span>Your Story</span>
+      Ink That<br>
+      <span>Tells Your Story</span>
     </h1>
 
     <p>
-      Custom tattoo artistry created with precision, creativity,
-      and attention to every detail.
+      Custom tattoo artistry created with passion,
+      precision and attention to every detail.
     </p>
 
     <div class="buttons">
-      <a class="btn gold" href="#contact">Book Your Tattoo</a>
-      <a class="btn" href="#gallery">View Our Work</a>
+
+      <a class="btn gold" href="#contact">
+        Book Your Tattoo
+      </a>
+
+      <a class="btn" href="#gallery">
+        See Our Work
+      </a>
+
     </div>
+
   </div>
+
 </section>
 
-<section id="gallery">
+
+<!-- TATTOO PREVIEWS -->
+
+<section class="preview">
+
   <div class="container">
+
+    <div class="preview-title">
+      <small>Featured Tattoo Work</small>
+    </div>
+
+    <div class="preview-grid">
+
+      <img src="https://i.ibb.co/nqKcXYp5/IMG-5907.jpg" alt="Tattoo artwork preview">
+
+      <img src="https://i.ibb.co/jvXHxNBb/IMG-5908.jpg" alt="Tattoo artwork preview">
+
+      <img src="https://i.ibb.co/27pKNbv4/IMG-5918.jpg" alt="Tattoo artwork preview">
+
+      <img src="https://i.ibb.co/LD3zxSpV/IMG-5917.webp" alt="Tattoo artwork preview">
+
+      <img src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg" alt="Tattoo artwork preview">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MAIN GALLERY -->
+
+<section id="gallery" class="gallery-section">
+
+  <div class="container">
+
     <div class="section-title">
-      <small>Our Work</small>
-      <h2>Tattoo Gallery</h2>
+
+      <small>Our Portfolio</small>
+
+      <h2>See The Ink</h2>
+
     </div>
 
     <div class="gallery">
-      <img src="https://i.ibb.co/nqKcXYp5/IMG-5907.jpg" alt="Tattoo artwork">
-      <img src="https://i.ibb.co/jvXHxNBb/IMG-5908.jpg" alt="Tattoo artwork">
-      <img src="https://i.ibb.co/27pKNbv4/IMG-5918.jpg" alt="Tattoo artwork">
-      <img src="https://i.ibb.co/LD3zxSpV/IMG-5917.webp" alt="Tattoo artwork">
-      <img src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg" alt="Tattoo artwork">
-      <img src="https://i.ibb.co/84sVwRTn/IMG-5915.jpg" alt="Tattoo artwork">
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/nqKcXYp5/IMG-5907.jpg"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/jvXHxNBb/IMG-5908.jpg"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/27pKNbv4/IMG-5918.jpg"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/LD3zxSpV/IMG-5917.webp"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
+
+      <div class="gallery-card">
+
+        <img
+          src="https://i.ibb.co/84sVwRTn/IMG-5915.jpg"
+          alt="Tattoo artwork"
+        >
+
+        <div class="gallery-label">
+          Custom Tattoo
+        </div>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
-<section id="services" class="services">
+
+<!-- FEATURED SHOWCASE -->
+
+<section class="featured">
+
   <div class="container">
+
     <div class="section-title">
-      <small>What We Do</small>
+
+      <small>Made To Be Seen</small>
+
+      <h2>Our Art. Your Story.</h2>
+
+    </div>
+
+    <div class="featured-image">
+
+      <img
+        src="https://i.ibb.co/84sVwRTn/IMG-5915.jpg"
+        alt="Featured tattoo artwork"
+      >
+
+    </div>
+
+    <div class="featured-text">
+
+      <h3>Custom Ink. Real Expression.</h3>
+
+      <p>
+        Every tattoo has a story behind it.
+        Let us turn your idea into artwork
+        you will be proud to wear.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <small>What We Create</small>
+
       <h2>Our Services</h2>
+
     </div>
 
     <div class="service-grid">
+
       <div class="card">
-        <div class="number">01</div>
+
+        <div class="card-number">01</div>
+
         <h3>Custom Tattoos</h3>
+
         <p>
-          Unique tattoo designs created around your ideas,
-          personality, and vision.
+          Unique designs created around your ideas,
+          personality and vision.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="number">02</div>
+
+        <div class="card-number">02</div>
+
         <h3>Fine Line</h3>
+
         <p>
-          Detailed and delicate tattoo work for clean,
-          elegant results.
+          Detailed and delicate tattoo work
+          for clean and elegant results.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="number">03</div>
+
+        <div class="card-number">03</div>
+
         <h3>Cover Ups</h3>
+
         <p>
-          Creative tattoo solutions designed to transform
-          unwanted or old ink.
+          Creative tattoo solutions designed
+          to transform old or unwanted ink.
         </p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
+
+<!-- ABOUT -->
+
 <section id="about">
+
   <div class="container about">
 
     <div class="about-image">
-      <img src="https://i.ibb.co/84sVwRTn/IMG-5915.jpg" alt="Rebecca and Sheena Tattoos">
+
+      <img
+        src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg"
+        alt="Rebecca and Sheena Tattoos"
+      >
+
     </div>
 
+
     <div class="about-text">
-      <div class="section-title" style="text-align:left;margin-bottom:20px;">
+
+      <div
+        class="section-title"
+        style="text-align:left;margin-bottom:20px;"
+      >
+
         <small>About The Studio</small>
-        <h2>Made With Passion.</h2>
+
+        <h2>Created With Passion.</h2>
+
       </div>
 
       <p>
-        Rebecca & Sheena Tattoos is dedicated to creating
-        meaningful, beautiful tattoos in a professional
-        and welcoming environment.
+        Rebecca & Sheena Tattoos is dedicated
+        to creating meaningful and beautiful
+        tattoos in a professional and welcoming
+        environment.
       </p>
 
       <p>
-        Every piece is approached with care — from the first
-        idea to the final line.
+        From the first idea to the final line,
+        every piece receives care, creativity
+        and attention to detail.
       </p>
 
-      <a class="btn gold" href="#contact">Start Your Tattoo</a>
+      <a class="btn gold" href="#contact">
+        Start Your Tattoo
+      </a>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- CONTACT -->
+
 <section id="contact" class="contact">
+
   <div class="container">
 
     <div class="section-title">
-      <small>Let's Create</small>
+
+      <small>Let's Create Something</small>
+
       <h2>Book Your Tattoo</h2>
+
     </div>
+
 
     <div class="contact-box">
 
       <h3>Rebecca & Sheena Tattoos</h3>
 
       <p>
-        Ready for your next piece? Contact us directly
-        by phone, text, or email.
+        Ready for your next piece?
+        Contact us by phone, SMS or email.
       </p>
+
 
       <div class="contact-details">
 
         <div class="contact-item">
+
           <strong>Phone</strong>
-          <a class="contact-link" href="tel:+15306821175">
+
+          <a
+            class="contact-link"
+            href="tel:+15306821175"
+          >
             +1 (530) 682-1175
           </a>
+
         </div>
 
+
         <div class="contact-item">
+
           <strong>Email</strong>
-          <a class="contact-link" href="mailto:Rebeccapalmer542@yahoo.com">
+
+          <a
+            class="contact-link"
+            href="mailto:Rebeccapalmer542@yahoo.com"
+          >
             Rebeccapalmer542@yahoo.com
           </a>
+
         </div>
+
 
         <div class="contact-item">
+
           <strong>Studio</strong>
-          <span>403 W ROYLE St, Richmond, MO 64085</span>
+
+          <span>
+            403 W ROYLE St, Richmond, MO 64085
+          </span>
+
         </div>
 
       </div>
 
-      <div class="buttons" style="margin-bottom:30px;">
-        <a class="btn gold" href="tel:+15306821175">CALL</a>
-        <a class="btn" href="sms:+15306821175">TEXT</a>
-        <a class="btn" href="mailto:Rebeccapalmer542@yahoo.com">EMAIL</a>
+
+      <!-- CONTACT BUTTONS -->
+
+      <div
+        class="buttons"
+        style="margin-bottom:30px;"
+      >
+
+        <a
+          class="btn gold"
+          href="tel:+15306821175"
+        >
+          CALL
+        </a>
+
+        <a
+          class="btn"
+          href="sms:+15306821175"
+        >
+          TEXT / SMS
+        </a>
+
+        <a
+          class="btn"
+          href="mailto:Rebeccapalmer542@yahoo.com"
+        >
+          EMAIL
+        </a>
+
       </div>
+
+
+      <!-- SMS BOOKING FORM -->
 
       <form onsubmit="sendBooking(event)">
 
-        <input id="name" type="text" placeholder="Your Name" required>
+        <input
+          id="name"
+          type="text"
+          placeholder="Your Name"
+          required
+        >
 
-        <input id="phone" type="tel" placeholder="Your Phone Number" required>
+        <input
+          id="phone"
+          type="tel"
+          placeholder="Your Phone Number"
+          required
+        >
 
-        <textarea id="message" placeholder="Tell us about the tattoo you want..." required></textarea>
+        <textarea
+          id="message"
+          placeholder="Tell us about the tattoo you want..."
+          required
+        ></textarea>
 
-        <button type="submit">Send Booking Request</button>
+        <button type="submit">
+          Send Booking Request by SMS
+        </button>
 
       </form>
 
     </div>
+
   </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
   <div class="container">
-    © 2026 Rebecca & Sheena Tattoos. All Rights Reserved.
+
+    © 2026 Rebecca & Sheena Tattoos.
+    All Rights Reserved.
+
   </div>
+
 </footer>
 
+
+<!-- IMAGE VIEWER -->
+
 <div class="lightbox" id="lightbox">
-  <span onclick="closeLightbox()">×</span>
-  <img id="lightboxImage" src="" alt="Tattoo artwork enlarged">
+
+  <div
+    class="close"
+    onclick="closeLightbox()"
+  >
+    ×
+  </div>
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Enlarged tattoo artwork"
+  >
+
 </div>
 
-<script>
-const galleryImages = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
 
-galleryImages.forEach(img => {
-  img.addEventListener("click", () => {
+<script>
+
+/* IMAGE VIEWER */
+
+const images = document.querySelectorAll(
+  ".gallery-card img, .preview-grid img"
+);
+
+const lightbox =
+  document.getElementById("lightbox");
+
+const lightboxImage =
+  document.getElementById("lightboxImage");
+
+
+images.forEach(function(img) {
+
+  img.addEventListener("click", function() {
+
     lightboxImage.src = img.src;
+
     lightbox.style.display = "flex";
+
   });
+
 });
+
 
 function closeLightbox() {
+
   lightbox.style.display = "none";
+
 }
 
-lightbox.addEventListener("click", function(e) {
-  if (e.target === lightbox) {
+
+lightbox.addEventListener("click", function(event) {
+
+  if (event.target === lightbox) {
+
     closeLightbox();
+
   }
+
 });
 
+
+/* SMS BOOKING */
+
 function sendBooking(event) {
+
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
+  const name =
+    document.getElementById("name").value;
 
-  const smsMessage =
-    "Tattoo Booking Request%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Phone: " + encodeURIComponent(phone) + "%0A" +
-    "Tattoo idea: " + encodeURIComponent(message);
+  const phone =
+    document.getElementById("phone").value;
 
-  window.location.href = "sms:+15306821175?body=" + smsMessage;
+  const message =
+    document.getElementById("message").value;
+
+
+  const bookingMessage =
+    "Tattoo Booking Request\n\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Tattoo idea: " + message;
+
+
+  window.location.href =
+    "sms:+15306821175?body=" +
+    encodeURIComponent(bookingMessage);
+
 }
+
 </script>
 
 </body>
