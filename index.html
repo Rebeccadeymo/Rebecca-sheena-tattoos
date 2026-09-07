@@ -99,15 +99,32 @@ nav a:hover{
 
 /* HERO */
 .hero{
-  padding:70px 0;
-  background:linear-gradient(135deg,#fff,#faf7f0);
+  position:relative;
+  min-height:720px;
+  padding:120px 0;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.48),
+      rgba(0,0,0,.60)
+    ),
+    url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
+    center center / cover no-repeat;
 }
 
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  align-items:center;
-  gap:50px;
+  display:block;
+  position:relative;
+  z-index:2;
+}
+
+.hero-grid > div:first-child{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
 }
 
 .eyebrow{
@@ -119,23 +136,34 @@ nav a:hover{
   margin-bottom:12px;
 }
 
+.hero .eyebrow{
+  color:#e3bd70;
+  text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
 .hero h1{
-  font-size:clamp(42px,6vw,70px);
+  font-size:clamp(48px,7vw,82px);
   line-height:1.05;
   margin-bottom:20px;
+  color:#fff;
+  text-shadow:0 5px 25px rgba(0,0,0,.55);
+  font-weight:900;
+  letter-spacing:-1px;
 }
 
 .hero p{
-  font-size:18px;
-  color:#666;
-  max-width:620px;
-  margin-bottom:28px;
+  font-size:19px;
+  color:#f4f4f4;
+  max-width:700px;
+  margin:0 auto 30px;
+  text-shadow:0 2px 10px rgba(0,0,0,.55);
 }
 
 .buttons{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
+  justify-content:center;
 }
 
 .btn{
@@ -145,6 +173,11 @@ nav a:hover{
   font-weight:800;
   border:1px solid #b58a3a;
   cursor:pointer;
+  transition:.2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn-primary{
@@ -153,27 +186,16 @@ nav a:hover{
 }
 
 .btn-secondary{
-  background:#fff;
+  background:rgba(255,255,255,.95);
   color:#8b6727;
 }
 
-.hero-image,
-.gallery-item,
-.booking-feature-image,
-.contact-feature-image{
-  overflow:hidden;
-  background:#eee;
-}
-
 .hero-image{
-  border-radius:18px;
-  box-shadow:0 18px 50px rgba(0,0,0,.13);
+  display:none;
 }
 
 .hero-image img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
+  display:none;
 }
 
 /* SECTIONS */
@@ -205,6 +227,8 @@ section{
 }
 
 .gallery-item{
+  overflow:hidden;
+  background:#eee;
   border-radius:14px;
   min-height:300px;
 }
@@ -295,6 +319,8 @@ section{
 }
 
 .booking-feature-image{
+  overflow:hidden;
+  background:#eee;
   border-radius:16px;
   position:sticky;
   top:100px;
@@ -579,6 +605,11 @@ textarea{
   font-size:16px;
   font-weight:800;
   cursor:pointer;
+  transition:.2s ease;
+}
+
+.submit-btn:hover{
+  background:#9d762f;
 }
 
 /* CONTACT */
@@ -612,6 +643,8 @@ textarea{
 }
 
 .contact-feature-image{
+  overflow:hidden;
+  background:#eee;
   border-radius:16px;
 }
 
@@ -701,8 +734,12 @@ footer p{
   color:#888;
 }
 
-/* MOBILE */
+/* TABLET */
 @media(max-width:900px){
+
+  .hero{
+    min-height:680px;
+  }
 
   .hero-grid,
   .about-grid,
@@ -734,6 +771,7 @@ footer p{
   }
 }
 
+/* MOBILE */
 @media(max-width:650px){
 
   .navbar{
@@ -752,11 +790,21 @@ footer p{
   }
 
   .hero{
-    padding:50px 0 60px;
+    min-height:650px;
+    padding:90px 0;
+    background-position:center center;
   }
 
-  .hero-image img{
-    height:380px;
+  .hero h1{
+    font-size:clamp(44px,13vw,64px);
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-image{
+    display:none;
   }
 
   .gallery{
@@ -826,11 +874,13 @@ Español
 
 <!-- HERO -->
 <section class="hero" id="home">
+
 <div class="container hero-grid">
 
 <div>
 
-<div class="eyebrow"
+<div
+class="eyebrow"
 data-en="Professional Tattoo Studio"
 data-es="Estudio Profesional de Tatuajes">
 Professional Tattoo Studio
@@ -849,25 +899,25 @@ Let's turn your idea into something you'll be proud to wear.
 </p>
 
 <div class="buttons">
-<a href="#booking" class="btn btn-primary">
+
+<a
+href="#booking"
+class="btn btn-primary">
 Book an Appointment
 </a>
 
-<a href="#work" class="btn btn-secondary">
+<a
+href="#work"
+class="btn btn-secondary">
 View Our Work
 </a>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="hero-image">
-<img
-src="https://i.ibb.co/nqKcXYp5/IMG-5907.jpg?v=20260907"
-alt="Rebecca and Sheena Tattoos"
-referrerpolicy="no-referrer">
-</div>
-
-</div>
 </section>
 
 
@@ -878,9 +928,13 @@ referrerpolicy="no-referrer">
 
 <div class="section-heading">
 
-<div class="eyebrow">Our Work</div>
+<div class="eyebrow">
+Our Work
+</div>
 
-<h2>Tattoo Art That Speaks</h2>
+<h2>
+Tattoo Art That Speaks
+</h2>
 
 <p>
 Take a look at some of our tattoo work and get inspired for your next piece.
@@ -891,55 +945,77 @@ Take a look at some of our tattoo work and get inspired for your next piece.
 <div class="gallery">
 
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
 alt="Collection of tattoo artwork"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
 <!-- SERVICES -->
-<section class="services" id="services">
+<section
+class="services"
+id="services">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">What We Do</div>
+<div class="eyebrow">
+What We Do
+</div>
 
-<h2>Our Services</h2>
+<h2>
+Our Services
+</h2>
 
 <p>
 From simple pieces to detailed custom artwork, we work with you to create something unique.
@@ -947,34 +1023,63 @@ From simple pieces to detailed custom artwork, we work with you to create someth
 
 </div>
 
+
 <div class="service-grid">
 
 <div class="service-card">
-<div class="service-icon">🎨</div>
-<h3>Custom Tattoos</h3>
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Custom Tattoos
+</h3>
+
 <p>
 Bring your idea, reference or concept and we'll help transform it into a custom tattoo.
 </p>
+
 </div>
 
+
 <div class="service-card">
-<div class="service-icon">✍️</div>
-<h3>Tattoo Design</h3>
+
+<div class="service-icon">
+✍️
+</div>
+
+<h3>
+Tattoo Design
+</h3>
+
 <p>
 We can work with your vision to create artwork that fits your body and personal style.
 </p>
+
 </div>
 
+
 <div class="service-card">
-<div class="service-icon">✨</div>
-<h3>Detailed Artwork</h3>
+
+<div class="service-icon">
+✨
+</div>
+
+<h3>
+Detailed Artwork
+</h3>
+
 <p>
 We pay close attention to detail so your finished tattoo looks clean, balanced and beautiful.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
@@ -985,9 +1090,13 @@ We pay close attention to detail so your finished tattoo looks clean, balanced a
 
 <div class="about-text">
 
-<div class="eyebrow">About Us</div>
+<div class="eyebrow">
+About Us
+</div>
 
-<h2>Art With Meaning</h2>
+<h2>
+Art With Meaning
+</h2>
 
 <p>
 At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it.
@@ -998,28 +1107,49 @@ Our goal is to create a comfortable experience while producing tattoo artwork th
 </p>
 
 <ul class="about-list">
-<li>Professional tattoo service</li>
-<li>Custom artwork</li>
-<li>Attention to detail</li>
-<li>Client-focused experience</li>
+
+<li>
+Professional tattoo service
+</li>
+
+<li>
+Custom artwork
+</li>
+
+<li>
+Attention to detail
+</li>
+
+<li>
+Client-focused experience
+</li>
+
 </ul>
 
 <div style="margin-top:25px;">
-<a href="#booking" class="btn btn-primary">
+
+<a
+href="#booking"
+class="btn btn-primary">
 Start Your Booking
 </a>
+
 </div>
 
 </div>
+
 
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
 alt="Tattoo artwork"
 referrerpolicy="no-referrer">
+
 </div>
 
 </div>
+
 </section>
 
 
@@ -1030,53 +1160,92 @@ referrerpolicy="no-referrer">
 
 <div class="section-heading">
 
-<div class="eyebrow">Client Experience</div>
+<div class="eyebrow">
+Client Experience
+</div>
 
-<h2>What Clients Love</h2>
+<h2>
+What Clients Love
+</h2>
 
 </div>
+
 
 <div class="review-grid">
 
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 Beautiful work and very professional. I absolutely love my tattoo!
 </p>
-<strong>Happy Client</strong>
+
+<strong>
+Happy Client
+</strong>
+
 </div>
 
+
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 The attention to detail was amazing. The whole experience felt comfortable.
 </p>
-<strong>Happy Client</strong>
+
+<strong>
+Happy Client
+</strong>
+
 </div>
 
+
 <div class="review">
-<div class="stars">★★★★★</div>
+
+<div class="stars">
+★★★★★
+</div>
+
 <p>
 Exactly what I wanted. Great communication and beautiful artwork.
 </p>
-<strong>Happy Client</strong>
+
+<strong>
+Happy Client
+</strong>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
 <!-- BOOKING -->
-<section class="booking" id="booking">
+<section
+class="booking"
+id="booking">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">Appointments</div>
+<div class="eyebrow">
+Appointments
+</div>
 
-<h2>Book Your Tattoo</h2>
+<h2>
+Book Your Tattoo
+</h2>
 
 <p>
 Complete the form below and send your booking payment proof to request your appointment.
@@ -1102,7 +1271,9 @@ referrerpolicy="no-referrer">
 
 <div class="booking-info">
 
-<strong>Important Booking Information</strong>
+<strong>
+Important Booking Information
+</strong>
 
 <p>
 A booking payment between $100 and $200 is required to secure your appointment.
@@ -1122,14 +1293,30 @@ action="https://formsubmit.co/Rebeccapalmer542@yahoo.com"
 method="POST"
 enctype="multipart/form-data">
 
-<input type="hidden" name="_subject" value="New Tattoo Appointment Request">
 
-<input type="hidden" name="_template" value="table">
+<input
+type="hidden"
+name="_subject"
+value="New Tattoo Appointment Request">
 
-<input type="hidden" name="_captcha" value="true">
 
-<input type="hidden" name="_url"
+<input
+type="hidden"
+name="_template"
+value="table">
+
+
+<input
+type="hidden"
+name="_captcha"
+value="true">
+
+
+<input
+type="hidden"
+name="_url"
 value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
+
 
 <input
 type="hidden"
@@ -1137,11 +1324,14 @@ name="_autoresponse"
 value="Thank you for contacting Rebecca & Sheena Tattoos. We received your appointment request and booking payment information. Your appointment is not confirmed until the studio reviews your request and verifies your payment. Your selected booking payment amount will be deducted from your final tattoo payment.">
 
 
+<!-- NAME + PHONE -->
 <div class="form-row">
 
 <div class="form-group">
 
-<label for="fullName">Full Name *</label>
+<label for="fullName">
+Full Name *
+</label>
 
 <input
 type="text"
@@ -1155,7 +1345,9 @@ required>
 
 <div class="form-group">
 
-<label for="phone">Phone Number *</label>
+<label for="phone">
+Phone Number *
+</label>
 
 <input
 type="tel"
@@ -1169,9 +1361,12 @@ required>
 </div>
 
 
+<!-- EMAIL -->
 <div class="form-group">
 
-<label for="email">Email Address *</label>
+<label for="email">
+Email Address *
+</label>
 
 <input
 type="email"
@@ -1183,11 +1378,14 @@ required>
 </div>
 
 
+<!-- DATE + TIME -->
 <div class="form-row">
 
 <div class="form-group">
 
-<label for="preferredDate">Preferred Date *</label>
+<label for="preferredDate">
+Preferred Date *
+</label>
 
 <input
 type="date"
@@ -1200,7 +1398,9 @@ required>
 
 <div class="form-group">
 
-<label for="preferredTime">Preferred Time *</label>
+<label for="preferredTime">
+Preferred Time *
+</label>
 
 <input
 type="time"
@@ -1213,11 +1413,14 @@ required>
 </div>
 
 
+<!-- PLACEMENT + SIZE -->
 <div class="form-row">
 
 <div class="form-group">
 
-<label for="placement">Tattoo Placement *</label>
+<label for="placement">
+Tattoo Placement *
+</label>
 
 <input
 type="text"
@@ -1231,7 +1434,9 @@ required>
 
 <div class="form-group">
 
-<label for="size">Approximate Size *</label>
+<label for="size">
+Approximate Size *
+</label>
 
 <input
 type="text"
@@ -1245,9 +1450,12 @@ required>
 </div>
 
 
+<!-- DESCRIPTION -->
 <div class="form-group">
 
-<label for="description">Describe Your Tattoo Idea *</label>
+<label for="description">
+Describe Your Tattoo Idea *
+</label>
 
 <textarea
 id="description"
@@ -1259,7 +1467,6 @@ required></textarea>
 
 
 <!-- BOOKING PAYMENT -->
-
 <div class="form-group payment-amount-box">
 
 <label for="depositAmount">
@@ -1268,7 +1475,9 @@ Your Booking Payment Amount *
 
 <div class="amount-input-wrap">
 
-<span class="currency-symbol">$</span>
+<span class="currency-symbol">
+$
+</span>
 
 <input
 type="text"
@@ -1283,23 +1492,29 @@ required>
 </div>
 
 <div class="payment-help">
-Enter any whole-dollar amount from <strong>$100 to $200</strong>.
+
+Enter any whole-dollar amount from
+<strong>$100 to $200</strong>.
+
 This payment secures your appointment and will be deducted from your final tattoo payment.
+
 </div>
 
 </div>
 
 
 <!-- PAYMENT METHODS -->
-
 <div class="form-group">
 
-<label>Choose Your Payment Method *</label>
+<label>
+Choose Your Payment Method *
+</label>
 
 
 <div class="payment-methods">
 
 
+<!-- CASH APP -->
 <label class="payment-option">
 
 <input
@@ -1319,6 +1534,7 @@ Cash App
 </label>
 
 
+<!-- VENMO -->
 <label class="payment-option">
 
 <input
@@ -1337,6 +1553,7 @@ Venmo
 </label>
 
 
+<!-- ZELLE -->
 <label class="payment-option">
 
 <input
@@ -1357,6 +1574,7 @@ Zelle
 </div>
 
 
+<!-- PAYMENT DETAILS -->
 <div class="payment-details">
 
 
@@ -1368,7 +1586,9 @@ $
 
 <div class="payment-detail-text">
 
-<strong>Cash App</strong>
+<strong>
+Cash App
+</strong>
 
 $Msheena57
 
@@ -1385,7 +1605,9 @@ V
 
 <div class="payment-detail-text">
 
-<strong>Venmo</strong>
+<strong>
+Venmo
+</strong>
 
 <a
 href="https://venmo.com/u/Sheena-Rebeccatattoos"
@@ -1407,7 +1629,9 @@ Z
 
 <div class="payment-detail-text">
 
-<strong>Zelle</strong>
+<strong>
+Zelle
+</strong>
 
 sheenagmartin2357@gmail.com
 
@@ -1422,7 +1646,6 @@ sheenagmartin2357@gmail.com
 
 
 <!-- RECEIPT -->
-
 <div class="form-group">
 
 <label for="receipt">
@@ -1437,11 +1660,19 @@ accept=".jpg,.jpeg,.png,.webp,.pdf"
 required>
 
 <div class="payment-help">
+
 Upload a clear screenshot or photo of your payment receipt.
-JPG, PNG, WEBP or PDF. Maximum 10MB.
+
+JPG, PNG, WEBP or PDF.
+
+Maximum 10MB.
+
 </div>
 
-<div class="receipt-preview" id="receiptPreview">
+
+<div
+class="receipt-preview"
+id="receiptPreview">
 
 <img
 id="receiptPreviewImage"
@@ -1453,7 +1684,6 @@ alt="Payment receipt preview">
 
 
 <!-- AGREEMENT -->
-
 <div class="checkbox-row">
 
 <input
@@ -1474,6 +1704,7 @@ until the studio reviews and verifies my payment.
 </div>
 
 
+<!-- SUBMIT -->
 <button
 type="submit"
 class="submit-btn">
@@ -1485,32 +1716,43 @@ Submit Appointment Request
 </form>
 
 </div>
+
 </div>
+
 </div>
+
 </section>
 
 
 <!-- CONTACT -->
-
-<section class="contact" id="contact">
+<section
+class="contact"
+id="contact">
 
 <div class="container contact-grid">
 
 
 <div class="contact-card">
 
-<div class="eyebrow">Get In Touch</div>
+<div class="eyebrow">
+Get In Touch
+</div>
 
-<h2>Contact Rebecca & Sheena</h2>
+<h2>
+Contact Rebecca & Sheena
+</h2>
 
 <p>
 Have a question before booking? Contact us directly.
 </p>
 
 
+<!-- STUDIO -->
 <div class="contact-item">
 
-<h3>Studio</h3>
+<h3>
+Studio
+</h3>
 
 <p>
 403 W ROYLE St<br>
@@ -1520,9 +1762,12 @@ Richmond, MO 64085
 </div>
 
 
+<!-- PHONE -->
 <div class="contact-item">
 
-<h3>Phone</h3>
+<h3>
+Phone
+</h3>
 
 <div class="contact-line">
 
@@ -1543,9 +1788,12 @@ Richmond, MO 64085
 </div>
 
 
+<!-- EMAIL -->
 <div class="contact-item">
 
-<h3>Email</h3>
+<h3>
+Email
+</h3>
 
 <div class="contact-line">
 
@@ -1565,10 +1813,10 @@ Rebeccapalmer542@yahoo.com
 
 </div>
 
-
 </div>
 
 
+<!-- CONTACT IMAGE -->
 <div class="contact-feature-image">
 
 <img
@@ -1585,8 +1833,7 @@ referrerpolicy="no-referrer">
 </main>
 
 
-<!-- WHATSAPP -->
-
+<!-- WHATSAPP / LIVE CHAT -->
 <a
 class="live-chat"
 href="https://wa.me/15306821175?text=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d%20like%20to%20ask%20about%20booking%20a%20tattoo."
@@ -1599,16 +1846,18 @@ rel="noopener noreferrer">
 
 
 <!-- FOOTER -->
-
 <footer>
 
 <div class="container">
 
 <div class="footer-grid">
 
+
 <div>
 
-<h3>Rebecca & Sheena Tattoos</h3>
+<h3>
+Rebecca & Sheena Tattoos
+</h3>
 
 <p>
 Professional tattoo artistry with a focus on creativity,
@@ -1620,13 +1869,21 @@ detail and a great client experience.
 
 <div class="footer-links">
 
-<a href="#home">Home</a>
+<a href="#home">
+Home
+</a>
 
-<a href="#work">Our Work</a>
+<a href="#work">
+Our Work
+</a>
 
-<a href="#booking">Book Appointment</a>
+<a href="#booking">
+Book Appointment
+</a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
 </div>
 
@@ -1635,7 +1892,8 @@ detail and a great client experience.
 
 <div class="copyright">
 
-© <span id="year"></span> Rebecca & Sheena Tattoos.
+© <span id="year"></span>
+Rebecca & Sheena Tattoos.
 All rights reserved.
 
 </div>
@@ -1728,7 +1986,6 @@ Do NOT change the value while the customer is typing.
 This allows 100, 110, 125, 150, 180, 199 and 200.
 */
 
-
 bookingForm.addEventListener("submit",function(event){
 
 const rawAmount =
@@ -1784,7 +2041,10 @@ const receipt =
 document.getElementById("receipt");
 
 
-if(!receipt.files || receipt.files.length === 0){
+if(
+!receipt.files ||
+receipt.files.length === 0
+){
 
 event.preventDefault();
 
@@ -1803,7 +2063,9 @@ const file =
 receipt.files[0];
 
 
-if(file.size > 10 * 1024 * 1024){
+if(
+file.size > 10 * 1024 * 1024
+){
 
 event.preventDefault();
 
@@ -1853,10 +2115,13 @@ const receiptPreviewImage =
 document.getElementById("receiptPreviewImage");
 
 
-receiptInput.addEventListener("change",function(){
+receiptInput.addEventListener(
+"change",
+function(){
 
 const file =
 this.files[0];
+
 
 if(!file){
 
@@ -1873,6 +2138,7 @@ if(file.type.startsWith("image/")){
 const reader =
 new FileReader();
 
+
 reader.onload =
 function(e){
 
@@ -1883,6 +2149,7 @@ receiptPreview.style.display =
 "block";
 
 };
+
 
 reader.readAsDataURL(file);
 
