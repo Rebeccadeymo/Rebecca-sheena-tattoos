@@ -6,8 +6,7 @@
 
 <title>Rebecca & Sheena Tattoos | Professional Tattoo Studio</title>
 
-<meta name="description"
-content="Rebecca & Sheena Tattoos — professional tattoo services, custom tattoo designs and appointment booking in Richmond, Missouri.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional tattoo services, custom tattoo designs and appointment booking in Richmond, Missouri.">
 
 <style>
 *{
@@ -21,20 +20,20 @@ html{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#fafafa;
   color:#222;
   line-height:1.6;
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
 }
 
 img{
-  max-width:100%;
   display:block;
+  max-width:100%;
 }
 
 .container{
@@ -43,16 +42,14 @@ img{
   margin:auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
-  background:#fff;
-  border-bottom:1px solid #e5e5e5;
   position:sticky;
   top:0;
   z-index:1000;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
 }
 
 .navbar{
@@ -60,13 +57,13 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
+  gap:20px;
 }
 
 .logo{
   font-size:22px;
   font-weight:800;
-  letter-spacing:.5px;
+  white-space:nowrap;
 }
 
 .logo span{
@@ -76,13 +73,12 @@ header{
 nav{
   display:flex;
   align-items:center;
-  gap:25px;
+  gap:22px;
 }
 
 nav a{
   font-size:14px;
   font-weight:700;
-  transition:.2s;
 }
 
 nav a:hover{
@@ -99,15 +95,13 @@ nav a:hover{
   font-weight:700;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   min-height:680px;
+  position:relative;
   display:flex;
   align-items:center;
-  position:relative;
   overflow:hidden;
   background:#111;
 }
@@ -135,17 +129,17 @@ nav a:hover{
 .hero-content{
   position:relative;
   z-index:2;
-  color:#fff;
   max-width:700px;
   padding:80px 0;
+  color:#fff;
 }
 
-.hero-content .eyebrow{
+.eyebrow{
   color:#d6b56d;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:3px;
   font-size:13px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
   margin-bottom:18px;
 }
 
@@ -168,16 +162,16 @@ nav a:hover{
 
 .hero-buttons{
   display:flex;
-  gap:14px;
   flex-wrap:wrap;
+  gap:14px;
 }
 
 .btn{
   display:inline-block;
   padding:14px 24px;
   border-radius:4px;
-  font-weight:800;
   border:1px solid transparent;
+  font-weight:800;
   cursor:pointer;
   transition:.2s;
 }
@@ -193,8 +187,8 @@ nav a:hover{
 
 .btn-outline{
   border-color:#fff;
-  color:#fff;
   background:transparent;
+  color:#fff;
 }
 
 .btn-outline:hover{
@@ -202,9 +196,7 @@ nav a:hover{
   color:#222;
 }
 
-/* =========================
-   SECTION
-========================= */
+/* SECTIONS */
 
 section{
   padding:85px 0;
@@ -215,12 +207,12 @@ section{
   margin-bottom:45px;
 }
 
-.section-heading .small-title{
+.small-title{
   color:#b38b3c;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:2px;
   font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
   margin-bottom:10px;
 }
 
@@ -235,9 +227,7 @@ section{
   color:#666;
 }
 
-/* =========================
-   OUR WORK
-========================= */
+/* OUR WORK */
 
 .portfolio{
   background:#fff;
@@ -250,16 +240,10 @@ section{
 }
 
 .gallery-item{
-  position:relative;
+  min-height:310px;
   overflow:hidden;
   background:#eee;
-  min-height:310px;
   border:1px solid #e4e4e4;
-}
-
-.gallery-item:nth-child(1),
-.gallery-item:nth-child(2){
-  min-height:400px;
 }
 
 .gallery-item img{
@@ -270,13 +254,21 @@ section{
   transition:transform .4s ease;
 }
 
+.gallery-item:first-child,
+.gallery-item:nth-child(2){
+  min-height:400px;
+}
+
+.gallery-item:first-child img,
+.gallery-item:nth-child(2) img{
+  min-height:400px;
+}
+
 .gallery-item:hover img{
   transform:scale(1.04);
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* SERVICES */
 
 .services{
   background:#f7f7f7;
@@ -315,9 +307,7 @@ section{
   font-size:15px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about{
   background:#fff;
@@ -367,13 +357,7 @@ section{
   padding:35px;
 }
 
-.about-box h3{
-  margin-bottom:12px;
-}
-
-/* =========================
-   REVIEWS
-========================= */
+/* REVIEWS */
 
 .reviews{
   background:#f7f7f7;
@@ -407,24 +391,24 @@ section{
   font-weight:800;
 }
 
-/* =========================
-   BOOKING
-========================= */
+/* BOOKING */
 
 .booking{
   background:#fff;
 }
 
 .booking-feature-image{
+  width:100%;
   max-width:900px;
   margin:0 auto 30px;
-  background:#fff;
   padding:8px;
+  background:#fff;
   border:1px solid #dedede;
   box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .booking-feature-image img{
+  display:block;
   width:100%;
   height:430px;
   object-fit:cover;
@@ -433,16 +417,16 @@ section{
 .booking-box{
   max-width:900px;
   margin:auto;
-  background:#f8f8f8;
   padding:35px;
+  background:#f8f8f8;
   border:1px solid #ddd;
 }
 
 .booking-notice{
-  background:#fff;
-  border-left:4px solid #b38b3c;
   padding:18px;
   margin-bottom:25px;
+  background:#fff;
+  border-left:4px solid #b38b3c;
 }
 
 .booking-notice strong{
@@ -473,10 +457,10 @@ input,
 select,
 textarea{
   width:100%;
-  border:1px solid #ccc;
-  background:#fff;
   padding:13px 14px;
+  border:1px solid #ccc;
   border-radius:3px;
+  background:#fff;
   font:inherit;
   outline:none;
 }
@@ -492,9 +476,11 @@ textarea{
   resize:vertical;
 }
 
+/* PAYMENT AMOUNT */
+
 .deposit-input-row{
   display:flex;
-  align-items:stretch;
+  width:100%;
 }
 
 .deposit-dollar{
@@ -505,6 +491,7 @@ textarea{
   color:#fff;
   font-size:20px;
   font-weight:800;
+  border-radius:3px 0 0 3px;
 }
 
 .deposit-input-row input{
@@ -512,17 +499,19 @@ textarea{
 }
 
 .helper-text{
+  margin-top:6px;
   color:#777;
   font-size:13px;
-  margin-top:6px;
 }
 
+/* PAYMENT */
+
 .payment-box{
-  background:#fff;
-  border:1px solid #ddd;
   padding:22px;
   margin-top:10px;
   margin-bottom:20px;
+  background:#fff;
+  border:1px solid #ddd;
 }
 
 .payment-box h3{
@@ -537,10 +526,10 @@ textarea{
 }
 
 .payment-method{
-  border:1px solid #ccc;
   padding:14px;
-  cursor:pointer;
   background:#fafafa;
+  border:1px solid #ccc;
+  cursor:pointer;
 }
 
 .payment-method input{
@@ -549,9 +538,9 @@ textarea{
 }
 
 .payment-info{
+  padding:15px;
   margin-top:15px;
   background:#f7f7f7;
-  padding:15px;
   font-size:14px;
 }
 
@@ -559,24 +548,27 @@ textarea{
   margin-bottom:7px;
 }
 
+/* RECEIPT */
+
 .file-box{
-  border:2px dashed #ccc;
   padding:22px;
   background:#fff;
+  border:2px dashed #ccc;
 }
 
 .receipt-preview{
   display:none;
-  margin-top:15px;
   max-width:250px;
+  margin-top:15px;
   border:1px solid #ddd;
 }
+
+/* AGREEMENT */
 
 .agreement{
   display:flex;
   align-items:flex-start;
   gap:10px;
-  margin:20px 0;
 }
 
 .agreement input{
@@ -584,9 +576,7 @@ textarea{
   margin-top:5px;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact{
   background:#f7f7f7;
@@ -599,10 +589,10 @@ textarea{
 }
 
 .contact-card{
-  background:#fff;
   padding:28px;
-  text-align:center;
+  background:#fff;
   border:1px solid #e1e1e1;
+  text-align:center;
 }
 
 .contact-card .icon{
@@ -620,61 +610,46 @@ textarea{
 }
 
 .contact-feature-image{
+  width:100%;
   max-width:850px;
   margin:30px auto 0;
-  background:#fff;
   padding:8px;
+  background:#fff;
   border:1px solid #dedede;
   box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .contact-feature-image img{
+  display:block;
   width:100%;
   height:420px;
   object-fit:cover;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
 .whatsapp-chat{
   position:fixed;
   right:20px;
   bottom:20px;
   z-index:2000;
-  background:#25D366;
-  color:#fff;
-  padding:13px 18px;
-  border-radius:50px;
   display:flex;
   align-items:center;
   gap:9px;
+  padding:13px 18px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50px;
   font-weight:800;
   box-shadow:0 8px 25px rgba(0,0,0,.22);
 }
 
-.whatsapp-chat:hover{
-  transform:translateY(-2px);
-}
-
-.whatsapp-icon{
-  width:24px;
-  height:24px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:18px;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
+  padding:45px 0 25px;
   background:#171717;
   color:#fff;
-  padding:45px 0 25px;
 }
 
 .footer-grid{
@@ -693,8 +668,8 @@ footer{
 }
 
 .footer-brand p{
-  color:#bbb;
   max-width:500px;
+  color:#bbb;
 }
 
 .footer-column h3{
@@ -703,31 +678,21 @@ footer{
 
 .footer-column a{
   display:block;
-  color:#bbb;
   margin-bottom:7px;
-}
-
-.footer-column a:hover{
-  color:#fff;
+  color:#bbb;
 }
 
 .footer-bottom{
-  border-top:1px solid #333;
   padding-top:20px;
+  border-top:1px solid #333;
   text-align:center;
   color:#999;
   font-size:13px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:850px){
-
-  nav{
-    gap:12px;
-  }
 
   nav a{
     display:none;
@@ -751,7 +716,6 @@ footer{
   .footer-grid{
     grid-template-columns:1fr;
   }
-
 }
 
 @media(max-width:600px){
@@ -764,25 +728,12 @@ footer{
     width:90%;
   }
 
-  .navbar{
-    min-height:68px;
-  }
-
   .logo{
     font-size:18px;
   }
 
-  .language-btn{
-    padding:7px 10px;
-    font-size:12px;
-  }
-
   .hero{
     min-height:610px;
-  }
-
-  .hero-content{
-    padding:60px 0;
   }
 
   .hero h1{
@@ -802,12 +753,14 @@ footer{
   }
 
   .gallery-item,
-  .gallery-item:nth-child(1),
+  .gallery-item:first-child,
   .gallery-item:nth-child(2){
     min-height:360px;
   }
 
-  .gallery-item img{
+  .gallery-item img,
+  .gallery-item:first-child img,
+  .gallery-item:nth-child(2) img{
     min-height:360px;
   }
 
@@ -824,16 +777,16 @@ footer{
     padding:22px 17px;
   }
 
-  .payment-methods{
-    grid-template-columns:1fr;
-  }
-
   .booking-feature-image img{
     height:330px;
   }
 
   .contact-feature-image img{
     height:330px;
+  }
+
+  .payment-methods{
+    grid-template-columns:1fr;
   }
 
   .whatsapp-chat{
@@ -847,10 +800,6 @@ footer{
 </head>
 
 <body>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
   <div class="container navbar">
@@ -875,10 +824,6 @@ footer{
   </div>
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero" id="home">
 
@@ -911,6 +856,7 @@ footer{
       </p>
 
       <div class="hero-buttons">
+
         <a href="#booking"
            class="btn btn-gold"
            data-en="Book an Appointment"
@@ -924,17 +870,13 @@ footer{
            data-es="Ver Nuestro Trabajo">
           View Our Work
         </a>
+
       </div>
 
     </div>
   </div>
-
 </section>
 
-
-<!-- =========================
-     OUR WORK
-========================= -->
 
 <section class="portfolio" id="work">
 
@@ -962,59 +904,48 @@ footer{
 
     </div>
 
-
     <div class="gallery">
 
-      <!-- OUR WORK #1 — IMG 5945 -->
+      <!-- OUR WORK #1 -->
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg"
-          alt="Tattoo artwork by Rebecca and Sheena"
-          loading="lazy">
+          alt="Tattoo artwork by Rebecca and Sheena">
       </div>
 
-      <!-- OUR WORK #2 — IMG 5944 -->
+      <!-- OUR WORK #2 -->
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg"
-          alt="Tattoo artwork by Rebecca and Sheena"
-          loading="lazy">
+          alt="Tattoo artwork by Rebecca and Sheena">
       </div>
 
-      <!-- OUR WORK #3 — IMG 5935 -->
+      <!-- OUR WORK #3 -->
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg"
-          alt="Collection of tattoo artwork"
-          loading="lazy">
+          alt="Collection of tattoo artwork">
       </div>
 
-      <!-- OUR WORK #4 — IMG 5943 -->
+      <!-- OUR WORK #4 -->
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg"
-          alt="Tattoo artwork by Rebecca and Sheena"
-          loading="lazy">
+          alt="Tattoo artwork by Rebecca and Sheena">
       </div>
 
-      <!-- OUR WORK #5 — IMG 5940 -->
+      <!-- OUR WORK #5 -->
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg"
-          alt="Tattoo artwork by Rebecca and Sheena"
-          loading="lazy">
+          alt="Tattoo artwork by Rebecca and Sheena">
       </div>
 
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     SERVICES
-========================= -->
 
 <section class="services" id="services">
 
@@ -1042,16 +973,17 @@ footer{
 
     </div>
 
-
     <div class="service-grid">
 
       <div class="service-card">
         <div class="service-icon">🎨</div>
+
         <h3
           data-en="Custom Tattoos"
           data-es="Tatuajes Personalizados">
           Custom Tattoos
         </h3>
+
         <p
           data-en="Bring your idea, reference or concept and we'll help transform it into a custom tattoo."
           data-es="Trae tu idea, referencia o concepto y te ayudaremos a convertirlo en un tatuaje personalizado.">
@@ -1059,14 +991,15 @@ footer{
         </p>
       </div>
 
-
       <div class="service-card">
         <div class="service-icon">✍️</div>
+
         <h3
           data-en="Tattoo Design"
           data-es="Diseño de Tatuajes">
           Tattoo Design
         </h3>
+
         <p
           data-en="We can work with your vision to create artwork that fits your body and personal style."
           data-es="Trabajamos con tu visión para crear un diseño que se adapte a tu cuerpo y estilo personal.">
@@ -1074,14 +1007,15 @@ footer{
         </p>
       </div>
 
-
       <div class="service-card">
         <div class="service-icon">✨</div>
+
         <h3
           data-en="Detailed Artwork"
           data-es="Arte Detallado">
           Detailed Artwork
         </h3>
+
         <p
           data-en="We pay close attention to detail so your finished tattoo looks clean, balanced and beautiful."
           data-es="Prestamos mucha atención a los detalles para que tu tatuaje final se vea limpio, equilibrado y hermoso.">
@@ -1090,15 +1024,9 @@ footer{
       </div>
 
     </div>
-
   </div>
-
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
 
 <section class="about" id="about">
 
@@ -1108,19 +1036,15 @@ footer{
 
       <div class="about-text">
 
-        <div class="section-heading" style="text-align:left;margin-bottom:25px;">
-
-          <div class="small-title"
-               data-en="About Us"
-               data-es="Sobre Nosotras">
-            About Us
-          </div>
-
-          <h2>
-            <span>Art</span> With Meaning
-          </h2>
-
+        <div class="small-title"
+             data-en="About Us"
+             data-es="Sobre Nosotras">
+          About Us
         </div>
+
+        <h2>
+          <span>Art</span> With Meaning
+        </h2>
 
         <p
           data-en="At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it."
@@ -1160,7 +1084,6 @@ footer{
 
       </div>
 
-
       <div class="about-box">
 
         <h3
@@ -1187,15 +1110,9 @@ footer{
       </div>
 
     </div>
-
   </div>
-
 </section>
 
-
-<!-- =========================
-     REVIEWS
-========================= -->
 
 <section class="reviews">
 
@@ -1217,7 +1134,6 @@ footer{
 
     </div>
 
-
     <div class="review-grid">
 
       <div class="review-card">
@@ -1230,7 +1146,6 @@ footer{
         <div class="review-name">Happy Client</div>
       </div>
 
-
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <p
@@ -1240,7 +1155,6 @@ footer{
         </p>
         <div class="review-name">Happy Client</div>
       </div>
-
 
       <div class="review-card">
         <div class="stars">★★★★★</div>
@@ -1253,15 +1167,9 @@ footer{
       </div>
 
     </div>
-
   </div>
-
 </section>
 
-
-<!-- =========================
-     BOOK APPOINTMENT
-========================= -->
 
 <section class="booking" id="booking">
 
@@ -1290,13 +1198,12 @@ footer{
     </div>
 
 
-    <!-- BOOKING IMAGE — IMG 5941 -->
+    <!-- BOOK APPOINTMENT — IMG 5941 -->
     <div class="booking-feature-image">
 
       <img
         src="https://i.ibb.co/v6B4B36q/IMG-5941.jpg"
-        alt="Tattoo client in the studio"
-        loading="lazy">
+        alt="Tattoo client in the studio">
 
     </div>
 
@@ -1335,8 +1242,6 @@ footer{
         method="POST"
         enctype="multipart/form-data">
 
-        <!-- FORMSUBMIT SETTINGS -->
-
         <input type="hidden"
                name="_subject"
                value="New Tattoo Appointment Request - Rebecca & Sheena Tattoos">
@@ -1360,8 +1265,6 @@ footer{
 
         <div class="form-grid">
 
-          <!-- NAME -->
-
           <div class="form-group">
 
             <label for="name"
@@ -1380,8 +1283,6 @@ footer{
 
           </div>
 
-
-          <!-- PHONE -->
 
           <div class="form-group">
 
@@ -1402,8 +1303,6 @@ footer{
           </div>
 
 
-          <!-- EMAIL -->
-
           <div class="form-group">
 
             <label for="email"
@@ -1423,8 +1322,6 @@ footer{
           </div>
 
 
-          <!-- DATE -->
-
           <div class="form-group">
 
             <label for="date"
@@ -1442,8 +1339,6 @@ footer{
           </div>
 
 
-          <!-- TIME -->
-
           <div class="form-group">
 
             <label for="time"
@@ -1460,8 +1355,6 @@ footer{
 
           </div>
 
-
-          <!-- PLACEMENT -->
 
           <div class="form-group">
 
@@ -1481,8 +1374,6 @@ footer{
           </div>
 
 
-          <!-- SIZE -->
-
           <div class="form-group">
 
             <label for="size"
@@ -1501,8 +1392,6 @@ footer{
           </div>
 
 
-          <!-- DESCRIPTION -->
-
           <div class="form-group full">
 
             <label for="description"
@@ -1520,7 +1409,7 @@ footer{
           </div>
 
 
-          <!-- BOOKING PAYMENT -->
+          <!-- THIS NOW ACCEPTS EVERY WHOLE-DOLLAR AMOUNT FROM 100 TO 200 -->
 
           <div class="form-group full">
 
@@ -1542,20 +1431,19 @@ footer{
                 max="200"
                 step="1"
                 value="100"
+                inputmode="numeric"
                 required>
 
             </div>
 
             <p class="helper-text"
-               data-en="Enter any whole-dollar amount from $100 to $200. This payment is used to secure your appointment and will be deducted from your final tattoo payment."
-               data-es="Ingresa cualquier monto en dólares enteros de $100 a $200. Este pago se utiliza para asegurar tu cita y se descontará del pago final de tu tatuaje.">
-              Enter any whole-dollar amount from $100 to $200. This payment is used to secure your appointment and will be deducted from your final tattoo payment.
+               data-en="Enter any whole-dollar amount from $100 to $200 — for example $110, $125, $150, $180 or $195."
+               data-es="Ingresa cualquier monto entero de $100 a $200 — por ejemplo $110, $125, $150, $180 o $195.">
+              Enter any whole-dollar amount from $100 to $200 — for example $110, $125, $150, $180 or $195.
             </p>
 
           </div>
 
-
-          <!-- PAYMENT METHODS -->
 
           <div class="form-group full">
 
@@ -1568,52 +1456,39 @@ footer{
               </h3>
 
               <p
-                data-en="After choosing your booking payment amount, send that exact amount using one of the payment methods below."
-                data-es="Después de elegir el monto de tu pago de reserva, envía exactamente ese monto utilizando uno de los métodos de pago siguientes.">
-                After choosing your booking payment amount, send that exact amount using one of the payment methods below.
+                data-en="Send the exact booking payment amount you selected."
+                data-es="Envía exactamente el monto de pago de reserva que seleccionaste.">
+                Send the exact booking payment amount you selected.
               </p>
-
 
               <div class="payment-methods">
 
                 <label class="payment-method">
-
                   <input
                     type="radio"
                     name="Payment Method"
                     value="Cash App"
                     required>
-
                   Cash App
-
                 </label>
 
-
                 <label class="payment-method">
-
                   <input
                     type="radio"
                     name="Payment Method"
                     value="Venmo">
-
                   Venmo
-
                 </label>
 
-
                 <label class="payment-method">
-
                   <input
                     type="radio"
                     name="Payment Method"
                     value="Zelle">
-
                   Zelle
-
                 </label>
 
               </div>
-
 
               <div class="payment-info">
 
@@ -1643,8 +1518,6 @@ footer{
 
           </div>
 
-
-          <!-- RECEIPT -->
 
           <div class="form-group full">
 
@@ -1680,8 +1553,6 @@ footer{
           </div>
 
 
-          <!-- AGREEMENT -->
-
           <div class="form-group full">
 
             <label class="agreement">
@@ -1701,8 +1572,6 @@ footer{
 
           </div>
 
-
-          <!-- SUBMIT -->
 
           <div class="form-group full">
 
@@ -1728,13 +1597,8 @@ footer{
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
 
 <section class="contact" id="contact">
 
@@ -1823,25 +1687,19 @@ footer{
     </div>
 
 
-    <!-- CONTACT IMAGE — IMG 5942 -->
+    <!-- CONTACT — IMG 5942 -->
 
     <div class="contact-feature-image">
 
       <img
         src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg"
-        alt="Tattoo artwork on a client's back"
-        loading="lazy">
+        alt="Tattoo artwork on a client's back">
 
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     WHATSAPP LIVE CHAT
-========================= -->
 
 <a
   class="whatsapp-chat"
@@ -1850,7 +1708,7 @@ footer{
   rel="noopener"
   aria-label="Chat with Rebecca and Sheena Tattoos on WhatsApp">
 
-  <span class="whatsapp-icon">💬</span>
+  <span>💬</span>
 
   <span
     data-en="Live Chat"
@@ -1860,10 +1718,6 @@ footer{
 
 </a>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1952,30 +1806,21 @@ footer{
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-/* =========================
-   YEAR
-========================= */
+/* YEAR */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
 
-/* =========================
-   LANGUAGE SWITCHER
-========================= */
+/* LANGUAGE */
 
 let currentLanguage =
   localStorage.getItem("tattooLanguage") || "en";
 
 const languageBtn =
   document.getElementById("languageBtn");
-
 
 function setLanguage(language){
 
@@ -1995,7 +1840,9 @@ function setLanguage(language){
   });
 
   languageBtn.textContent =
-    language === "en" ? "Español" : "English";
+    language === "en"
+      ? "Español"
+      : "English";
 
   localStorage.setItem(
     "tattooLanguage",
@@ -2003,8 +1850,7 @@ function setLanguage(language){
   );
 }
 
-
-languageBtn.addEventListener("click", function(){
+languageBtn.addEventListener("click",function(){
 
   setLanguage(
     currentLanguage === "en"
@@ -2017,9 +1863,7 @@ languageBtn.addEventListener("click", function(){
 setLanguage(currentLanguage);
 
 
-/* =========================
-   MINIMUM BOOKING DATE
-========================= */
+/* MINIMUM DATE */
 
 const dateInput =
   document.getElementById("date");
@@ -2037,12 +1881,10 @@ const day =
   String(today.getDate()).padStart(2,"0");
 
 dateInput.min =
-  `${year}-${month}-${day}`;
+  year + "-" + month + "-" + day;
 
 
-/* =========================
-   RECEIPT PREVIEW
-========================= */
+/* RECEIPT PREVIEW */
 
 const receiptInput =
   document.getElementById("receipt");
@@ -2050,13 +1892,13 @@ const receiptInput =
 const receiptPreview =
   document.getElementById("receiptPreview");
 
-
-receiptInput.addEventListener("change", function(){
+receiptInput.addEventListener("change",function(){
 
   const file =
     this.files[0];
 
-  receiptPreview.style.display = "none";
+  receiptPreview.style.display =
+    "none";
 
   if(!file){
     return;
@@ -2078,15 +1920,16 @@ receiptInput.addEventListener("change", function(){
     const reader =
       new FileReader();
 
-    reader.onload = function(event){
+    reader.onload =
+      function(event){
 
-      receiptPreview.src =
-        event.target.result;
+        receiptPreview.src =
+          event.target.result;
 
-      receiptPreview.style.display =
-        "block";
+        receiptPreview.style.display =
+          "block";
 
-    };
+      };
 
     reader.readAsDataURL(file);
   }
@@ -2094,9 +1937,7 @@ receiptInput.addEventListener("change", function(){
 });
 
 
-/* =========================
-   FORM VALIDATION
-========================= */
+/* FORM VALIDATION */
 
 const bookingForm =
   document.getElementById("bookingForm");
@@ -2107,16 +1948,19 @@ const depositAmount =
 const agreement =
   document.getElementById("agreement");
 
+bookingForm.addEventListener("submit",function(event){
 
-bookingForm.addEventListener("submit", function(event){
-
-  /* BOOKING PAYMENT */
+  /*
+    IMPORTANT:
+    We DO NOT modify depositAmount.value while
+    the customer is typing.
+  */
 
   const amount =
     Number(depositAmount.value);
 
   if(
-    !Number.isFinite(amount) ||
+    !Number.isInteger(amount) ||
     amount < 100 ||
     amount > 200
   ){
@@ -2124,7 +1968,7 @@ bookingForm.addEventListener("submit", function(event){
     event.preventDefault();
 
     alert(
-      "Please choose a booking payment amount between $100 and $200."
+      "Please enter a whole-dollar booking payment between $100 and $200."
     );
 
     depositAmount.focus();
@@ -2132,8 +1976,6 @@ bookingForm.addEventListener("submit", function(event){
     return;
   }
 
-
-  /* PAYMENT METHOD */
 
   const paymentMethod =
     document.querySelector(
@@ -2151,8 +1993,6 @@ bookingForm.addEventListener("submit", function(event){
     return;
   }
 
-
-  /* RECEIPT */
 
   const receipt =
     receiptInput.files[0];
@@ -2183,8 +2023,6 @@ bookingForm.addEventListener("submit", function(event){
   }
 
 
-  /* AGREEMENT */
-
   if(!agreement.checked){
 
     event.preventDefault();
@@ -2197,35 +2035,6 @@ bookingForm.addEventListener("submit", function(event){
 
     return;
   }
-
-});
-
-
-/* =========================
-   KEEP AMOUNT WHOLE DOLLARS
-========================= */
-
-depositAmount.addEventListener("input", function(){
-
-  let value =
-    Number(this.value);
-
-  if(!Number.isFinite(value)){
-    return;
-  }
-
-  value =
-    Math.round(value);
-
-  if(value < 100){
-    value = 100;
-  }
-
-  if(value > 200){
-    value = 200;
-  }
-
-  this.value = value;
 
 });
 
