@@ -415,34 +415,6 @@ section {
   background: #f5f5f3;
 }
 
-/* NEW BOOKING IMAGE */
-
-.booking-image-wrap {
-  max-width: 850px;
-  margin: 0 auto 35px;
-  background: #fff;
-  padding: 8px;
-  border: 1px solid #dedede;
-  border-radius: 8px;
-  box-shadow: 0 12px 35px rgba(0,0,0,.10);
-}
-
-.booking-image-wrap img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-}
-
-.booking-image-caption {
-  text-align: center;
-  padding: 14px 10px 8px;
-  color: #666;
-  font-size: 13px;
-  font-weight: 700;
-}
-
 .booking-box {
   max-width: 900px;
   margin: auto;
@@ -501,7 +473,7 @@ textarea {
 }
 
 /* =========================
-   DEPOSIT
+   BOOKING PAYMENT
 ========================= */
 
 .deposit-box {
@@ -526,6 +498,55 @@ textarea {
 .deposit-highlight {
   color: #171717;
   font-weight: 800;
+}
+
+.deposit-amount-wrap {
+  margin: 20px 0 22px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+}
+
+.deposit-amount-label {
+  margin-bottom: 8px;
+}
+
+.deposit-input-row {
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.deposit-dollar {
+  padding-left: 15px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #9a742f;
+}
+
+.deposit-input-row input {
+  border: none;
+  box-shadow: none !important;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 12px;
+}
+
+.deposit-input-row input:focus {
+  border: none;
+  box-shadow: none !important;
+}
+
+.deposit-range-note {
+  margin-top: 7px !important;
+  margin-bottom: 0 !important;
+  color: #777 !important;
+  font-size: 13px;
 }
 
 .payment-options {
@@ -745,89 +766,36 @@ textarea {
   color: #9a742f;
 }
 
-/* NEW CONTACT IMAGE */
-
-.contact-image-wrap {
-  max-width: 850px;
-  margin: 38px auto 0;
-  background: #fff;
-  padding: 8px;
-  border: 1px solid #dedede;
-  border-radius: 8px;
-  box-shadow: 0 12px 35px rgba(0,0,0,.10);
-}
-
-.contact-image-wrap img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-}
-
-.contact-image-caption {
-  text-align: center;
-  padding: 14px 10px 8px;
-  color: #666;
-  font-size: 13px;
-  font-weight: 700;
-}
-
 /* =========================
    WHATSAPP LIVE CHAT
 ========================= */
 
 .whatsapp-chat {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  right: 20px;
+  bottom: 20px;
   z-index: 2000;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #171717;
+  background: #25D366;
   color: #fff;
-  padding: 12px 18px 12px 13px;
+  padding: 13px 18px;
   border-radius: 50px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  font-size: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.22);
   font-weight: 900;
-  transition: .25s;
+  transition: .2s;
 }
 
 .whatsapp-chat:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 35px rgba(0,0,0,.30);
+  box-shadow: 0 12px 30px rgba(0,0,0,.28);
 }
 
 .whatsapp-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.whatsapp-icon svg {
-  width: 22px;
-  height: 22px;
-  fill: #fff;
-}
-
-.whatsapp-chat-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.whatsapp-chat-text small {
-  font-size: 10px;
-  font-weight: 700;
-  opacity: .7;
-  margin-bottom: 2px;
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
 }
 
 /* =========================
@@ -910,11 +878,6 @@ footer a {
     height: 400px;
   }
 
-  .booking-image-wrap img,
-  .contact-image-wrap img {
-    height: 400px;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -979,24 +942,10 @@ footer a {
     width: 100%;
   }
 
-  .booking-image-wrap img,
-  .contact-image-wrap img {
-    height: 360px;
-  }
-
   .whatsapp-chat {
-    right: 14px;
-    bottom: 14px;
-    padding: 9px 14px 9px 9px;
-  }
-
-  .whatsapp-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .whatsapp-chat-text {
-    font-size: 12px;
+    right: 15px;
+    bottom: 15px;
+    padding: 13px 16px;
   }
 }
 </style>
@@ -1116,8 +1065,6 @@ footer a {
     </div>
 
 
-    <!-- HERO FEATURE IMAGE -->
-
     <div class="hero-image-wrap">
 
       <img
@@ -1142,7 +1089,6 @@ footer a {
 
 <!-- =========================
      PORTFOLIO
-     FIVE NEW IMAGES
 ========================= -->
 
 <section class="portfolio" id="portfolio">
@@ -1153,9 +1099,9 @@ footer a {
 
       <div
         class="eyebrow"
-        data-en="Our Work"
-        data-es="Nuestro Trabajo">
-        Our Work
+        data-en="Selected Work"
+        data-es="Trabajos Seleccionados">
+        Selected Work
       </div>
 
       <h2
@@ -1174,48 +1120,40 @@ footer a {
 
     <div class="gallery">
 
-      <!-- NEW IMAGE 5945 -->
-
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg"
-          alt="Colorful arm tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/jvXHxNBb/IMG-5908.jpg"
+          alt="Tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- NEW IMAGE 5944 -->
-
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg"
-          alt="Detailed sleeve tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/27pKNbv4/IMG-5918.jpg"
+          alt="Detailed tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- NEW IMAGE 5938 -->
-
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/qYHHLksL/IMG-5938.jpg"
-          alt="Black and grey tattoo portfolio artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/LD3zxSpV/IMG-5917.webp"
+          alt="Black and grey tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- NEW IMAGE 5943 -->
-
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg"
-          alt="Fine detail shoulder tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg"
+          alt="Large custom tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- NEW IMAGE 5940 -->
+      <!-- REPLACED 4-ARMS IMAGE WITH IMG-5935 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg"
-          alt="Custom tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg"
+          alt="Tattoo portfolio collage showing four different arm tattoos by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
@@ -1277,7 +1215,6 @@ footer a {
 
       </div>
 
-
       <div class="service-card">
 
         <div class="service-number">02</div>
@@ -1295,7 +1232,6 @@ footer a {
         </p>
 
       </div>
-
 
       <div class="service-card">
 
@@ -1370,7 +1306,6 @@ footer a {
         </p>
 
       </div>
-
 
       <div class="about-box">
 
@@ -1448,7 +1383,6 @@ footer a {
 
       </div>
 
-
       <div class="review">
 
         <div class="stars">★★★★★</div>
@@ -1466,7 +1400,6 @@ footer a {
         </strong>
 
       </div>
-
 
       <div class="review">
 
@@ -1517,29 +1450,10 @@ footer a {
       </h2>
 
       <p
-        data-en="Complete the appointment request below. A $100 deposit and proof of payment are required with your request."
-        data-es="Completa la solicitud de cita a continuación. Se requiere un depósito de $100 y comprobante de pago.">
-        Complete the appointment request below. A $100 deposit and proof of payment are required with your request.
+        data-en="Complete the appointment request below. Choose a booking payment between $100 and $200 to secure your appointment, then upload proof of payment."
+        data-es="Completa la solicitud de cita a continuación. Elige un pago de reserva entre $100 y $200 para asegurar tu cita y luego carga el comprobante de pago.">
+        Complete the appointment request below. Choose a booking payment between $100 and $200 to secure your appointment, then upload proof of payment.
       </p>
-
-    </div>
-
-
-    <!-- YELLOW TOP LADY IMAGE -->
-
-    <div class="booking-image-wrap">
-
-      <img
-        src="https://i.ibb.co/v6B4B36q/IMG-5941.jpg"
-        alt="Tattoo client wearing a yellow top showing her tattoo"
-        loading="lazy">
-
-      <div
-        class="booking-image-caption"
-        data-en="Every tattoo is personal. Let's create yours."
-        data-es="Cada tatuaje es personal. Creemos el tuyo.">
-        Every tattoo is personal. Let's create yours.
-      </div>
 
     </div>
 
@@ -1571,14 +1485,18 @@ footer a {
           name="_url"
           value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
 
+        <!-- CUSTOMER AUTOMATIC EMAIL RESPONSE -->
+
         <input
           type="hidden"
           name="_autoresponse"
-          value="Thank you for submitting your tattoo appointment request to Rebecca & Sheena Tattoos. We have received your appointment request and payment proof. Your $100 deposit is a down payment toward your tattoo and will be deducted from your final tattoo payment. Your appointment is not confirmed until the studio reviews your request and verifies your deposit. We will contact you with confirmation and next steps.">
+          value="Thank you for submitting your tattoo appointment request to Rebecca & Sheena Tattoos. We have received your appointment request and payment proof. Your selected booking payment is used to secure your appointment and will be deducted from your final tattoo payment. Your appointment is not confirmed until the studio reviews your request and verifies your payment. We will contact you with confirmation and next steps.">
 
 
         <div class="form-grid">
 
+
+          <!-- NAME -->
 
           <div class="form-group">
 
@@ -1600,6 +1518,8 @@ footer a {
           </div>
 
 
+          <!-- PHONE -->
+
           <div class="form-group">
 
             <label for="phone"
@@ -1619,6 +1539,8 @@ footer a {
 
           </div>
 
+
+          <!-- EMAIL -->
 
           <div class="form-group">
 
@@ -1640,6 +1562,8 @@ footer a {
           </div>
 
 
+          <!-- DATE -->
+
           <div class="form-group">
 
             <label for="date"
@@ -1657,6 +1581,8 @@ footer a {
           </div>
 
 
+          <!-- TIME -->
+
           <div class="form-group">
 
             <label for="time"
@@ -1673,6 +1599,8 @@ footer a {
 
           </div>
 
+
+          <!-- PLACEMENT -->
 
           <div class="form-group">
 
@@ -1693,6 +1621,8 @@ footer a {
 
           </div>
 
+
+          <!-- SIZE -->
 
           <div class="form-group full">
 
@@ -1753,6 +1683,8 @@ footer a {
           </div>
 
 
+          <!-- DESCRIPTION -->
+
           <div class="form-group full">
 
             <label
@@ -1773,35 +1705,72 @@ footer a {
           </div>
 
 
+          <!-- BOOKING PAYMENT -->
+
           <div class="form-group full">
 
             <div class="deposit-box">
 
               <h3
-                data-en="$100 Upfront Appointment Deposit"
-                data-es="Depósito de $100 para la Cita">
-                $100 Upfront Appointment Deposit
+                data-en="Choose Your Booking Payment: $100–$200"
+                data-es="Elige Tu Pago de Reserva: $100–$200">
+                Choose Your Booking Payment: $100–$200
               </h3>
 
               <p
-                data-en="A $100 deposit is required before your appointment can be confirmed."
-                data-es="Se requiere un depósito de $100 antes de que tu cita pueda ser confirmada.">
-                A $100 deposit is required before your appointment can be confirmed.
+                data-en="A booking payment between $100 and $200 is required to secure your tattoo appointment."
+                data-es="Se requiere un pago de reserva de entre $100 y $200 para asegurar tu cita de tatuaje.">
+                A booking payment between <strong>$100 and $200</strong> is required to secure your tattoo appointment.
               </p>
 
               <p
-                data-en="The $100 deposit is a down payment toward your tattoo. It will be deducted from your final tattoo payment."
-                data-es="El depósito de $100 es un pago inicial para tu tatuaje. Será descontado del pago final de tu tatuaje.">
-                The $100 deposit is a <strong>down payment toward your tattoo</strong>.
-                It will be <strong>deducted from your final tattoo payment</strong>.
+                data-en="You choose the amount you want to pay. The amount you pay will be deducted from your final tattoo payment."
+                data-es="Tú eliges el monto que deseas pagar. El monto que pagues será descontado del pago final de tu tatuaje.">
+                You choose the amount you want to pay.
+                The amount you pay will be <strong>deducted from your final tattoo payment.</strong>
               </p>
 
-              <p
-                data-en="Please make your $100 deposit using one of the payment methods below, then upload your proof of payment with this appointment request."
-                data-es="Realiza tu depósito de $100 usando uno de los métodos de pago a continuación y luego carga tu comprobante de pago con esta solicitud.">
-                Please make your $100 deposit using one of the payment methods below, then upload your proof of payment with this appointment request.
-              </p>
 
+              <!-- CUSTOMER CHOOSES AMOUNT -->
+
+              <div class="deposit-amount-wrap">
+
+                <label
+                  for="depositAmount"
+                  class="deposit-amount-label"
+                  data-en="Your Booking Payment Amount *"
+                  data-es="Monto de Tu Pago de Reserva *">
+                  Your Booking Payment Amount *
+                </label>
+
+                <div class="deposit-input-row">
+
+                  <span class="deposit-dollar">$</span>
+
+                  <input
+                    type="number"
+                    id="depositAmount"
+                    name="Booking Payment Amount"
+                    min="100"
+                    max="200"
+                    step="1"
+                    value="100"
+                    inputmode="numeric"
+                    required>
+
+                </div>
+
+                <p
+                  class="deposit-range-note"
+                  data-en="Enter any whole-dollar amount from $100 to $200."
+                  data-es="Ingresa cualquier cantidad en dólares enteros entre $100 y $200.">
+                  Enter any whole-dollar amount from $100 to $200.
+                </p>
+
+              </div>
+
+
+              <!-- PAYMENT OPTIONS -->
 
               <div class="payment-options">
 
@@ -1843,6 +1812,8 @@ footer a {
               </div>
 
 
+              <!-- PAYMENT METHOD -->
+
               <label
                 class="method-title"
                 data-en="Which payment method did you use? *"
@@ -1857,7 +1828,7 @@ footer a {
                   <input
                     type="radio"
                     id="cashapp"
-                    name="Deposit Payment Method"
+                    name="Booking Payment Method"
                     value="Cash App"
                     required>
 
@@ -1876,7 +1847,7 @@ footer a {
                   <input
                     type="radio"
                     id="venmo"
-                    name="Deposit Payment Method"
+                    name="Booking Payment Method"
                     value="Venmo">
 
                   <label
@@ -1894,7 +1865,7 @@ footer a {
                   <input
                     type="radio"
                     id="zelle"
-                    name="Deposit Payment Method"
+                    name="Booking Payment Method"
                     value="Zelle">
 
                   <label
@@ -1909,11 +1880,7 @@ footer a {
               </div>
 
 
-              <input
-                type="hidden"
-                name="Deposit Amount"
-                value="$100">
-
+              <!-- IMPORTANT NOTICE -->
 
               <p class="payment-note">
 
@@ -1924,9 +1891,11 @@ footer a {
                 </strong>
 
                 <span
-                  data-en=" Your appointment request is not considered confirmed until the studio reviews your request and verifies the $100 deposit."
-                  data-es=" Tu solicitud de cita no se considera confirmada hasta que el estudio revise tu solicitud y verifique el depósito de $100.">
-                  Your appointment request is not considered confirmed until the studio reviews your request and verifies the $100 deposit.
+                  data-en="Your booking payment is used to secure your appointment. Your appointment is not confirmed until the studio reviews your request and verifies your payment. The amount you pay will be deducted from your final tattoo payment."
+                  data-es="Tu pago de reserva se utiliza para asegurar tu cita. Tu cita no se confirma hasta que el estudio revise tu solicitud y verifique tu pago. El monto que pagues será descontado del pago final de tu tatuaje.">
+                  Your booking payment is used to secure your appointment.
+                  Your appointment is not confirmed until the studio reviews your request and verifies your payment.
+                  The amount you pay will be deducted from your final tattoo payment.
                 </span>
 
               </p>
@@ -1936,20 +1905,22 @@ footer a {
           </div>
 
 
+          <!-- RECEIPT -->
+
           <div class="form-group full">
 
             <div class="receipt-box">
 
               <h4
-                data-en="🧾 Upload Proof of Your $100 Payment *"
-                data-es="🧾 Carga el Comprobante de tu Pago de $100 *">
-                🧾 Upload Proof of Your $100 Payment *
+                data-en="🧾 Upload Proof of Your Booking Payment *"
+                data-es="🧾 Carga el Comprobante de tu Pago de Reserva *">
+                🧾 Upload Proof of Your Booking Payment *
               </h4>
 
               <p
-                data-en="After paying the $100 deposit, upload a screenshot, receipt or other proof showing that the payment was made. This proof will be included with your appointment request."
-                data-es="Después de pagar el depósito de $100, carga una captura de pantalla, recibo u otro comprobante que muestre que se realizó el pago. Este comprobante se incluirá con tu solicitud de cita.">
-                After paying the $100 deposit, upload a screenshot, receipt or other proof showing that the payment was made. This proof will be included with your appointment request.
+                data-en="After paying your chosen booking amount ($100–$200), upload a screenshot, receipt or other proof showing that the payment was made. This proof will be included with your appointment request."
+                data-es="Después de pagar el monto de reserva elegido ($100–$200), carga una captura de pantalla, recibo u otro comprobante que muestre que se realizó el pago. Este comprobante se incluirá con tu solicitud de cita.">
+                After paying your chosen booking amount ($100–$200), upload a screenshot, receipt or other proof showing that the payment was made. This proof will be included with your appointment request.
               </p>
 
               <label
@@ -1983,6 +1954,8 @@ footer a {
           </div>
 
 
+          <!-- AGREEMENT -->
+
           <div class="form-group full">
 
             <div class="deposit-confirm">
@@ -1990,19 +1963,20 @@ footer a {
               <input
                 type="checkbox"
                 id="depositAgreement"
-                name="Deposit Agreement"
+                name="Booking Payment Agreement"
                 value="Customer confirms understanding"
                 required>
 
               <label for="depositAgreement">
 
                 <span
-                  data-en="I understand that a $100 upfront deposit is required to secure my tattoo appointment, that I must provide proof of payment with this request, and that the $100 deposit will be deducted from my final tattoo payment."
-                  data-es="Entiendo que se requiere un depósito inicial de $100 para asegurar mi cita de tatuaje, que debo proporcionar un comprobante de pago con esta solicitud y que el depósito de $100 será descontado del pago final de mi tatuaje.">
-                  I understand that a <strong>$100 upfront deposit</strong>
-                  is required to secure my tattoo appointment,
+                  data-en="I understand that I must pay a booking payment between $100 and $200 to secure my tattoo appointment, that I must provide proof of payment with this request, and that the amount I pay will be deducted from my final tattoo payment."
+                  data-es="Entiendo que debo realizar un pago de reserva entre $100 y $200 para asegurar mi cita de tatuaje, que debo proporcionar un comprobante de pago con esta solicitud y que el monto que pague será descontado del pago final de mi tatuaje.">
+                  I understand that I must pay a
+                  <strong>$100–$200 booking payment</strong>
+                  to secure my tattoo appointment,
                   that I must provide proof of payment with this request,
-                  and that the $100 deposit will be
+                  and that the amount I pay will be
                   <strong>deducted from my final tattoo payment</strong>.
                 </span>
 
@@ -2012,6 +1986,8 @@ footer a {
 
           </div>
 
+
+          <!-- SUBMIT -->
 
           <div class="form-group full">
 
@@ -2157,28 +2133,34 @@ footer a {
 
     </div>
 
-
-    <!-- SWORD/BACK TATTOO IMAGE -->
-
-    <div class="contact-image-wrap">
-
-      <img
-        src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg"
-        alt="Tattoo artwork displayed on a client's back"
-        loading="lazy">
-
-      <div
-        class="contact-image-caption"
-        data-en="Custom tattoo artwork created with care and precision"
-        data-es="Arte de tatuaje personalizado creado con cuidado y precisión">
-        Custom tattoo artwork created with care and precision
-      </div>
-
-    </div>
-
   </div>
 
 </section>
+
+
+<!-- =========================
+     WHATSAPP LIVE CHAT
+========================= -->
+
+<a
+  class="whatsapp-chat"
+  href="https://wa.me/15306821175?text=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%20would%20like%20to%20ask%20about%20booking%20an%20appointment."
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Rebecca and Sheena Tattoos on WhatsApp">
+
+  <svg
+    class="whatsapp-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true">
+    <path d="M12.04 2C6.51 2 2 6.51 2 12.04c0 1.77.46 3.5 1.34 5.04L2 22l5.08-1.33a10.01 10.01 0 004.96 1.31h.01c5.53 0 10.03-4.51 10.03-10.04C22.08 6.51 17.57 2 12.04 2zm5.85 14.38c-.25.7-1.45 1.34-2 1.43-.5.08-1.13.12-1.83-.12-.42-.14-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.41.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.49.25.59.85 2.04.92 2.19.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.38-.41.51-.14.14-.29.3-.12.59.17.29.75 1.23 1.61 1.99 1.1.98 2.03 1.28 2.32 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.27.1 1.71.81 2  .96.29.14.48.22.55.34.07.12.07.7-.18 1.4z"/>
+  </svg>
+
+  <span data-en="Live Chat" data-es="Chat en Vivo">
+    Live Chat
+  </span>
+
+</a>
 
 
 <!-- =========================
@@ -2223,33 +2205,6 @@ footer a {
   </div>
 
 </footer>
-
-
-<!-- =========================
-     WHATSAPP LIVE CHAT
-========================= -->
-
-<a
-  class="whatsapp-chat"
-  href="https://wa.me/15306821175?text=Hi%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d%20like%20to%20make%20an%20enquiry%20about%20a%20tattoo."
-  target="_blank"
-  rel="noopener"
-  aria-label="Chat with Rebecca and Sheena Tattoos on WhatsApp">
-
-  <span class="whatsapp-icon">
-
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.53 0 .23 5.3.23 11.82c0 2.08.54 4.11 1.57 5.9L.14 24l6.43-1.69a11.79 11.79 0 005.48 1.4h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.15-1.23-6.11-3.36-8.41zM12.06 21.7h-.01a9.84 9.84 0 01-5.02-1.38l-.36-.21-3.82 1 1.02-3.72-.23-.38a9.84 9.84 0 01-1.51-5.19c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.79 9.79 0 012.89 6.96c0 5.43-4.42 9.85-9.85 9.85zm5.41-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
-    </svg>
-
-  </span>
-
-  <span class="whatsapp-chat-text">
-    <small>LIVE CHAT</small>
-    Chat with us
-  </span>
-
-</a>
 
 
 <!-- =========================
@@ -2421,6 +2376,31 @@ dateInput.min = today;
 
 
 /* =========================
+   BOOKING PAYMENT AMOUNT
+========================= */
+
+const depositAmount =
+  document.getElementById("depositAmount");
+
+
+/* Prevent values outside $100–$200 */
+
+depositAmount.addEventListener("input", function() {
+
+  let value = Number(this.value);
+
+  if (value > 200) {
+    this.value = 200;
+  }
+
+  if (value < 100 && this.value !== "") {
+    this.value = 100;
+  }
+
+});
+
+
+/* =========================
    FORM VALIDATION
 ========================= */
 
@@ -2437,45 +2417,76 @@ bookingForm.addEventListener("submit", function(event) {
 
   const paymentMethod =
     document.querySelector(
-      'input[name="Deposit Payment Method"]:checked'
+      'input[name="Booking Payment Method"]:checked'
     );
 
+  const amount =
+    Number(depositAmount.value);
+
+
+  /* Validate booking payment amount */
+
+  if (
+    !Number.isFinite(amount) ||
+    amount < 100 ||
+    amount > 200
+  ) {
+
+    event.preventDefault();
+
+    alert(
+      "Please choose a booking payment amount between $100 and $200."
+    );
+
+    depositAmount.focus();
+
+    return;
+  }
+
+
+  /* Validate payment method */
 
   if (!paymentMethod) {
 
     event.preventDefault();
 
     alert(
-      "Please select the payment method you used for the $100 deposit."
+      "Please select the payment method you used for your booking payment."
     );
 
     return;
   }
 
+
+  /* Validate receipt */
 
   if (!receipt.files.length) {
 
     event.preventDefault();
 
     alert(
-      "Please upload proof of your $100 deposit payment before submitting your appointment request."
+      "Please upload proof of your booking payment before submitting your appointment request."
     );
 
     return;
   }
 
+
+  /* Validate agreement */
 
   if (!agreement.checked) {
 
     event.preventDefault();
 
     alert(
-      "Please confirm that you understand the $100 deposit terms."
+      "Please confirm that you understand the booking payment terms."
     );
 
     return;
   }
 
+
+  /* Validate file size */
 
   if (receipt.files[0].size > 10 * 1024 * 1024) {
 
