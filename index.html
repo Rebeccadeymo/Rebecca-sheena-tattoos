@@ -415,6 +415,34 @@ section {
   background: #f5f5f3;
 }
 
+/* NEW BOOKING IMAGE */
+
+.booking-image-wrap {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.10);
+}
+
+.booking-image-wrap img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+.booking-image-caption {
+  text-align: center;
+  padding: 14px 10px 8px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .booking-box {
   max-width: 900px;
   margin: auto;
@@ -717,6 +745,91 @@ textarea {
   color: #9a742f;
 }
 
+/* NEW CONTACT IMAGE */
+
+.contact-image-wrap {
+  max-width: 850px;
+  margin: 38px auto 0;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.10);
+}
+
+.contact-image-wrap img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+}
+
+.contact-image-caption {
+  text-align: center;
+  padding: 14px 10px 8px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   WHATSAPP LIVE CHAT
+========================= */
+
+.whatsapp-chat {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #171717;
+  color: #fff;
+  padding: 12px 18px 12px 13px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  font-size: 14px;
+  font-weight: 900;
+  transition: .25s;
+}
+
+.whatsapp-chat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.30);
+}
+
+.whatsapp-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.whatsapp-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.whatsapp-chat-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.whatsapp-chat-text small {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: .7;
+  margin-bottom: 2px;
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -797,6 +910,11 @@ footer a {
     height: 400px;
   }
 
+  .booking-image-wrap img,
+  .contact-image-wrap img {
+    height: 400px;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -859,6 +977,26 @@ footer a {
 
   .btn {
     width: 100%;
+  }
+
+  .booking-image-wrap img,
+  .contact-image-wrap img {
+    height: 360px;
+  }
+
+  .whatsapp-chat {
+    right: 14px;
+    bottom: 14px;
+    padding: 9px 14px 9px 9px;
+  }
+
+  .whatsapp-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .whatsapp-chat-text {
+    font-size: 12px;
   }
 }
 </style>
@@ -978,7 +1116,7 @@ footer a {
     </div>
 
 
-    <!-- LADY TATTOOING CUSTOMER -->
+    <!-- HERO FEATURE IMAGE -->
 
     <div class="hero-image-wrap">
 
@@ -1004,7 +1142,7 @@ footer a {
 
 <!-- =========================
      PORTFOLIO
-     FIVE IMAGES ONLY
+     FIVE NEW IMAGES
 ========================= -->
 
 <section class="portfolio" id="portfolio">
@@ -1015,9 +1153,9 @@ footer a {
 
       <div
         class="eyebrow"
-        data-en="Selected Work"
-        data-es="Trabajos Seleccionados">
-        Selected Work
+        data-en="Our Work"
+        data-es="Nuestro Trabajo">
+        Our Work
       </div>
 
       <h2
@@ -1036,48 +1174,48 @@ footer a {
 
     <div class="gallery">
 
-      <!-- IMAGE 5908 -->
+      <!-- NEW IMAGE 5945 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/jvXHxNBb/IMG-5908.jpg"
-          alt="Tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg"
+          alt="Colorful arm tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- IMAGE 5918 -->
+      <!-- NEW IMAGE 5944 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/27pKNbv4/IMG-5918.jpg"
-          alt="Detailed tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg"
+          alt="Detailed sleeve tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- IMAGE 5917 -->
+      <!-- NEW IMAGE 5938 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/LD3zxSpV/IMG-5917.webp"
-          alt="Black and grey tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/qYHHLksL/IMG-5938.jpg"
+          alt="Black and grey tattoo portfolio artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- IMAGE 5916 -->
+      <!-- NEW IMAGE 5943 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/7xD4RZJw/IMG-5916.jpg"
-          alt="Large custom tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg"
+          alt="Fine detail shoulder tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
-      <!-- IMAGE 5915 -->
+      <!-- NEW IMAGE 5940 -->
 
       <div class="gallery-card">
         <img
-          src="https://i.ibb.co/84sVwRTn/IMG-5915.jpg"
-          alt="Detailed tattoo artwork by Rebecca and Sheena Tattoos"
+          src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg"
+          alt="Custom tattoo artwork by Rebecca and Sheena Tattoos"
           loading="lazy">
       </div>
 
@@ -1387,14 +1525,31 @@ footer a {
     </div>
 
 
+    <!-- YELLOW TOP LADY IMAGE -->
+
+    <div class="booking-image-wrap">
+
+      <img
+        src="https://i.ibb.co/v6B4B36q/IMG-5941.jpg"
+        alt="Tattoo client wearing a yellow top showing her tattoo"
+        loading="lazy">
+
+      <div
+        class="booking-image-caption"
+        data-en="Every tattoo is personal. Let's create yours."
+        data-es="Cada tatuaje es personal. Creemos el tuyo.">
+        Every tattoo is personal. Let's create yours.
+      </div>
+
+    </div>
+
+
     <div class="booking-box">
 
       <form
         action="https://formsubmit.co/Rebeccapalmer542@yahoo.com"
         method="POST"
         enctype="multipart/form-data">
-
-        <!-- FORMSUBMIT SETTINGS -->
 
         <input
           type="hidden"
@@ -1416,8 +1571,6 @@ footer a {
           name="_url"
           value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
 
-        <!-- CUSTOMER AUTOMATIC EMAIL RESPONSE -->
-
         <input
           type="hidden"
           name="_autoresponse"
@@ -1426,8 +1579,6 @@ footer a {
 
         <div class="form-grid">
 
-
-          <!-- NAME -->
 
           <div class="form-group">
 
@@ -1449,8 +1600,6 @@ footer a {
           </div>
 
 
-          <!-- PHONE -->
-
           <div class="form-group">
 
             <label for="phone"
@@ -1470,8 +1619,6 @@ footer a {
 
           </div>
 
-
-          <!-- EMAIL -->
 
           <div class="form-group">
 
@@ -1493,8 +1640,6 @@ footer a {
           </div>
 
 
-          <!-- DATE -->
-
           <div class="form-group">
 
             <label for="date"
@@ -1512,8 +1657,6 @@ footer a {
           </div>
 
 
-          <!-- TIME -->
-
           <div class="form-group">
 
             <label for="time"
@@ -1530,8 +1673,6 @@ footer a {
 
           </div>
 
-
-          <!-- PLACEMENT -->
 
           <div class="form-group">
 
@@ -1552,8 +1693,6 @@ footer a {
 
           </div>
 
-
-          <!-- SIZE -->
 
           <div class="form-group full">
 
@@ -1614,8 +1753,6 @@ footer a {
           </div>
 
 
-          <!-- DESCRIPTION -->
-
           <div class="form-group full">
 
             <label
@@ -1636,8 +1773,6 @@ footer a {
           </div>
 
 
-          <!-- DEPOSIT -->
-
           <div class="form-group full">
 
             <div class="deposit-box">
@@ -1651,7 +1786,7 @@ footer a {
               <p
                 data-en="A $100 deposit is required before your appointment can be confirmed."
                 data-es="Se requiere un depósito de $100 antes de que tu cita pueda ser confirmada.">
-                A <span class="deposit-highlight">$100 deposit is required before your appointment can be confirmed.</span>
+                A $100 deposit is required before your appointment can be confirmed.
               </p>
 
               <p
@@ -1667,8 +1802,6 @@ footer a {
                 Please make your $100 deposit using one of the payment methods below, then upload your proof of payment with this appointment request.
               </p>
 
-
-              <!-- PAYMENT OPTIONS -->
 
               <div class="payment-options">
 
@@ -1709,8 +1842,6 @@ footer a {
 
               </div>
 
-
-              <!-- PAYMENT METHOD -->
 
               <label
                 class="method-title"
@@ -1778,8 +1909,6 @@ footer a {
               </div>
 
 
-              <!-- DEPOSIT AMOUNT -->
-
               <input
                 type="hidden"
                 name="Deposit Amount"
@@ -1807,8 +1936,6 @@ footer a {
           </div>
 
 
-          <!-- RECEIPT -->
-
           <div class="form-group full">
 
             <div class="receipt-box">
@@ -1831,8 +1958,6 @@ footer a {
                 data-es="Recibo / Comprobante de Pago *">
                 Payment Receipt / Proof *
               </label>
-
-              <!-- IMPORTANT: FORMSubmit FILE FIELD -->
 
               <input
                 type="file"
@@ -1857,8 +1982,6 @@ footer a {
 
           </div>
 
-
-          <!-- AGREEMENT -->
 
           <div class="form-group full">
 
@@ -1889,8 +2012,6 @@ footer a {
 
           </div>
 
-
-          <!-- SUBMIT -->
 
           <div class="form-group full">
 
@@ -2015,7 +2136,7 @@ footer a {
         <div class="contact-icon">
 
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 002-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
           </svg>
 
         </div>
@@ -2032,6 +2153,25 @@ footer a {
           </a>
         </p>
 
+      </div>
+
+    </div>
+
+
+    <!-- SWORD/BACK TATTOO IMAGE -->
+
+    <div class="contact-image-wrap">
+
+      <img
+        src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg"
+        alt="Tattoo artwork displayed on a client's back"
+        loading="lazy">
+
+      <div
+        class="contact-image-caption"
+        data-en="Custom tattoo artwork created with care and precision"
+        data-es="Arte de tatuaje personalizado creado con cuidado y precisión">
+        Custom tattoo artwork created with care and precision
       </div>
 
     </div>
@@ -2083,6 +2223,33 @@ footer a {
   </div>
 
 </footer>
+
+
+<!-- =========================
+     WHATSAPP LIVE CHAT
+========================= -->
+
+<a
+  class="whatsapp-chat"
+  href="https://wa.me/15306821175?text=Hi%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d%20like%20to%20make%20an%20enquiry%20about%20a%20tattoo."
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Rebecca and Sheena Tattoos on WhatsApp">
+
+  <span class="whatsapp-icon">
+
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.53 0 .23 5.3.23 11.82c0 2.08.54 4.11 1.57 5.9L.14 24l6.43-1.69a11.79 11.79 0 005.48 1.4h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.15-1.23-6.11-3.36-8.41zM12.06 21.7h-.01a9.84 9.84 0 01-5.02-1.38l-.36-.21-3.82 1 1.02-3.72-.23-.38a9.84 9.84 0 01-1.51-5.19c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.79 9.79 0 012.89 6.96c0 5.43-4.42 9.85-9.85 9.85zm5.41-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+
+  </span>
+
+  <span class="whatsapp-chat-text">
+    <small>LIVE CHAT</small>
+    Chat with us
+  </span>
+
+</a>
 
 
 <!-- =========================
