@@ -979,6 +979,7 @@ footer a {
 
 
     <!-- LADY TATTOOING CUSTOMER -->
+
     <div class="hero-image-wrap">
 
       <img
@@ -1393,6 +1394,8 @@ footer a {
         method="POST"
         enctype="multipart/form-data">
 
+        <!-- FORMSUBMIT SETTINGS -->
+
         <input
           type="hidden"
           name="_subject"
@@ -1412,6 +1415,14 @@ footer a {
           type="hidden"
           name="_url"
           value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
+
+        <!-- CUSTOMER AUTOMATIC EMAIL RESPONSE -->
+
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Thank you for submitting your tattoo appointment request to Rebecca & Sheena Tattoos. We have received your appointment request and payment proof. Your $100 deposit is a down payment toward your tattoo and will be deducted from your final tattoo payment. Your appointment is not confirmed until the studio reviews your request and verifies your deposit. We will contact you with confirmation and next steps.">
+
 
         <div class="form-grid">
 
@@ -1767,6 +1778,8 @@ footer a {
               </div>
 
 
+              <!-- DEPOSIT AMOUNT -->
+
               <input
                 type="hidden"
                 name="Deposit Amount"
@@ -1819,10 +1832,12 @@ footer a {
                 Payment Receipt / Proof *
               </label>
 
+              <!-- IMPORTANT: FORMSubmit FILE FIELD -->
+
               <input
                 type="file"
                 id="receipt"
-                name="Payment Proof"
+                name="attachment"
                 accept="image/jpeg,image/png,image/webp,application/pdf"
                 required>
 
