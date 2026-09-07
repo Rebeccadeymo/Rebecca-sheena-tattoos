@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rebecca & Sheena Tattoos</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#080808;
+color:#f5f5f5;
+line-height:1.6
+}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1100px;margin:auto}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
+background:rgba(5,5,5,.9);
+border-bottom:1px solid #292929;
+backdrop-filter:blur(10px)
+}
+
+nav{
+height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between
+}
+
+.logo{
+font-family:Georgia,serif;
+font-size:21px
+}
+
+.logo small{
+display:block;
+font-family:Arial;
+font-size:8px;
+letter-spacing:3px;
+color:#caa66a;
+text-transform:uppercase
+}
+
+.navbutton{
+background:#caa66a;
+color:#111;
+padding:10px 16px;
+font-size:11px;
+font-weight:bold;
+letter-spacing:1px
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.92)),
+radial-gradient(circle at 70% 35%,#3c3020,#090909 55%);
+padding-top:70px
+}
+
+.hero h1{
+font-family:Georgia,serif;
+font-size:clamp(48px,9vw,90px);
+font-weight:normal;
+line-height:.98;
+max-width:800px;
+margin:15px 0
+}
+
+.gold{color:#caa66a}
+
+.eyebrow{
+color:#caa66a;
+font-size:11px;
+font-weight:bold;
+letter-spacing:3px;
+text-transform:uppercase
+}
+
+.hero p{
+max-width:580px;
+font-size:18px;
+color:#bbb;
+margin:25px 0
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border:1px solid #caa66a;
+font-size:11px;
+font-weight:bold;
+letter-spacing:1.5px;
+text-transform:uppercase
+}
+
+.primary{
+background:#caa66a;
+color:#111
+}
+
+section{padding:100px 0}
+
+h2{
+font-family:Georgia,serif;
+font-size:48px;
+font-weight:normal;
+line-height:1.1;
+margin:10px 0 20px
+}
+
+.intro{
+color:#999;
+max-width:600px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:45px
+}
+
+.card{
+background:#121212;
+border:1px solid #292929;
+padding:30px
+}
+
+.card h3{
+font-family:Georgia,serif;
+font-size:25px;
+font-weight:normal
+}
+
+.card p{
+color:#999;
+font-size:14px
+}
+
+.number{
+color:#caa66a;
+font-size:11px;
+letter-spacing:2px
+}
+
+.about{
+background:#101010;
+border-top:1px solid #252525;
+border-bottom:1px solid #252525
+}
+
+.aboutbox{
+max-width:760px
+}
+
+.quote{
+border-left:2px solid #caa66a;
+padding-left:20px;
+font-family:Georgia,serif;
+font-size:22px;
+margin-top:30px
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px
+}
+
+.info p{color:#999}
+
+.info strong{
+display:block;
+color:#caa66a;
+font-size:10px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-top:20px
+}
+
+form{
+display:grid;
+gap:13px
+}
+
+input,textarea,select{
+width:100%;
+background:#101010;
+border:1px solid #333;
+padding:15px;
+color:white;
+font:inherit
+}
+
+textarea{min-height:140px}
+
+button{
+cursor:pointer;
+border:1px solid #caa66a;
+background:#caa66a;
+padding:15px;
+font-weight:bold;
+letter-spacing:1px
+}
+
+footer{
+border-top:1px solid #252525;
+padding:30px 0;
+color:#777;
+font-size:12px
+}
+
+@media(max-width:700px){
+.cards,.contact{grid-template-columns:1fr}
+h2{font-size:38px}
+.hero h1{font-size:55px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="container">
+<a class="logo" href="#">
+Rebecca & Sheena
+<small>Tattoos • Richmond Missouri</small>
+</a>
+
+<a class="navbutton" href="#booking">BOOK NOW</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="eyebrow">Custom Tattoo Artistry • Richmond, Missouri</div>
+
+<h1>
+Ink with intention.<br>
+<span class="gold">Art that stays.</span>
+</h1>
+
+<p>
+Beautiful, custom tattoos created around your story,
+your style and your vision. Every piece is designed
+to feel personal and made to last.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#booking">Start a Booking</a>
+
+<a class="btn" href="https://wa.me/15306821175">
+WhatsApp Us
+</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="eyebrow">Our Work</div>
+
+<h2>Made by hand.<br>Made for you.</h2>
+
+<p class="intro">
+Whether you're bringing us a finished idea or only a rough
+concept, we'll work with you to create something that feels
+like it belongs on you.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="number">01 / CUSTOM</div>
+<h3>Custom Designs</h3>
+<p>
+Original tattoo concepts created around your story,
+references, placement and personal style.
+</p>
+</div>
+
+<div class="card">
+<div class="number">02 / DETAIL</div>
+<h3>Fine Line</h3>
+<p>
+Delicate linework, lettering and detailed designs
+created with precision.
+</p>
+</div>
+
+<div class="card">
+<div class="number">03 / STATEMENT</div>
+<h3>Bold Pieces</h3>
+<p>
+Expressive tattoos designed to make an impact while
+working naturally with the body.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="about">
+<div class="container aboutbox">
+
+<div class="eyebrow">Rebecca & Sheena Tattoos</div>
+
+<h2>Your skin is the canvas.</h2>
+
+<p class="intro">
+We believe getting a tattoo should be more than simply
+getting ink. It's an experience — from the first
+conversation about your idea to seeing the finished
+piece in the mirror.
+</p>
+
+<p class="intro">
+Bring your inspiration, your memories, your ideas or
+even just a feeling. We'll help turn it into something
+you'll be proud to wear.
+</p>
+
+<div class="quote">
+“Your story is the inspiration. Your skin is the canvas.”
+</div>
+
+</div>
+</section>
+
+<section id="booking">
+<div class="container">
+
+<div class="contact">
+
+<div class="info">
+
+<div class="eyebrow">Let's create something</div>
+
+<h2>Book your next tattoo.</h2>
+
+<p>
+Ready to start? Send us your idea and we'll get the
+conversation started.
+</p>
+
+<strong>Phone</strong>
+<a href="tel:+15306821175">+1 (530) 682-1175</a>
+
+<strong>WhatsApp</strong>
+<a href="https://wa.me/15306821175">
+Message Rebecca & Sheena
+</a>
+
+<strong>Studio</strong>
+<a href="https://www.google.com/maps/search/?api=1&query=403%20W%20ROYLE%20St%2C%20Richmond%2C%20MO%2064085">
+403 W ROYLE St<br>
+Richmond, MO 64085
+</a>
+
+</div>
+
+<form id="form">
+
+<input id="name" placeholder="Your name" required>
+
+<input id="phone" placeholder="Phone number" required>
+
+<select id="style">
+<option>Choose tattoo style</option>
+<option>Custom Design</option>
+<option>Fine Line</option>
+<option>Bold / Statement</option>
+<option>Not Sure Yet</option>
+</select>
+
+<input id="placement" placeholder="Tattoo placement">
+
+<textarea id="idea"
+placeholder="Tell us about your tattoo idea, size and any references..."></textarea>
+
+<button type="submit">
+SEND BOOKING REQUEST
+</button>
+
+</form>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+© 2026 Rebecca & Sheena Tattoos
+<br>
+Richmond, Missouri • Custom Tattoo Artistry
+</div>
+</footer>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let style=document.getElementById("style").value;
+let placement=document.getElementById("placement").value;
+let idea=document.getElementById("idea").value;
+
+let message=
+"Hello Rebecca & Sheena Tattoos!%0A%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Style: "+encodeURIComponent(style)+"%0A"+
+"Placement: "+encodeURIComponent(placement)+"%0A"+
+"Idea: "+encodeURIComponent(idea);
+
+window.open("https://wa.me/15306821175?text="+message,"_blank");
+});
+</script>
+
+</body>
+</html>
