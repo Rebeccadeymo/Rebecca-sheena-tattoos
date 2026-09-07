@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Rebecca & Sheena Tattoos — Professional tattoo studio in Richmond, Missouri. Book your custom tattoo appointment today.">
-<meta name="theme-color" content="#090909">
+<meta name="theme-color" content="#080808">
 
 <title>Rebecca & Sheena Tattoos | Richmond, Missouri</title>
 
@@ -79,7 +79,6 @@ nav {
 
 .nav-links a {
   color: #ddd;
-  transition: .2s;
 }
 
 .nav-links a:hover {
@@ -320,7 +319,7 @@ section {
 }
 
 .booking-box {
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
   background: #111;
   border: 1px solid #333;
@@ -374,11 +373,11 @@ textarea {
   resize: vertical;
 }
 
-/* DEPOSIT INSIDE BOOKING */
+/* DEPOSIT */
 
 .deposit-box {
-  margin: 10px 0 25px;
-  padding: 25px;
+  margin: 8px 0 22px;
+  padding: 26px;
   border: 1px solid #c7a15a;
   background: #17140e;
   border-radius: 8px;
@@ -386,7 +385,7 @@ textarea {
 
 .deposit-box h3 {
   color: #c7a15a;
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -396,28 +395,28 @@ textarea {
 }
 
 .deposit-highlight {
-  font-weight: 800;
   color: #fff;
+  font-weight: 800;
 }
 
 .payment-options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .payment-option {
   background: #0b0b0b;
   border: 1px solid #303030;
   border-radius: 6px;
-  padding: 16px;
+  padding: 17px;
 }
 
 .payment-option strong {
   display: block;
   color: #c7a15a;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .payment-option span {
@@ -427,31 +426,120 @@ textarea {
   word-break: break-word;
 }
 
-.payment-note {
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid #333;
+.payment-option a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c7a15a;
   font-size: 13px;
-  color: #aaa;
+  font-weight: 700;
 }
 
-.copy-button {
-  margin-top: 8px;
-  border: 1px solid #444;
-  background: #1a1a1a;
-  color: #fff;
-  padding: 7px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
+.payment-note {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #333;
+  color: #aaa;
+  font-size: 14px;
 }
+
+.payment-note strong {
+  color: #fff;
+}
+
+/* PAYMENT METHOD SELECTOR */
+
+.method-title {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.method-option {
+  position: relative;
+}
+
+.method-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.method-option label {
+  margin: 0;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid #383838;
+  background: #0b0b0b;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.method-option input:checked + label {
+  border-color: #c7a15a;
+  background: #211b10;
+  color: #c7a15a;
+}
+
+/* RECEIPT */
+
+.receipt-box {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #333;
+  border-radius: 7px;
+  background: #0b0b0b;
+}
+
+.receipt-box h4 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.receipt-box p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.receipt-box input[type="file"] {
+  padding: 10px;
+  background: #111;
+  border-color: #444;
+}
+
+.receipt-required {
+  color: #c7a15a;
+  font-weight: 800;
+}
+
+.receipt-preview {
+  display: none;
+  margin-top: 15px;
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: cover;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+/* CONFIRMATION */
 
 .deposit-confirm {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  margin: 18px 0;
-  padding: 16px;
+  margin: 20px 0;
+  padding: 17px;
   background: #0b0b0b;
   border: 1px solid #292929;
   border-radius: 6px;
@@ -572,7 +660,8 @@ footer p {
     grid-column: auto;
   }
 
-  .payment-options {
+  .payment-options,
+  .method-grid {
     grid-template-columns: 1fr;
   }
 
@@ -620,7 +709,10 @@ footer p {
 
 <nav>
   <div class="container nav-inner">
-    <a href="#top" class="logo">Rebecca <span>&</span> Sheena Tattoos</a>
+
+    <a href="#top" class="logo">
+      Rebecca <span>&</span> Sheena Tattoos
+    </a>
 
     <div class="nav-links">
       <a href="#portfolio">Portfolio</a>
@@ -631,12 +723,14 @@ footer p {
       <a href="#contact">Contact</a>
       <a href="#booking" class="nav-button">BOOK APPOINTMENT</a>
     </div>
+
   </div>
 </nav>
 
 <!-- HERO -->
 
 <header class="hero" id="top">
+
   <div class="container hero-content">
 
     <div class="eyebrow">Richmond, Missouri</div>
@@ -652,11 +746,17 @@ footer p {
     </p>
 
     <div class="hero-buttons">
-      <a href="#booking" class="btn btn-primary">BOOK AN APPOINTMENT</a>
-      <a href="#portfolio" class="btn btn-secondary">VIEW OUR WORK</a>
+      <a href="#booking" class="btn btn-primary">
+        BOOK AN APPOINTMENT
+      </a>
+
+      <a href="#portfolio" class="btn btn-secondary">
+        VIEW OUR WORK
+      </a>
     </div>
 
   </div>
+
 </header>
 
 <!-- PORTFOLIO -->
@@ -718,7 +818,9 @@ footer p {
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -762,7 +864,9 @@ footer p {
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -779,6 +883,7 @@ footer p {
     <div class="about-grid">
 
       <div class="about-box">
+
         <h3>More than just ink.</h3>
 
         <p>
@@ -791,9 +896,11 @@ footer p {
           communication, detail and creating an experience you'll
           feel confident about.
         </p>
+
       </div>
 
       <div class="about-box">
+
         <h3>Your idea. Your story. Your tattoo.</h3>
 
         <p>
@@ -804,10 +911,13 @@ footer p {
         <a href="#booking" class="btn btn-primary">
           START YOUR BOOKING
         </a>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- REVIEWS -->
@@ -825,30 +935,38 @@ footer p {
 
       <div class="review">
         <div class="stars">★★★★★</div>
+
         <p>
           Amazing attention to detail and such a beautiful finished tattoo.
         </p>
+
         <strong>Happy Client</strong>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
+
         <p>
           Professional, creative and easy to work with from beginning to end.
         </p>
+
         <strong>Happy Client</strong>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
+
         <p>
           The tattoo came out even better than I imagined. Highly recommended.
         </p>
+
         <strong>Happy Client</strong>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- BOOKING -->
@@ -858,159 +976,390 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
+
       <div class="eyebrow">Appointments</div>
+
       <h2>Book Your Tattoo</h2>
+
       <p>
-        Complete the form below and we'll review your appointment request.
+        Complete your appointment request below.
+        Your $100 deposit and proof of payment are required with your request.
       </p>
+
     </div>
 
     <div class="booking-box">
 
-      <form id="bookingForm">
+      <!-- FORM SUBMIT BACKEND -->
+
+      <form
+        action="https://formsubmit.co/Rebeccapalmer542@yahoo.com"
+        method="POST"
+        enctype="multipart/form-data">
+
+        <!-- FORM SETTINGS -->
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Tattoo Appointment Request - Rebecca & Sheena Tattoos">
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table">
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="true">
+
+        <input
+          type="hidden"
+          name="_url"
+          value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
 
         <div class="form-grid">
 
+          <!-- CUSTOMER INFORMATION -->
+
           <div class="form-group">
-            <label for="name">Full Name *</label>
+
+            <label for="name">
+              Full Name *
+            </label>
+
             <input
               type="text"
               id="name"
-              name="name"
+              name="Full Name"
               placeholder="Your full name"
               required>
+
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone Number *</label>
+
+            <label for="phone">
+              Phone Number *
+            </label>
+
             <input
               type="tel"
               id="phone"
-              name="phone"
+              name="Phone Number"
               placeholder="Your phone number"
               required>
+
           </div>
 
           <div class="form-group">
-            <label for="email">Email Address *</label>
+
+            <label for="email">
+              Email Address *
+            </label>
+
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Your email"
               required>
+
           </div>
 
           <div class="form-group">
-            <label for="date">Preferred Date *</label>
+
+            <label for="date">
+              Preferred Date *
+            </label>
+
             <input
               type="date"
               id="date"
-              name="date"
+              name="Preferred Date"
               required>
+
           </div>
 
           <div class="form-group">
-            <label for="time">Preferred Time *</label>
+
+            <label for="time">
+              Preferred Time *
+            </label>
+
             <input
               type="time"
               id="time"
-              name="time"
+              name="Preferred Time"
               required>
+
           </div>
 
           <div class="form-group">
-            <label for="placement">Tattoo Placement *</label>
+
+            <label for="placement">
+              Tattoo Placement *
+            </label>
+
             <input
               type="text"
               id="placement"
-              name="placement"
+              name="Tattoo Placement"
               placeholder="Example: forearm"
               required>
+
           </div>
 
           <div class="form-group full">
-            <label for="size">Approximate Tattoo Size</label>
-            <select id="size" name="size">
-              <option value="">Select a size</option>
-              <option value="Small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="Large">Large</option>
-              <option value="Extra Large">Extra Large</option>
-              <option value="Not Sure">Not Sure Yet</option>
+
+            <label for="size">
+              Approximate Tattoo Size
+            </label>
+
+            <select
+              id="size"
+              name="Approximate Tattoo Size">
+
+              <option value="">
+                Select a size
+              </option>
+
+              <option value="Small">
+                Small
+              </option>
+
+              <option value="Medium">
+                Medium
+              </option>
+
+              <option value="Large">
+                Large
+              </option>
+
+              <option value="Extra Large">
+                Extra Large
+              </option>
+
+              <option value="Not Sure">
+                Not Sure Yet
+              </option>
+
             </select>
+
           </div>
 
           <div class="form-group full">
-            <label for="description">Tell Us About Your Tattoo *</label>
+
+            <label for="description">
+              Tell Us About Your Tattoo *
+            </label>
+
             <textarea
               id="description"
-              name="description"
+              name="Tattoo Description"
               placeholder="Describe your tattoo idea, style, colors, meaning, placement, etc."
               required></textarea>
+
           </div>
 
-          <!-- DEPOSIT / PAYMENT INFORMATION IS NOW PART OF BOOKING -->
+          <!-- DEPOSIT INFORMATION -->
 
           <div class="form-group full">
 
             <div class="deposit-box">
 
-              <h3>$100 Appointment Deposit</h3>
+              <h3>
+                $100 Upfront Appointment Deposit
+              </h3>
 
               <p>
-                A <span class="deposit-highlight">$100 deposit is required
-                to secure your tattoo appointment.</span>
+                A
+                <span class="deposit-highlight">
+                  $100 deposit is required before your appointment can be confirmed.
+                </span>
               </p>
 
               <p>
-                This deposit is a <strong>down payment toward your tattoo</strong>.
-                It will be deducted from your final tattoo balance.
+                The $100 deposit is a
+                <strong>down payment toward your tattoo</strong>.
+                It will be
+                <strong>deducted from your final tattoo payment</strong>.
               </p>
+
+              <p>
+                Please make your $100 deposit using one of the payment
+                methods below, then upload your proof of payment with
+                this appointment request.
+              </p>
+
+              <!-- PAYMENT OPTIONS -->
 
               <div class="payment-options">
 
                 <div class="payment-option">
-                  <strong>Cash App</strong>
-                  <span>$Msheena57</span>
+
+                  <strong>
+                    Cash App
+                  </strong>
+
+                  <span>
+                    $Msheena57
+                  </span>
+
                 </div>
 
                 <div class="payment-option">
-                  <strong>Venmo</strong>
-                  <span>@Sheena-Rebeccatattoos</span>
+
+                  <strong>
+                    Venmo
+                  </strong>
+
+                  <span>
+                    @Sheena-Rebeccatattoos
+                  </span>
+
                   <a
                     href="https://venmo.com/u/Sheena-Rebeccatattoos"
                     target="_blank"
-                    rel="noopener"
-                    class="copy-button"
-                    style="display:inline-block;">
+                    rel="noopener">
                     Open Venmo
                   </a>
+
                 </div>
 
                 <div class="payment-option">
-                  <strong>Zelle</strong>
-                  <span>sheenagmartin2357@gmail.com</span>
-                  <button
-                    type="button"
-                    class="copy-button"
-                    onclick="copyZelleEmail()">
-                    Copy Zelle Email
-                  </button>
+
+                  <strong>
+                    Zelle
+                  </strong>
+
+                  <span>
+                    sheenagmartin2357@gmail.com
+                  </span>
+
                 </div>
 
               </div>
 
-              <div class="payment-note">
-                <strong>Important:</strong>
-                Please submit your appointment request first.
-                Your appointment is not confirmed until the studio
-                accepts your request and the $100 deposit has been received.
+              <!-- PAYMENT METHOD -->
+
+              <label class="method-title">
+                Which payment method did you use? *
+              </label>
+
+              <div class="method-grid">
+
+                <div class="method-option">
+
+                  <input
+                    type="radio"
+                    id="cashapp"
+                    name="Deposit Payment Method"
+                    value="Cash App"
+                    required>
+
+                  <label for="cashapp">
+                    Cash App
+                  </label>
+
+                </div>
+
+                <div class="method-option">
+
+                  <input
+                    type="radio"
+                    id="venmo"
+                    name="Deposit Payment Method"
+                    value="Venmo">
+
+                  <label for="venmo">
+                    Venmo
+                  </label>
+
+                </div>
+
+                <div class="method-option">
+
+                  <input
+                    type="radio"
+                    id="zelle"
+                    name="Deposit Payment Method"
+                    value="Zelle">
+
+                  <label for="zelle">
+                    Zelle
+                  </label>
+
+                </div>
+
               </div>
+
+              <!-- PAYMENT STATUS -->
+
+              <input
+                type="hidden"
+                name="Deposit Amount"
+                value="$100">
+
+              <p class="payment-note">
+
+                <strong>
+                  Important:
+                </strong>
+
+                Your appointment request is not considered confirmed
+                until the studio reviews your request and verifies the
+                $100 deposit.
+
+              </p>
 
             </div>
 
           </div>
+
+          <!-- RECEIPT UPLOAD -->
+
+          <div class="form-group full">
+
+            <div class="receipt-box">
+
+              <h4>
+                🧾 Upload Proof of Your $100 Payment *
+              </h4>
+
+              <p>
+                After paying the $100 deposit, upload a screenshot,
+                receipt or other proof showing that the payment was made.
+                This proof will be sent together with your appointment request.
+              </p>
+
+              <label for="receipt">
+                Payment Receipt / Proof *
+              </label>
+
+              <input
+                type="file"
+                id="receipt"
+                name="Payment Proof"
+                accept="image/jpeg,image/png,image/webp,application/pdf"
+                required>
+
+              <p style="margin-top:10px;margin-bottom:0;">
+                Accepted: JPG, PNG, WEBP or PDF.
+                Maximum total upload size: 10 MB.
+              </p>
+
+              <img
+                id="receiptPreview"
+                class="receipt-preview"
+                alt="Payment receipt preview">
+
+            </div>
+
+          </div>
+
+          <!-- CUSTOMER AGREEMENT -->
 
           <div class="form-group full">
 
@@ -1018,19 +1367,27 @@ footer p {
 
               <input
                 type="checkbox"
-                id="depositAgree"
-                name="depositAgree"
+                id="depositAgreement"
+                name="Deposit Agreement"
+                value="Customer confirms understanding"
                 required>
 
-              <label for="depositAgree">
-                I understand that a $100 deposit is required to secure
-                my appointment and that the deposit will be deducted
-                from my final tattoo balance.
+              <label for="depositAgreement">
+
+                I understand that a
+                <strong>$100 upfront deposit</strong>
+                is required to secure my tattoo appointment,
+                that I must provide proof of payment with this request,
+                and that the $100 deposit will be
+                <strong>deducted from my final tattoo payment</strong>.
+
               </label>
 
             </div>
 
           </div>
+
+          <!-- SUBMIT -->
 
           <div class="form-group full">
 
@@ -1038,7 +1395,9 @@ footer p {
               type="submit"
               class="btn btn-primary"
               style="width:100%; cursor:pointer;">
-              SUBMIT APPOINTMENT REQUEST
+
+              SUBMIT APPOINTMENT + PAYMENT PROOF
+
             </button>
 
           </div>
@@ -1048,7 +1407,9 @@ footer p {
       </form>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -1058,45 +1419,70 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
-      <div class="eyebrow">Get In Touch</div>
-      <h2>Contact Us</h2>
+
+      <div class="eyebrow">
+        Get In Touch
+      </div>
+
+      <h2>
+        Contact Us
+      </h2>
+
       <p>
-        Have a question before booking? Reach out directly.
+        Have a question before booking?
+        Reach out directly.
       </p>
+
     </div>
 
     <div class="contact-grid">
 
       <div class="contact-card">
-        <h3>Call</h3>
+
+        <h3>
+          Call
+        </h3>
+
         <p>
           <a href="tel:+15306821175">
             +1 (530) 682-1175
           </a>
         </p>
+
       </div>
 
       <div class="contact-card">
-        <h3>Text / SMS</h3>
+
+        <h3>
+          Text / SMS
+        </h3>
+
         <p>
           <a href="sms:+15306821175">
             Send us a text message
           </a>
         </p>
+
       </div>
 
       <div class="contact-card">
-        <h3>Email</h3>
+
+        <h3>
+          Email
+        </h3>
+
         <p>
           <a href="mailto:Rebeccapalmer542@yahoo.com">
             Rebeccapalmer542@yahoo.com
           </a>
         </p>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 <!-- FOOTER -->
@@ -1115,76 +1501,68 @@ footer p {
 
     <p>
       Call or Text:
-      <a href="tel:+15306821175">+1 (530) 682-1175</a>
+      <a href="tel:+15306821175">
+        +1 (530) 682-1175
+      </a>
     </p>
 
     <p>
-      © 2026 Rebecca & Sheena Tattoos. All rights reserved.
+      © 2026 Rebecca & Sheena Tattoos.
+      All rights reserved.
     </p>
 
   </div>
 
 </footer>
 
+<!-- RECEIPT PREVIEW -->
+
 <script>
 
-/* ZELLE COPY BUTTON */
+const receiptInput = document.getElementById("receipt");
+const receiptPreview = document.getElementById("receiptPreview");
 
-function copyZelleEmail() {
+receiptInput.addEventListener("change", function() {
 
-  const email = "sheenagmartin2357@gmail.com";
+  const file = this.files[0];
 
-  navigator.clipboard.writeText(email)
-    .then(function() {
-      alert("Zelle email copied: " + email);
-    })
-    .catch(function() {
-      alert("Zelle email: " + email);
-    });
-}
+  if (!file) {
+    receiptPreview.style.display = "none";
+    receiptPreview.src = "";
+    return;
+  }
 
+  if (file.size > 10 * 1024 * 1024) {
 
-/* BOOKING FORM */
+    alert(
+      "The payment proof file is too large. Please choose a file smaller than 10 MB."
+    );
 
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    this.value = "";
+    receiptPreview.style.display = "none";
+    receiptPreview.src = "";
 
-  event.preventDefault();
+    return;
+  }
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const date = document.getElementById("date").value;
-  const time = document.getElementById("time").value;
-  const placement = document.getElementById("placement").value.trim();
-  const size = document.getElementById("size").value;
-  const description = document.getElementById("description").value.trim();
+  if (file.type.startsWith("image/")) {
 
-  const message =
-`Hello Rebecca & Sheena Tattoos,
+    const reader = new FileReader();
 
-I would like to request a tattoo appointment.
+    reader.onload = function(e) {
 
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Preferred Date: ${date}
-Preferred Time: ${time}
-Placement: ${placement}
-Approximate Size: ${size || "Not specified"}
+      receiptPreview.src = e.target.result;
+      receiptPreview.style.display = "block";
 
-Tattoo Details:
-${description}
+    };
 
-I understand that a $100 deposit is required to secure my appointment and that the deposit will be deducted from my final tattoo balance.
+    reader.readAsDataURL(file);
 
-Please let me know if my requested appointment time is available.
+  } else {
 
-Thank you.`;
+    receiptPreview.style.display = "none";
 
-  const smsNumber = "+15306821175";
-
-  window.location.href =
-    "sms:" + smsNumber + "?&body=" + encodeURIComponent(message);
+  }
 
 });
 
