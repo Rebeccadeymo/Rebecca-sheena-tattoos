@@ -642,19 +642,6 @@ textarea{
   margin-bottom:3px;
 }
 
-.contact-feature-image{
-  overflow:hidden;
-  background:#eee;
-  border-radius:16px;
-}
-
-.contact-feature-image img{
-  width:100%;
-  height:520px;
-  object-fit:cover;
-}
-
-/* CONTACT ICONS */
 .contact-line{
   display:flex;
   align-items:center;
@@ -683,18 +670,37 @@ textarea{
   color:#d63384;
 }
 
-/* CHAT */
+/* PROFESSIONAL SMS / LIVE AGENT BUTTON */
 .live-chat{
   position:fixed;
   right:20px;
   bottom:20px;
   z-index:999;
-  background:#25d366;
+
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  background:#111;
   color:#fff;
-  padding:13px 18px;
-  border-radius:999px;
+
+  padding:14px 20px;
+  border:1px solid #b58a3a;
+  border-radius:10px;
+
+  font-size:15px;
   font-weight:800;
-  box-shadow:0 8px 25px rgba(0,0,0,.2);
+  letter-spacing:.2px;
+
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
+  transition:all .2s ease;
+}
+
+.live-chat:hover{
+  background:#b58a3a;
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 10px 28px rgba(0,0,0,.22);
 }
 
 /* FOOTER */
@@ -839,6 +845,8 @@ footer p{
   .live-chat{
     right:14px;
     bottom:14px;
+    padding:13px 17px;
+    font-size:14px;
   }
 }
 </style>
@@ -1833,14 +1841,12 @@ referrerpolicy="no-referrer">
 </main>
 
 
-<!-- WHATSAPP / LIVE CHAT -->
+<!-- SMS / LIVE AGENT -->
 <a
 class="live-chat"
-href="https://wa.me/15306821175?text=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d%20like%20to%20ask%20about%20booking%20a%20tattoo."
-target="_blank"
-rel="noopener noreferrer">
+href="sms:+15306821175?&body=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d%20like%20to%20ask%20about%20booking%20a%20tattoo.">
 
-💬 Live Chat
+📱 Text Us
 
 </a>
 
