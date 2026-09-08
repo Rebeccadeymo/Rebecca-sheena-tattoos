@@ -312,24 +312,9 @@ section{
 
 /* BOOKING */
 .booking-layout{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:40px;
-  align-items:start;
-}
-
-.booking-feature-image{
-  overflow:hidden;
-  background:#eee;
-  border-radius:16px;
-  position:sticky;
-  top:100px;
-}
-
-.booking-feature-image img{
-  width:100%;
-  height:650px;
-  object-fit:cover;
+  display:block;
+  max-width:900px;
+  margin:auto;
 }
 
 .booking-form-wrapper{
@@ -783,9 +768,7 @@ footer p{
     min-height:680px;
   }
 
-  .hero-grid,
   .about-grid,
-  .booking-layout,
   .contact-grid{
     grid-template-columns:1fr;
   }
@@ -801,15 +784,6 @@ footer p{
 
   .payment-methods{
     grid-template-columns:1fr;
-  }
-
-  .booking-feature-image{
-    position:relative;
-    top:auto;
-  }
-
-  .booking-feature-image img{
-    height:420px;
   }
 }
 
@@ -987,48 +961,38 @@ Take a look at some of our tattoo work and get inspired for your next piece.
 <div class="gallery">
 
 <div class="gallery-item">
-
 <img
 src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
-
 </div>
 
 <div class="gallery-item">
-
 <img
 src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
-
 </div>
 
 <div class="gallery-item">
-
 <img
 src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
 alt="Collection of tattoo artwork"
 referrerpolicy="no-referrer">
-
 </div>
 
 <div class="gallery-item">
-
 <img
 src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
-
 </div>
 
 <div class="gallery-item">
-
 <img
 src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
-
 </div>
 
 </div>
@@ -1275,21 +1239,12 @@ Book Your Tattoo
 </h2>
 
 <p>
-Complete the form below and send your booking payment proof to request your appointment.
+Complete the form below, make your booking payment, and upload your payment proof to request your appointment.
 </p>
 
 </div>
 
 <div class="booking-layout">
-
-<div class="booking-feature-image">
-
-<img
-src="https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907"
-alt="Tattoo client in the studio"
-referrerpolicy="no-referrer">
-
-</div>
 
 <div class="booking-form-wrapper">
 
@@ -1319,33 +1274,10 @@ aria-live="polite">
 
 <form
 id="bookingForm"
-action="https://formspree.io/f/myeynvdz"
-method="POST"
-enctype="multipart/form-data">
+enctype="multipart/form-data"
+novalidate>
 
-<!-- FORMSPREE SETTINGS -->
-
-<input
-type="hidden"
-name="_subject"
-value="New Tattoo Appointment Request">
-
-<input
-type="hidden"
-name="_format"
-value="plain">
-
-<!-- ANTI-SPAM HONEYPOT -->
-
-<input
-type="text"
-name="_gotcha"
-tabindex="-1"
-autocomplete="off"
-style="display:none !important;position:absolute;left:-9999px;"
-aria-hidden="true">
-
-<!-- NAME + PHONE -->
+<!-- FULL NAME + PHONE -->
 
 <div class="form-row">
 
@@ -1358,7 +1290,7 @@ Full Name *
 <input
 type="text"
 id="fullName"
-name="Full Name"
+name="fi-sender-fullName"
 placeholder="Your full name"
 autocomplete="name"
 required>
@@ -1374,7 +1306,7 @@ Phone Number *
 <input
 type="tel"
 id="phone"
-name="Phone Number"
+name="fi-sender-phone"
 placeholder="Your phone number"
 autocomplete="tel"
 required>
@@ -1394,7 +1326,7 @@ Email Address *
 <input
 type="email"
 id="email"
-name="email"
+name="fi-sender-email"
 placeholder="Your email address"
 autocomplete="email"
 required>
@@ -1414,7 +1346,7 @@ Preferred Date *
 <input
 type="date"
 id="preferredDate"
-name="Preferred Date"
+name="fi-date-preferredDate"
 required>
 
 </div>
@@ -1428,7 +1360,7 @@ Preferred Time *
 <input
 type="time"
 id="preferredTime"
-name="Preferred Time"
+name="fi-text-preferredTime"
 required>
 
 </div>
@@ -1448,7 +1380,7 @@ Tattoo Placement *
 <input
 type="text"
 id="placement"
-name="Tattoo Placement"
+name="fi-text-tattooPlacement"
 placeholder="Example: arm, back, chest"
 required>
 
@@ -1463,7 +1395,7 @@ Approximate Size *
 <input
 type="text"
 id="size"
-name="Approximate Size"
+name="fi-text-approximateSize"
 placeholder="Example: 4 inches"
 required>
 
@@ -1481,7 +1413,7 @@ Describe Your Tattoo Idea *
 
 <textarea
 id="description"
-name="Tattoo Description"
+name="fi-text-tattooDescription"
 placeholder="Tell us about the tattoo you would like..."
 required></textarea>
 
@@ -1504,7 +1436,7 @@ $
 <input
 type="text"
 id="depositAmount"
-name="Booking Payment Amount"
+name="fi-number-bookingPaymentAmount"
 inputmode="numeric"
 autocomplete="off"
 placeholder="100"
@@ -1534,13 +1466,11 @@ Choose Your Payment Method *
 
 <div class="payment-methods">
 
-<!-- CASH APP -->
-
 <label class="payment-option">
 
 <input
 type="radio"
-name="Payment Method"
+name="fi-radio-paymentMethod"
 value="Cash App"
 required>
 
@@ -1554,13 +1484,11 @@ Cash App
 
 </label>
 
-<!-- VENMO -->
-
 <label class="payment-option">
 
 <input
 type="radio"
-name="Payment Method"
+name="fi-radio-paymentMethod"
 value="Venmo">
 
 <div class="payment-logo venmo-logo">
@@ -1573,13 +1501,11 @@ Venmo
 
 </label>
 
-<!-- ZELLE -->
-
 <label class="payment-option">
 
 <input
 type="radio"
-name="Payment Method"
+name="fi-radio-paymentMethod"
 value="Zelle">
 
 <div class="payment-logo zelle-logo">
@@ -1593,8 +1519,6 @@ Zelle
 </label>
 
 </div>
-
-<!-- PAYMENT DETAILS -->
 
 <div class="payment-details">
 
@@ -1672,7 +1596,7 @@ Payment Proof / Receipt *
 <input
 type="file"
 id="receipt"
-name="Payment Receipt"
+name="fi-file-paymentReceipt"
 accept=".jpg,.jpeg,.png,.webp,.pdf"
 required>
 
@@ -1705,7 +1629,7 @@ alt="Payment receipt preview">
 <input
 type="checkbox"
 id="agreement"
-name="Booking Agreement"
+name="fi-checkbox-bookingAgreement"
 value="Agreed"
 required>
 
@@ -1762,8 +1686,6 @@ Contact Rebecca & Sheena
 Have a question before booking? Contact us directly.
 </p>
 
-<!-- STUDIO -->
-
 <div class="contact-item">
 
 <h3>
@@ -1776,8 +1698,6 @@ Richmond, MO 64085
 </p>
 
 </div>
-
-<!-- PHONE -->
 
 <div class="contact-item">
 
@@ -1802,8 +1722,6 @@ Phone
 </div>
 
 </div>
-
-<!-- EMAIL -->
 
 <div class="contact-item">
 
@@ -1831,8 +1749,6 @@ Rebeccapalmer542@yahoo.com
 
 </div>
 
-<!-- CONTACT IMAGE -->
-
 <div class="contact-feature-image">
 
 <img
@@ -1848,7 +1764,7 @@ referrerpolicy="no-referrer">
 
 </main>
 
-<!-- SMS / LIVE AGENT -->
+<!-- SMS -->
 
 <a
 class="live-chat"
@@ -1912,6 +1828,9 @@ All rights reserved.
 </div>
 
 </footer>
+
+<!-- FORMINIT SDK -->
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
 
 <script>
 
@@ -1983,6 +1902,15 @@ preferredDate.min =
 today.toISOString().split("T")[0];
 
 
+/* FORMINIT */
+
+const FORM_ID =
+"1f5pzk33x3d";
+
+const forminit =
+new Forminit();
+
+
 /* FORM ELEMENTS */
 
 const bookingForm =
@@ -2003,6 +1931,12 @@ document.getElementById("submitBtn");
 const formStatus =
 document.getElementById("formStatus");
 
+const receiptPreview =
+document.getElementById("receiptPreview");
+
+const receiptPreviewImage =
+document.getElementById("receiptPreviewImage");
+
 
 /* STATUS MESSAGE */
 
@@ -2022,166 +1956,7 @@ block:"center"
 }
 
 
-/* BOOKING VALIDATION */
-
-bookingForm.addEventListener(
-"submit",
-function(event){
-
-/*
-Prevent accidental double submission.
-*/
-
-if(submitBtn.disabled){
-
-event.preventDefault();
-
-return;
-
-}
-
-
-/* PAYMENT AMOUNT */
-
-const rawAmount =
-depositAmount.value.trim();
-
-const amount =
-Number(rawAmount);
-
-
-if(
-!/^\d+$/.test(rawAmount) ||
-!Number.isInteger(amount) ||
-amount < 100 ||
-amount > 200
-){
-
-event.preventDefault();
-
-showStatus(
-"Please enter a whole-dollar booking payment between $100 and $200.",
-"error"
-);
-
-depositAmount.focus();
-
-return;
-
-}
-
-
-/* PAYMENT METHOD */
-
-const paymentMethod =
-document.querySelector(
-'input[name="Payment Method"]:checked'
-);
-
-if(!paymentMethod){
-
-event.preventDefault();
-
-showStatus(
-"Please choose Cash App, Venmo, or Zelle as your payment method.",
-"error"
-);
-
-return;
-
-}
-
-
-/* RECEIPT */
-
-if(
-!receipt.files ||
-receipt.files.length === 0
-){
-
-event.preventDefault();
-
-showStatus(
-"Please upload your payment receipt before submitting your appointment.",
-"error"
-);
-
-receipt.focus();
-
-return;
-
-}
-
-
-const file =
-receipt.files[0];
-
-
-/* FILE SIZE */
-
-if(
-file.size > 10 * 1024 * 1024
-){
-
-event.preventDefault();
-
-showStatus(
-"Your receipt file is larger than 10MB. Please choose a smaller file.",
-"error"
-);
-
-receipt.value = "";
-
-return;
-
-}
-
-
-/* AGREEMENT */
-
-if(!agreement.checked){
-
-event.preventDefault();
-
-showStatus(
-"Please confirm that you understand the booking payment terms.",
-"error"
-);
-
-agreement.focus();
-
-return;
-
-}
-
-
-/*
-Everything passed validation.
-Allow Formspree to receive the normal
-multipart/form-data submission.
-*/
-
-submitBtn.disabled = true;
-
-submitBtn.textContent =
-"Submitting Appointment...";
-
-showStatus(
-"Please wait while your appointment request and payment receipt are being submitted.",
-"info"
-);
-
-});
-
-
 /* RECEIPT PREVIEW */
-
-const receiptPreview =
-document.getElementById("receiptPreview");
-
-const receiptPreviewImage =
-document.getElementById("receiptPreviewImage");
-
 
 receipt.addEventListener(
 "change",
@@ -2201,12 +1976,12 @@ return;
 }
 
 
-/* CHECK SIZE */
+/* FILE SIZE */
 
 if(file.size > 10 * 1024 * 1024){
 
 showStatus(
-"That receipt is larger than 10MB. Please choose a smaller file.",
+"Your receipt file is larger than 10MB. Please choose a smaller file.",
 "error"
 );
 
@@ -2246,6 +2021,248 @@ reader.readAsDataURL(file);
 
 receiptPreview.style.display =
 "none";
+
+}
+
+});
+
+
+/* BOOKING FORM */
+
+bookingForm.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+
+/* HTML REQUIRED FIELD CHECK */
+
+if(!bookingForm.checkValidity()){
+
+bookingForm.reportValidity();
+
+showStatus(
+"Please complete all required fields before submitting your appointment.",
+"error"
+);
+
+return;
+
+}
+
+
+/* PAYMENT AMOUNT */
+
+const rawAmount =
+depositAmount.value.trim();
+
+const amount =
+Number(rawAmount);
+
+
+if(
+!/^\d+$/.test(rawAmount) ||
+!Number.isInteger(amount) ||
+amount < 100 ||
+amount > 200
+){
+
+showStatus(
+"Please enter a whole-dollar booking payment between $100 and $200.",
+"error"
+);
+
+depositAmount.focus();
+
+return;
+
+}
+
+
+/* PAYMENT METHOD */
+
+const paymentMethod =
+document.querySelector(
+'input[name="fi-radio-paymentMethod"]:checked'
+);
+
+if(!paymentMethod){
+
+showStatus(
+"Please choose Cash App, Venmo, or Zelle as your payment method.",
+"error"
+);
+
+return;
+
+}
+
+
+/* RECEIPT */
+
+if(
+!receipt.files ||
+receipt.files.length === 0
+){
+
+showStatus(
+"Please upload your payment receipt before submitting your appointment.",
+"error"
+);
+
+receipt.focus();
+
+return;
+
+}
+
+
+const file =
+receipt.files[0];
+
+
+/* FILE SIZE */
+
+if(
+file.size > 10 * 1024 * 1024
+){
+
+showStatus(
+"Your receipt file is larger than 10MB. Please choose a smaller file.",
+"error"
+);
+
+receipt.value = "";
+
+return;
+
+}
+
+
+/* AGREEMENT */
+
+if(!agreement.checked){
+
+showStatus(
+"Please confirm that you understand the booking payment terms.",
+"error"
+);
+
+agreement.focus();
+
+return;
+
+}
+
+
+/* PREVENT DOUBLE SUBMISSION */
+
+submitBtn.disabled =
+true;
+
+submitBtn.textContent =
+"Submitting Appointment...";
+
+showStatus(
+"Please wait while your appointment request and payment receipt are being submitted.",
+"info"
+);
+
+
+try{
+
+/*
+Forminit requires FormData for file uploads.
+*/
+
+const formData =
+new FormData(bookingForm);
+
+
+/*
+Submit directly to your public Forminit form.
+*/
+
+const result =
+await forminit.submit(
+FORM_ID,
+formData
+);
+
+
+if(result.error){
+
+console.error(
+"Forminit submission error:",
+result.error
+);
+
+showStatus(
+result.error.message ||
+"Something went wrong while submitting your appointment. Please try again.",
+"error"
+);
+
+submitBtn.disabled =
+false;
+
+submitBtn.textContent =
+"Submit Appointment Request";
+
+return;
+
+}
+
+
+/* SUCCESS */
+
+showStatus(
+"🎉 Your appointment request has been submitted successfully! We received your booking information and payment receipt. Your appointment is not confirmed until the studio reviews and verifies your payment.",
+"success"
+);
+
+
+/* RESET */
+
+bookingForm.reset();
+
+receiptPreview.style.display =
+"none";
+
+receiptPreviewImage.src =
+"";
+
+submitBtn.disabled =
+false;
+
+submitBtn.textContent =
+"Submit Appointment Request";
+
+
+formStatus.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+
+}catch(error){
+
+console.error(
+"Forminit error:",
+error
+);
+
+showStatus(
+"We couldn't submit your appointment right now. Please check your internet connection and try again.",
+"error"
+);
+
+submitBtn.disabled =
+false;
+
+submitBtn.textContent =
+"Submit Appointment Request";
 
 }
 
