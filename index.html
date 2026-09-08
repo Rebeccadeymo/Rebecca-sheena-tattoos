@@ -486,10 +486,10 @@ textarea{
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
-  gap:9px;
-  min-height:125px;
-  padding:15px 10px;
+  justify-content:flex-start;
+  gap:7px;
+  min-height:175px;
+  padding:18px 10px;
   background:#fff;
   border:2px solid #e5e5e5;
   border-radius:13px;
@@ -514,16 +514,19 @@ textarea{
   pointer-events:none;
 }
 
+/* PAYMENT LOGOS */
 .payment-logo{
-  width:56px;
-  height:56px;
-  border-radius:14px;
+  width:70px;
+  height:70px;
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
   font-weight:900;
-  font-size:25px;
+  font-size:32px;
   color:#fff;
+  margin-bottom:4px;
+  flex-shrink:0;
 }
 
 .cashapp-logo{
@@ -532,77 +535,41 @@ textarea{
 
 .venmo-logo{
   background:#008cff;
-  font-size:20px;
+  font-size:26px;
 }
 
 .zelle-logo{
   background:#6d1cff;
-  font-size:19px;
+  font-size:25px;
 }
 
 .payment-name{
   font-weight:800;
+  font-size:15px;
+}
+
+.payment-owner{
+  font-size:13px;
+  font-weight:700;
+  color:#555;
+  line-height:1.35;
+}
+
+.payment-handle{
   font-size:14px;
+  font-weight:800;
+  color:#111;
+  line-height:1.35;
+  overflow-wrap:anywhere;
 }
 
-.payment-details{
-  margin-top:15px;
-  padding:18px;
-  background:#fff;
-  border-radius:10px;
-  border:1px solid #eee;
-}
-
-.payment-detail{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:10px 0;
-}
-
-.detail-icon{
-  width:38px;
-  height:38px;
-  flex-shrink:0;
-  border-radius:9px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-  font-weight:900;
-}
-
-.cash-icon{
-  background:#eafff0;
-  color:#00a63c;
-}
-
-.venmo-icon{
-  background:#e8f5ff;
+.payment-handle a{
   color:#0077cc;
+  text-decoration:underline;
+  text-underline-offset:2px;
 }
 
-.zelle-icon{
-  background:#f0e9ff;
-  color:#651cff;
-}
-
-.payment-detail-text{
-  font-size:14px;
-}
-
-.payment-detail-text strong{
-  display:block;
-  font-size:13px;
-  margin-bottom:2px;
-}
-
-.payment-help{
-  color:#666;
-  font-size:13px;
-  margin-top:8px;
-}
-
+/* RECEIPT */
 .receipt-preview{
   margin-top:12px;
   display:none;
@@ -918,6 +885,10 @@ footer p{
     padding:13px 17px;
     font-size:14px;
   }
+
+  .payment-option{
+    min-height:175px;
+  }
 }
 </style>
 </head>
@@ -1000,6 +971,10 @@ View Our Work
 <img
 src="https://i.ibb.co/Zz1L6vqw/A2132795-1-C7-B-453-F-B855-8-E3-B97-F3-BB3-E.png"
 alt="Rebecca & Sheena Tattoos logo"
+width="210"
+height="210"
+loading="eager"
+decoding="async"
 referrerpolicy="no-referrer">
 
 </div>
@@ -1037,6 +1012,8 @@ Take a look at some of our tattoo work and get inspired for your next piece.
 <img
 src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 </div>
 
@@ -1044,6 +1021,8 @@ referrerpolicy="no-referrer">
 <img
 src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 </div>
 
@@ -1051,6 +1030,8 @@ referrerpolicy="no-referrer">
 <img
 src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
 alt="Collection of tattoo artwork"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 </div>
 
@@ -1058,6 +1039,8 @@ referrerpolicy="no-referrer">
 <img
 src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 </div>
 
@@ -1065,6 +1048,8 @@ referrerpolicy="no-referrer">
 <img
 src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 </div>
 
@@ -1208,16 +1193,20 @@ Start Your Booking
 
 </div>
 
-<!-- LOGO REPLACES DUPLICATE TATTOO IMAGE -->
+<!-- OPTIMIZED LOGO DISPLAY -->
 <div
 class="gallery-item"
-style="display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at center,#303030 0%,#111 72%); padding:35px;">
+style="display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at center,#303030 0%,#111 72%); padding:20px;">
 
 <img
 src="https://i.ibb.co/Zz1L6vqw/A2132795-1-C7-B-453-F-B855-8-E3-B97-F3-BB3-E.png"
 alt="Rebecca & Sheena Tattoos logo"
+width="520"
+height="520"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer"
-style="width:100%; max-width:260px; height:auto; object-fit:contain; filter:drop-shadow(0 8px 20px rgba(0,0,0,.55));">
+style="width:100%; height:100%; max-width:520px; max-height:520px; object-fit:contain; filter:drop-shadow(0 8px 20px rgba(0,0,0,.55));">
 
 </div>
 
@@ -1543,6 +1532,8 @@ Choose Your Payment Method *
 
 <div class="payment-methods">
 
+<!-- CASH APP -->
+
 <label class="payment-option">
 
 <input
@@ -1559,7 +1550,17 @@ $
 Cash App
 </div>
 
+<div class="payment-owner">
+Sheena Martin
+</div>
+
+<div class="payment-handle">
+$Msheena57
+</div>
+
 </label>
+
+<!-- VENMO -->
 
 <label class="payment-option">
 
@@ -1576,7 +1577,24 @@ V
 Venmo
 </div>
 
+<div class="payment-owner">
+Lucinda Filsaime
+</div>
+
+<div class="payment-handle">
+
+<a
+href="https://venmo.com/u/Sheena-Rebeccatattoos"
+target="_blank"
+rel="noopener noreferrer">
+@Sheena-Rebeccatattoos
+</a>
+
+</div>
+
 </label>
+
+<!-- ZELLE -->
 
 <label class="payment-option">
 
@@ -1593,70 +1611,15 @@ Z
 Zelle
 </div>
 
-</label>
-
+<div class="payment-owner">
+Sheena Martin
 </div>
 
-<div class="payment-details">
-
-<div class="payment-detail">
-
-<div class="detail-icon cash-icon">
-$
-</div>
-
-<div class="payment-detail-text">
-
-<strong>
-Cash App
-</strong>
-
-$Msheena57
-
-</div>
-
-</div>
-
-<div class="payment-detail">
-
-<div class="detail-icon venmo-icon">
-V
-</div>
-
-<div class="payment-detail-text">
-
-<strong>
-Venmo
-</strong>
-
-<a
-href="https://venmo.com/u/Sheena-Rebeccatattoos"
-target="_blank"
-rel="noopener noreferrer">
-@Sheena-Rebeccatattoos
-</a>
-
-</div>
-
-</div>
-
-<div class="payment-detail">
-
-<div class="detail-icon zelle-icon">
-Z
-</div>
-
-<div class="payment-detail-text">
-
-<strong>
-Zelle
-</strong>
-
+<div class="payment-handle">
 sheenagmartin2357@gmail.com
-
 </div>
 
-</div>
+</label>
 
 </div>
 
@@ -1831,6 +1794,8 @@ Rebeccapalmer542@yahoo.com
 <img
 src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
 alt="Tattoo artwork on a client's back"
+loading="lazy"
+decoding="async"
 referrerpolicy="no-referrer">
 
 </div>
