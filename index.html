@@ -612,6 +612,42 @@ textarea{
   background:#9d762f;
 }
 
+.submit-btn:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+}
+
+/* FORM STATUS */
+.form-status{
+  display:none;
+  margin-bottom:20px;
+  padding:15px 17px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.form-status.info{
+  display:block;
+  background:#fff8e8;
+  color:#805f13;
+  border:1px solid #ecd99d;
+}
+
+.form-status.error{
+  display:block;
+  background:#fff1f1;
+  color:#9d2222;
+  border:1px solid #efb8b8;
+}
+
+.form-status.success{
+  display:block;
+  background:#eaf8ee;
+  color:#176b35;
+  border:1px solid #b9e5c5;
+}
+
 /* CONTACT */
 .contact-grid{
   display:grid;
@@ -670,7 +706,7 @@ textarea{
   color:#d63384;
 }
 
-/* PROFESSIONAL SMS / LIVE AGENT BUTTON */
+/* PROFESSIONAL SMS / LIVE AGENT */
 .live-chat{
   position:fixed;
   right:20px;
@@ -877,7 +913,6 @@ Español
 </div>
 </header>
 
-
 <main>
 
 <!-- HERO -->
@@ -928,7 +963,6 @@ View Our Work
 
 </section>
 
-
 <!-- OUR WORK -->
 <section id="work">
 
@@ -961,7 +995,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 <div class="gallery-item">
 
 <img
@@ -970,7 +1003,6 @@ alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
 
 </div>
-
 
 <div class="gallery-item">
 
@@ -981,7 +1013,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 <div class="gallery-item">
 
 <img
@@ -990,7 +1021,6 @@ alt="Tattoo artwork by Rebecca and Sheena"
 referrerpolicy="no-referrer">
 
 </div>
-
 
 <div class="gallery-item">
 
@@ -1006,7 +1036,6 @@ referrerpolicy="no-referrer">
 </div>
 
 </section>
-
 
 <!-- SERVICES -->
 <section
@@ -1031,7 +1060,6 @@ From simple pieces to detailed custom artwork, we work with you to create someth
 
 </div>
 
-
 <div class="service-grid">
 
 <div class="service-card">
@@ -1050,7 +1078,6 @@ Bring your idea, reference or concept and we'll help transform it into a custom 
 
 </div>
 
-
 <div class="service-card">
 
 <div class="service-icon">
@@ -1066,7 +1093,6 @@ We can work with your vision to create artwork that fits your body and personal 
 </p>
 
 </div>
-
 
 <div class="service-card">
 
@@ -1089,7 +1115,6 @@ We pay close attention to detail so your finished tattoo looks clean, balanced a
 </div>
 
 </section>
-
 
 <!-- ABOUT -->
 <section id="about">
@@ -1146,7 +1171,6 @@ Start Your Booking
 
 </div>
 
-
 <div class="gallery-item">
 
 <img
@@ -1159,7 +1183,6 @@ referrerpolicy="no-referrer">
 </div>
 
 </section>
-
 
 <!-- REVIEWS -->
 <section class="reviews">
@@ -1177,7 +1200,6 @@ What Clients Love
 </h2>
 
 </div>
-
 
 <div class="review-grid">
 
@@ -1197,7 +1219,6 @@ Happy Client
 
 </div>
 
-
 <div class="review">
 
 <div class="stars">
@@ -1213,7 +1234,6 @@ Happy Client
 </strong>
 
 </div>
-
 
 <div class="review">
 
@@ -1236,7 +1256,6 @@ Happy Client
 </div>
 
 </section>
-
 
 <!-- BOOKING -->
 <section
@@ -1261,9 +1280,7 @@ Complete the form below and send your booking payment proof to request your appo
 
 </div>
 
-
 <div class="booking-layout">
-
 
 <div class="booking-feature-image">
 
@@ -1273,7 +1290,6 @@ alt="Tattoo client in the studio"
 referrerpolicy="no-referrer">
 
 </div>
-
 
 <div class="booking-form-wrapper">
 
@@ -1294,6 +1310,12 @@ Your appointment is not confirmed until the studio reviews your request and veri
 
 </div>
 
+<div
+id="formStatus"
+class="form-status"
+role="alert"
+aria-live="polite">
+</div>
 
 <form
 id="bookingForm"
@@ -1301,36 +1323,45 @@ action="https://formsubmit.co/Rebeccapalmer542@yahoo.com"
 method="POST"
 enctype="multipart/form-data">
 
-
 <input
 type="hidden"
 name="_subject"
 value="New Tattoo Appointment Request">
-
 
 <input
 type="hidden"
 name="_template"
 value="table">
 
-
 <input
 type="hidden"
 name="_captcha"
 value="true">
-
 
 <input
 type="hidden"
 name="_url"
 value="https://rebeccadeymo.github.io/Rebecca-sheena-tattoos/">
 
-
 <input
 type="hidden"
 name="_autoresponse"
 value="Thank you for contacting Rebecca & Sheena Tattoos. We received your appointment request and booking payment information. Your appointment is not confirmed until the studio reviews your request and verifies your payment. Your selected booking payment amount will be deducted from your final tattoo payment.">
 
+<!-- REPLY TO CUSTOMER EMAIL -->
+<input
+type="hidden"
+name="_replyto"
+id="replyTo">
+
+<!-- ANTI-SPAM HONEYPOT -->
+<input
+type="text"
+name="_honey"
+tabindex="-1"
+autocomplete="off"
+style="display:none !important;position:absolute;left:-9999px;"
+aria-hidden="true">
 
 <!-- NAME + PHONE -->
 <div class="form-row">
@@ -1346,10 +1377,10 @@ type="text"
 id="fullName"
 name="Full Name"
 placeholder="Your full name"
+autocomplete="name"
 required>
 
 </div>
-
 
 <div class="form-group">
 
@@ -1362,12 +1393,12 @@ type="tel"
 id="phone"
 name="Phone Number"
 placeholder="Your phone number"
+autocomplete="tel"
 required>
 
 </div>
 
 </div>
-
 
 <!-- EMAIL -->
 <div class="form-group">
@@ -1381,10 +1412,10 @@ type="email"
 id="email"
 name="Email Address"
 placeholder="Your email address"
+autocomplete="email"
 required>
 
 </div>
-
 
 <!-- DATE + TIME -->
 <div class="form-row">
@@ -1403,7 +1434,6 @@ required>
 
 </div>
 
-
 <div class="form-group">
 
 <label for="preferredTime">
@@ -1419,7 +1449,6 @@ required>
 </div>
 
 </div>
-
 
 <!-- PLACEMENT + SIZE -->
 <div class="form-row">
@@ -1439,7 +1468,6 @@ required>
 
 </div>
 
-
 <div class="form-group">
 
 <label for="size">
@@ -1457,7 +1485,6 @@ required>
 
 </div>
 
-
 <!-- DESCRIPTION -->
 <div class="form-group">
 
@@ -1472,7 +1499,6 @@ placeholder="Tell us about the tattoo you would like..."
 required></textarea>
 
 </div>
-
 
 <!-- BOOKING PAYMENT -->
 <div class="form-group payment-amount-box">
@@ -1510,7 +1536,6 @@ This payment secures your appointment and will be deducted from your final tatto
 
 </div>
 
-
 <!-- PAYMENT METHODS -->
 <div class="form-group">
 
@@ -1518,9 +1543,7 @@ This payment secures your appointment and will be deducted from your final tatto
 Choose Your Payment Method *
 </label>
 
-
 <div class="payment-methods">
-
 
 <!-- CASH APP -->
 <label class="payment-option">
@@ -1541,7 +1564,6 @@ Cash App
 
 </label>
 
-
 <!-- VENMO -->
 <label class="payment-option">
 
@@ -1559,7 +1581,6 @@ Venmo
 </div>
 
 </label>
-
 
 <!-- ZELLE -->
 <label class="payment-option">
@@ -1581,10 +1602,8 @@ Zelle
 
 </div>
 
-
 <!-- PAYMENT DETAILS -->
 <div class="payment-details">
-
 
 <div class="payment-detail">
 
@@ -1603,7 +1622,6 @@ $Msheena57
 </div>
 
 </div>
-
 
 <div class="payment-detail">
 
@@ -1628,7 +1646,6 @@ rel="noopener noreferrer">
 
 </div>
 
-
 <div class="payment-detail">
 
 <div class="detail-icon zelle-icon">
@@ -1647,11 +1664,9 @@ sheenagmartin2357@gmail.com
 
 </div>
 
-
 </div>
 
 </div>
-
 
 <!-- RECEIPT -->
 <div class="form-group">
@@ -1677,7 +1692,6 @@ Maximum 10MB.
 
 </div>
 
-
 <div
 class="receipt-preview"
 id="receiptPreview">
@@ -1689,7 +1703,6 @@ alt="Payment receipt preview">
 </div>
 
 </div>
-
 
 <!-- AGREEMENT -->
 <div class="checkbox-row">
@@ -1711,11 +1724,11 @@ until the studio reviews and verifies my payment.
 
 </div>
 
-
 <!-- SUBMIT -->
 <button
 type="submit"
-class="submit-btn">
+class="submit-btn"
+id="submitBtn">
 
 Submit Appointment Request
 
@@ -1731,14 +1744,12 @@ Submit Appointment Request
 
 </section>
 
-
 <!-- CONTACT -->
 <section
 class="contact"
 id="contact">
 
 <div class="container contact-grid">
-
 
 <div class="contact-card">
 
@@ -1754,7 +1765,6 @@ Contact Rebecca & Sheena
 Have a question before booking? Contact us directly.
 </p>
 
-
 <!-- STUDIO -->
 <div class="contact-item">
 
@@ -1768,7 +1778,6 @@ Richmond, MO 64085
 </p>
 
 </div>
-
 
 <!-- PHONE -->
 <div class="contact-item">
@@ -1794,7 +1803,6 @@ Phone
 </div>
 
 </div>
-
 
 <!-- EMAIL -->
 <div class="contact-item">
@@ -1823,7 +1831,6 @@ Rebeccapalmer542@yahoo.com
 
 </div>
 
-
 <!-- CONTACT IMAGE -->
 <div class="contact-feature-image">
 
@@ -1840,7 +1847,6 @@ referrerpolicy="no-referrer">
 
 </main>
 
-
 <!-- SMS / LIVE AGENT -->
 <a
 class="live-chat"
@@ -1850,14 +1856,12 @@ href="sms:+15306821175?&body=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d
 
 </a>
 
-
 <!-- FOOTER -->
 <footer>
 
 <div class="container">
 
 <div class="footer-grid">
-
 
 <div>
 
@@ -1871,7 +1875,6 @@ detail and a great client experience.
 </p>
 
 </div>
-
 
 <div class="footer-links">
 
@@ -1895,7 +1898,6 @@ Contact
 
 </div>
 
-
 <div class="copyright">
 
 © <span id="year"></span>
@@ -1907,7 +1909,6 @@ All rights reserved.
 </div>
 
 </footer>
-
 
 <script>
 
@@ -1977,7 +1978,7 @@ preferredDate.min =
 today.toISOString().split("T")[0];
 
 
-/* BOOKING PAYMENT */
+/* BOOKING FORM */
 
 const bookingForm =
 document.getElementById("bookingForm");
@@ -1985,14 +1986,63 @@ document.getElementById("bookingForm");
 const depositAmount =
 document.getElementById("depositAmount");
 
+const receipt =
+document.getElementById("receipt");
+
+const agreement =
+document.getElementById("agreement");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+const formStatus =
+document.getElementById("formStatus");
+
+const customerEmail =
+document.getElementById("email");
+
+const replyTo =
+document.getElementById("replyTo");
+
+
+/* STATUS MESSAGE */
+
+function showStatus(message,type){
+
+formStatus.textContent =
+message;
+
+formStatus.className =
+"form-status " + type;
+
+formStatus.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+
+/* BOOKING FORM VALIDATION */
+
+bookingForm.addEventListener(
+"submit",
+function(event){
 
 /*
-IMPORTANT:
-Do NOT change the value while the customer is typing.
-This allows 100, 110, 125, 150, 180, 199 and 200.
+Prevent accidental double submission.
 */
 
-bookingForm.addEventListener("submit",function(event){
+if(submitBtn.disabled){
+
+event.preventDefault();
+
+return;
+
+}
+
+
+/* PAYMENT AMOUNT */
 
 const rawAmount =
 depositAmount.value.trim();
@@ -2010,8 +2060,9 @@ amount > 200
 
 event.preventDefault();
 
-alert(
-"Please enter a whole-dollar booking payment between $100 and $200."
+showStatus(
+"Please enter a whole-dollar booking payment between $100 and $200.",
+"error"
 );
 
 depositAmount.focus();
@@ -2032,8 +2083,9 @@ if(!paymentMethod){
 
 event.preventDefault();
 
-alert(
-"Please choose Cash App, Venmo, or Zelle as your payment method."
+showStatus(
+"Please choose Cash App, Venmo, or Zelle as your payment method.",
+"error"
 );
 
 return;
@@ -2043,10 +2095,6 @@ return;
 
 /* RECEIPT */
 
-const receipt =
-document.getElementById("receipt");
-
-
 if(
 !receipt.files ||
 receipt.files.length === 0
@@ -2054,8 +2102,9 @@ receipt.files.length === 0
 
 event.preventDefault();
 
-alert(
-"Please upload your payment receipt."
+showStatus(
+"Please upload your payment receipt before submitting your appointment.",
+"error"
 );
 
 receipt.focus();
@@ -2069,14 +2118,17 @@ const file =
 receipt.files[0];
 
 
+/* FILE SIZE */
+
 if(
 file.size > 10 * 1024 * 1024
 ){
 
 event.preventDefault();
 
-alert(
-"Your receipt file is larger than 10MB. Please choose a smaller file."
+showStatus(
+"Your receipt file is larger than 10MB. Please choose a smaller file.",
+"error"
 );
 
 receipt.value = "";
@@ -2088,16 +2140,13 @@ return;
 
 /* AGREEMENT */
 
-const agreement =
-document.getElementById("agreement");
-
-
 if(!agreement.checked){
 
 event.preventDefault();
 
-alert(
-"Please confirm that you understand the booking payment terms."
+showStatus(
+"Please confirm that you understand the booking payment terms.",
+"error"
 );
 
 agreement.focus();
@@ -2106,13 +2155,36 @@ return;
 
 }
 
+
+/*
+Send the customer's email as the reply-to address.
+This makes it easier to reply directly to the customer
+from the appointment email.
+*/
+
+replyTo.value =
+customerEmail.value.trim();
+
+
+/*
+Disable the button immediately.
+This prevents double-clicks and repeated submissions.
+*/
+
+submitBtn.disabled = true;
+
+submitBtn.textContent =
+"Submitting Appointment...";
+
+showStatus(
+"Please wait while your appointment request and payment proof are being submitted. Do not close this page.",
+"info"
+);
+
 });
 
 
 /* RECEIPT PREVIEW */
-
-const receiptInput =
-document.getElementById("receipt");
 
 const receiptPreview =
 document.getElementById("receiptPreview");
@@ -2121,7 +2193,7 @@ const receiptPreviewImage =
 document.getElementById("receiptPreviewImage");
 
 
-receiptInput.addEventListener(
+receipt.addEventListener(
 "change",
 function(){
 
@@ -2130,6 +2202,23 @@ this.files[0];
 
 
 if(!file){
+
+receiptPreview.style.display =
+"none";
+
+return;
+
+}
+
+
+if(file.size > 10 * 1024 * 1024){
+
+showStatus(
+"That receipt is larger than 10MB. Please choose a smaller file.",
+"error"
+);
+
+this.value = "";
 
 receiptPreview.style.display =
 "none";
