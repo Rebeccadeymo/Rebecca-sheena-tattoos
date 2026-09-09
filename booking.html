@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book an Appointment | Rebecca & Sheena Tattoos</title>
+
+<meta name="description" content="Book a professional tattoo appointment with Rebecca & Sheena Tattoos. Studio appointments and home tattoo services available.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(255,190,215,.35),transparent 30%),
+        radial-gradient(circle at 90% 20%,rgba(255,215,230,.4),transparent 30%),
+        linear-gradient(180deg,#fff7fa 0%,#fff 45%,#fff3f7 100%);
+    color:#222;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,245,249,.97);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(190,120,145,.22);
+    padding:10px 20px;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#c26a91;
+}
+
+.lang-btn{
+    border:1px solid #c78aa4;
+    background:#fff;
+    color:#9b4f72;
+    border-radius:20px;
+    padding:8px 13px;
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.booking-hero{
+    min-height:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(rgba(80,10,42,.52),rgba(45,5,27,.68)),
+        url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907") center/cover no-repeat;
+}
+
+.booking-hero-content{
+    position:relative;
+    z-index:2;
+    padding:70px 20px;
+    color:#fff;
+}
+
+.booking-hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(58px,9vw,105px);
+    line-height:1;
+    font-weight:400;
+    text-shadow:0 0 25px rgba(255,170,205,.65);
+}
+
+.booking-hero p{
+    max-width:700px;
+    margin:20px auto 0;
+    font-size:15px;
+    letter-spacing:.4px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.booking-wrap{
+    max-width:950px;
+    margin:0 auto;
+    padding:55px 18px 80px;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.intro h2{
+    font-family:'Great Vibes',cursive;
+    color:#9c4f72;
+    font-size:52px;
+    font-weight:400;
+}
+
+.intro p{
+    max-width:720px;
+    margin:10px auto;
+    color:#555;
+}
+
+.notice{
+    background:linear-gradient(135deg,#ffe8f1,#fff7fa);
+    border:1px solid #e4b2c6;
+    border-radius:18px;
+    padding:20px;
+    margin:25px 0 35px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(150,70,105,.07);
+}
+
+.notice strong{
+    color:#9b4f72;
+    font-family:'Cinzel',serif;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form{
+    width:100%;
+}
+
+.form-section{
+    background:rgba(255,255,255,.94);
+    border:1px solid #ead5df;
+    border-radius:22px;
+    padding:28px;
+    margin-bottom:25px;
+    box-shadow:0 10px 35px rgba(110,50,80,.08);
+}
+
+.form-section h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+    color:#9b4f72;
+    margin-bottom:5px;
+}
+
+.section-description{
+    color:#777;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+label{
+    display:block;
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.4px;
+    margin-bottom:7px;
+    color:#51303f;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid #d9c1cc;
+    border-radius:11px;
+    padding:13px 14px;
+    font-family:'Montserrat',sans-serif;
+    font-size:14px;
+    background:#fff;
+    color:#222;
+    outline:none;
+    transition:.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#c26a91;
+    box-shadow:0 0 0 3px rgba(194,106,145,.12);
+}
+
+input:disabled{
+    background:#f7f1f4;
+    cursor:not-allowed;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.field{
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.help{
+    display:block;
+    margin-top:6px;
+    font-size:11px;
+    color:#777;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
+}
+
+.location-option{
+    position:relative;
+}
+
+.location-option input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.location-card{
+    display:block;
+    cursor:pointer;
+    border:2px solid #e3d2da;
+    border-radius:18px;
+    padding:22px;
+    height:100%;
+    background:#fff;
+    transition:.25s;
+}
+
+.location-card:hover{
+    border-color:#cc7fa0;
+    transform:translateY(-2px);
+}
+
+.location-option input:checked + .location-card{
+    border-color:#b75f87;
+    background:linear-gradient(135deg,#ffeaf3,#fff);
+    box-shadow:0 8px 25px rgba(183,95,135,.12);
+}
+
+.location-card-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.location-card h4{
+    font-family:'Cormorant Garamond',serif;
+    color:#9b4f72;
+    font-size:26px;
+}
+
+.location-card p{
+    font-size:12px;
+    color:#666;
+    margin-top:6px;
+}
+
+
+/* =========================
+   HOME SERVICE
+========================= */
+
+#homeServiceFields{
+    display:none;
+    margin-top:25px;
+    padding-top:25px;
+    border-top:1px dashed #ddb7c8;
+}
+
+.home-service-note{
+    background:#fff0f6;
+    border-left:4px solid #bd668d;
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#553b47;
+}
+
+.home-service-note strong{
+    color:#9b4f72;
+}
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+.address-autocomplete{
+    position:relative;
+}
+
+.address-loading{
+    display:none;
+    position:absolute;
+    right:14px;
+    top:43px;
+    font-size:11px;
+    color:#9b4f72;
+}
+
+.address-suggestions{
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    z-index:500;
+    margin-top:5px;
+    background:#fff;
+    border:1px solid #dfc1cf;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(70,20,45,.14);
+    overflow:hidden;
+}
+
+.address-suggestion{
+    padding:12px 14px;
+    cursor:pointer;
+    font-size:13px;
+    color:#3e2933;
+    border-bottom:1px solid #f1e3e9;
+}
+
+.address-suggestion:last-child{
+    border-bottom:none;
+}
+
+.address-suggestion:hover{
+    background:#fff0f6;
+}
+
+.address-note{
+    background:#fff6fa;
+    border:1px solid #edd2de;
+    border-radius:10px;
+    padding:10px 12px;
+    margin-top:8px;
+    font-size:11px;
+    color:#765966;
+}
+
+
+/* =========================
+   PAYMENT AMOUNT
+========================= */
+
+.payment-intro{
+    margin-bottom:25px;
+}
+
+.payment-range{
+    display:inline-block;
+    background:#fff0f5;
+    color:#9b4f72;
+    border:1px solid #e0b0c4;
+    padding:8px 13px;
+    border-radius:20px;
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    font-weight:700;
+}
+
+.amount-wrap{
+    max-width:430px;
+    margin-bottom:30px;
+}
+
+.amount-prefix{
+    position:relative;
+}
+
+.amount-prefix span{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-weight:700;
+    color:#9b4f72;
+}
+
+.amount-prefix input{
+    padding-left:30px;
+}
+
+.amount-warning{
+    display:none;
+    color:#b22f5d;
+    font-size:12px;
+    margin-top:7px;
+}
+
+
+/* =========================
+   PAYMENT METHOD DROPDOWN
+========================= */
+
+.payment-method-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#9b4f72;
+    margin-bottom:5px;
+}
+
+.payment-method-help{
+    font-size:12px;
+    color:#777;
+    margin-bottom:15px;
+}
+
+.payment-method-select{
+    position:relative;
+    max-width:520px;
+}
+
+.payment-method-select select{
+    appearance:auto;
+    -webkit-appearance:auto;
+    cursor:pointer;
+    min-height:52px;
+    font-size:14px;
+    padding:14px 16px;
+    border:2px solid #dfc7d2;
+    background:#fff;
+}
+
+.payment-method-select select:hover{
+    border-color:#c8799d;
+}
+
+.payment-method-select select:focus{
+    border-color:#b75f87;
+    box-shadow:0 0 0 3px rgba(183,95,135,.12);
+}
+
+
+/* =========================
+   SELECTED PAYMENT DETAILS
+========================= */
+
+.selected-payment{
+    display:none;
+    margin-top:22px;
+    padding:20px;
+
+    background:linear-gradient(135deg,#fff0f6,#fff9fb);
+
+    border:1px solid #dfb4c6;
+    border-radius:17px;
+
+    animation:paymentReveal .25s ease;
+}
+
+@keyframes paymentReveal{
+    from{
+        opacity:0;
+        transform:translateY(-5px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.selected-payment h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    color:#9b4f72;
+    margin-bottom:10px;
+}
+
+.payment-detail-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+
+    background:#fff;
+    border:1px solid #ead5df;
+    border-radius:12px;
+    padding:13px 15px;
+    margin-top:9px;
+}
+
+.payment-detail-label{
+    font-family:'Cinzel',serif;
+    font-size:10px;
+    color:#86606f;
+    font-weight:700;
+}
+
+.payment-detail-value{
+    font-size:14px;
+    font-weight:700;
+    color:#432b36;
+    text-align:right;
+    word-break:break-word;
+}
+
+
+/* =========================
+   RECEIPT
+========================= */
+
+.receipt-box{
+    background:#fff8fb;
+    border:1px dashed #ce8daa;
+    border-radius:15px;
+    padding:18px;
+}
+
+input[type="file"]{
+    padding:11px;
+}
+
+
+/* =========================
+   AGREEMENT
+========================= */
+
+.agreement{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-family:'Montserrat',sans-serif;
+    font-size:12px;
+    color:#555;
+    margin-top:10px;
+}
+
+.agreement input{
+    width:auto;
+    margin-top:3px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-btn{
+    width:100%;
+    border:none;
+    border-radius:14px;
+    padding:17px 20px;
+
+    background:linear-gradient(135deg,#9b4f72,#d17ba2);
+
+    color:#fff;
+
+    font-family:'Cinzel',serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(155,79,114,.22);
+
+    transition:.25s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+}
+
+.submit-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+    transform:none;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+#formStatus{
+    display:none;
+    margin-top:20px;
+    padding:18px;
+    border-radius:14px;
+    text-align:center;
+    font-size:13px;
+}
+
+.success{
+    display:block!important;
+    background:#effaf2;
+    border:1px solid #9bd1a8;
+    color:#28663a;
+}
+
+.error{
+    display:block!important;
+    background:#fff0f3;
+    border:1px solid #e0a1b3;
+    color:#8d2948;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#27121d;
+    color:#fff;
+    text-align:center;
+    padding:45px 20px;
+}
+
+.footer-logo{
+    width:90px;
+    margin:0 auto 15px;
+}
+
+footer h3{
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    font-weight:400;
+}
+
+footer p{
+    font-size:12px;
+    color:#e4d7dd;
+    margin-top:8px;
+}
+
+.footer-links{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    font-family:'Cinzel',serif;
+    font-size:11px;
+    color:#f2c8d8;
+}
+
+.copy{
+    margin-top:25px;
+    font-size:10px;
+    opacity:.7;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    header{
+        padding:8px 12px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:7px;
+    }
+
+    .logo img{
+        width:65px;
+        height:65px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:10px;
+    }
+
+    .booking-hero{
+        min-height:390px;
+    }
+
+    .booking-hero h1{
+        font-size:64px;
+    }
+
+    .booking-wrap{
+        padding:40px 13px 60px;
+    }
+
+    .form-section{
+        padding:21px 17px;
+        border-radius:18px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .location-options{
+        grid-template-columns:1fr;
+    }
+
+    .intro h2{
+        font-size:45px;
+    }
+
+    .payment-detail-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .payment-detail-value{
+        text-align:left;
+    }
+
+    .payment-method-select{
+        max-width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+
+<img
+src="https://i.ibb.co/Zz1L6vqw/A2132795-1C7B-453F-B855-8E3B97F3BB3E.png"
+alt="Rebecca & Sheena Tattoos Logo">
+
+</a>
+
+<nav>
+
+<a href="index.html">HOME</a>
+<a href="index.html#work">OUR WORK</a>
+<a href="index.html#services">SERVICES</a>
+<a href="index.html#about">ABOUT</a>
+<a href="booking.html">BOOK</a>
+<a href="index.html#contact">CONTACT</a>
+
+<button
+class="lang-btn"
+type="button"
+onclick="toggleLanguage()">
+
+ES / EN
+
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="booking-hero">
+
+<div class="booking-hero-content">
+
+<h
