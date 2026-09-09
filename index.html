@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio</title>
+<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio & Home Service</title>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork and appointment booking.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service.">
 <meta name="theme-color" content="#ffffff">
 
 <style>
@@ -374,6 +374,133 @@ section{
   margin-bottom:8px;
 }
 
+/* HOME SERVICE NOTICE */
+.home-service-notice{
+  background:linear-gradient(135deg,#fffaf0,#fff);
+  border:1px solid #e3c98d;
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:25px;
+}
+
+.home-service-notice h3{
+  color:#8b6727;
+  font-size:21px;
+  margin-bottom:7px;
+}
+
+.home-service-notice p{
+  color:#555;
+  font-size:14px;
+  margin-bottom:7px;
+}
+
+.home-service-notice p:last-child{
+  margin-bottom:0;
+}
+
+/* APPOINTMENT LOCATION */
+.service-location-box{
+  background:#fff;
+  border:1px solid #e4e4e4;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:22px;
+}
+
+.service-location-box>label{
+  font-size:16px;
+  margin-bottom:12px;
+}
+
+.location-options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.location-option{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px;
+  background:#fff;
+  border:2px solid #e5e5e5;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.location-option:hover{
+  border-color:#c6a15b;
+  transform:translateY(-1px);
+}
+
+.location-option:has(input:checked){
+  border-color:#b58a3a;
+  background:#fffaf1;
+  box-shadow:0 4px 14px rgba(181,138,58,.10);
+}
+
+.location-option input{
+  width:auto;
+  flex-shrink:0;
+  accent-color:#b58a3a;
+}
+
+.location-option-content{
+  display:flex;
+  flex-direction:column;
+}
+
+.location-option-title{
+  font-weight:800;
+  font-size:15px;
+}
+
+.location-option-description{
+  color:#666;
+  font-size:13px;
+  line-height:1.4;
+}
+
+/* HOME ADDRESS */
+.home-address{
+  display:none;
+  background:#fff;
+  border:1px solid #e4e4e4;
+  border-left:4px solid #b58a3a;
+  border-radius:10px;
+  padding:20px;
+  margin-bottom:22px;
+}
+
+.home-address.visible{
+  display:block;
+}
+
+.home-address-heading{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:5px;
+}
+
+.home-address-subtext{
+  color:#666;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.address-note{
+  background:#faf9f6;
+  border-radius:8px;
+  padding:12px;
+  margin-top:5px;
+  font-size:12px;
+  color:#666;
+}
+
 /* FORM STATUS */
 .form-status{
   display:none;
@@ -471,6 +598,13 @@ textarea{
   max-width:220px;
   font-size:18px;
   font-weight:700;
+}
+
+.payment-help{
+  color:#666;
+  font-size:13px;
+  margin-top:8px;
+  line-height:1.5;
 }
 
 /* PAYMENT CARDS */
@@ -889,6 +1023,14 @@ footer p{
   .payment-option{
     min-height:175px;
   }
+
+  .location-options{
+    grid-template-columns:1fr;
+  }
+
+  .home-address{
+    padding:16px;
+  }
 }
 </style>
 </head>
@@ -931,9 +1073,9 @@ Español
 
 <div
 class="eyebrow"
-data-en="Professional Tattoo Studio"
-data-es="Estudio Profesional de Tatuajes">
-Professional Tattoo Studio
+data-en="Professional Tattoo Studio & Home Service"
+data-es="Estudio Profesional de Tatuajes y Servicio a Domicilio">
+Professional Tattoo Studio & Home Service
 </div>
 
 <h1>
@@ -942,10 +1084,10 @@ Our Art.
 </h1>
 
 <p
-data-en="Custom tattoos created with creativity, precision and attention to detail. Let's turn your idea into something you'll be proud to wear."
-data-es="Tatuajes personalizados creados con creatividad, precisión y atención al detalle. Convirtamos tu idea en algo que te enorgullezca llevar.">
+data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
+data-es="Tatuajes personalizados creados con creatividad, precisión y atención al detalle. Visita nuestro estudio o solicita nuestro servicio de tatuajes a domicilio y convirtamos tu idea en algo que te enorgullezca llevar.">
 Custom tattoos created with creativity, precision and attention to detail.
-Let's turn your idea into something you'll be proud to wear.
+Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear.
 </p>
 
 <div class="buttons">
@@ -1119,15 +1261,15 @@ We can work with your vision to create artwork that fits your body and personal 
 <div class="service-card">
 
 <div class="service-icon">
-✨
+🏠
 </div>
 
 <h3>
-Detailed Artwork
+Home Tattoo Service
 </h3>
 
 <p>
-We pay close attention to detail so your finished tattoo looks clean, balanced and beautiful.
+Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment.
 </p>
 
 </div>
@@ -1169,6 +1311,14 @@ Professional tattoo service
 
 <li>
 Custom artwork
+</li>
+
+<li>
+Studio appointments
+</li>
+
+<li>
+Home tattoo service
 </li>
 
 <li>
@@ -1305,7 +1455,7 @@ Book Your Tattoo
 </h2>
 
 <p>
-Complete the form below, make your booking payment, and upload your payment proof to request your appointment.
+Complete the form below, choose whether you want to visit our studio or request home service, make your booking payment, and upload your payment proof.
 </p>
 
 </div>
@@ -1313,6 +1463,23 @@ Complete the form below, make your booking payment, and upload your payment proo
 <div class="booking-layout">
 
 <div class="booking-form-wrapper">
+
+<!-- HOME SERVICE NOTICE -->
+<div class="home-service-notice">
+
+<h3>
+🏠 We Offer Home Tattoo Service
+</h3>
+
+<p>
+Can't make it to our studio? You can request a home-service appointment and we may come to your location to provide your tattoo service.
+</p>
+
+<p>
+Home-service requests are subject to location, availability, travel arrangements, and studio approval.
+</p>
+
+</div>
 
 <div class="booking-info">
 
@@ -1396,6 +1563,166 @@ name="fi-sender-email"
 placeholder="Your email address"
 autocomplete="email"
 required>
+
+</div>
+
+<!-- APPOINTMENT LOCATION -->
+
+<div class="service-location-box">
+
+<label>
+Where would you like your tattoo appointment? *
+</label>
+
+<div class="location-options">
+
+<label class="location-option">
+
+<input
+type="radio"
+name="fi-radio-serviceLocation"
+value="Studio Appointment"
+required>
+
+<div class="location-option-content">
+
+<span class="location-option-title">
+🏢 I'll Come to the Studio
+</span>
+
+<span class="location-option-description">
+I'll visit the tattoo studio for my appointment.
+</span>
+
+</div>
+
+</label>
+
+<label class="location-option">
+
+<input
+type="radio"
+name="fi-radio-serviceLocation"
+value="Home Service">
+
+<div class="location-option-content">
+
+<span class="location-option-title">
+🏠 Home Service
+</span>
+
+<span class="location-option-description">
+Please come to my location for the tattoo appointment.
+</span>
+
+</div>
+
+</label>
+
+</div>
+
+</div>
+
+<!-- HOME SERVICE ADDRESS -->
+
+<div
+class="home-address"
+id="homeAddressSection">
+
+<div class="home-address-heading">
+🏠 Home Service Location
+</div>
+
+<div class="home-address-subtext">
+Please provide the location where you would like us to perform the tattoo. This helps the studio review your request and determine whether home service is available for your area.
+</div>
+
+<div class="form-group">
+
+<label for="homeAddress">
+Street Address *
+</label>
+
+<input
+type="text"
+id="homeAddress"
+name="fi-text-homeAddress"
+placeholder="House number and street address"
+autocomplete="street-address">
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="homeCity">
+City *
+</label>
+
+<input
+type="text"
+id="homeCity"
+name="fi-text-homeCity"
+placeholder="City"
+autocomplete="address-level2">
+
+</div>
+
+<div class="form-group">
+
+<label for="homeState">
+State *
+</label>
+
+<input
+type="text"
+id="homeState"
+name="fi-text-homeState"
+placeholder="State"
+autocomplete="address-level1">
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="homeZip">
+ZIP Code *
+</label>
+
+<input
+type="text"
+id="homeZip"
+name="fi-text-homeZip"
+placeholder="ZIP code"
+autocomplete="postal-code">
+
+</div>
+
+<div class="form-group">
+
+<label for="homeDirections">
+Additional Directions
+</label>
+
+<input
+type="text"
+id="homeDirections"
+name="fi-text-homeDirections"
+placeholder="Optional directions or access information"
+autocomplete="off">
+
+</div>
+
+</div>
+
+<div class="address-note">
+🔒 Your address is collected for appointment planning and home-service review. The studio will review the location before confirming the appointment.
+</div>
 
 </div>
 
@@ -1677,7 +2004,8 @@ required>
 
 I understand that my selected booking payment is required to secure my appointment,
 will be deducted from my final tattoo payment, and my appointment is not confirmed
-until the studio reviews and verifies my payment.
+until the studio reviews and verifies my payment. If I request home service, I understand
+that the location must be reviewed and approved by the studio before my appointment is confirmed.
 
 </label>
 
@@ -1980,6 +2308,76 @@ const receiptPreviewImage =
 document.getElementById("receiptPreviewImage");
 
 
+/* HOME SERVICE ELEMENTS */
+
+const serviceLocationInputs =
+document.querySelectorAll(
+'input[name="fi-radio-serviceLocation"]'
+);
+
+const homeAddressSection =
+document.getElementById("homeAddressSection");
+
+const homeAddress =
+document.getElementById("homeAddress");
+
+const homeCity =
+document.getElementById("homeCity");
+
+const homeState =
+document.getElementById("homeState");
+
+const homeZip =
+document.getElementById("homeZip");
+
+
+/* SHOW / HIDE HOME SERVICE ADDRESS */
+
+function updateServiceLocation(){
+
+const selectedLocation =
+document.querySelector(
+'input[name="fi-radio-serviceLocation"]:checked'
+);
+
+const isHomeService =
+selectedLocation &&
+selectedLocation.value === "Home Service";
+
+
+if(isHomeService){
+
+homeAddressSection.classList.add("visible");
+
+homeAddress.required = true;
+homeCity.required = true;
+homeState.required = true;
+homeZip.required = true;
+
+}else{
+
+homeAddressSection.classList.remove("visible");
+
+homeAddress.required = false;
+homeCity.required = false;
+homeState.required = false;
+homeZip.required = false;
+
+}
+
+}
+
+
+serviceLocationInputs.forEach(function(input){
+
+input.addEventListener(
+"change",
+updateServiceLocation
+);
+
+});
+
+
 /* STATUS MESSAGE */
 
 function showStatus(message,type){
@@ -2078,6 +2476,11 @@ async function(event){
 event.preventDefault();
 
 
+/* MAKE SURE LOCATION DISPLAY/REQUIRED STATE IS CURRENT */
+
+updateServiceLocation();
+
+
 /* HTML REQUIRED FIELD CHECK */
 
 if(!bookingForm.checkValidity()){
@@ -2090,6 +2493,48 @@ showStatus(
 );
 
 return;
+
+}
+
+
+/* SERVICE LOCATION */
+
+const selectedLocation =
+document.querySelector(
+'input[name="fi-radio-serviceLocation"]:checked'
+);
+
+if(!selectedLocation){
+
+showStatus(
+"Please choose whether you want to come to the studio or request home service.",
+"error"
+);
+
+return;
+
+}
+
+
+/* HOME SERVICE ADDRESS CHECK */
+
+if(selectedLocation.value === "Home Service"){
+
+if(
+!homeAddress.value.trim() ||
+!homeCity.value.trim() ||
+!homeState.value.trim() ||
+!homeZip.value.trim()
+){
+
+showStatus(
+"Please provide your complete home-service address so the studio can review your location.",
+"error"
+);
+
+return;
+
+}
 
 }
 
@@ -2268,6 +2713,13 @@ showStatus(
 /* RESET */
 
 bookingForm.reset();
+
+homeAddressSection.classList.remove("visible");
+
+homeAddress.required = false;
+homeCity.required = false;
+homeState.required = false;
+homeZip.required = false;
 
 receiptPreview.style.display =
 "none";
