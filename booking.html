@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Your Tattoo | Rebecca & Sheena Tattoos</title>
+
+<meta name="description" content="Book a tattoo appointment with Rebecca & Sheena Tattoos. Studio and home service appointments available.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Montserrat",sans-serif;
+  background:#fff;
+  color:#222;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(190,120,145,.25);
+  box-shadow:0 3px 18px rgba(0,0,0,.06);
+}
+
+.nav-container{
+  width:min(1200px,92%);
+  margin:auto;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-wrap img{
+  width:62px;
+  height:62px;
+  object-fit:contain;
+}
+
+.logo-text{
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  font-weight:700;
+  line-height:1;
+}
+
+.logo-text span{
+  display:block;
+  font-family:"Great Vibes",cursive;
+  color:#b76e8b;
+  font-size:20px;
+  margin-top:3px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+nav a{
+  font-family:"Cinzel",serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.8px;
+  transition:.25s ease;
+}
+
+nav a:hover{
+  color:#b76e8b;
+}
+
+.nav-book{
+  background:#b76e8b;
+  color:white!important;
+  padding:11px 18px;
+  border-radius:30px;
+  box-shadow:0 5px 15px rgba(183,110,139,.25);
+}
+
+.nav-book:hover{
+  background:#98546f;
+  transform:translateY(-1px);
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.language-toggle{
+  border:1px solid #d5a2b5;
+  background:white;
+  color:#8e526a;
+  border-radius:20px;
+  padding:7px 11px;
+  font-family:"Cinzel",serif;
+  font-size:10px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.booking-hero{
+  position:relative;
+  min-height:430px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(40,12,25,.58),rgba(40,12,25,.68)),
+    url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
+    center/cover no-repeat;
+}
+
+.booking-hero-content{
+  width:min(900px,90%);
+  color:white;
+  padding:80px 20px;
+}
+
+.booking-eyebrow{
+  font-family:"Cinzel",serif;
+  font-size:13px;
+  letter-spacing:3px;
+  margin-bottom:15px;
+}
+
+.booking-hero h1{
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(58px,9vw,100px);
+  font-weight:400;
+  line-height:1;
+  text-shadow:0 3px 20px rgba(0,0,0,.5);
+}
+
+.booking-hero p{
+  max-width:700px;
+  margin:22px auto 0;
+  font-size:15px;
+}
+
+/* =========================
+   BOOKING AREA
+========================= */
+
+.booking-section{
+  width:min(1050px,92%);
+  margin:60px auto 90px;
+}
+
+.booking-intro{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.booking-intro h2{
+  font-family:"Great Vibes",cursive;
+  color:#b76e8b;
+  font-size:52px;
+  font-weight:400;
+}
+
+.booking-intro p{
+  max-width:760px;
+  margin:10px auto;
+  color:#666;
+  font-size:14px;
+}
+
+.booking-notice{
+  margin:25px auto 0;
+  padding:20px;
+  border-left:4px solid #b76e8b;
+  background:#fff5f8;
+  border-radius:8px;
+  text-align:left;
+  max-width:800px;
+}
+
+.booking-notice strong{
+  color:#9c5573;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.form-card{
+  background:#fff;
+  border:1px solid #ead8df;
+  border-radius:18px;
+  padding:clamp(22px,4vw,45px);
+  box-shadow:0 12px 40px rgba(90,40,60,.08);
+}
+
+.form-section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:31px;
+  color:#8f5069;
+  margin:28px 0 18px;
+  padding-bottom:8px;
+  border-bottom:1px solid #ead8df;
+}
+
+.form-section-title:first-child{
+  margin-top:0;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  font-family:"Montserrat",sans-serif;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:#333;
+}
+
+.required{
+  color:#b76e8b;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  border:1px solid #d9c5cd;
+  border-radius:9px;
+  background:#fff;
+  padding:13px 14px;
+  font-family:"Montserrat",sans-serif;
+  font-size:14px;
+  color:#222;
+  outline:none;
+  transition:.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#b76e8b;
+  box-shadow:0 0 0 3px rgba(183,110,139,.10);
+}
+
+textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+.field-help{
+  display:block;
+  margin-top:6px;
+  color:#777;
+  font-size:11px;
+}
+
+/* =========================
+   RADIO
+========================= */
+
+.radio-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.radio-option{
+  flex:1;
+  min-width:200px;
+}
+
+.radio-option input{
+  display:none;
+}
+
+.radio-option label{
+  display:block;
+  cursor:pointer;
+  border:1px solid #d9c5cd;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  transition:.2s ease;
+  background:#fff;
+}
+
+.radio-option input:checked + label{
+  border-color:#b76e8b;
+  background:#fff2f6;
+  color:#914e69;
+  box-shadow:0 0 0 2px rgba(183,110,139,.12);
+}
+
+/* =========================
+   HOME SERVICE
+========================= */
+
+.home-service-fields{
+  display:none;
+  margin-top:20px;
+  padding:20px;
+  background:#fff7f9;
+  border:1px solid #ecd9e0;
+  border-radius:12px;
+}
+
+.home-service-fields.visible{
+  display:block;
+}
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-box{
+  background:#fff7f9;
+  border:1px solid #ead6de;
+  border-radius:12px;
+  padding:22px;
+  margin-top:8px;
+}
+
+.payment-details{
+  display:none;
+  margin-top:18px;
+  padding:18px;
+  background:#fff;
+  border:1px dashed #d5a2b5;
+  border-radius:10px;
+}
+
+.payment-details.visible{
+  display:block;
+}
+
+.payment-details p{
+  margin:5px 0;
+  font-size:13px;
+}
+
+.payment-details strong{
+  color:#95546d;
+}
+
+.payment-details a{
+  color:#b76e8b;
+  font-weight:600;
+}
+
+.amount-note{
+  font-size:12px;
+  color:#777;
+  margin-top:6px;
+}
+
+/* =========================
+   RECEIPT
+========================= */
+
+.receipt-preview{
+  display:none;
+  margin-top:12px;
+  padding:12px;
+  border-radius:8px;
+  background:#f8f8f8;
+  font-size:12px;
+  color:#555;
+}
+
+/* =========================
+   AGREEMENT
+========================= */
+
+.agreement{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:25px 0;
+}
+
+.agreement input{
+  width:auto;
+  margin-top:4px;
+  accent-color:#b76e8b;
+}
+
+.agreement label{
+  margin:0;
+  font-weight:500;
+  font-size:12px;
+  line-height:1.5;
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-btn{
+  width:100%;
+  border:0;
+  border-radius:35px;
+  padding:16px 25px;
+  background:linear-gradient(135deg,#b76e8b,#9b5571);
+  color:white;
+  font-family:"Cinzel",serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(183,110,139,.25);
+  transition:.25s ease;
+}
+
+.submit-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(183,110,139,.3);
+}
+
+.submit-btn:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+  transform:none;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+#formStatus{
+  display:none;
+  margin:20px 0 0;
+  padding:15px 17px;
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.5;
+}
+
+#formStatus.visible{
+  display:block;
+}
+
+#formStatus.success{
+  background:#eef9f1;
+  color:#28633a;
+  border:1px solid #b9dfc3;
+}
+
+#formStatus.error{
+  background:#fff0f2;
+  color:#9a3048;
+  border:1px solid #edbcc7;
+}
+
+#formStatus.info{
+  background:#f1f7fb;
+  color:#315f78;
+  border:1px solid #c6dce8;
+}
+
+/* =========================
+   BACK HOME
+========================= */
+
+.back-home{
+  text-align:center;
+  margin-top:25px;
+}
+
+.back-home a{
+  color:#9b5571;
+  font-family:"Cinzel",serif;
+  font-size:12px;
+  font-weight:600;
+}
+
+.back-home a:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#2c1822;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer .footer-logo{
+  font-family:"Great Vibes",cursive;
+  font-size:35px;
+  color:#e6b1c4;
+}
+
+footer p{
+  font-size:11px;
+  opacity:.8;
+  margin-top:8px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+  .nav-container{
+    min-height:72px;
+  }
+
+  nav{
+    gap:8px;
+  }
+
+  nav a:not(.nav-book){
+    display:none;
+  }
+
+  .logo-wrap img{
+    width:52px;
+    height:52px;
+  }
+
+  .logo-text{
+    font-size:18px;
+  }
+
+  .logo-text span{
+    font-size:17px;
+  }
+
+  .booking-hero{
+    min-height:380px;
+  }
+
+  .booking-hero-content{
+    padding:60px 15px;
+  }
+
+  .booking-intro h2{
+    font-size:44px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .radio-options{
+    flex-direction:column;
+  }
+
+  .radio-option{
+    min-width:0;
+  }
+
+  .form-card{
+    padding:23px 17px;
+  }
+
+  .form-section-title{
+    font-size:28px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+  <div class="nav-container">
+
+    <a href="index.html#home" class="logo-wrap">
+
+      <img
+        src="https://i.ibb.co/Zz1L6vqw/A2132795-1C7B-453F-B855-8E3B97F3BB3E.png"
+        alt="Rebecca & Sheena Tattoos Logo"
+      >
+
+      <div class="logo-text">
+        Rebecca & Sheena
+        <span>Tattoos</span>
+      </div>
+
+    </a>
+
+    <nav>
+      <a href="index.html#home" data-en="Home" data-es="Inicio">Home</a>
+
+      <a href="index.html#work" data-en="Our Work" data-es="Nuestro Trabajo">
+        Our Work
+      </a>
+
+      <a href="index.html#services" data-en="Services" data-es="Servicios">
+        Services
+      </a>
+
+      <a href="index.html#about" data-en="About" data-es="Nosotros">
+        About
+      </a>
+
+      <a href="booking.html"
+         class="nav-book"
+         data-en="Book"
+         data-es="Reservar">
+        Book
+      </a>
+
+      <a href="index.html#contact" data-en="Contact" data-es="Contacto">
+        Contact
+      </a>
+
+      <button
+        type="button"
+        class="language-toggle"
+        id="languageToggle">
+        ES
+      </button>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="booking-hero">
+
+  <div class="booking-hero-content">
+
+    <div
+      class="booking-eyebrow"
+      data-en="REBECCA & SHEENA TATTOOS"
+      data-es="REBECCA & SHEENA TATTOOS">
+      REBECCA & SHEENA TATTOOS
+    </div>
+
+    <h1
+      data-en="Book Your Tattoo"
+      data-es="Reserva Tu Tatuaje">
+      Book Your Tattoo
+    </h1>
+
+    <p
+      data-en="Tell us about your tattoo idea and preferred appointment. We offer both studio and home service appointments."
+      data-es="Cuéntanos sobre tu idea de tatuaje y tu cita preferida. Ofrecemos citas en el estudio y servicio a domicilio.">
+      Tell us about your tattoo idea and preferred appointment.
+      We offer both studio and home service appointments.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     BOOKING SECTION
+========================= -->
+
+<section class="booking-section">
+
+  <div class="booking-intro">
+
+    <h2
+      data-en="Let's Create Something Beautiful"
+      data-es="Creemos Algo Hermoso">
+      Let's Create Something Beautiful
+    </h2>
+
+    <p
+      data-en="Please complete the form below as accurately as possible. This helps us understand your tattoo request and prepare for your appointment."
+      data-es="Completa el formulario a continuación con la mayor precisión posible. Esto nos ayuda a entender tu solicitud y preparar tu cita.">
+      Please complete the form below as accurately as possible.
+      This helps us understand your tattoo request and prepare for your appointment.
+    </p>
+
+    <div class="booking-notice">
+
+      <strong
+        data-en="Booking Payment: $100–$200"
+        data-es="Pago de Reserva: $100–$200">
+        Booking Payment: $100–$200
+      </strong>
+
+      <p
+        data-en="Your booking payment is deducted from your final tattoo payment. Your appointment is not confirmed until the studio reviews and verifies your payment."
+        data-es="Tu pago de reserva se descuenta del pago final de tu tatuaje. Tu cita no queda confirmada hasta que el estudio revise y verifique tu pago.">
+        Your booking payment is deducted from your final tattoo payment.
+        Your appointment is not confirmed until the studio reviews and verifies your payment.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       FORM
+  ========================= -->
+
+  <div class="form-card">
+
+    <form
+      id="bookingForm"
+      enctype="multipart/form-data"
+      novalidate>
+
+      <!-- PERSONAL INFORMATION -->
+
+      <h3
+        class="form-section-title"
+        data-en="Your Information"
+        data-es="Tu Información">
+        Your Information
+      </h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label for="fullName">
+            <span data-en="Full Name" data-es="Nombre Completo">
+              Full Name
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="fullName"
+            name="fi-sender-fullName"
+            autocomplete="name"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="phone">
+            <span data-en="Phone Number" data-es="Número de Teléfono">
+              Phone Number
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="fi-sender-phone"
+            autocomplete="tel"
+            required>
+
+        </div>
+
+
+        <div class="form-group full">
+
+          <label for="email">
+            <span data-en="Email Address" data-es="Correo Electrónico">
+              Email Address
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="fi-sender-email"
+            autocomplete="email"
+            required>
+
+        </div>
+
+      </div>
+
+
+      <!-- APPOINTMENT LOCATION -->
+
+      <h3
+        class="form-section-title"
+        data-en="Appointment Location"
+        data-es="Lugar de la Cita">
+        Appointment Location
+      </h3>
+
+      <div class="form-group">
+
+        <label>
+          <span data-en="Choose where you would like your tattoo appointment"
+                data-es="Elige dónde deseas tu cita de tatuaje">
+            Choose where you would like your tattoo appointment
+          </span>
+          <span class="required">*</span>
+        </label>
+
+        <div class="radio-options">
+
+          <div class="radio-option">
+
+            <input
+              type="radio"
+              id="studioAppointment"
+              name="fi-radio-serviceLocation"
+              value="Studio Appointment"
+              required>
+
+            <label
+              for="studioAppointment"
+              data-en="Studio Appointment"
+              data-es="Cita en el Estudio">
+              Studio Appointment
+            </label>
+
+          </div>
+
+
+          <div class="radio-option">
+
+            <input
+              type="radio"
+              id="homeService"
+              name="fi-radio-serviceLocation"
+              value="Home Service">
+
+            <label
+              for="homeService"
+              data-en="Home Service"
+              data-es="Servicio a Domicilio">
+              Home Service
+            </label>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- HOME SERVICE FIELDS -->
+
+      <div
+        class="home-service-fields"
+        id="homeServiceFields">
+
+        <h4
+          style="font-family:'Cormorant Garamond',serif;font-size:25px;color:#95546d;margin-bottom:15px;"
+          data-en="Home Service Details"
+          data-es="Detalles del Servicio a Domicilio">
+          Home Service Details
+        </h4>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+
+            <label for="homeAddress">
+              <span data-en="Home Address" data-es="Dirección">
+                Home Address
+              </span>
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="homeAddress"
+              name="fi-text-homeAddress"
+              autocomplete="street-address">
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="homeCity">
+              <span data-en="City" data-es="Ciudad">
+                City
+              </span>
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="homeCity"
+              name="fi-text-homeCity"
+              autocomplete="address-level2">
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="homeState">
+              <span data-en="State" data-es="Estado">
+                State
+              </span>
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="homeState"
+              name="fi-text-homeState"
+              autocomplete="address-level1">
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="homeZip">
+              <span data-en="ZIP Code" data-es="Código Postal">
+                ZIP Code
+              </span>
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              id="homeZip"
+              name="fi-text-homeZip"
+              autocomplete="postal-code">
+
+          </div>
+
+
+          <div class="form-group full">
+
+            <label for="homeDirections">
+              <span data-en="Directions / Helpful Details"
+                    data-es="Indicaciones / Detalles Útiles">
+                Directions / Helpful Details
+              </span>
+            </label>
+
+            <textarea
+              id="homeDirections"
+              name="fi-text-homeDirections"
+              placeholder="Gate code, apartment number, landmarks, parking information, etc."></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- APPOINTMENT DETAILS -->
+
+      <h3
+        class="form-section-title"
+        data-en="Appointment Details"
+        data-es="Detalles de la Cita">
+        Appointment Details
+      </h3>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label for="preferredDate">
+            <span data-en="Preferred Date" data-es="Fecha Preferida">
+              Preferred Date
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="date"
+            id="preferredDate"
+            name="fi-date-preferredDate"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="preferredTime">
+            <span data-en="Preferred Time" data-es="Hora Preferida">
+              Preferred Time
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="time"
+            id="preferredTime"
+            name="fi-text-preferredTime"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="placement">
+            <span data-en="Tattoo Placement" data-es="Ubicación del Tatuaje">
+              Tattoo Placement
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="placement"
+            name="fi-text-tattooPlacement"
+            placeholder="Arm, leg, back, chest, etc."
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="size">
+            <span data-en="Approximate Size" data-es="Tamaño Aproximado">
+              Approximate Size
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="size"
+            name="fi-text-approximateSize"
+            placeholder="Example: 4 inches"
+            required>
+
+        </div>
+
+
+        <div class="form-group full">
+
+          <label for="description">
+            <span data-en="Tell Us About Your Tattoo"
+                  data-es="Cuéntanos Sobre Tu Tatuaje">
+              Tell Us About Your Tattoo
+            </span>
+            <span class="required">*</span>
+          </label>
+
+          <textarea
+            id="description"
+            name="fi-text-tattooDescription"
+            placeholder="Describe your tattoo idea, style, colors, references, special details, etc."
+            required></textarea>
+
+        </div>
+
+      </div>
+
+
+      <!-- PAYMENT -->
+
+      <h3
+        class="form-section-title"
+        data-en="Booking Payment"
+        data-es="Pago de Reserva">
+        Booking Payment
+      </h3>
+
+      <div class="payment-box">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+
+            <label for="depositAmount">
+
+              <span
+                data-en="Booking Payment Amount ($100–$200)"
+                data-es="Monto del Pago de Reserva ($100–$200)">
+                Booking Payment Amount ($100–$200)
+              </span>
+
+              <span class="required">*</span>
+
+            </label>
+
+            <input
+              type="text"
+              id="depositAmount"
+              name="fi-number-bookingPaymentAmount"
+              inputmode="numeric"
+              placeholder="Example: 100"
+              required>
+
+            <div
+              class="amount-note"
+              data-en="Enter a whole dollar amount between $100 and $200."
+              data-es="Ingresa una cantidad en dólares enteros entre $100 y $200.">
+              Enter a whole dollar amount between $100 and $200.
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="paymentMethod">
+
+              <span
+                data-en="Payment Method"
+                data-es="Método de Pago">
+                Payment Method
+              </span>
+
+              <span class="required">*</span>
+
+            </label>
+
+            <select
+              id="paymentMethod"
+              name="fi-select-paymentMethod"
+              required>
+
+              <option
+                value=""
+                data-en="Select payment method"
+                data-es="Selecciona método de pago">
+                Select payment method
+              </option>
+
+              <option value="Cash App">Cash App</option>
+              <option value="Venmo">Venmo</option>
+              <option value="Zelle">Zelle</option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <!-- CASH APP -->
+
+        <div
+          class="payment-details"
+          id="cashAppDetails">
+
+          <p><strong>Cash App</strong></p>
+
+          <p>
+            $Msheena57
+          </p>
+
+          <p>
+            <strong>Owner:</strong> Sheena Martin
+          </p>
+
+        </div>
+
+
+        <!-- VENMO -->
+
+        <div
+          class="payment-details"
+          id="venmoDetails">
+
+          <p><strong>Venmo</strong></p>
+
+          <p>
+            <a
+              href="https://venmo.com/u/Sheena-Rebeccatattoos"
+              target="_blank"
+              rel="noopener">
+              @Sheena-Rebeccatattoos
+            </a>
+          </p>
+
+          <p>
+            <strong>Owner:</strong> Sheena Martin
+          </p>
+
+        </div>
+
+
+        <!-- ZELLE -->
+
+        <div
+          class="payment-details"
+          id="zelleDetails">
+
+          <p><strong>Zelle</strong></p>
+
+          <p>
+            sheenagmartin2357@gmail.com
+          </p>
+
+          <p>
+            <strong>Owner:</strong> Sheena Martin
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- RECEIPT -->
+
+      <div class="form-group" style="margin-top:25px;">
+
+        <label for="receipt">
+
+          <span
+            data-en="Payment Receipt"
+            data-es="Recibo de Pago">
+            Payment Receipt
+          </span>
+
+          <span class="required">*</span>
+
+        </label>
+
+        <input
+          type="file"
+          id="receipt"
+          name="fi-file-paymentReceipt"
+          accept=".jpg,.jpeg,.png,.webp,.pdf"
+          required>
+
+        <span
+          class="field-help"
+          data-en="Accepted: JPG, JPEG, PNG, WEBP or PDF. Maximum file size: 10MB."
+          data-es="Aceptados: JPG, JPEG, PNG, WEBP o PDF. Tamaño máximo: 10MB.">
+          Accepted: JPG, JPEG, PNG, WEBP or PDF. Maximum file size: 10MB.
+        </span>
+
+        <div
+          class="receipt-preview"
+          id="receiptPreview">
+        </div>
+
+      </div>
+
+
+      <!-- AGREEMENT -->
+
+      <div class="agreement">
+
+        <input
+          type="checkbox"
+          id="agreement"
+          name="fi-checkbox-bookingAgreement"
+          value="Agreed"
+          required>
+
+        <label for="agreement">
+
+          <span
+            data-en="I understand that my booking payment is $100–$200, will be deducted from my final tattoo payment, and my appointment is not confirmed until Rebecca & Sheena Tattoos reviews and verifies my payment."
+            data-es="Entiendo que mi pago de reserva es de $100–$200, se descontará de mi pago final del tatuaje y mi cita no queda confirmada hasta que Rebecca & Sheena Tattoos revise y verifique mi pago.">
+            I understand that my booking payment is $100–$200,
+            will be deducted from my final tattoo payment,
+            and my appointment is not confirmed until Rebecca & Sheena Tattoos
+            reviews and verifies my payment.
+          </span>
+
+          <span class="required">*</span>
+
+        </label>
+
+      </div>
+
+
+      <!-- STATUS -->
+
+      <div id="formStatus"></div>
+
+
+      <!-- SUBMIT -->
+
+      <button
+        type="submit"
+        id="submitBtn"
+        class="submit-btn"
+        data-en="Submit Appointment Request"
+        data-es="Enviar Solicitud de Cita">
+        Submit Appointment Request
+      </button>
+
+
+      <div class="back-home">
+
+        <a
+          href="index.html#home"
+          data-en="← Back to Home"
+          data-es="← Volver al Inicio">
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    Rebecca & Sheena Tattoos
+  </div>
+
+  <p>
+    © <span id="year"></span> Rebecca & Sheena Tattoos.
+    All rights reserved.
+  </p>
+
+  <p>
+    403 W ROYLE St, Richmond, MO 64085
+  </p>
+
+</footer>
+
+
+<!-- =========================
+     FORMinit SDK
+========================= -->
+
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* =========================
+     YEAR
+  ========================= */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  /* =========================
+     LANGUAGE TOGGLE
+  ========================= */
+
+  const languageToggle =
+    document.getElementById("languageToggle");
+
+  let currentLanguage =
+    localStorage.getItem("siteLanguage") || "en";
+
+
+  function updateLanguage(){
+
+    document.querySelectorAll("[data-en]").forEach(function(element){
+
+      const text =
+        element.getAttribute("data-" + currentLanguage);
+
+      if(text !== null){
+        element.textContent = text;
+      }
+
+    });
+
+    languageToggle.textContent =
+      currentLanguage === "en" ? "ES" : "EN";
+
+    document.documentElement.lang =
+      currentLanguage;
+
+  }
+
+
+  languageToggle.addEventListener("click", function(){
+
+    currentLanguage =
+      currentLanguage === "en" ? "es" : "en";
+
+    localStorage.setItem(
+      "siteLanguage",
+      currentLanguage
+    );
+
+    updateLanguage();
+
+  });
+
+
+  updateLanguage();
+
+
+  /* =========================
+     ELEMENTS
+  ========================= */
+
+  const bookingForm =
+    document.getElementById("bookingForm");
+
+  const fullName =
+    document.getElementById("fullName");
+
+  const phone =
+    document.getElementById("phone");
+
+  const email =
+    document.getElementById("email");
+
+  const preferredDate =
+    document.getElementById("preferredDate");
+
+  const preferredTime =
+    document.getElementById("preferredTime");
+
+  const placement =
+    document.getElementById("placement");
+
+  const size =
+    document.getElementById("size");
+
+  const description =
+    document.getElementById("description");
+
+  const depositAmount =
+    document.getElementById("depositAmount");
+
+  const paymentMethod =
+    document.getElementById("paymentMethod");
+
+  const receipt =
+    document.getElementById("receipt");
+
+  const agreement =
+    document.getElementById("agreement");
+
+  const submitBtn =
+    document.getElementById("submitBtn");
+
+  const formStatus =
+    document.getElementById("formStatus");
+
+  const homeServiceFields =
+    document.getElementById("homeServiceFields");
+
+  const homeAddress =
+    document.getElementById("homeAddress");
+
+  const homeCity =
+    document.getElementById("homeCity");
+
+  const homeState =
+    document.getElementById("homeState");
+
+  const homeZip =
+    document.getElementById("homeZip");
+
+  const homeDirections =
+    document.getElementById("homeDirections");
+
+  const receiptPreview =
+    document.getElementById("receiptPreview");
+
+
+  /* =========================
+     FORM ID
+  ========================= */
+
+  const FORM_ID =
+    "1f5pzk33x3d";
+
+
+  /* =========================
+     FORMinit
+  ========================= */
+
+  const forminit =
+    new Forminit();
+
+
+  /* =========================
+     LOCAL DATE
+  ========================= */
+
+  function getLocalDate(){
+
+    const today =
+      new Date();
+
+    const year =
+      today.getFullYear();
+
+    const month =
+      String(today.getMonth() + 1).padStart(2,"0");
+
+    const day =
+      String(today.getDate()).padStart(2,"0");
+
+    return year + "-" + month + "-" + day;
+
+  }
+
+  preferredDate.min =
+    getLocalDate();
+
+
+  /* =========================
+     STATUS MESSAGE
+  ========================= */
+
+  function showStatus(message,type){
+
+    formStatus.textContent =
+      message;
+
+    formStatus.className =
+      "visible " + type;
+
+    formStatus.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  }
+
+
+  /* =========================
+     CLEAR STATUS
+  ========================= */
+
+  function clearStatus(){
+
+    formStatus.textContent =
+      "";
+
+    formStatus.className =
+      "";
+
+  }
+
+
+  /* =========================
+     FOCUS FIELD
+  ========================= */
+
+  function failField(field,message){
+
+    showStatus(
+      message,
+      "error"
+    );
+
+    if(field){
+
+      field.focus();
+
+      field.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+
+    }
+
+    return false;
+
+  }
+
+
+  /* =========================
+     HOME SERVICE
+  ========================= */
+
+  function updateServiceLocation(){
+
+    const selected =
+      document.querySelector(
+        'input[name="fi-radio-serviceLocation"]:checked'
+      );
+
+    const isHome =
+      selected &&
+      selected.value === "Home Service";
+
+
+    homeServiceFields.classList.toggle(
+      "visible",
+      isHome
+    );
+
+
+    homeAddress.required =
+      isHome;
+
+    homeCity.required =
+      isHome;
+
+    homeState.required =
+      isHome;
+
+    homeZip.required =
+      isHome;
+
+
+    if(!isHome){
+
+      homeAddress.required = false;
+      homeCity.required = false;
+      homeState.required = false;
+      homeZip.required = false;
+
+    }
+
+  }
+
+
+  document
+    .querySelectorAll(
+      'input[name="fi-radio-serviceLocation"]'
+    )
+    .forEach(function(radio){
+
+      radio.addEventListener(
+        "change",
+        updateServiceLocation
+      );
+
+    });
+
+
+  updateServiceLocation();
+
+
+  /* =========================
+     PAYMENT METHOD DISPLAY
+  ========================= */
+
+  function updatePaymentDetails(){
+
+    document
+      .getElementById("cashAppDetails")
+      .classList.remove("visible");
+
+    document
+      .getElementById("venmoDetails")
+      .classList.remove("visible");
+
+    document
+      .getElementById("zelleDetails")
+      .classList.remove("visible");
+
+
+    if(paymentMethod.value === "Cash App"){
+
+      document
+        .getElementById("cashAppDetails")
+        .classList.add("visible");
+
+    }
+
+
+    if(paymentMethod.value === "Venmo"){
+
+      document
+        .getElementById("venmoDetails")
+        .classList.add("visible");
+
+    }
+
+
+    if(paymentMethod.value === "Zelle"){
+
+      document
+        .getElementById("zelleDetails")
+        .classList.add("visible");
+
+    }
+
+  }
+
+
+  paymentMethod.addEventListener(
+    "change",
+    updatePaymentDetails
+  );
+
+
+  /* =========================
+     RECEIPT PREVIEW
+  ========================= */
+
+  receipt.addEventListener(
+    "change",
+    function(){
+
+      receiptPreview.className =
+        "receipt-preview";
+
+      receiptPreview.textContent =
+        "";
+
+
+      if(
+        !receipt.files ||
+        receipt.files.length === 0
+      ){
+        return;
+      }
+
+
+      const file =
+        receipt.files[0];
+
+
+      const maxSize =
+        10 * 1024 * 1024;
+
+
+      if(file.size > maxSize){
+
+        receiptPreview.textContent =
+          "This file is larger than 10MB. Please choose a smaller file.";
+
+        receiptPreview.style.display =
+          "block";
+
+        receiptPreview.style.color =
+          "#a13048";
+
+        return;
+
+      }
+
+
+      receiptPreview.textContent =
+        "Selected receipt: " +
+        file.name +
+        " (" +
+        (file.size / 1024 / 1024).toFixed(2) +
+        " MB)";
+
+      receiptPreview.style.display =
+        "block";
+
+    }
+  );
+
+
+  /* =========================
+     FORM SUBMISSION
+  ========================= */
+
+  bookingForm.addEventListener(
+    "submit",
+    async function(event){
+
+      event.preventDefault();
+
+      clearStatus();
+
+      updateServiceLocation();
+
+
+      /* =========================
+         FULL NAME
+      ========================= */
+
+      if(!fullName.value.trim()){
+
+        return failField(
+          fullName,
+          "Please enter your full name."
+        );
+
+      }
+
+
+      /* =========================
+         PHONE
+      ========================= */
+
+      if(!phone.value.trim()){
+
+        return failField(
+          phone,
+          "Please enter your phone number."
+        );
+
+      }
+
+
+      /* =========================
+         EMAIL
+      ========================= */
+
+      if(!email.value.trim()){
+
+        return failField(
+          email,
+          "Please enter your email address."
+        );
+
+      }
+
+
+      if(!email.checkValidity()){
+
+        return failField(
+          email,
+          "Please enter a valid email address."
+        );
+
+      }
+
+
+      /* =========================
+         SERVICE LOCATION
+      ========================= */
+
+      const selectedLocation =
+        document.querySelector(
+          'input[name="fi-radio-serviceLocation"]:checked'
+        );
+
+
+      if(!selectedLocation){
+
+        showStatus(
+          "Please select either Studio Appointment or Home Service.",
+          "error"
+        );
+
+        document
+          .getElementById("studioAppointment")
+          .focus();
+
+        return;
+
+      }
+
+
+      /* =========================
+         HOME SERVICE
+      ========================= */
+
+      if(
+        selectedLocation.value ===
+        "Home Service"
+      ){
+
+        if(!homeAddress.value.trim()){
+
+          return failField(
+            homeAddress,
+            "Please enter your home address for the home service appointment."
+          );
+
+        }
+
+
+        if(!homeCity.value.trim()){
+
+          return failField(
+            homeCity,
+            "Please enter your city."
+          );
+
+        }
+
+
+        if(!homeState.value.trim()){
+
+          return failField(
+            homeState,
+            "Please enter your state."
+          );
+
+        }
+
+
+        if(!homeZip.value.trim()){
+
+          return failField(
+            homeZip,
+            "Please enter your ZIP code."
+          );
+
+        }
+
+      }
+
+
+      /* =========================
+         DATE
+      ========================= */
+
+      if(!preferredDate.value){
+
+        return failField(
+          preferredDate,
+          "Please select your preferred appointment date."
+        );
+
+      }
+
+
+      if(
+        preferredDate.value <
+        preferredDate.min
+      ){
+
+        return failField(
+          preferredDate,
+          "Please select a date from today onward."
+        );
+
+      }
+
+
+      /* =========================
+         TIME
+      ========================= */
+
+      if(!preferredTime.value){
+
+        return failField(
+          preferredTime,
+          "Please select your preferred appointment time."
+        );
+
+      }
+
+
+      /* =========================
+         PLACEMENT
+      ========================= */
+
+      if(!placement.value.trim()){
+
+        return failField(
+          placement,
+          "Please enter where you would like the tattoo placed."
+        );
+
+      }
+
+
+      /* =========================
+         SIZE
+      ========================= */
+
+      if(!size.value.trim()){
+
+        return failField(
+          size,
+          "Please enter the approximate tattoo size."
+        );
+
+      }
+
+
+      /* =========================
+         DESCRIPTION
+      ========================= */
+
+      if(!description.value.trim()){
+
+        return failField(
+          description,
+          "Please describe the tattoo you would like."
+        );
+
+      }
+
+
+      /* =========================
+         PAYMENT AMOUNT
+      ========================= */
+
+      const rawAmount =
+        depositAmount.value.trim();
+
+
+      if(!rawAmount){
+
+        return failField(
+          depositAmount,
+          "Please enter your booking payment amount."
+        );
+
+      }
+
+
+      if(!/^\d+$/.test(rawAmount)){
+
+        return failField(
+          depositAmount,
+          "Please enter a whole dollar amount between $100 and $200."
+        );
+
+      }
+
+
+      const amount =
+        Number(rawAmount);
+
+
+      if(
+        !Number.isInteger(amount) ||
+        amount < 100 ||
+        amount > 200
+      ){
+
+        return failField(
+          depositAmount,
+          "Your booking payment must be between $100 and $200."
+        );
+
+      }
+
+
+      /* =========================
+         PAYMENT METHOD
+      ========================= */
+
+      if(!paymentMethod.value){
+
+        return failField(
+          paymentMethod,
+          "Please select your payment method."
+        );
+
+      }
+
+
+      /* =========================
+         RECEIPT
+      ========================= */
+
+      if(
+        !receipt.files ||
+        receipt.files.length === 0
+      ){
+
+        return failField(
+          receipt,
+          "Please upload your payment receipt."
+        );
+
+      }
+
+
+      const file =
+        receipt.files[0];
+
+
+      const maxFileSize =
+        10 * 1024 * 1024;
+
+
+      if(file.size > maxFileSize){
+
+        return failField(
+          receipt,
+          "Your payment receipt is larger than 10MB. Please upload a smaller file."
+        );
+
+      }
+
+
+      /* =========================
+         AGREEMENT
+      ========================= */
+
+      if(!agreement.checked){
+
+        showStatus(
+          "Please confirm that you understand the booking payment and appointment terms.",
+          "error"
+        );
+
+        agreement.focus();
+
+        return;
+
+      }
+
+
+      /* =========================
+         SUBMIT
+      ========================= */
+
+      submitBtn.disabled =
+        true;
+
+      submitBtn.textContent =
+        currentLanguage === "es"
+          ? "Enviando Solicitud..."
+          : "Submitting Appointment...";
+
+
+      showStatus(
+        currentLanguage === "es"
+          ? "Espera mientras enviamos tu solicitud de cita y recibo de pago."
+          : "Please wait while your appointment request and payment receipt are being submitted.",
+        "info"
+      );
+
+
+      try{
+
+        const formData =
+          new FormData(bookingForm);
+
+
+        const result =
+          await forminit.submit(
+            FORM_ID,
+            formData
+          );
+
+
+        if(result && result.error){
+
+          throw new Error(
+            result.error.message ||
+            "Form submission failed."
+          );
+
+        }
+
+
+        /* =========================
+           SUCCESS
+        ========================= */
+
+        showStatus(
+          currentLanguage === "es"
+            ? "🎉 ¡Tu solicitud de cita ha sido enviada correctamente! Recibimos tu información y recibo de pago. Tu cita no está confirmada hasta que el estudio revise y verifique tu pago."
+            : "🎉 Your appointment request has been submitted successfully! We received your booking information and payment receipt. Your appointment is not confirmed until the studio reviews and verifies your payment.",
+          "success"
+        );
+
+
+        bookingForm.reset();
+
+
+        /* Reset home service */
+
+        homeServiceFields.classList.remove(
+          "visible"
+        );
+
+        homeAddress.required =
+          false;
+
+        homeCity.required =
+          false;
+
+        homeState.required =
+          false;
+
+        homeZip.required =
+          false;
+
+
+        /* Reset payment display */
+
+        updatePaymentDetails();
+
+
+        /* Reset receipt preview */
+
+        receiptPreview.style.display =
+          "none";
+
+        receiptPreview.textContent =
+          "";
+
+
+        /* Restore date minimum */
+
+        preferredDate.min =
+          getLocalDate();
+
+
+      }catch(error){
+
+        console.error(
+          "Booking submission error:",
+          error
+        );
+
+
+        showStatus(
+          currentLanguage === "es"
+            ? "No pudimos enviar tu solicitud en este momento. Por favor verifica tu información e inténtalo nuevamente."
+            : "We could not submit your appointment request at this time. Please check your information and try again.",
+          "error"
+        );
+
+      }finally{
+
+        submitBtn.disabled =
+          false;
+
+        submitBtn.textContent =
+          currentLanguage === "es"
+            ? "Enviar Solicitud de Cita"
+            : "Submit Appointment Request";
+
+      }
+
+    }
+  );
+
+});
+
+</script>
+
+</body>
+</html>
