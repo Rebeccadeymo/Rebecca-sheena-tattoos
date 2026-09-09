@@ -85,7 +85,6 @@ img{
 .section-heading h2,
 .service-card h3,
 .about-text h2,
-.booking-form-wrapper h3,
 .contact-card h2,
 footer h3{
   font-family:'Cormorant Garamond',Georgia,serif;
@@ -225,25 +224,15 @@ nav a:hover{
 
 /* =========================
    HERO LOGO
-   BLENDED VERSION
 ========================= */
 
 .hero-logo{
   flex:0 0 210px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   position:relative;
 }
-
-/*
-  The logo itself has a colored background baked
-  into the image. These effects help it visually
-  blend into the hero instead of looking like a
-  separate box.
-*/
 
 .hero-logo:before{
   content:"";
@@ -264,20 +253,14 @@ nav a:hover{
     );
 
   filter:blur(12px);
-
   z-index:-1;
 }
 
 .hero-logo img{
   width:210px;
   height:210px;
-
   object-fit:contain;
 
-  /*
-    Screen blending helps the darker/colored
-    parts of the image merge with the photograph.
-  */
   mix-blend-mode:screen;
 
   filter:
@@ -308,34 +291,21 @@ nav a:hover{
 
 .hero h1{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
-
   font-size:clamp(70px,9vw,118px);
-
   line-height:.9;
-
   margin-bottom:28px;
-
   color:#fff;
-
-  text-shadow:
-    0 5px 25px rgba(0,0,0,.6);
-
+  text-shadow:0 5px 25px rgba(0,0,0,.6);
   font-weight:400;
-
   letter-spacing:0;
 }
 
 .hero p{
   font-family:'Montserrat',Arial,sans-serif;
-
   font-size:17px;
-
   color:#fff6f8;
-
   max-width:700px;
-
   margin:0 auto 30px;
-
   text-shadow:0 2px 10px rgba(0,0,0,.6);
 }
 
@@ -353,23 +323,16 @@ nav a:hover{
 
 .btn{
   display:inline-block;
-
   padding:13px 21px;
-
   border-radius:8px;
 
   font-family:'Cinzel',Georgia,serif;
-
   font-size:11px;
-
   letter-spacing:.8px;
-
   font-weight:700;
 
   border:1px solid var(--gold);
-
   cursor:pointer;
-
   transition:.2s ease;
 }
 
@@ -415,15 +378,10 @@ section:nth-child(even){
 
 .section-heading h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
-
   font-size:58px;
-
   line-height:1;
-
   font-weight:400;
-
   margin-bottom:14px;
-
   color:#21181b;
 }
 
@@ -436,15 +394,10 @@ section:nth-child(even){
 
 .section-heading h2:after{
   content:"";
-
   display:block;
-
   width:65px;
-
   height:1px;
-
   background:var(--gold);
-
   margin:16px auto 0;
 }
 
@@ -455,24 +408,17 @@ section:nth-child(even){
 
 .gallery{
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
 
 .gallery-item{
   overflow:hidden;
-
   background:#fff;
-
   border-radius:14px;
-
   min-height:300px;
 
-  border:
-    1px solid rgba(181,138,58,.18);
+  border:1px solid rgba(181,138,58,.18);
 
   box-shadow:
     0 8px 25px rgba(30,20,24,.08);
@@ -480,15 +426,11 @@ section:nth-child(even){
 
 .gallery-item img{
   width:100%;
-
   height:100%;
-
   min-height:300px;
-
   object-fit:cover;
 
-  transition:
-    transform .35s ease;
+  transition:transform .35s ease;
 }
 
 .gallery-item:hover img{
@@ -509,10 +451,7 @@ section:nth-child(even){
 .service-grid,
 .review-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
 
@@ -520,11 +459,8 @@ section:nth-child(even){
 .review{
   background:#fff;
 
-  border:
-    1px solid rgba(181,138,58,.18);
-
+  border:1px solid rgba(181,138,58,.18);
   border-radius:15px;
-
   padding:30px;
 
   box-shadow:
@@ -544,17 +480,13 @@ section:nth-child(even){
 
 .service-icon{
   font-size:30px;
-
   margin-bottom:15px;
 }
 
 .service-card h3{
   margin-bottom:10px;
-
   font-size:27px;
-
   font-weight:600;
-
   color:#241b1e;
 }
 
@@ -570,686 +502,40 @@ section:nth-child(even){
 
 .about-grid{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:55px;
-
   align-items:center;
 }
 
 .about-text h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
-
   font-size:62px;
-
   line-height:1;
-
   font-weight:400;
-
   margin-bottom:22px;
 }
 
 .about-text p{
   color:#666;
-
   margin-bottom:15px;
-
   font-size:15px;
 }
 
 .about-list{
   list-style:none;
-
   margin-top:22px;
 }
 
 .about-list li{
   margin:10px 0;
-
   font-weight:600;
-
   font-size:14px;
 }
 
 .about-list li::before{
   content:"✦";
-
   color:var(--gold);
-
   margin-right:10px;
-}
-
-
-/* =========================
-   BOOKING
-========================= */
-
-.booking-layout{
-  display:block;
-
-  max-width:900px;
-
-  margin:auto;
-}
-
-.booking-form-wrapper{
-  background:#fff;
-
-  border:
-    1px solid rgba(181,138,58,.2);
-
-  border-radius:18px;
-
-  padding:32px;
-
-  box-shadow:
-    0 12px 35px rgba(30,20,24,.07);
-}
-
-.booking-form-wrapper h3{
-  font-size:34px;
-
-  font-weight:600;
-
-  margin-bottom:10px;
-}
-
-.booking-form-wrapper>p{
-  color:#666;
-}
-
-.booking-info{
-  background:#fffaf2;
-
-  border-left:
-    4px solid var(--gold);
-
-  padding:18px;
-
-  border-radius:8px;
-
-  margin-bottom:25px;
-}
-
-.booking-info strong{
-  display:block;
-
-  margin-bottom:8px;
-}
-
-.booking-info p{
-  color:#555;
-
-  font-size:14px;
-
-  margin-bottom:8px;
-}
-
-
-/* =========================
-   HOME SERVICE
-========================= */
-
-.home-service-notice{
-  background:
-    linear-gradient(
-      135deg,
-      #fff7fa,
-      #fffaf0
-    );
-
-  border:
-    1px solid #e3c98d;
-
-  border-radius:14px;
-
-  padding:20px;
-
-  margin-bottom:25px;
-}
-
-.home-service-notice h3{
-  color:#8b6727;
-
-  font-size:21px;
-
-  margin-bottom:7px;
-}
-
-.home-service-notice p{
-  color:#555;
-
-  font-size:14px;
-
-  margin-bottom:7px;
-}
-
-.home-service-notice p:last-child{
-  margin-bottom:0;
-}
-
-
-/* =========================
-   LOCATION
-========================= */
-
-.service-location-box{
-  background:#fff;
-
-  border:
-    1px solid #eadde0;
-
-  border-radius:12px;
-
-  padding:20px;
-
-  margin-bottom:22px;
-}
-
-.service-location-box>label{
-  font-size:16px;
-
-  margin-bottom:12px;
-}
-
-.location-options{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:12px;
-}
-
-.location-option{
-  position:relative;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  padding:16px;
-
-  background:#fff;
-
-  border:
-    2px solid #eadfe2;
-
-  border-radius:12px;
-
-  cursor:pointer;
-
-  transition:.2s ease;
-}
-
-.location-option:hover{
-  border-color:#c6a15b;
-
-  transform:translateY(-1px);
-}
-
-.location-option:has(input:checked){
-  border-color:var(--gold);
-
-  background:#fffaf4;
-
-  box-shadow:
-    0 4px 14px rgba(181,138,58,.10);
-}
-
-.location-option input{
-  width:auto;
-
-  flex-shrink:0;
-
-  accent-color:var(--gold);
-}
-
-.location-option-content{
-  display:flex;
-
-  flex-direction:column;
-}
-
-.location-option-title{
-  font-weight:800;
-
-  font-size:15px;
-}
-
-.location-option-description{
-  color:#666;
-
-  font-size:13px;
-
-  line-height:1.4;
-}
-
-
-/* =========================
-   HOME ADDRESS
-========================= */
-
-.home-address{
-  display:none;
-
-  background:#fff;
-
-  border:
-    1px solid #eadfe2;
-
-  border-left:
-    4px solid var(--gold);
-
-  border-radius:10px;
-
-  padding:20px;
-
-  margin-bottom:22px;
-}
-
-.home-address.visible{
-  display:block;
-}
-
-.home-address-heading{
-  font-size:18px;
-
-  font-weight:800;
-
-  margin-bottom:5px;
-}
-
-.home-address-subtext{
-  color:#666;
-
-  font-size:13px;
-
-  margin-bottom:18px;
-}
-
-.address-note{
-  background:#faf4f6;
-
-  border-radius:8px;
-
-  padding:12px;
-
-  margin-top:5px;
-
-  font-size:12px;
-
-  color:#666;
-}
-
-
-/* =========================
-   FORM STATUS
-========================= */
-
-.form-status{
-  display:none;
-
-  margin-bottom:20px;
-
-  padding:15px 17px;
-
-  border-radius:10px;
-
-  font-size:14px;
-
-  font-weight:700;
-}
-
-.form-status.info{
-  display:block;
-
-  background:#fff8e8;
-
-  color:#805f13;
-
-  border:
-    1px solid #ecd99d;
-}
-
-.form-status.error{
-  display:block;
-
-  background:#fff1f1;
-
-  color:#9d2222;
-
-  border:
-    1px solid #efb8b8;
-}
-
-.form-status.success{
-  display:block;
-
-  background:#eaf8ee;
-
-  color:#176b35;
-
-  border:
-    1px solid #b9e5c5;
-}
-
-
-/* =========================
-   FORM
-========================= */
-
-.form-group{
-  margin-bottom:18px;
-}
-
-.form-row{
-  display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:15px;
-}
-
-label{
-  display:block;
-
-  font-weight:800;
-
-  font-size:14px;
-
-  margin-bottom:7px;
-}
-
-input,
-textarea,
-select{
-  width:100%;
-
-  border:
-    1px solid #ded3d6;
-
-  border-radius:8px;
-
-  padding:13px 14px;
-
-  font:inherit;
-
-  background:#fff;
-
-  color:#222;
-
-  outline:none;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-  border-color:var(--gold);
-
-  box-shadow:
-    0 0 0 3px rgba(181,138,58,.1);
-}
-
-textarea{
-  min-height:130px;
-
-  resize:vertical;
-}
-
-
-/* =========================
-   PAYMENT AMOUNT
-========================= */
-
-.payment-amount-box{
-  background:#fffafc;
-
-  border:
-    1px solid #eadde0;
-
-  border-radius:12px;
-
-  padding:18px;
-}
-
-.amount-input-wrap{
-  display:flex;
-
-  align-items:center;
-
-  gap:8px;
-
-  margin-top:8px;
-}
-
-.currency-symbol{
-  font-size:22px;
-
-  font-weight:900;
-}
-
-#depositAmount{
-  max-width:220px;
-
-  font-size:18px;
-
-  font-weight:700;
-}
-
-.payment-help{
-  color:#666;
-
-  font-size:13px;
-
-  margin-top:8px;
-
-  line-height:1.5;
-}
-
-
-/* =========================
-   PAYMENT DETAILS
-========================= */
-
-.selected-payment-details{
-  margin-top:12px;
-}
-
-.payment-option{
-  position:relative;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-
-  justify-content:flex-start;
-
-  gap:7px;
-
-  min-height:175px;
-
-  padding:18px 10px;
-
-  background:#fff;
-
-  border:
-    2px solid #eadfe2;
-
-  border-radius:13px;
-
-  cursor:default;
-
-  transition:.2s ease;
-
-  text-align:center;
-}
-
-.payment-option:hover{
-  border-color:#c6a15b;
-
-  transform:translateY(-2px);
-}
-
-.payment-logo{
-  width:70px;
-
-  height:70px;
-
-  border-radius:16px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-weight:900;
-
-  font-size:32px;
-
-  color:#fff;
-
-  margin-bottom:4px;
-
-  flex-shrink:0;
-}
-
-.cashapp-logo{
-  background:#00d64f;
-}
-
-.venmo-logo{
-  background:#008cff;
-
-  font-size:26px;
-}
-
-.zelle-logo{
-  background:#6d1cff;
-
-  font-size:25px;
-}
-
-.payment-name{
-  font-weight:800;
-
-  font-size:15px;
-}
-
-.payment-owner{
-  font-size:13px;
-
-  font-weight:700;
-
-  color:#555;
-
-  line-height:1.35;
-}
-
-.payment-handle{
-  font-size:14px;
-
-  font-weight:800;
-
-  color:#111;
-
-  line-height:1.35;
-
-  overflow-wrap:anywhere;
-}
-
-.payment-handle a{
-  color:#0077cc;
-
-  text-decoration:underline;
-
-  text-underline-offset:2px;
-}
-
-
-/* =========================
-   RECEIPT
-========================= */
-
-.receipt-preview{
-  margin-top:12px;
-
-  display:none;
-}
-
-.receipt-preview img{
-  width:180px;
-
-  max-height:180px;
-
-  object-fit:cover;
-
-  border-radius:8px;
-
-  border:
-    1px solid #ddd;
-}
-
-.checkbox-row{
-  display:flex;
-
-  gap:10px;
-
-  align-items:flex-start;
-
-  margin:20px 0;
-}
-
-.checkbox-row input{
-  width:auto;
-
-  margin-top:4px;
-}
-
-.checkbox-row label{
-  font-weight:500;
-
-  font-size:13px;
-}
-
-.submit-btn{
-  width:100%;
-
-  border:none;
-
-  background:var(--gold);
-
-  color:#fff;
-
-  padding:15px;
-
-  border-radius:8px;
-
-  font-size:16px;
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  transition:.2s ease;
-}
-
-.submit-btn:hover{
-  background:#9d762f;
-}
-
-.submit-btn:disabled{
-  opacity:.65;
-
-  cursor:not-allowed;
 }
 
 
@@ -1259,30 +545,21 @@ textarea{
 
 .contact-grid{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:40px;
-
   align-items:center;
 }
 
 .contact-card h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
-
   font-size:62px;
-
   line-height:1;
-
   font-weight:400;
-
   margin-bottom:18px;
 }
 
 .contact-card>p{
   color:#666;
-
   margin-bottom:25px;
 }
 
@@ -1292,69 +569,50 @@ textarea{
 
 .contact-item h3{
   font-family:'Cinzel',Georgia,serif;
-
   font-size:11px;
-
   color:#8b6727;
-
   text-transform:uppercase;
-
   letter-spacing:2px;
-
   margin-bottom:5px;
 }
 
 .contact-line{
   display:flex;
-
   align-items:center;
-
   gap:12px;
 }
 
 .contact-line-icon{
   width:42px;
-
   height:42px;
-
   border-radius:10px;
 
   display:flex;
-
   align-items:center;
-
   justify-content:center;
 
   flex-shrink:0;
-
   font-size:20px;
-
   font-weight:900;
 }
 
 .phone-icon{
   background:#eaf8ee;
-
   color:#1b9c4a;
 }
 
 .email-icon{
   background:#fff0f6;
-
   color:#d63384;
 }
 
 .contact-feature-image img{
   width:100%;
-
   height:500px;
-
   object-fit:cover;
 
   border-radius:14px;
-
-  border:
-    1px solid rgba(181,138,58,.2);
+  border:1px solid rgba(181,138,58,.2);
 
   box-shadow:
     0 10px 30px rgba(30,20,24,.1);
@@ -1367,34 +625,24 @@ textarea{
 
 .live-chat{
   position:fixed;
-
   right:20px;
-
   bottom:20px;
-
   z-index:999;
 
   display:flex;
-
   align-items:center;
-
   gap:9px;
 
   background:#111;
-
   color:#fff;
 
   padding:14px 20px;
 
-  border:
-    1px solid var(--gold);
-
+  border:1px solid var(--gold);
   border-radius:10px;
 
   font-size:15px;
-
   font-weight:800;
-
   letter-spacing:.2px;
 
   box-shadow:
@@ -1405,9 +653,7 @@ textarea{
 
 .live-chat:hover{
   background:var(--gold);
-
   color:#fff;
-
   transform:translateY(-3px);
 }
 
@@ -1418,42 +664,31 @@ textarea{
 
 footer{
   background:#171214;
-
   color:#ddd;
-
   padding:40px 0;
 }
 
 .footer-grid{
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns:1fr 1fr;
   gap:30px;
 }
 
 footer h3{
   color:#fff;
-
   font-size:29px;
-
   font-weight:600;
 }
 
 footer p{
   color:#aaa;
-
   font-size:14px;
 }
 
 .footer-links{
   display:flex;
-
   justify-content:flex-end;
-
   gap:20px;
-
   flex-wrap:wrap;
 }
 
@@ -1462,15 +697,10 @@ footer p{
 }
 
 .copyright{
-  border-top:
-    1px solid #333;
-
+  border-top:1px solid #333;
   margin-top:30px;
-
   padding-top:20px;
-
   font-size:13px;
-
   color:#888;
 }
 
@@ -1509,8 +739,7 @@ footer p{
   }
 
   .gallery{
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
   .service-grid,
@@ -1529,9 +758,7 @@ footer p{
 
   .navbar{
     padding:12px 0;
-
     align-items:flex-start;
-
     flex-direction:column;
   }
 
@@ -1541,9 +768,7 @@ footer p{
 
   nav{
     width:100%;
-
     justify-content:flex-start;
-
     gap:12px 16px;
   }
 
@@ -1557,15 +782,12 @@ footer p{
 
   .hero{
     min-height:680px;
-
     padding:85px 0;
-
     background-position:center center;
   }
 
   .hero-branding{
     flex-direction:column;
-
     gap:25px;
   }
 
@@ -1574,9 +796,7 @@ footer p{
   }
 
   .hero h1{
-    font-size:
-      clamp(64px,18vw,90px);
-
+    font-size:clamp(64px,18vw,90px);
     line-height:.9;
   }
 
@@ -1586,13 +806,11 @@ footer p{
 
   .hero-logo{
     flex:0 0 auto;
-
     order:2;
   }
 
   .hero-logo img{
     width:145px;
-
     height:145px;
 
     mix-blend-mode:screen;
@@ -1628,14 +846,6 @@ footer p{
     min-height:360px;
   }
 
-  .form-row{
-    grid-template-columns:1fr;
-  }
-
-  .booking-form-wrapper{
-    padding:20px;
-  }
-
   .contact-feature-image img{
     height:380px;
   }
@@ -1650,24 +860,9 @@ footer p{
 
   .live-chat{
     right:14px;
-
     bottom:14px;
-
     padding:13px 17px;
-
     font-size:14px;
-  }
-
-  .payment-option{
-    min-height:175px;
-  }
-
-  .location-options{
-    grid-template-columns:1fr;
-  }
-
-  .home-address{
-    padding:16px;
   }
 
 }
@@ -1675,9 +870,7 @@ footer p{
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -1717,7 +910,7 @@ data-es="Nosotros">
 About
 </a>
 
-<a href="#booking"
+<a href="booking.html"
 data-en="Book"
 data-es="Reservar">
 Book
@@ -1745,7 +938,6 @@ Español
 
 <main>
 
-
 <!-- =========================
      HERO
 ========================= -->
@@ -1756,9 +948,7 @@ Español
 
 <div class="hero-branding">
 
-
 <div class="hero-branding-text">
-
 
 <div
 class="eyebrow"
@@ -1769,12 +959,10 @@ Professional Tattoo Studio & Home Service
 
 </div>
 
-
 <h1>
 Your Story.<br>
 Our Art.
 </h1>
-
 
 <p
 data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
@@ -1785,28 +973,29 @@ Visit our studio or request our home tattoo service and let us turn your idea in
 
 </p>
 
-
 <div class="buttons">
 
 <a
-href="#booking"
-class="btn btn-primary">
+href="booking.html"
+class="btn btn-primary"
+data-en="Book an Appointment"
+data-es="Reservar una Cita">
 
 Book an Appointment
 
 </a>
 
-
 <a
 href="#work"
-class="btn btn-secondary">
+class="btn btn-secondary"
+data-en="View Our Work"
+data-es="Ver Nuestro Trabajo">
 
 View Our Work
 
 </a>
 
 </div>
-
 
 </div>
 
@@ -1826,7 +1015,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 </div>
 
 </div>
@@ -1841,7 +1029,6 @@ referrerpolicy="no-referrer">
 <section id="work">
 
 <div class="container">
-
 
 <div class="section-heading">
 
@@ -1859,9 +1046,7 @@ Take a look at some of our tattoo work and get inspired for your next piece.
 
 </div>
 
-
 <div class="gallery">
-
 
 <div class="gallery-item">
 
@@ -1874,7 +1059,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 <div class="gallery-item">
 
 <img
@@ -1885,7 +1069,6 @@ decoding="async"
 referrerpolicy="no-referrer">
 
 </div>
-
 
 <div class="gallery-item">
 
@@ -1898,7 +1081,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 <div class="gallery-item">
 
 <img
@@ -1909,7 +1091,6 @@ decoding="async"
 referrerpolicy="no-referrer">
 
 </div>
-
 
 <div class="gallery-item">
 
@@ -1922,7 +1103,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 </div>
 
 </div>
@@ -1934,12 +1114,9 @@ referrerpolicy="no-referrer">
      SERVICES
 ========================= -->
 
-<section
-class="services"
-id="services">
+<section class="services" id="services">
 
 <div class="container">
-
 
 <div class="section-heading">
 
@@ -1957,9 +1134,7 @@ From simple pieces to detailed custom artwork, we work with you to create someth
 
 </div>
 
-
 <div class="service-grid">
-
 
 <div class="service-card">
 
@@ -1977,7 +1152,6 @@ Bring your idea, reference or concept and we'll help transform it into a custom 
 
 </div>
 
-
 <div class="service-card">
 
 <div class="service-icon">
@@ -1993,7 +1167,6 @@ We can work with your vision to create artwork that fits your body and personal 
 </p>
 
 </div>
-
 
 <div class="service-card">
 
@@ -2011,7 +1184,6 @@ Prefer to be tattooed at home? Request our home service and we'll review your lo
 
 </div>
 
-
 </div>
 
 </div>
@@ -2026,7 +1198,6 @@ Prefer to be tattooed at home? Request our home service and we'll review your lo
 <section id="about">
 
 <div class="container about-grid">
-
 
 <div class="about-text">
 
@@ -2046,48 +1217,30 @@ At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind 
 Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come.
 </p>
 
-
 <ul class="about-list">
 
-<li>
-Professional tattoo service
-</li>
-
-<li>
-Custom artwork
-</li>
-
-<li>
-Studio appointments
-</li>
-
-<li>
-Home tattoo service
-</li>
-
-<li>
-Attention to detail
-</li>
-
-<li>
-Client-focused experience
-</li>
+<li>Professional tattoo service</li>
+<li>Custom artwork</li>
+<li>Studio appointments</li>
+<li>Home tattoo service</li>
+<li>Attention to detail</li>
+<li>Client-focused experience</li>
 
 </ul>
-
 
 <div style="margin-top:25px;">
 
 <a
-href="#booking"
-class="btn btn-primary">
+href="booking.html"
+class="btn btn-primary"
+data-en="Start Your Booking"
+data-es="Comenzar Reserva">
 
 Start Your Booking
 
 </a>
 
 </div>
-
 
 </div>
 
@@ -2123,7 +1276,6 @@ filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
 
 </div>
 
-
 </div>
 
 </section>
@@ -2137,7 +1289,6 @@ filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
 
 <div class="container">
 
-
 <div class="section-heading">
 
 <div class="eyebrow">
@@ -2150,9 +1301,7 @@ What Clients Love
 
 </div>
 
-
 <div class="review-grid">
-
 
 <div class="review">
 
@@ -2170,7 +1319,6 @@ Happy Client
 
 </div>
 
-
 <div class="review">
 
 <div class="stars">
@@ -2186,7 +1334,6 @@ Happy Client
 </strong>
 
 </div>
-
 
 <div class="review">
 
@@ -2204,673 +1351,6 @@ Happy Client
 
 </div>
 
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     BOOKING
-========================= -->
-
-<section
-class="booking"
-id="booking">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-<div class="eyebrow">
-Appointments
-</div>
-
-<h2>
-Book Your Tattoo
-</h2>
-
-<p>
-Complete the form below, choose whether you want to visit our studio or request home service, make your booking payment, and upload your payment proof.
-</p>
-
-</div>
-
-
-<div class="booking-layout">
-
-
-<div class="booking-form-wrapper">
-
-
-<div class="home-service-notice">
-
-<h3>
-🏠 We Offer Home Tattoo Service
-</h3>
-
-<p>
-Can't make it to our studio? You can request a home-service appointment and we may come to your location to provide your tattoo service.
-</p>
-
-<p>
-Home-service requests are subject to location, availability, travel arrangements, and studio approval.
-</p>
-
-</div>
-
-
-<div class="booking-info">
-
-<strong>
-Important Booking Information
-</strong>
-
-<p>
-A booking payment between $100 and $200 is required to secure your appointment.
-You choose the amount. The exact amount you pay will be deducted from your final tattoo payment.
-</p>
-
-<p>
-Your appointment is not confirmed until the studio reviews your request and verifies your payment.
-</p>
-
-</div>
-
-
-<div
-id="formStatus"
-class="form-status"
-role="alert"
-aria-live="polite">
-</div>
-
-
-<form
-id="bookingForm"
-enctype="multipart/form-data"
-novalidate>
-
-
-<div class="form-row">
-
-
-<div class="form-group">
-
-<label for="fullName">
-Full Name *
-</label>
-
-<input
-type="text"
-id="fullName"
-name="fi-sender-fullName"
-placeholder="Your full name"
-autocomplete="name"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="phone">
-Phone Number *
-</label>
-
-<input
-type="tel"
-id="phone"
-name="fi-sender-phone"
-placeholder="Your phone number"
-autocomplete="tel"
-required>
-
-</div>
-
-
-</div>
-
-
-<div class="form-group">
-
-<label for="email">
-Email Address *
-</label>
-
-<input
-type="email"
-id="email"
-name="fi-sender-email"
-placeholder="Your email address"
-autocomplete="email"
-required>
-
-</div>
-
-
-<!-- LOCATION -->
-
-<div class="service-location-box">
-
-<label>
-Where would you like your tattoo appointment? *
-</label>
-
-
-<div class="location-options">
-
-
-<label class="location-option">
-
-<input
-type="radio"
-name="fi-radio-serviceLocation"
-value="Studio Appointment"
-required>
-
-<div class="location-option-content">
-
-<span class="location-option-title">
-🏢 I'll Come to the Studio
-</span>
-
-<span class="location-option-description">
-I'll visit the tattoo studio for my appointment.
-</span>
-
-</div>
-
-</label>
-
-
-<label class="location-option">
-
-<input
-type="radio"
-name="fi-radio-serviceLocation"
-value="Home Service">
-
-<div class="location-option-content">
-
-<span class="location-option-title">
-🏠 Home Service
-</span>
-
-<span class="location-option-description">
-Please come to my location for the tattoo appointment.
-</span>
-
-</div>
-
-</label>
-
-
-</div>
-
-</div>
-
-
-<!-- HOME ADDRESS -->
-
-<div
-class="home-address"
-id="homeAddressSection">
-
-
-<div class="home-address-heading">
-🏠 Home Service Location
-</div>
-
-
-<div class="home-address-subtext">
-Please provide the location where you would like us to perform the tattoo. This helps the studio review your request and determine whether home service is available for your area.
-</div>
-
-
-<div class="form-group">
-
-<label for="homeAddress">
-Street Address *
-</label>
-
-<input
-type="text"
-id="homeAddress"
-name="fi-text-homeAddress"
-placeholder="House number and street address"
-autocomplete="street-address">
-
-</div>
-
-
-<div class="form-row">
-
-
-<div class="form-group">
-
-<label for="homeCity">
-City *
-</label>
-
-<input
-type="text"
-id="homeCity"
-name="fi-text-homeCity"
-placeholder="City"
-autocomplete="address-level2">
-
-</div>
-
-
-<div class="form-group">
-
-<label for="homeState">
-State *
-</label>
-
-<input
-type="text"
-id="homeState"
-name="fi-text-homeState"
-placeholder="State"
-autocomplete="address-level1">
-
-</div>
-
-
-</div>
-
-
-<div class="form-row">
-
-
-<div class="form-group">
-
-<label for="homeZip">
-ZIP Code *
-</label>
-
-<input
-type="text"
-id="homeZip"
-name="fi-text-homeZip"
-placeholder="ZIP code"
-autocomplete="postal-code">
-
-</div>
-
-
-<div class="form-group">
-
-<label for="homeDirections">
-Additional Directions
-</label>
-
-<input
-type="text"
-id="homeDirections"
-name="fi-text-homeDirections"
-placeholder="Optional directions or access information"
-autocomplete="off">
-
-</div>
-
-
-</div>
-
-
-<div class="address-note">
-
-🔒 Your address is collected for appointment planning and home-service review. The studio will review the location before confirming the appointment.
-
-</div>
-
-
-</div>
-
-
-<!-- DATE/TIME -->
-
-<div class="form-row">
-
-
-<div class="form-group">
-
-<label for="preferredDate">
-Preferred Date *
-</label>
-
-<input
-type="date"
-id="preferredDate"
-name="fi-date-preferredDate"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="preferredTime">
-Preferred Time *
-</label>
-
-<input
-type="time"
-id="preferredTime"
-name="fi-text-preferredTime"
-required>
-
-</div>
-
-
-</div>
-
-
-<!-- PLACEMENT/SIZE -->
-
-<div class="form-row">
-
-
-<div class="form-group">
-
-<label for="placement">
-Tattoo Placement *
-</label>
-
-<input
-type="text"
-id="placement"
-name="fi-text-tattooPlacement"
-placeholder="Example: arm, back, chest"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="size">
-Approximate Size *
-</label>
-
-<input
-type="text"
-id="size"
-name="fi-text-approximateSize"
-placeholder="Example: 4 inches"
-required>
-
-</div>
-
-
-</div>
-
-
-<!-- DESCRIPTION -->
-
-<div class="form-group">
-
-<label for="description">
-Describe Your Tattoo Idea *
-</label>
-
-<textarea
-id="description"
-name="fi-text-tattooDescription"
-placeholder="Tell us about the tattoo you would like..."
-required></textarea>
-
-</div>
-
-
-<!-- PAYMENT AMOUNT -->
-
-<div class="form-group payment-amount-box">
-
-<label for="depositAmount">
-Your Booking Payment Amount *
-</label>
-
-
-<div class="amount-input-wrap">
-
-<span class="currency-symbol">
-$
-</span>
-
-<input
-type="text"
-id="depositAmount"
-name="fi-number-bookingPaymentAmount"
-inputmode="numeric"
-autocomplete="off"
-placeholder="100"
-maxlength="3"
-required>
-
-</div>
-
-
-<div class="payment-help">
-
-Enter any whole-dollar amount from
-<strong>$100 to $200</strong>.
-
-This payment secures your appointment and will be deducted from your final tattoo payment.
-
-</div>
-
-</div>
-
-
-<!-- PAYMENT METHOD -->
-
-<div class="form-group">
-
-<label for="paymentMethod">
-Choose Your Payment Method *
-</label>
-
-<select
-id="paymentMethod"
-name="fi-select-paymentMethod"
-required>
-
-<option value="">
-Select Cash App, Venmo, or Zelle
-</option>
-
-<option value="Cash App">
-Cash App
-</option>
-
-<option value="Venmo">
-Venmo
-</option>
-
-<option value="Zelle">
-Zelle
-</option>
-
-</select>
-
-</div>
-
-
-<!-- PAYMENT DETAILS -->
-
-<div
-class="selected-payment-details"
-id="selectedPaymentDetails"
-style="display:none;">
-
-
-<div
-id="cashAppDetails"
-class="payment-option"
-style="display:none;">
-
-<div class="payment-logo cashapp-logo">
-$
-</div>
-
-<div class="payment-name">
-Cash App
-</div>
-
-<div class="payment-owner">
-Sheena Martin
-</div>
-
-<div class="payment-handle">
-$Msheena57
-</div>
-
-</div>
-
-
-<div
-id="venmoDetails"
-class="payment-option"
-style="display:none;">
-
-<div class="payment-logo venmo-logo">
-V
-</div>
-
-<div class="payment-name">
-Venmo
-</div>
-
-<div class="payment-owner">
-Sheena Martin
-</div>
-
-<div class="payment-handle">
-
-<a
-href="https://venmo.com/u/Sheena-Rebeccatattoos"
-target="_blank"
-rel="noopener noreferrer">
-
-@Sheena-Rebeccatattoos
-
-</a>
-
-</div>
-
-</div>
-
-
-<div
-id="zelleDetails"
-class="payment-option"
-style="display:none;">
-
-<div class="payment-logo zelle-logo">
-Z
-</div>
-
-<div class="payment-name">
-Zelle
-</div>
-
-<div class="payment-owner">
-Sheena Martin
-</div>
-
-<div class="payment-handle">
-sheenagmartin2357@gmail.com
-</div>
-
-</div>
-
-
-</div>
-
-
-<!-- RECEIPT -->
-
-<div class="form-group">
-
-<label for="receipt">
-Payment Proof / Receipt *
-</label>
-
-<input
-type="file"
-id="receipt"
-name="fi-file-paymentReceipt"
-accept=".jpg,.jpeg,.png,.webp,.pdf"
-required>
-
-
-<div class="payment-help">
-
-Upload a clear screenshot or photo of your payment receipt.
-
-JPG, PNG, WEBP or PDF.
-
-Maximum 10MB.
-
-</div>
-
-
-<div
-class="receipt-preview"
-id="receiptPreview">
-
-<img
-id="receiptPreviewImage"
-alt="Payment receipt preview">
-
-</div>
-
-</div>
-
-
-<!-- AGREEMENT -->
-
-<div class="checkbox-row">
-
-<input
-type="checkbox"
-id="agreement"
-name="fi-checkbox-bookingAgreement"
-value="Agreed"
-required>
-
-<label for="agreement">
-
-I understand that my selected booking payment is required to secure my appointment,
-will be deducted from my final tattoo payment, and my appointment is not confirmed
-until the studio reviews and verifies my payment. If I request home service, I understand
-that the location must be reviewed and approved by the studio before my appointment is confirmed.
-
-</label>
-
-</div>
-
-
-<button
-type="submit"
-class="submit-btn"
-id="submitBtn">
-
-Submit Appointment Request
-
-</button>
-
-
-</form>
-
-</div>
-
 </div>
 
 </div>
@@ -2882,12 +1362,9 @@ Submit Appointment Request
      CONTACT
 ========================= -->
 
-<section
-class="contact"
-id="contact">
+<section class="contact" id="contact">
 
 <div class="container contact-grid">
-
 
 <div class="contact-card">
 
@@ -2903,7 +1380,6 @@ Contact Rebecca & Sheena
 Have a question before booking? Contact us directly.
 </p>
 
-
 <div class="contact-item">
 
 <h3>
@@ -2917,7 +1393,6 @@ Richmond, MO 64085
 
 </div>
 
-
 <div class="contact-item">
 
 <h3>
@@ -2926,25 +1401,19 @@ Phone
 
 <div class="contact-line">
 
-
 <div class="contact-line-icon phone-icon">
 ☎
 </div>
 
-
 <p>
-
 <a href="tel:+15306821175">
 +1 (530) 682-1175
 </a>
-
 </p>
 
-
 </div>
 
 </div>
-
 
 <div class="contact-item">
 
@@ -2954,25 +1423,19 @@ Email
 
 <div class="contact-line">
 
-
 <div class="contact-line-icon email-icon">
 ✉
 </div>
 
-
 <p>
-
 <a href="mailto:Rebeccapalmer542@yahoo.com">
 Rebeccapalmer542@yahoo.com
 </a>
-
 </p>
 
-
 </div>
 
 </div>
-
 
 </div>
 
@@ -2988,11 +1451,9 @@ referrerpolicy="no-referrer">
 
 </div>
 
-
 </div>
 
 </section>
-
 
 </main>
 
@@ -3018,9 +1479,7 @@ href="sms:+15306821175?&body=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d
 
 <div class="container">
 
-
 <div class="footer-grid">
-
 
 <div>
 
@@ -3035,7 +1494,6 @@ detail and a great client experience.
 
 </div>
 
-
 <div class="footer-links">
 
 <a href="#home">
@@ -3046,7 +1504,7 @@ Home
 Our Work
 </a>
 
-<a href="#booking">
+<a href="booking.html">
 Book Appointment
 </a>
 
@@ -3056,9 +1514,7 @@ Contact
 
 </div>
 
-
 </div>
-
 
 <div class="copyright">
 
@@ -3068,17 +1524,9 @@ All rights reserved.
 
 </div>
 
-
 </div>
 
 </footer>
-
-
-<!-- =========================
-     FORMINIT SDK
-========================= -->
-
-<script src="https://forminit.com/sdk/v1/forminit.js"></script>
 
 
 <script>
@@ -3100,7 +1548,6 @@ document.getElementById("languageToggle");
 
 let currentLanguage =
 localStorage.getItem("siteLanguage") || "en";
-
 
 function updateLanguage(){
 
@@ -3125,7 +1572,6 @@ currentLanguage
 
 }
 
-
 languageToggle.addEventListener(
 "click",
 function(){
@@ -3139,609 +1585,9 @@ updateLanguage();
 
 });
 
-
 updateLanguage();
 
-
-/* =========================
-   MINIMUM DATE
-========================= */
-
-const preferredDate =
-document.getElementById("preferredDate");
-
-const today =
-new Date();
-
-preferredDate.min =
-today.toISOString().split("T")[0];
-
-
-/* =========================
-   FORMINIT
-========================= */
-
-const FORM_ID =
-"1f5pzk33x3d";
-
-const forminit =
-new Forminit();
-
-
-/* =========================
-   FORM ELEMENTS
-========================= */
-
-const bookingForm =
-document.getElementById("bookingForm");
-
-const depositAmount =
-document.getElementById("depositAmount");
-
-const receipt =
-document.getElementById("receipt");
-
-const agreement =
-document.getElementById("agreement");
-
-const submitBtn =
-document.getElementById("submitBtn");
-
-const formStatus =
-document.getElementById("formStatus");
-
-const receiptPreview =
-document.getElementById("receiptPreview");
-
-const receiptPreviewImage =
-document.getElementById("receiptPreviewImage");
-
-
-/* =========================
-   PAYMENT ELEMENTS
-========================= */
-
-const paymentMethod =
-document.getElementById("paymentMethod");
-
-const selectedPaymentDetails =
-document.getElementById("selectedPaymentDetails");
-
-const cashAppDetails =
-document.getElementById("cashAppDetails");
-
-const venmoDetails =
-document.getElementById("venmoDetails");
-
-const zelleDetails =
-document.getElementById("zelleDetails");
-
-
-/* =========================
-   PAYMENT DISPLAY
-========================= */
-
-paymentMethod.addEventListener(
-"change",
-function(){
-
-cashAppDetails.style.display =
-"none";
-
-venmoDetails.style.display =
-"none";
-
-zelleDetails.style.display =
-"none";
-
-selectedPaymentDetails.style.display =
-"none";
-
-
-if(this.value === "Cash App"){
-
-selectedPaymentDetails.style.display =
-"block";
-
-cashAppDetails.style.display =
-"flex";
-
-}
-
-else if(this.value === "Venmo"){
-
-selectedPaymentDetails.style.display =
-"block";
-
-venmoDetails.style.display =
-"flex";
-
-}
-
-else if(this.value === "Zelle"){
-
-selectedPaymentDetails.style.display =
-"block";
-
-zelleDetails.style.display =
-"flex";
-
-}
-
-});
-
-
-/* =========================
-   HOME SERVICE
-========================= */
-
-const serviceLocationInputs =
-document.querySelectorAll(
-'input[name="fi-radio-serviceLocation"]'
-);
-
-const homeAddressSection =
-document.getElementById("homeAddressSection");
-
-const homeAddress =
-document.getElementById("homeAddress");
-
-const homeCity =
-document.getElementById("homeCity");
-
-const homeState =
-document.getElementById("homeState");
-
-const homeZip =
-document.getElementById("homeZip");
-
-
-function updateServiceLocation(){
-
-const selectedLocation =
-document.querySelector(
-'input[name="fi-radio-serviceLocation"]:checked'
-);
-
-const isHomeService =
-selectedLocation &&
-selectedLocation.value === "Home Service";
-
-
-if(isHomeService){
-
-homeAddressSection.classList.add("visible");
-
-homeAddress.required = true;
-
-homeCity.required = true;
-
-homeState.required = true;
-
-homeZip.required = true;
-
-}
-
-else{
-
-homeAddressSection.classList.remove("visible");
-
-homeAddress.required = false;
-
-homeCity.required = false;
-
-homeState.required = false;
-
-homeZip.required = false;
-
-}
-
-}
-
-
-serviceLocationInputs.forEach(function(input){
-
-input.addEventListener(
-"change",
-updateServiceLocation
-);
-
-});
-
-
-/* =========================
-   STATUS
-========================= */
-
-function showStatus(message,type){
-
-formStatus.textContent =
-message;
-
-formStatus.className =
-"form-status " + type;
-
-formStatus.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-}
-
-
-/* =========================
-   RECEIPT PREVIEW
-========================= */
-
-receipt.addEventListener(
-"change",
-function(){
-
-const file =
-this.files[0];
-
-
-if(!file){
-
-receiptPreview.style.display =
-"none";
-
-return;
-
-}
-
-
-if(file.size >
-10 * 1024 * 1024){
-
-showStatus(
-"Your receipt file is larger than 10MB. Please choose a smaller file.",
-"error"
-);
-
-this.value = "";
-
-receiptPreview.style.display =
-"none";
-
-return;
-
-}
-
-
-if(file.type.startsWith("image/")){
-
-const reader =
-new FileReader();
-
-
-reader.onload =
-function(e){
-
-receiptPreviewImage.src =
-e.target.result;
-
-receiptPreview.style.display =
-"block";
-
-};
-
-
-reader.readAsDataURL(file);
-
-}
-
-else{
-
-receiptPreview.style.display =
-"none";
-
-}
-
-});
-
-
-/* =========================
-   BOOKING FORM
-========================= */
-
-bookingForm.addEventListener(
-"submit",
-async function(event){
-
-event.preventDefault();
-
-
-updateServiceLocation();
-
-
-if(!bookingForm.checkValidity()){
-
-bookingForm.reportValidity();
-
-showStatus(
-"Please complete all required fields before submitting your appointment.",
-"error"
-);
-
-return;
-
-}
-
-
-const selectedLocation =
-document.querySelector(
-'input[name="fi-radio-serviceLocation"]:checked'
-);
-
-
-if(!selectedLocation){
-
-showStatus(
-"Please choose whether you want to come to the studio or request home service.",
-"error"
-);
-
-return;
-
-}
-
-
-if(
-selectedLocation.value === "Home Service"
-){
-
-if(
-!homeAddress.value.trim() ||
-!homeCity.value.trim() ||
-!homeState.value.trim() ||
-!homeZip.value.trim()
-){
-
-showStatus(
-"Please provide your complete home-service address so the studio can review your location.",
-"error"
-);
-
-return;
-
-}
-
-}
-
-
-const rawAmount =
-depositAmount.value.trim();
-
-const amount =
-Number(rawAmount);
-
-
-if(
-!/^\d+$/.test(rawAmount) ||
-!Number.isInteger(amount) ||
-amount < 100 ||
-amount > 200
-){
-
-showStatus(
-"Please enter a whole-dollar booking payment between $100 and $200.",
-"error"
-);
-
-depositAmount.focus();
-
-return;
-
-}
-
-
-const selectedPaymentMethod =
-paymentMethod.value;
-
-
-if(!selectedPaymentMethod){
-
-showStatus(
-"Please choose Cash App, Venmo, or Zelle as your payment method.",
-"error"
-);
-
-paymentMethod.focus();
-
-return;
-
-}
-
-
-if(
-!receipt.files ||
-receipt.files.length === 0
-){
-
-showStatus(
-"Please upload your payment receipt before submitting your appointment.",
-"error"
-);
-
-receipt.focus();
-
-return;
-
-}
-
-
-const file =
-receipt.files[0];
-
-
-if(
-file.size >
-10 * 1024 * 1024
-){
-
-showStatus(
-"Your receipt file is larger than 10MB. Please choose a smaller file.",
-"error"
-);
-
-receipt.value = "";
-
-return;
-
-}
-
-
-if(!agreement.checked){
-
-showStatus(
-"Please confirm that you understand the booking payment terms.",
-"error"
-);
-
-agreement.focus();
-
-return;
-
-}
-
-
-submitBtn.disabled =
-true;
-
-submitBtn.textContent =
-"Submitting Appointment...";
-
-
-showStatus(
-"Please wait while your appointment request and payment receipt are being submitted.",
-"info"
-);
-
-
-try{
-
-const formData =
-new FormData(bookingForm);
-
-
-const result =
-await forminit.submit(
-FORM_ID,
-formData
-);
-
-
-if(result.error){
-
-console.error(
-"Forminit submission error:",
-result.error
-);
-
-showStatus(
-result.error.message ||
-"Something went wrong while submitting your appointment. Please try again.",
-"error"
-);
-
-submitBtn.disabled =
-false;
-
-submitBtn.textContent =
-"Submit Appointment Request";
-
-return;
-
-}
-
-
-showStatus(
-"🎉 Your appointment request has been submitted successfully! We received your booking information and payment receipt. Your appointment is not confirmed until the studio reviews and verifies your payment.",
-"success"
-);
-
-
-bookingForm.reset();
-
-
-homeAddressSection.classList.remove(
-"visible"
-);
-
-
-homeAddress.required =
-false;
-
-homeCity.required =
-false;
-
-homeState.required =
-false;
-
-homeZip.required =
-false;
-
-
-selectedPaymentDetails.style.display =
-"none";
-
-cashAppDetails.style.display =
-"none";
-
-venmoDetails.style.display =
-"none";
-
-zelleDetails.style.display =
-"none";
-
-
-receiptPreview.style.display =
-"none";
-
-receiptPreviewImage.src =
-"";
-
-
-submitBtn.disabled =
-false;
-
-submitBtn.textContent =
-"Submit Appointment Request";
-
-
-formStatus.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
-
-
-}
-
-catch(error){
-
-console.error(
-"Forminit error:",
-error
-);
-
-showStatus(
-"We couldn't submit your appointment right now. Please check your internet connection and try again.",
-"error"
-);
-
-submitBtn.disabled =
-false;
-
-submitBtn.textContent =
-"Submit Appointment Request";
-
-}
-
-});
-
 </script>
-
 
 </body>
 </html>
