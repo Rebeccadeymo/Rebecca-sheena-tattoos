@@ -9,12 +9,17 @@
 <meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service.">
 <meta name="theme-color" content="#ffffff">
 
-<!-- Artistic fonts -->
+<!-- Artistic Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
   box-sizing:border-box;
@@ -49,8 +54,9 @@ img{
   margin:auto;
 }
 
+
 /* =========================
-   LUXURY WHITE DESIGN
+   COLORS
 ========================= */
 
 :root{
@@ -58,14 +64,17 @@ img{
   --pink-light:#fff7fa;
   --pink-soft:#fdf0f4;
   --pink-dark:#c97f98;
+
   --gold:#b58a3a;
   --gold-light:#dfbd73;
+
   --black:#181214;
   --text:#2b2225;
   --muted:#706467;
   --white:#ffffff;
   --border:#eadde1;
 }
+
 
 /* =========================
    ARTISTIC TYPOGRAPHY
@@ -102,6 +111,7 @@ footer h3{
   letter-spacing:3px;
   margin-bottom:12px;
 }
+
 
 /* =========================
    HEADER
@@ -155,6 +165,7 @@ nav a:hover{
   font-weight:700;
 }
 
+
 /* =========================
    HERO
 ========================= */
@@ -180,12 +191,14 @@ nav a:hover{
   content:"";
   position:absolute;
   inset:0;
+
   background:
     radial-gradient(
       circle at 50% 50%,
       rgba(244,176,197,.14),
       transparent 58%
     );
+
   pointer-events:none;
 }
 
@@ -209,20 +222,83 @@ nav a:hover{
   text-align:center;
 }
 
+
+/* =========================
+   HERO LOGO
+   BLENDED VERSION
+========================= */
+
 .hero-logo{
   flex:0 0 210px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
+  position:relative;
+}
+
+/*
+  The logo itself has a colored background baked
+  into the image. These effects help it visually
+  blend into the hero instead of looking like a
+  separate box.
+*/
+
+.hero-logo:before{
+  content:"";
+  position:absolute;
+
+  width:245px;
+  height:245px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.28) 0%,
+      rgba(255,255,255,.12) 35%,
+      rgba(231,168,186,.10) 55%,
+      transparent 72%
+    );
+
+  filter:blur(12px);
+
+  z-index:-1;
 }
 
 .hero-logo img{
   width:210px;
   height:210px;
+
   object-fit:contain;
+
+  /*
+    Screen blending helps the darker/colored
+    parts of the image merge with the photograph.
+  */
+  mix-blend-mode:screen;
+
   filter:
-    drop-shadow(0 8px 22px rgba(0,0,0,.55))
-    drop-shadow(0 0 12px rgba(240,180,200,.25));
+    drop-shadow(0 4px 12px rgba(0,0,0,.35))
+    drop-shadow(0 0 18px rgba(255,255,255,.35))
+    drop-shadow(0 0 25px rgba(231,168,186,.22));
+
+  opacity:.97;
+
+  transition:
+    transform .3s ease,
+    filter .3s ease;
+}
+
+.hero-logo img:hover{
+  transform:scale(1.03);
+
+  filter:
+    drop-shadow(0 5px 15px rgba(0,0,0,.38))
+    drop-shadow(0 0 22px rgba(255,255,255,.4))
+    drop-shadow(0 0 30px rgba(231,168,186,.25));
 }
 
 .hero .eyebrow{
@@ -232,24 +308,41 @@ nav a:hover{
 
 .hero h1{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
+
   font-size:clamp(70px,9vw,118px);
+
   line-height:.9;
+
   margin-bottom:28px;
+
   color:#fff;
+
   text-shadow:
     0 5px 25px rgba(0,0,0,.6);
+
   font-weight:400;
+
   letter-spacing:0;
 }
 
 .hero p{
   font-family:'Montserrat',Arial,sans-serif;
+
   font-size:17px;
+
   color:#fff6f8;
+
   max-width:700px;
+
   margin:0 auto 30px;
+
   text-shadow:0 2px 10px rgba(0,0,0,.6);
 }
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons{
   display:flex;
@@ -260,14 +353,23 @@ nav a:hover{
 
 .btn{
   display:inline-block;
+
   padding:13px 21px;
+
   border-radius:8px;
+
   font-family:'Cinzel',Georgia,serif;
+
   font-size:11px;
+
   letter-spacing:.8px;
+
   font-weight:700;
+
   border:1px solid var(--gold);
+
   cursor:pointer;
+
   transition:.2s ease;
 }
 
@@ -278,7 +380,9 @@ nav a:hover{
 .btn-primary{
   background:var(--gold);
   color:#fff;
-  box-shadow:0 7px 18px rgba(181,138,58,.2);
+
+  box-shadow:
+    0 7px 18px rgba(181,138,58,.2);
 }
 
 .btn-primary:hover{
@@ -289,6 +393,7 @@ nav a:hover{
   background:rgba(255,255,255,.95);
   color:#7f5d24;
 }
+
 
 /* =========================
    SECTIONS
@@ -310,10 +415,15 @@ section:nth-child(even){
 
 .section-heading h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
+
   font-size:58px;
+
   line-height:1;
+
   font-weight:400;
+
   margin-bottom:14px;
+
   color:#21181b;
 }
 
@@ -324,16 +434,20 @@ section:nth-child(even){
   font-size:14px;
 }
 
-/* Decorative heading line */
-
 .section-heading h2:after{
   content:"";
+
   display:block;
+
   width:65px;
+
   height:1px;
+
   background:var(--gold);
+
   margin:16px auto 0;
 }
+
 
 /* =========================
    GALLERY
@@ -341,30 +455,46 @@ section:nth-child(even){
 
 .gallery{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:18px;
 }
 
 .gallery-item{
   overflow:hidden;
+
   background:#fff;
+
   border-radius:14px;
+
   min-height:300px;
-  border:1px solid rgba(181,138,58,.18);
-  box-shadow:0 8px 25px rgba(30,20,24,.08);
+
+  border:
+    1px solid rgba(181,138,58,.18);
+
+  box-shadow:
+    0 8px 25px rgba(30,20,24,.08);
 }
 
 .gallery-item img{
   width:100%;
+
   height:100%;
+
   min-height:300px;
+
   object-fit:cover;
-  transition:transform .35s ease;
+
+  transition:
+    transform .35s ease;
 }
 
 .gallery-item:hover img{
   transform:scale(1.04);
 }
+
 
 /* =========================
    SERVICES
@@ -379,17 +509,26 @@ section:nth-child(even){
 .service-grid,
 .review-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:22px;
 }
 
 .service-card,
 .review{
   background:#fff;
-  border:1px solid rgba(181,138,58,.18);
+
+  border:
+    1px solid rgba(181,138,58,.18);
+
   border-radius:15px;
+
   padding:30px;
-  box-shadow:0 8px 25px rgba(30,20,24,.06);
+
+  box-shadow:
+    0 8px 25px rgba(30,20,24,.06);
 }
 
 .service-card{
@@ -398,18 +537,24 @@ section:nth-child(even){
 
 .service-card:hover{
   transform:translateY(-4px);
-  box-shadow:0 14px 30px rgba(30,20,24,.12);
+
+  box-shadow:
+    0 14px 30px rgba(30,20,24,.12);
 }
 
 .service-icon{
   font-size:30px;
+
   margin-bottom:15px;
 }
 
 .service-card h3{
   margin-bottom:10px;
+
   font-size:27px;
+
   font-weight:600;
+
   color:#241b1e;
 }
 
@@ -418,47 +563,64 @@ section:nth-child(even){
   color:#666;
 }
 
+
 /* =========================
    ABOUT
 ========================= */
 
 .about-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:55px;
+
   align-items:center;
 }
 
 .about-text h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
+
   font-size:62px;
+
   line-height:1;
+
   font-weight:400;
+
   margin-bottom:22px;
 }
 
 .about-text p{
   color:#666;
+
   margin-bottom:15px;
+
   font-size:15px;
 }
 
 .about-list{
   list-style:none;
+
   margin-top:22px;
 }
 
 .about-list li{
   margin:10px 0;
+
   font-weight:600;
+
   font-size:14px;
 }
 
 .about-list li::before{
   content:"✦";
+
   color:var(--gold);
+
   margin-right:10px;
 }
+
 
 /* =========================
    BOOKING
@@ -466,21 +628,31 @@ section:nth-child(even){
 
 .booking-layout{
   display:block;
+
   max-width:900px;
+
   margin:auto;
 }
 
 .booking-form-wrapper{
   background:#fff;
-  border:1px solid rgba(181,138,58,.2);
+
+  border:
+    1px solid rgba(181,138,58,.2);
+
   border-radius:18px;
+
   padding:32px;
-  box-shadow:0 12px 35px rgba(30,20,24,.07);
+
+  box-shadow:
+    0 12px 35px rgba(30,20,24,.07);
 }
 
 .booking-form-wrapper h3{
   font-size:34px;
+
   font-weight:600;
+
   margin-bottom:10px;
 }
 
@@ -490,42 +662,67 @@ section:nth-child(even){
 
 .booking-info{
   background:#fffaf2;
-  border-left:4px solid var(--gold);
+
+  border-left:
+    4px solid var(--gold);
+
   padding:18px;
+
   border-radius:8px;
+
   margin-bottom:25px;
 }
 
 .booking-info strong{
   display:block;
+
   margin-bottom:8px;
 }
 
 .booking-info p{
   color:#555;
+
   font-size:14px;
+
   margin-bottom:8px;
 }
 
-/* HOME SERVICE NOTICE */
+
+/* =========================
+   HOME SERVICE
+========================= */
 
 .home-service-notice{
-  background:linear-gradient(135deg,#fff7fa,#fffaf0);
-  border:1px solid #e3c98d;
+  background:
+    linear-gradient(
+      135deg,
+      #fff7fa,
+      #fffaf0
+    );
+
+  border:
+    1px solid #e3c98d;
+
   border-radius:14px;
+
   padding:20px;
+
   margin-bottom:25px;
 }
 
 .home-service-notice h3{
   color:#8b6727;
+
   font-size:21px;
+
   margin-bottom:7px;
 }
 
 .home-service-notice p{
   color:#555;
+
   font-size:14px;
+
   margin-bottom:7px;
 }
 
@@ -533,82 +730,125 @@ section:nth-child(even){
   margin-bottom:0;
 }
 
-/* LOCATION */
+
+/* =========================
+   LOCATION
+========================= */
 
 .service-location-box{
   background:#fff;
-  border:1px solid #eadde0;
+
+  border:
+    1px solid #eadde0;
+
   border-radius:12px;
+
   padding:20px;
+
   margin-bottom:22px;
 }
 
 .service-location-box>label{
   font-size:16px;
+
   margin-bottom:12px;
 }
 
 .location-options{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:12px;
 }
 
 .location-option{
   position:relative;
+
   display:flex;
+
   align-items:center;
+
   gap:12px;
+
   padding:16px;
+
   background:#fff;
-  border:2px solid #eadfe2;
+
+  border:
+    2px solid #eadfe2;
+
   border-radius:12px;
+
   cursor:pointer;
+
   transition:.2s ease;
 }
 
 .location-option:hover{
   border-color:#c6a15b;
+
   transform:translateY(-1px);
 }
 
 .location-option:has(input:checked){
   border-color:var(--gold);
+
   background:#fffaf4;
-  box-shadow:0 4px 14px rgba(181,138,58,.10);
+
+  box-shadow:
+    0 4px 14px rgba(181,138,58,.10);
 }
 
 .location-option input{
   width:auto;
+
   flex-shrink:0;
+
   accent-color:var(--gold);
 }
 
 .location-option-content{
   display:flex;
+
   flex-direction:column;
 }
 
 .location-option-title{
   font-weight:800;
+
   font-size:15px;
 }
 
 .location-option-description{
   color:#666;
+
   font-size:13px;
+
   line-height:1.4;
 }
 
-/* HOME ADDRESS */
+
+/* =========================
+   HOME ADDRESS
+========================= */
 
 .home-address{
   display:none;
+
   background:#fff;
-  border:1px solid #eadfe2;
-  border-left:4px solid var(--gold);
+
+  border:
+    1px solid #eadfe2;
+
+  border-left:
+    4px solid var(--gold);
+
   border-radius:10px;
+
   padding:20px;
+
   margin-bottom:22px;
 }
 
@@ -618,56 +858,90 @@ section:nth-child(even){
 
 .home-address-heading{
   font-size:18px;
+
   font-weight:800;
+
   margin-bottom:5px;
 }
 
 .home-address-subtext{
   color:#666;
+
   font-size:13px;
+
   margin-bottom:18px;
 }
 
 .address-note{
   background:#faf4f6;
+
   border-radius:8px;
+
   padding:12px;
+
   margin-top:5px;
+
   font-size:12px;
+
   color:#666;
 }
 
-/* FORM STATUS */
+
+/* =========================
+   FORM STATUS
+========================= */
 
 .form-status{
   display:none;
+
   margin-bottom:20px;
+
   padding:15px 17px;
+
   border-radius:10px;
+
   font-size:14px;
+
   font-weight:700;
 }
 
 .form-status.info{
   display:block;
+
   background:#fff8e8;
+
   color:#805f13;
-  border:1px solid #ecd99d;
+
+  border:
+    1px solid #ecd99d;
 }
 
 .form-status.error{
   display:block;
+
   background:#fff1f1;
+
   color:#9d2222;
-  border:1px solid #efb8b8;
+
+  border:
+    1px solid #efb8b8;
 }
 
 .form-status.success{
   display:block;
+
   background:#eaf8ee;
+
   color:#176b35;
-  border:1px solid #b9e5c5;
+
+  border:
+    1px solid #b9e5c5;
 }
+
+
+/* =========================
+   FORM
+========================= */
 
 .form-group{
   margin-bottom:18px;
@@ -675,14 +949,20 @@ section:nth-child(even){
 
 .form-row{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:15px;
 }
 
 label{
   display:block;
+
   font-weight:800;
+
   font-size:14px;
+
   margin-bottom:7px;
 }
 
@@ -690,12 +970,20 @@ input,
 textarea,
 select{
   width:100%;
-  border:1px solid #ded3d6;
+
+  border:
+    1px solid #ded3d6;
+
   border-radius:8px;
+
   padding:13px 14px;
+
   font:inherit;
+
   background:#fff;
+
   color:#222;
+
   outline:none;
 }
 
@@ -703,49 +991,71 @@ input:focus,
 textarea:focus,
 select:focus{
   border-color:var(--gold);
-  box-shadow:0 0 0 3px rgba(181,138,58,.1);
+
+  box-shadow:
+    0 0 0 3px rgba(181,138,58,.1);
 }
 
 textarea{
   min-height:130px;
+
   resize:vertical;
 }
 
-/* PAYMENT */
+
+/* =========================
+   PAYMENT AMOUNT
+========================= */
 
 .payment-amount-box{
   background:#fffafc;
-  border:1px solid #eadde0;
+
+  border:
+    1px solid #eadde0;
+
   border-radius:12px;
+
   padding:18px;
 }
 
 .amount-input-wrap{
   display:flex;
+
   align-items:center;
+
   gap:8px;
+
   margin-top:8px;
 }
 
 .currency-symbol{
   font-size:22px;
+
   font-weight:900;
 }
 
 #depositAmount{
   max-width:220px;
+
   font-size:18px;
+
   font-weight:700;
 }
 
 .payment-help{
   color:#666;
+
   font-size:13px;
+
   margin-top:8px;
+
   line-height:1.5;
 }
 
-/* PAYMENT DISPLAY */
+
+/* =========================
+   PAYMENT DETAILS
+========================= */
 
 .selected-payment-details{
   margin-top:12px;
@@ -753,37 +1063,62 @@ textarea{
 
 .payment-option{
   position:relative;
+
   display:flex;
+
   flex-direction:column;
+
   align-items:center;
+
   justify-content:flex-start;
+
   gap:7px;
+
   min-height:175px;
+
   padding:18px 10px;
+
   background:#fff;
-  border:2px solid #eadfe2;
+
+  border:
+    2px solid #eadfe2;
+
   border-radius:13px;
+
   cursor:default;
+
   transition:.2s ease;
+
   text-align:center;
 }
 
 .payment-option:hover{
   border-color:#c6a15b;
+
   transform:translateY(-2px);
 }
 
 .payment-logo{
   width:70px;
+
   height:70px;
+
   border-radius:16px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   font-weight:900;
+
   font-size:32px;
+
   color:#fff;
+
   margin-bottom:4px;
+
   flex-shrink:0;
 }
 
@@ -793,82 +1128,117 @@ textarea{
 
 .venmo-logo{
   background:#008cff;
+
   font-size:26px;
 }
 
 .zelle-logo{
   background:#6d1cff;
+
   font-size:25px;
 }
 
 .payment-name{
   font-weight:800;
+
   font-size:15px;
 }
 
 .payment-owner{
   font-size:13px;
+
   font-weight:700;
+
   color:#555;
+
   line-height:1.35;
 }
 
 .payment-handle{
   font-size:14px;
+
   font-weight:800;
+
   color:#111;
+
   line-height:1.35;
+
   overflow-wrap:anywhere;
 }
 
 .payment-handle a{
   color:#0077cc;
+
   text-decoration:underline;
+
   text-underline-offset:2px;
 }
 
-/* RECEIPT */
+
+/* =========================
+   RECEIPT
+========================= */
 
 .receipt-preview{
   margin-top:12px;
+
   display:none;
 }
 
 .receipt-preview img{
   width:180px;
+
   max-height:180px;
+
   object-fit:cover;
+
   border-radius:8px;
-  border:1px solid #ddd;
+
+  border:
+    1px solid #ddd;
 }
 
 .checkbox-row{
   display:flex;
+
   gap:10px;
+
   align-items:flex-start;
+
   margin:20px 0;
 }
 
 .checkbox-row input{
   width:auto;
+
   margin-top:4px;
 }
 
 .checkbox-row label{
   font-weight:500;
+
   font-size:13px;
 }
 
 .submit-btn{
   width:100%;
+
   border:none;
+
   background:var(--gold);
+
   color:#fff;
+
   padding:15px;
+
   border-radius:8px;
+
   font-size:16px;
+
   font-weight:800;
+
   cursor:pointer;
+
   transition:.2s ease;
 }
 
@@ -878,8 +1248,10 @@ textarea{
 
 .submit-btn:disabled{
   opacity:.65;
+
   cursor:not-allowed;
 }
+
 
 /* =========================
    CONTACT
@@ -887,21 +1259,30 @@ textarea{
 
 .contact-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:40px;
+
   align-items:center;
 }
 
 .contact-card h2{
   font-family:'Great Vibes','Cormorant Garamond',cursive;
+
   font-size:62px;
+
   line-height:1;
+
   font-weight:400;
+
   margin-bottom:18px;
 }
 
 .contact-card>p{
   color:#666;
+
   margin-bottom:25px;
 }
 
@@ -911,84 +1292,125 @@ textarea{
 
 .contact-item h3{
   font-family:'Cinzel',Georgia,serif;
+
   font-size:11px;
+
   color:#8b6727;
+
   text-transform:uppercase;
+
   letter-spacing:2px;
+
   margin-bottom:5px;
 }
 
 .contact-line{
   display:flex;
+
   align-items:center;
+
   gap:12px;
 }
 
 .contact-line-icon{
   width:42px;
+
   height:42px;
+
   border-radius:10px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   flex-shrink:0;
+
   font-size:20px;
+
   font-weight:900;
 }
 
 .phone-icon{
   background:#eaf8ee;
+
   color:#1b9c4a;
 }
 
 .email-icon{
   background:#fff0f6;
+
   color:#d63384;
 }
 
 .contact-feature-image img{
   width:100%;
+
   height:500px;
+
   object-fit:cover;
+
   border-radius:14px;
-  border:1px solid rgba(181,138,58,.2);
-  box-shadow:0 10px 30px rgba(30,20,24,.1);
+
+  border:
+    1px solid rgba(181,138,58,.2);
+
+  box-shadow:
+    0 10px 30px rgba(30,20,24,.1);
 }
 
+
 /* =========================
-   SMS
+   SMS BUTTON
 ========================= */
 
 .live-chat{
   position:fixed;
+
   right:20px;
+
   bottom:20px;
+
   z-index:999;
 
   display:flex;
+
   align-items:center;
+
   gap:9px;
 
   background:#111;
+
   color:#fff;
 
   padding:14px 20px;
-  border:1px solid var(--gold);
+
+  border:
+    1px solid var(--gold);
+
   border-radius:10px;
 
   font-size:15px;
+
   font-weight:800;
+
   letter-spacing:.2px;
 
-  box-shadow:0 8px 25px rgba(0,0,0,.18);
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.18);
+
   transition:all .2s ease;
 }
 
 .live-chat:hover{
   background:var(--gold);
+
   color:#fff;
+
   transform:translateY(-3px);
 }
+
 
 /* =========================
    FOOTER
@@ -996,31 +1418,42 @@ textarea{
 
 footer{
   background:#171214;
+
   color:#ddd;
+
   padding:40px 0;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:30px;
 }
 
 footer h3{
   color:#fff;
+
   font-size:29px;
+
   font-weight:600;
 }
 
 footer p{
   color:#aaa;
+
   font-size:14px;
 }
 
 .footer-links{
   display:flex;
+
   justify-content:flex-end;
+
   gap:20px;
+
   flex-wrap:wrap;
 }
 
@@ -1029,12 +1462,18 @@ footer p{
 }
 
 .copyright{
-  border-top:1px solid #333;
+  border-top:
+    1px solid #333;
+
   margin-top:30px;
+
   padding-top:20px;
+
   font-size:13px;
+
   color:#888;
 }
+
 
 /* =========================
    TABLET
@@ -1059,13 +1498,19 @@ footer p{
     height:160px;
   }
 
+  .hero-logo:before{
+    width:190px;
+    height:190px;
+  }
+
   .about-grid,
   .contact-grid{
     grid-template-columns:1fr;
   }
 
   .gallery{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+      repeat(2,1fr);
   }
 
   .service-grid,
@@ -1075,6 +1520,7 @@ footer p{
 
 }
 
+
 /* =========================
    MOBILE
 ========================= */
@@ -1083,7 +1529,9 @@ footer p{
 
   .navbar{
     padding:12px 0;
+
     align-items:flex-start;
+
     flex-direction:column;
   }
 
@@ -1093,7 +1541,9 @@ footer p{
 
   nav{
     width:100%;
+
     justify-content:flex-start;
+
     gap:12px 16px;
   }
 
@@ -1107,12 +1557,15 @@ footer p{
 
   .hero{
     min-height:680px;
+
     padding:85px 0;
+
     background-position:center center;
   }
 
   .hero-branding{
     flex-direction:column;
+
     gap:25px;
   }
 
@@ -1121,7 +1574,9 @@ footer p{
   }
 
   .hero h1{
-    font-size:clamp(64px,18vw,90px);
+    font-size:
+      clamp(64px,18vw,90px);
+
     line-height:.9;
   }
 
@@ -1131,11 +1586,28 @@ footer p{
 
   .hero-logo{
     flex:0 0 auto;
+
+    order:2;
   }
 
   .hero-logo img{
     width:145px;
+
     height:145px;
+
+    mix-blend-mode:screen;
+
+    filter:
+      drop-shadow(0 4px 10px rgba(0,0,0,.3))
+      drop-shadow(0 0 15px rgba(255,255,255,.35))
+      drop-shadow(0 0 20px rgba(231,168,186,.2));
+
+    opacity:.97;
+  }
+
+  .hero-logo:before{
+    width:175px;
+    height:175px;
   }
 
   .section-heading h2{
@@ -1178,8 +1650,11 @@ footer p{
 
   .live-chat{
     right:14px;
+
     bottom:14px;
+
     padding:13px 17px;
+
     font-size:14px;
   }
 
@@ -1200,7 +1675,13 @@ footer p{
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -1212,27 +1693,39 @@ Rebecca & Sheena <span>Tattoos</span>
 
 <nav>
 
-<a href="#home" data-en="Home" data-es="Inicio">
+<a href="#home"
+data-en="Home"
+data-es="Inicio">
 Home
 </a>
 
-<a href="#work" data-en="Our Work" data-es="Nuestro Trabajo">
+<a href="#work"
+data-en="Our Work"
+data-es="Nuestro Trabajo">
 Our Work
 </a>
 
-<a href="#services" data-en="Services" data-es="Servicios">
+<a href="#services"
+data-en="Services"
+data-es="Servicios">
 Services
 </a>
 
-<a href="#about" data-en="About" data-es="Nosotros">
+<a href="#about"
+data-en="About"
+data-es="Nosotros">
 About
 </a>
 
-<a href="#booking" data-en="Book" data-es="Reservar">
+<a href="#booking"
+data-en="Book"
+data-es="Reservar">
 Book
 </a>
 
-<a href="#contact" data-en="Contact" data-es="Contacto">
+<a href="#contact"
+data-en="Contact"
+data-es="Contacto">
 Contact
 </a>
 
@@ -1249,9 +1742,13 @@ Español
 
 </header>
 
+
 <main>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -1259,7 +1756,9 @@ Español
 
 <div class="hero-branding">
 
+
 <div class="hero-branding-text">
+
 
 <div
 class="eyebrow"
@@ -1270,10 +1769,12 @@ Professional Tattoo Studio & Home Service
 
 </div>
 
+
 <h1>
 Your Story.<br>
 Our Art.
 </h1>
+
 
 <p
 data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
@@ -1284,19 +1785,33 @@ Visit our studio or request our home tattoo service and let us turn your idea in
 
 </p>
 
+
 <div class="buttons">
 
-<a href="#booking" class="btn btn-primary">
+<a
+href="#booking"
+class="btn btn-primary">
+
 Book an Appointment
+
 </a>
 
-<a href="#work" class="btn btn-secondary">
+
+<a
+href="#work"
+class="btn btn-secondary">
+
 View Our Work
+
 </a>
 
 </div>
 
+
 </div>
+
+
+<!-- HERO LOGO -->
 
 <div class="hero-logo">
 
@@ -1311,17 +1826,22 @@ referrerpolicy="no-referrer">
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
-<!-- OUR WORK -->
+
+<!-- =========================
+     OUR WORK
+========================= -->
 
 <section id="work">
 
 <div class="container">
+
 
 <div class="section-heading">
 
@@ -1339,52 +1859,69 @@ Take a look at some of our tattoo work and get inspired for your next piece.
 
 </div>
 
+
 <div class="gallery">
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
 alt="Collection of tattoo artwork"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer">
+
 </div>
 
+
 <div class="gallery-item">
+
 <img
 src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
 alt="Tattoo artwork by Rebecca and Sheena"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer">
+
 </div>
+
 
 </div>
 
@@ -1392,13 +1929,17 @@ referrerpolicy="no-referrer">
 
 </section>
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section
 class="services"
 id="services">
 
 <div class="container">
+
 
 <div class="section-heading">
 
@@ -1416,7 +1957,9 @@ From simple pieces to detailed custom artwork, we work with you to create someth
 
 </div>
 
+
 <div class="service-grid">
+
 
 <div class="service-card">
 
@@ -1434,6 +1977,7 @@ Bring your idea, reference or concept and we'll help transform it into a custom 
 
 </div>
 
+
 <div class="service-card">
 
 <div class="service-icon">
@@ -1449,6 +1993,7 @@ We can work with your vision to create artwork that fits your body and personal 
 </p>
 
 </div>
+
 
 <div class="service-card">
 
@@ -1466,17 +2011,22 @@ Prefer to be tattooed at home? Request our home service and we'll review your lo
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
 <div class="container about-grid">
+
 
 <div class="about-text">
 
@@ -1495,6 +2045,7 @@ At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind 
 <p>
 Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come.
 </p>
+
 
 <ul class="about-list">
 
@@ -1524,21 +2075,34 @@ Client-focused experience
 
 </ul>
 
+
 <div style="margin-top:25px;">
 
 <a
 href="#booking"
 class="btn btn-primary">
+
 Start Your Booking
+
 </a>
 
 </div>
 
+
 </div>
+
+
+<!-- ABOUT LOGO -->
 
 <div
 class="gallery-item"
-style="display:flex; align-items:center; justify-content:center; background:#fff; padding:20px;">
+style="
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fff;
+padding:20px;
+">
 
 <img
 src="https://i.ibb.co/Zz1L6vqw/A2132795-1-C7-B-453-F-B855-8-E3-B97-F3-BB3-E.png"
@@ -1548,19 +2112,31 @@ height="520"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer"
-style="width:100%; height:100%; max-width:520px; max-height:520px; object-fit:contain; filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));">
+style="
+width:100%;
+height:100%;
+max-width:520px;
+max-height:520px;
+object-fit:contain;
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
+">
 
 </div>
+
 
 </div>
 
 </section>
 
-<!-- REVIEWS -->
+
+<!-- =========================
+     REVIEWS
+========================= -->
 
 <section class="reviews">
 
 <div class="container">
+
 
 <div class="section-heading">
 
@@ -1574,7 +2150,9 @@ What Clients Love
 
 </div>
 
+
 <div class="review-grid">
+
 
 <div class="review">
 
@@ -1592,6 +2170,7 @@ Happy Client
 
 </div>
 
+
 <div class="review">
 
 <div class="stars">
@@ -1607,6 +2186,7 @@ Happy Client
 </strong>
 
 </div>
+
 
 <div class="review">
 
@@ -1624,19 +2204,24 @@ Happy Client
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
-<!-- BOOKING -->
+
+<!-- =========================
+     BOOKING
+========================= -->
 
 <section
 class="booking"
 id="booking">
 
 <div class="container">
+
 
 <div class="section-heading">
 
@@ -1654,9 +2239,12 @@ Complete the form below, choose whether you want to visit our studio or request 
 
 </div>
 
+
 <div class="booking-layout">
 
+
 <div class="booking-form-wrapper">
+
 
 <div class="home-service-notice">
 
@@ -1673,6 +2261,7 @@ Home-service requests are subject to location, availability, travel arrangements
 </p>
 
 </div>
+
 
 <div class="booking-info">
 
@@ -1691,6 +2280,7 @@ Your appointment is not confirmed until the studio reviews your request and veri
 
 </div>
 
+
 <div
 id="formStatus"
 class="form-status"
@@ -1698,12 +2288,15 @@ role="alert"
 aria-live="polite">
 </div>
 
+
 <form
 id="bookingForm"
 enctype="multipart/form-data"
 novalidate>
 
+
 <div class="form-row">
+
 
 <div class="form-group">
 
@@ -1721,6 +2314,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <label for="phone">
@@ -1737,7 +2331,9 @@ required>
 
 </div>
 
+
 </div>
+
 
 <div class="form-group">
 
@@ -1755,13 +2351,18 @@ required>
 
 </div>
 
+
+<!-- LOCATION -->
+
 <div class="service-location-box">
 
 <label>
 Where would you like your tattoo appointment? *
 </label>
 
+
 <div class="location-options">
+
 
 <label class="location-option">
 
@@ -1785,6 +2386,7 @@ I'll visit the tattoo studio for my appointment.
 
 </label>
 
+
 <label class="location-option">
 
 <input
@@ -1806,21 +2408,28 @@ Please come to my location for the tattoo appointment.
 
 </label>
 
+
 </div>
 
 </div>
+
+
+<!-- HOME ADDRESS -->
 
 <div
 class="home-address"
 id="homeAddressSection">
 
+
 <div class="home-address-heading">
 🏠 Home Service Location
 </div>
 
+
 <div class="home-address-subtext">
 Please provide the location where you would like us to perform the tattoo. This helps the studio review your request and determine whether home service is available for your area.
 </div>
+
 
 <div class="form-group">
 
@@ -1837,7 +2446,9 @@ autocomplete="street-address">
 
 </div>
 
+
 <div class="form-row">
+
 
 <div class="form-group">
 
@@ -1854,6 +2465,7 @@ autocomplete="address-level2">
 
 </div>
 
+
 <div class="form-group">
 
 <label for="homeState">
@@ -1869,9 +2481,12 @@ autocomplete="address-level1">
 
 </div>
 
+
 </div>
 
+
 <div class="form-row">
+
 
 <div class="form-group">
 
@@ -1888,6 +2503,7 @@ autocomplete="postal-code">
 
 </div>
 
+
 <div class="form-group">
 
 <label for="homeDirections">
@@ -1903,15 +2519,24 @@ autocomplete="off">
 
 </div>
 
+
 </div>
+
 
 <div class="address-note">
+
 🔒 Your address is collected for appointment planning and home-service review. The studio will review the location before confirming the appointment.
-</div>
 
 </div>
+
+
+</div>
+
+
+<!-- DATE/TIME -->
 
 <div class="form-row">
+
 
 <div class="form-group">
 
@@ -1927,6 +2552,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <label for="preferredTime">
@@ -1941,9 +2567,14 @@ required>
 
 </div>
 
+
 </div>
 
+
+<!-- PLACEMENT/SIZE -->
+
 <div class="form-row">
+
 
 <div class="form-group">
 
@@ -1960,6 +2591,7 @@ required>
 
 </div>
 
+
 <div class="form-group">
 
 <label for="size">
@@ -1975,7 +2607,11 @@ required>
 
 </div>
 
+
 </div>
+
+
+<!-- DESCRIPTION -->
 
 <div class="form-group">
 
@@ -1991,11 +2627,15 @@ required></textarea>
 
 </div>
 
+
+<!-- PAYMENT AMOUNT -->
+
 <div class="form-group payment-amount-box">
 
 <label for="depositAmount">
 Your Booking Payment Amount *
 </label>
+
 
 <div class="amount-input-wrap">
 
@@ -2015,6 +2655,7 @@ required>
 
 </div>
 
+
 <div class="payment-help">
 
 Enter any whole-dollar amount from
@@ -2025,6 +2666,9 @@ This payment secures your appointment and will be deducted from your final tatto
 </div>
 
 </div>
+
+
+<!-- PAYMENT METHOD -->
 
 <div class="form-group">
 
@@ -2057,10 +2701,14 @@ Zelle
 
 </div>
 
+
+<!-- PAYMENT DETAILS -->
+
 <div
 class="selected-payment-details"
 id="selectedPaymentDetails"
 style="display:none;">
+
 
 <div
 id="cashAppDetails"
@@ -2085,6 +2733,7 @@ $Msheena57
 
 </div>
 
+
 <div
 id="venmoDetails"
 class="payment-option"
@@ -2108,12 +2757,15 @@ Sheena Martin
 href="https://venmo.com/u/Sheena-Rebeccatattoos"
 target="_blank"
 rel="noopener noreferrer">
+
 @Sheena-Rebeccatattoos
+
 </a>
 
 </div>
 
 </div>
+
 
 <div
 id="zelleDetails"
@@ -2138,7 +2790,11 @@ sheenagmartin2357@gmail.com
 
 </div>
 
+
 </div>
+
+
+<!-- RECEIPT -->
 
 <div class="form-group">
 
@@ -2153,6 +2809,7 @@ name="fi-file-paymentReceipt"
 accept=".jpg,.jpeg,.png,.webp,.pdf"
 required>
 
+
 <div class="payment-help">
 
 Upload a clear screenshot or photo of your payment receipt.
@@ -2162,6 +2819,7 @@ JPG, PNG, WEBP or PDF.
 Maximum 10MB.
 
 </div>
+
 
 <div
 class="receipt-preview"
@@ -2174,6 +2832,9 @@ alt="Payment receipt preview">
 </div>
 
 </div>
+
+
+<!-- AGREEMENT -->
 
 <div class="checkbox-row">
 
@@ -2195,6 +2856,7 @@ that the location must be reviewed and approved by the studio before my appointm
 
 </div>
 
+
 <button
 type="submit"
 class="submit-btn"
@@ -2203,6 +2865,7 @@ id="submitBtn">
 Submit Appointment Request
 
 </button>
+
 
 </form>
 
@@ -2214,13 +2877,17 @@ Submit Appointment Request
 
 </section>
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section
 class="contact"
 id="contact">
 
 <div class="container contact-grid">
+
 
 <div class="contact-card">
 
@@ -2236,6 +2903,7 @@ Contact Rebecca & Sheena
 Have a question before booking? Contact us directly.
 </p>
 
+
 <div class="contact-item">
 
 <h3>
@@ -2249,6 +2917,7 @@ Richmond, MO 64085
 
 </div>
 
+
 <div class="contact-item">
 
 <h3>
@@ -2257,9 +2926,11 @@ Phone
 
 <div class="contact-line">
 
+
 <div class="contact-line-icon phone-icon">
 ☎
 </div>
+
 
 <p>
 
@@ -2269,9 +2940,11 @@ Phone
 
 </p>
 
+
 </div>
 
 </div>
+
 
 <div class="contact-item">
 
@@ -2281,9 +2954,11 @@ Email
 
 <div class="contact-line">
 
+
 <div class="contact-line-icon email-icon">
 ✉
 </div>
+
 
 <p>
 
@@ -2293,11 +2968,14 @@ Rebeccapalmer542@yahoo.com
 
 </p>
 
-</div>
 
 </div>
 
 </div>
+
+
+</div>
+
 
 <div class="contact-feature-image">
 
@@ -2310,13 +2988,18 @@ referrerpolicy="no-referrer">
 
 </div>
 
+
 </div>
 
 </section>
 
+
 </main>
 
-<!-- SMS -->
+
+<!-- =========================
+     SMS
+========================= -->
 
 <a
 class="live-chat"
@@ -2326,13 +3009,18 @@ href="sms:+15306821175?&body=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%27d
 
 </a>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
 <div class="container">
 
+
 <div class="footer-grid">
+
 
 <div>
 
@@ -2346,6 +3034,7 @@ detail and a great client experience.
 </p>
 
 </div>
+
 
 <div class="footer-links">
 
@@ -2367,7 +3056,9 @@ Contact
 
 </div>
 
+
 </div>
+
 
 <div class="copyright">
 
@@ -2377,23 +3068,32 @@ All rights reserved.
 
 </div>
 
+
 </div>
 
 </footer>
 
-<!-- FORMINIT SDK -->
+
+<!-- =========================
+     FORMINIT SDK
+========================= -->
 
 <script src="https://forminit.com/sdk/v1/forminit.js"></script>
 
+
 <script>
 
-/* YEAR */
+/* =========================
+   YEAR
+========================= */
 
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 
-/* LANGUAGE */
+/* =========================
+   LANGUAGE
+========================= */
 
 const languageToggle =
 document.getElementById("languageToggle");
@@ -2443,7 +3143,9 @@ updateLanguage();
 updateLanguage();
 
 
-/* MINIMUM DATE */
+/* =========================
+   MINIMUM DATE
+========================= */
 
 const preferredDate =
 document.getElementById("preferredDate");
@@ -2455,7 +3157,9 @@ preferredDate.min =
 today.toISOString().split("T")[0];
 
 
-/* FORMINIT */
+/* =========================
+   FORMINIT
+========================= */
 
 const FORM_ID =
 "1f5pzk33x3d";
@@ -2464,7 +3168,9 @@ const forminit =
 new Forminit();
 
 
-/* FORM ELEMENTS */
+/* =========================
+   FORM ELEMENTS
+========================= */
 
 const bookingForm =
 document.getElementById("bookingForm");
@@ -2491,7 +3197,9 @@ const receiptPreviewImage =
 document.getElementById("receiptPreviewImage");
 
 
-/* PAYMENT METHOD ELEMENTS */
+/* =========================
+   PAYMENT ELEMENTS
+========================= */
 
 const paymentMethod =
 document.getElementById("paymentMethod");
@@ -2509,7 +3217,9 @@ const zelleDetails =
 document.getElementById("zelleDetails");
 
 
-/* PAYMENT DISPLAY */
+/* =========================
+   PAYMENT DISPLAY
+========================= */
 
 paymentMethod.addEventListener(
 "change",
@@ -2561,7 +3271,9 @@ zelleDetails.style.display =
 });
 
 
-/* HOME SERVICE */
+/* =========================
+   HOME SERVICE
+========================= */
 
 const serviceLocationInputs =
 document.querySelectorAll(
@@ -2601,17 +3313,25 @@ if(isHomeService){
 homeAddressSection.classList.add("visible");
 
 homeAddress.required = true;
+
 homeCity.required = true;
+
 homeState.required = true;
+
 homeZip.required = true;
 
-}else{
+}
+
+else{
 
 homeAddressSection.classList.remove("visible");
 
 homeAddress.required = false;
+
 homeCity.required = false;
+
 homeState.required = false;
+
 homeZip.required = false;
 
 }
@@ -2629,7 +3349,9 @@ updateServiceLocation
 });
 
 
-/* STATUS */
+/* =========================
+   STATUS
+========================= */
 
 function showStatus(message,type){
 
@@ -2647,7 +3369,9 @@ block:"center"
 }
 
 
-/* RECEIPT PREVIEW */
+/* =========================
+   RECEIPT PREVIEW
+========================= */
 
 receipt.addEventListener(
 "change",
@@ -2667,7 +3391,8 @@ return;
 }
 
 
-if(file.size > 10 * 1024 * 1024){
+if(file.size >
+10 * 1024 * 1024){
 
 showStatus(
 "Your receipt file is larger than 10MB. Please choose a smaller file.",
@@ -2704,7 +3429,9 @@ receiptPreview.style.display =
 
 reader.readAsDataURL(file);
 
-}else{
+}
+
+else{
 
 receiptPreview.style.display =
 "none";
@@ -2714,7 +3441,9 @@ receiptPreview.style.display =
 });
 
 
-/* BOOKING FORM */
+/* =========================
+   BOOKING FORM
+========================= */
 
 bookingForm.addEventListener(
 "submit",
@@ -2758,7 +3487,9 @@ return;
 }
 
 
-if(selectedLocation.value === "Home Service"){
+if(
+selectedLocation.value === "Home Service"
+){
 
 if(
 !homeAddress.value.trim() ||
@@ -2845,7 +3576,8 @@ receipt.files[0];
 
 
 if(
-file.size > 10 * 1024 * 1024
+file.size >
+10 * 1024 * 1024
 ){
 
 showStatus(
@@ -2879,6 +3611,7 @@ true;
 
 submitBtn.textContent =
 "Submitting Appointment...";
+
 
 showStatus(
 "Please wait while your appointment request and payment receipt are being submitted.",
@@ -2931,12 +3664,23 @@ showStatus(
 
 bookingForm.reset();
 
-homeAddressSection.classList.remove("visible");
 
-homeAddress.required = false;
-homeCity.required = false;
-homeState.required = false;
-homeZip.required = false;
+homeAddressSection.classList.remove(
+"visible"
+);
+
+
+homeAddress.required =
+false;
+
+homeCity.required =
+false;
+
+homeState.required =
+false;
+
+homeZip.required =
+false;
 
 
 selectedPaymentDetails.style.display =
@@ -2951,11 +3695,13 @@ venmoDetails.style.display =
 zelleDetails.style.display =
 "none";
 
+
 receiptPreview.style.display =
 "none";
 
 receiptPreviewImage.src =
 "";
+
 
 submitBtn.disabled =
 false;
@@ -2970,7 +3716,9 @@ block:"center"
 });
 
 
-}catch(error){
+}
+
+catch(error){
 
 console.error(
 "Forminit error:",
@@ -2993,6 +3741,7 @@ submitBtn.textContent =
 });
 
 </script>
+
 
 </body>
 </html>
