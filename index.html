@@ -607,11 +607,8 @@ textarea{
   line-height:1.5;
 }
 
-/* PAYMENT CARDS */
-.payment-methods{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
+/* PAYMENT DISPLAY */
+.selected-payment-details{
   margin-top:12px;
 }
 
@@ -627,7 +624,7 @@ textarea{
   background:#fff;
   border:2px solid #e5e5e5;
   border-radius:13px;
-  cursor:pointer;
+  cursor:default;
   transition:.2s ease;
   text-align:center;
 }
@@ -637,18 +634,6 @@ textarea{
   transform:translateY(-2px);
 }
 
-.payment-option:has(input:checked){
-  border-color:#b58a3a;
-  box-shadow:0 5px 18px rgba(181,138,58,.13);
-}
-
-.payment-option input{
-  position:absolute;
-  opacity:0;
-  pointer-events:none;
-}
-
-/* PAYMENT LOGOS */
 .payment-logo{
   width:70px;
   height:70px;
@@ -922,10 +907,6 @@ footer p{
 
   .service-grid,
   .review-grid{
-    grid-template-columns:1fr;
-  }
-
-  .payment-methods{
     grid-template-columns:1fr;
   }
 }
@@ -1849,25 +1830,52 @@ This payment secures your appointment and will be deducted from your final tatto
 
 </div>
 
-<!-- PAYMENT METHODS -->
+<!-- PAYMENT METHOD SELECTION -->
 
 <div class="form-group">
 
-<label>
+<label for="paymentMethod">
 Choose Your Payment Method *
 </label>
 
-<div class="payment-methods">
+<select
+id="paymentMethod"
+name="fi-select-paymentMethod"
+required>
+
+<option value="">
+Select Cash App, Venmo, or Zelle
+</option>
+
+<option value="Cash App">
+Cash App
+</option>
+
+<option value="Venmo">
+Venmo
+</option>
+
+<option value="Zelle">
+Zelle
+</option>
+
+</select>
+
+</div>
+
+<!-- SELECTED PAYMENT DETAILS -->
+
+<div
+class="selected-payment-details"
+id="selectedPaymentDetails"
+style="display:none;">
 
 <!-- CASH APP -->
 
-<label class="payment-option">
-
-<input
-type="radio"
-name="fi-radio-paymentMethod"
-value="Cash App"
-required>
+<div
+id="cashAppDetails"
+class="payment-option"
+style="display:none;">
 
 <div class="payment-logo cashapp-logo">
 $
@@ -1885,16 +1893,14 @@ Sheena Martin
 $Msheena57
 </div>
 
-</label>
+</div>
 
 <!-- VENMO -->
 
-<label class="payment-option">
-
-<input
-type="radio"
-name="fi-radio-paymentMethod"
-value="Venmo">
+<div
+id="venmoDetails"
+class="payment-option"
+style="display:none;">
 
 <div class="payment-logo venmo-logo">
 V
@@ -1919,16 +1925,14 @@ rel="noopener noreferrer">
 
 </div>
 
-</label>
+</div>
 
 <!-- ZELLE -->
 
-<label class="payment-option">
-
-<input
-type="radio"
-name="fi-radio-paymentMethod"
-value="Zelle">
+<div
+id="zelleDetails"
+class="payment-option"
+style="display:none;">
 
 <div class="payment-logo zelle-logo">
 Z
@@ -1945,8 +1949,6 @@ Sheena Martin
 <div class="payment-handle">
 sheenagmartin2357@gmail.com
 </div>
-
-</label>
 
 </div>
 
@@ -2308,6 +2310,80 @@ const receiptPreviewImage =
 document.getElementById("receiptPreviewImage");
 
 
+/* PAYMENT METHOD ELEMENTS */
+
+const paymentMethod =
+document.getElementById("paymentMethod");
+
+const selectedPaymentDetails =
+document.getElementById("selectedPaymentDetails");
+
+const cashAppDetails =
+document.getElementById("cashAppDetails");
+
+const venmoDetails =
+document.getElementById("venmoDetails");
+
+const zelleDetails =
+document.getElementById("zelleDetails");
+
+
+/* SHOW SELECTED PAYMENT METHOD */
+
+paymentMethod.addEventListener(
+"change",
+function(){
+
+/* HIDE ALL PAYMENT DETAILS */
+
+cashAppDetails.style.display =
+"none";
+
+venmoDetails.style.display =
+"none";
+
+zelleDetails.style.display =
+"none";
+
+selectedPaymentDetails.style.display =
+"none";
+
+
+/* SHOW ONLY SELECTED PAYMENT METHOD */
+
+if(this.value === "Cash App"){
+
+selectedPaymentDetails.style.display =
+"block";
+
+cashAppDetails.style.display =
+"flex";
+
+}
+
+else if(this.value === "Venmo"){
+
+selectedPaymentDetails.style.display =
+"block";
+
+venmoDetails.style.display =
+"flex";
+
+}
+
+else if(this.value === "Zelle"){
+
+selectedPaymentDetails.style.display =
+"block";
+
+zelleDetails.style.display =
+"flex";
+
+}
+
+});
+
+
 /* HOME SERVICE ELEMENTS */
 
 const serviceLocationInputs =
@@ -2569,17 +2645,17 @@ return;
 
 /* PAYMENT METHOD */
 
-const paymentMethod =
-document.querySelector(
-'input[name="fi-radio-paymentMethod"]:checked'
-);
+const selectedPaymentMethod =
+paymentMethod.value;
 
-if(!paymentMethod){
+if(!selectedPaymentMethod){
 
 showStatus(
 "Please choose Cash App, Venmo, or Zelle as your payment method.",
 "error"
 );
+
+paymentMethod.focus();
 
 return;
 
@@ -2720,6 +2796,21 @@ homeAddress.required = false;
 homeCity.required = false;
 homeState.required = false;
 homeZip.required = false;
+
+
+/* RESET PAYMENT DISPLAY */
+
+selectedPaymentDetails.style.display =
+"none";
+
+cashAppDetails.style.display =
+"none";
+
+venmoDetails.style.display =
+"none";
+
+zelleDetails.style.display =
+"none";
 
 receiptPreview.style.display =
 "none";
