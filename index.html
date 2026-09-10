@@ -1,1793 +1,1785 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio & Home Service</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service.">
-<meta name="theme-color" content="#ffffff">
+<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio</title>
 
-<!-- Artistic Fonts -->
+<meta
+  name="description"
+  content="Rebecca & Sheena Tattoos offers professional custom tattoos, tattoo design, studio appointments and home tattoo services in Richmond, Missouri."
+>
+
+<meta
+  name="theme-color"
+  content="#0b0b0d"
+>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+>
 
 <style>
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:'Montserrat',Arial,Helvetica,sans-serif;
-  background:#ffffff;
-  color:#241b1e;
-  line-height:1.6;
-  overflow-x:hidden;
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #0b0b0d;
+  color: #f8f4f2;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-img{
-  display:block;
-  max-width:100%;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 button,
-a{
-  -webkit-tap-highlight-color:transparent;
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-button:focus-visible,
-a:focus-visible{
-  outline:3px solid var(--gold-light);
-  outline-offset:3px;
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
 }
 
-.container{
-  width:92%;
-  max-width:1180px;
-  margin:auto;
-}
-
-
-/* =========================
+/* =========================================================
    COLORS
-========================= */
+========================================================= */
 
-:root{
-  --pink:#e7a8ba;
-  --pink-light:#fff7fa;
-  --pink-soft:#fdf0f4;
-  --pink-dark:#c97f98;
-
-  --gold:#b58a3a;
-  --gold-light:#dfbd73;
-
-  --black:#181214;
-  --text:#2b2225;
-  --muted:#706467;
-  --white:#ffffff;
-  --border:#eadde1;
+:root {
+  --black: #0b0b0d;
+  --black-soft: #111114;
+  --black-card: #17171b;
+  --white: #f8f4f2;
+  --muted: #c6bec0;
+  --gold: #d6b06a;
+  --gold-light: #efd08d;
+  --pink: #d99aa9;
+  --pink-light: #edbdc8;
+  --border: rgba(255,255,255,.12);
 }
 
-
-/* =========================
-   ARTISTIC TYPOGRAPHY
-========================= */
-
-.logo,
-.hero h1,
-.section-heading h2,
-.service-card h3,
-.about-text h2,
-.contact-card h2,
-footer h3{
-  font-family:'Cormorant Garamond',Georgia,serif;
-}
-
-.logo{
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:.3px;
-}
-
-.logo span{
-  color:var(--gold);
-  font-style:italic;
-}
-
-.eyebrow{
-  font-family:'Cinzel',Georgia,serif;
-  color:var(--gold);
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  margin-bottom:12px;
-}
-
-
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid rgba(181,138,58,.22);
-  backdrop-filter:blur(12px);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9000;
+  background: rgba(11,11,13,.88);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(214,176,106,.16);
 }
 
-.navbar{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
-nav{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
+.brand {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: var(--gold-light);
+  white-space: nowrap;
 }
 
-nav a{
-  font-family:'Cinzel',Georgia,serif;
-  font-size:11px;
-  font-weight:700;
-  color:#30272a;
-  letter-spacing:.8px;
-  transition:.2s ease;
+.brand span {
+  color: var(--pink-light);
 }
 
-nav a:hover{
-  color:var(--pink-dark);
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
 }
 
-.language-btn{
-  border:1px solid var(--gold);
-  background:#fff;
-  color:#8b6727;
-  padding:8px 12px;
-  border-radius:7px;
-  cursor:pointer;
-  font-family:'Montserrat',Arial,sans-serif;
-  font-weight:700;
-  min-height:38px;
+.nav-links a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #eee8e7;
+  transition: .25s ease;
 }
 
+.nav-links a:hover {
+  color: var(--gold-light);
+}
 
-/* =========================
+.lang-btn {
+  border: 1px solid rgba(214,176,106,.5);
+  background: transparent;
+  color: var(--gold-light);
+  border-radius: 30px;
+  padding: 8px 13px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
-.hero{
-  position:relative;
-  min-height:720px;
-  padding:120px 0;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
   background:
     linear-gradient(
-      rgba(34,10,18,.55),
-      rgba(34,10,18,.68)
+      90deg,
+      rgba(5,5,7,.88) 0%,
+      rgba(5,5,7,.65) 43%,
+      rgba(5,5,7,.15) 100%
     ),
     url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
     center center / cover no-repeat;
 }
 
-.hero:after{
-  content:"";
-  position:absolute;
-  inset:0;
-
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(244,176,197,.14),
-      transparent 58%
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.18),
+      transparent 50%,
+      rgba(0,0,0,.65)
     );
-
-  pointer-events:none;
+  pointer-events: none;
 }
 
-.hero-grid{
-  position:relative;
-  z-index:2;
-  width:100%;
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding-top: 90px;
 }
 
-.hero-branding{
-  width:100%;
-  max-width:950px;
-  margin:auto;
+.hero-content {
+  max-width: 650px;
 }
 
-.hero-branding-text{
-  width:100%;
-  text-align:center;
+.hero-kicker {
+  color: var(--gold-light);
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
-.hero .eyebrow{
-  color:#efc979;
-  text-shadow:0 2px 8px rgba(0,0,0,.5);
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 8vw, 105px);
+  line-height: .88;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: -2px;
 }
 
-.hero h1{
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-size:clamp(70px,9vw,118px);
-  line-height:.9;
-  margin-bottom:28px;
-  color:#fff;
-  text-shadow:0 5px 25px rgba(0,0,0,.6);
-  font-weight:400;
-  letter-spacing:0;
+.hero h1 span {
+  display: block;
+  font-family: "Great Vibes", cursive;
+  font-size: .63em;
+  line-height: 1;
+  color: var(--pink-light);
+  letter-spacing: 0;
+  margin-top: 8px;
 }
 
-.hero p{
-  font-family:'Montserrat',Arial,sans-serif;
-  font-size:17px;
-  color:#fff6f8;
-  max-width:700px;
-  margin:0 auto 30px;
-  text-shadow:0 2px 10px rgba(0,0,0,.6);
+.hero-text {
+  max-width: 600px;
+  color: #eee7e5;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 32px;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  justify-content:center;
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
 }
 
-.btn{
-  display:inline-block;
-  padding:13px 21px;
-  border-radius:8px;
-
-  font-family:'Cinzel',Georgia,serif;
-  font-size:11px;
-  letter-spacing:.8px;
-  font-weight:700;
-
-  border:1px solid var(--gold);
-  cursor:pointer;
-  transition:.2s ease;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: .25s ease;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
+.btn-primary {
+  background: var(--gold);
+  color: #111;
 }
 
-.btn-primary{
-  background:var(--gold);
-  color:#fff;
-
-  box-shadow:
-    0 7px 18px rgba(181,138,58,.2);
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
 }
 
-.btn-primary:hover{
-  background:#9d762f;
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.55);
+  color: white;
+  background: rgba(0,0,0,.18);
 }
 
-.btn-secondary{
-  background:rgba(255,255,255,.95);
-  color:#7f5d24;
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
 }
 
+/* =========================================================
+   SECTION BASICS
+========================================================= */
 
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-  padding:90px 0;
-  background:#fff;
+section {
+  padding: 100px 0;
 }
 
-section:nth-child(even){
-  background:#fff;
+.section-dark {
+  background: var(--black);
 }
 
-.section-heading{
-  text-align:center;
-  margin-bottom:50px;
+.section-soft {
+  background: #101014;
 }
 
-.section-heading h2{
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-size:58px;
-  line-height:1;
-  font-weight:400;
-  margin-bottom:14px;
-  color:#21181b;
+.section-heading {
+  text-align: center;
+  margin-bottom: 55px;
 }
 
-.section-heading p{
-  max-width:650px;
-  margin:auto;
-  color:var(--muted);
-  font-size:14px;
+.section-eyebrow {
+  font-family: "Cinzel", serif;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.section-heading h2:after{
-  content:"";
-  display:block;
-  width:65px;
-  height:1px;
-  background:var(--gold);
-  margin:16px auto 0;
+.section-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 6vw, 64px);
+  line-height: 1;
+  font-weight: 600;
 }
 
+.section-heading p {
+  max-width: 620px;
+  margin: 17px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+}
 
-/* =========================
+/* =========================================================
    GALLERY
-========================= */
+========================================================= */
 
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.gallery-item{
-  overflow:hidden;
-  background:#fff;
-  border-radius:14px;
-  min-height:300px;
-
-  border:1px solid rgba(181,138,58,.18);
-
-  box-shadow:
-    0 8px 25px rgba(30,20,24,.08);
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #151519;
 }
 
-.gallery-item img{
-  width:100%;
-  height:100%;
-  min-height:300px;
-  object-fit:cover;
-
-  transition:transform .35s ease;
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
 }
 
-.gallery-item:hover img{
-  transform:scale(1.04);
+.gallery-item:hover img {
+  transform: scale(1.06);
 }
 
-
-/* =========================
+/* =========================================================
    SERVICES
-========================= */
+========================================================= */
 
-.services,
-.reviews,
-.contact{
-  background:#fff !important;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.service-grid,
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+.service-card {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  padding: 35px 28px;
+  text-align: center;
+  transition: .3s ease;
 }
 
-.service-card,
-.review{
-  background:#fff;
-
-  border:1px solid rgba(181,138,58,.18);
-  border-radius:15px;
-  padding:30px;
-
-  box-shadow:
-    0 8px 25px rgba(30,20,24,.06);
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(214,176,106,.45);
 }
 
-.service-card{
-  transition:.2s ease;
+.service-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
-.service-card:hover{
-  transform:translateY(-4px);
-
-  box-shadow:
-    0 14px 30px rgba(30,20,24,.12);
+.service-card h3 {
+  font-family: "Cinzel", serif;
+  color: var(--gold-light);
+  font-size: 17px;
+  margin-bottom: 12px;
 }
 
-.service-icon{
-  font-size:30px;
-  margin-bottom:15px;
+.service-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
 }
 
-.service-card h3{
-  margin-bottom:10px;
-  font-size:27px;
-  font-weight:600;
-  color:#241b1e;
-}
-
-.service-card p,
-.review p{
-  color:#666;
-}
-
-
-/* =========================
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
 }
 
-.about-text h2{
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-size:62px;
-  line-height:1;
-  font-weight:400;
-  margin-bottom:22px;
+.about-image {
+  position: relative;
 }
 
-.about-text p{
-  color:#666;
-  margin-bottom:15px;
-  font-size:15px;
+.about-image img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
 }
 
-.about-list{
-  list-style:none;
-  margin-top:22px;
+.about-content .section-eyebrow {
+  text-align: left;
 }
 
-.about-list li{
-  margin:10px 0;
-  font-weight:600;
-  font-size:14px;
+.about-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(43px, 5vw, 64px);
+  line-height: 1;
+  margin-bottom: 22px;
 }
 
-.about-list li::before{
-  content:"✦";
-  color:var(--gold);
-  margin-right:10px;
+.about-content p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 17px;
 }
 
+.about-list {
+  list-style: none;
+  margin: 25px 0 30px;
+}
 
-/* =========================
+.about-list li {
+  padding: 8px 0;
+  color: #e8e0df;
+  font-size: 13px;
+}
+
+.about-list li::before {
+  content: "✦";
+  color: var(--gold-light);
+  margin-right: 11px;
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.review {
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  padding: 30px;
+}
+
+.stars {
+  color: var(--gold-light);
+  letter-spacing: 4px;
+  margin-bottom: 17px;
+}
+
+.review p {
+  color: #ddd5d5;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.review-name {
+  margin-top: 20px;
+  color: var(--pink-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
 }
 
-.contact-card h2{
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-size:62px;
-  line-height:1;
-  font-weight:400;
-  margin-bottom:18px;
+.contact-image img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
 }
 
-.contact-card>p{
-  color:#666;
-  margin-bottom:25px;
+.contact-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 5vw, 68px);
+  line-height: .95;
+  margin-bottom: 20px;
 }
 
-.contact-item{
-  margin:18px 0;
+.contact-intro {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
-.contact-item h3{
-  font-family:'Cinzel',Georgia,serif;
-  font-size:11px;
-  color:#8b6727;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:5px;
+.contact-info {
+  display: grid;
+  gap: 20px;
 }
 
-.contact-line{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.contact-item {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
 }
 
-.contact-line-icon{
-  width:42px;
-  height:42px;
-  border-radius:10px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  flex-shrink:0;
-  font-size:20px;
-  font-weight:900;
+.contact-item h3 {
+  color: var(--gold-light);
+  font-family: "Cinzel", serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
-.phone-icon{
-  background:#eaf8ee;
-  color:#1b9c4a;
+.contact-item p,
+.contact-item a {
+  color: #eee7e5;
+  font-size: 14px;
 }
 
-.email-icon{
-  background:#fff0f6;
-  color:#d63384;
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+  text-align: center;
+  padding: 90px 20px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(214,176,106,.08),
+      rgba(217,154,169,.06)
+    ),
+    #0e0e11;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-.contact-line a{
-  word-break:break-word;
+.cta h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 6vw, 72px);
+  margin-bottom: 15px;
 }
 
-.contact-feature-image img{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-
-  border-radius:14px;
-  border:1px solid rgba(181,138,58,.2);
-
-  box-shadow:
-    0 10px 30px rgba(30,20,24,.1);
+.cta p {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
+/* =========================================================
+   FOOTER
+========================================================= */
 
-/* =========================
-   TAWK TO LIVE CHAT
-========================= */
+footer {
+  background: #070709;
+  padding: 45px 0 30px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  color: var(--gold-light);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.footer-text {
+  color: #928b8d;
+  font-size: 12px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.footer-links a {
+  color: #bdb5b6;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+  color: var(--gold-light);
+}
+
+.copyright {
+  color: #676164;
+  font-size: 10px;
+}
+
+/* =========================================================
+   TAWK.TO
+========================================================= */
 
 /*
-   The old SMS/Text Us button has been removed.
-
-   Tawk.to supplies the actual live-chat bubble.
-   No custom text or fake chat button is used here.
+   IMPORTANT:
+   This is the REAL Tawk.to widget.
+   There is NO fake chat button or SMS button on this page.
 */
 
 #tawkchat-minified-container,
-#tawkchat-container{
-  z-index:99999 !important;
+#tawkchat-container,
+iframe[title*="chat"],
+iframe[title*="Chat"] {
+  z-index: 2147483647 !important;
 }
 
+/*
+   Keep the Tawk bubble above the website.
+*/
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#171214;
-  color:#ddd;
-  padding:40px 0;
+#tawkchat-minified-container {
+  bottom: 20px !important;
+  right: 20px !important;
 }
 
-.footer-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
+/* =========================================================
+   MOBILE
+========================================================= */
 
-footer h3{
-  color:#fff;
-  font-size:29px;
-  font-weight:600;
-}
+@media (max-width: 900px) {
 
-footer p{
-  color:#aaa;
-  font-size:14px;
-}
+  .nav-links {
+    gap: 12px;
+  }
 
-.footer-links{
-  display:flex;
-  justify-content:flex-end;
-  gap:20px;
-  flex-wrap:wrap;
-}
+  .nav-links a {
+    font-size: 10px;
+  }
 
-.footer-links a:hover{
-  color:#e2bd72;
-}
-
-.copyright{
-  border-top:1px solid #333;
-  margin-top:30px;
-  padding-top:20px;
-  font-size:13px;
-  color:#888;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:900px){
-
-  .hero{
-    min-height:680px;
+  .gallery-grid,
+  .services-grid,
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .gallery{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .service-grid,
-  .review-grid{
-    grid-template-columns:1fr;
+  .about-image {
+    order: 2;
   }
 
 }
 
+@media (max-width: 680px) {
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:650px){
-
-  .navbar{
-    padding:12px 0;
-    align-items:flex-start;
-    flex-direction:column;
+  header {
+    position: absolute;
   }
 
-  .logo{
-    font-size:25px;
+  .nav {
+    min-height: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 14px 0;
   }
 
-  nav{
-    width:100%;
-    justify-content:flex-start;
-    gap:12px 16px;
+  .brand {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
   }
 
-  nav a{
-    font-size:10px;
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 
-  section{
-    padding:65px 0;
+  .nav-links a {
+    font-size: 9px;
+    letter-spacing: .8px;
   }
 
-  .hero{
-    min-height:680px;
-    padding:85px 0;
-    background-position:center center;
+  .lang-btn {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    padding: 6px 9px;
+    font-size: 9px;
   }
 
-  .hero-branding{
-    width:100%;
+  .hero {
+    min-height: 100svh;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5,5,7,.84),
+        rgba(5,5,7,.48)
+      ),
+      url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
+      center center / cover no-repeat;
   }
 
-  .hero-branding-text{
-    width:100%;
+  .hero-grid {
+    padding-top: 145px;
+    padding-bottom: 60px;
   }
 
-  .hero h1{
-    font-size:clamp(64px,18vw,90px);
-    line-height:.9;
+  .hero h1 {
+    font-size: clamp(52px, 16vw, 78px);
   }
 
-  .hero p{
-    font-size:15px;
+  .hero-text {
+    font-size: 13px;
   }
 
-  .section-heading h2{
-    font-size:49px;
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 300px;
   }
 
-  .about-text h2,
-  .contact-card h2{
-    font-size:52px;
+  .btn {
+    width: 100%;
   }
 
-  .gallery{
-    grid-template-columns:1fr;
+  section {
+    padding: 75px 0;
   }
 
-  .gallery-item,
-  .gallery-item img{
-    min-height:360px;
+  .gallery-grid,
+  .services-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-feature-image img{
-    height:380px;
+  .gallery-item {
+    aspect-ratio: 4 / 5;
   }
 
-  .footer-grid{
-    grid-template-columns:1fr;
+  .about-content .section-eyebrow {
+    text-align: left;
   }
 
-  .footer-links{
-    justify-content:flex-start;
+  #tawkchat-minified-container {
+    bottom: 15px !important;
+    right: 15px !important;
   }
 
 }
 
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
 
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    transition:none !important;
-    animation:none !important;
-  }
-
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- =========================
+<!-- =======================================================
      HEADER
-========================= -->
+======================================================= -->
 
 <header>
 
-<div class="container navbar">
+  <div class="container nav">
 
-<a
-href="#home"
-class="logo"
-aria-label="Rebecca and Sheena Tattoos home">
+    <a
+      href="#home"
+      class="brand"
+      aria-label="Rebecca and Sheena Tattoos home"
+    >
+      Rebecca <span>&</span> Sheena Tattoos
+    </a>
 
-Rebecca & Sheena <span>Tattoos</span>
+    <nav aria-label="Main navigation">
 
-</a>
+      <ul class="nav-links">
 
-<nav aria-label="Main navigation">
+        <li>
+          <a href="#home" data-en="Home" data-es="Inicio">
+            Home
+          </a>
+        </li>
 
-<a
-href="#home"
-data-en="Home"
-data-es="Inicio">
-Home
-</a>
+        <li>
+          <a href="#work" data-en="Our Work" data-es="Nuestro Trabajo">
+            Our Work
+          </a>
+        </li>
 
-<a
-href="#work"
-data-en="Our Work"
-data-es="Nuestro Trabajo">
-Our Work
-</a>
+        <li>
+          <a href="#services" data-en="Services" data-es="Servicios">
+            Services
+          </a>
+        </li>
 
-<a
-href="#services"
-data-en="Services"
-data-es="Servicios">
-Services
-</a>
+        <li>
+          <a href="#about" data-en="About" data-es="Nosotras">
+            About
+          </a>
+        </li>
 
-<a
-href="#about"
-data-en="About"
-data-es="Nosotros">
-About
-</a>
+        <li>
+          <a href="booking.html" data-en="Book" data-es="Reservar">
+            Book
+          </a>
+        </li>
 
-<a
-href="booking.html"
-data-en="Book"
-data-es="Reservar">
-Book
-</a>
+        <li>
+          <a href="#contact" data-en="Contact" data-es="Contacto">
+            Contact
+          </a>
+        </li>
 
-<a
-href="#contact"
-data-en="Contact"
-data-es="Contacto">
-Contact
-</a>
+      </ul>
 
-<button
-type="button"
-class="language-btn"
-id="languageToggle"
-aria-label="Change website language">
-Español
-</button>
+    </nav>
 
-</nav>
+    <button
+      type="button"
+      class="lang-btn"
+      id="languageToggle"
+      aria-label="Change language"
+    >
+      Español
+    </button>
 
-</div>
+  </div>
 
 </header>
 
 
+<!-- =======================================================
+     HERO
+======================================================= -->
+
 <main>
 
-<!-- =========================
-     HERO
-========================= -->
+<section class="hero" id="home">
 
-<section
-class="hero"
-id="home"
-aria-labelledby="hero-title">
+  <div class="hero-grid">
 
-<div class="container hero-grid">
+    <div class="hero-content">
 
-<div class="hero-branding">
+      <div
+        class="hero-kicker"
+        data-en="Professional Tattoo Studio & Home Service"
+        data-es="Estudio Profesional de Tatuajes y Servicio a Domicilio"
+      >
+        Professional Tattoo Studio & Home Service
+      </div>
 
-<div class="hero-branding-text">
+      <h1>
+        <span
+          data-en="Your Story."
+          data-es="Tu Historia."
+        >
+          Your Story.
+        </span>
 
-<div
-class="eyebrow"
-data-en="Professional Tattoo Studio & Home Service"
-data-es="Estudio Profesional de Tatuajes y Servicio a Domicilio">
+        <span
+          data-en="Our Art."
+          data-es="Nuestro Arte."
+        >
+          Our Art.
+        </span>
+      </h1>
 
-Professional Tattoo Studio & Home Service
+      <p
+        class="hero-text"
+        data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
+        data-es="Tatuajes personalizados creados con creatividad, precisión y atención al detalle. Visita nuestro estudio o solicita nuestro servicio de tatuajes a domicilio y déjanos convertir tu idea en algo que estarás orgulloso de llevar."
+      >
+        Custom tattoos created with creativity, precision and attention to detail.
+        Visit our studio or request our home tattoo service and let us turn your
+        idea into something you'll be proud to wear.
+      </p>
 
-</div>
+      <div class="hero-buttons">
 
-<h1 id="hero-title">
-Your Story.<br>
-Our Art.
-</h1>
+        <a
+          href="booking.html"
+          class="btn btn-primary"
+          data-en="Book an Appointment"
+          data-es="Reservar una Cita"
+        >
+          Book an Appointment
+        </a>
 
-<p
-data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
-data-es="Tatuajes personalizados creados con creatividad, precisión y atención al detalle. Visita nuestro estudio o solicita nuestro servicio de tatuajes a domicilio y convirtamos tu idea en algo que te enorgullezca llevar.">
+        <a
+          href="#work"
+          class="btn btn-outline"
+          data-en="View Our Work"
+          data-es="Ver Nuestro Trabajo"
+        >
+          View Our Work
+        </a>
 
-Custom tattoos created with creativity, precision and attention to detail.
-Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear.
+      </div>
 
-</p>
+    </div>
 
-<div class="buttons">
-
-<a
-href="booking.html"
-class="btn btn-primary"
-data-en="Book an Appointment"
-data-es="Reservar una Cita">
-
-Book an Appointment
-
-</a>
-
-<a
-href="#work"
-class="btn btn-secondary"
-data-en="View Our Work"
-data-es="Ver Nuestro Trabajo">
-
-View Our Work
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =========================
-     OUR WORK
-========================= -->
+<!-- =======================================================
+     WORK
+======================================================= -->
 
-<section
-id="work"
-aria-labelledby="work-title">
+<section class="section-dark" id="work">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div
-class="eyebrow"
-data-en="Our Work"
-data-es="Nuestro Trabajo">
-Our Work
-</div>
+      <div
+        class="section-eyebrow"
+        data-en="Our Work"
+        data-es="Nuestro Trabajo"
+      >
+        Our Work
+      </div>
 
-<h2
-id="work-title"
-data-en="Tattoo Art That Speaks"
-data-es="Arte de Tatuaje que Habla">
-Tattoo Art That Speaks
-</h2>
+      <h2
+        data-en="Tattoo Art That Speaks"
+        data-es="Arte Que Habla"
+      >
+        Tattoo Art That Speaks
+      </h2>
 
-<p
-data-en="Take a look at some of our tattoo work and get inspired for your next piece."
-data-es="Mira algunos de nuestros trabajos de tatuaje e inspírate para tu próxima pieza.">
-Take a look at some of our tattoo work and get inspired for your next piece.
-</p>
+      <p
+        data-en="Take a look at some of our tattoo work and get inspired for your next piece."
+        data-es="Mira algunos de nuestros trabajos de tatuaje e inspírate para tu próxima pieza."
+      >
+        Take a look at some of our tattoo work and get inspired for your next piece.
+      </p>
 
-</div>
+    </div>
 
-<div class="gallery">
+    <div class="gallery-grid">
 
-<div class="gallery-item">
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-<img
-src="https://i.ibb.co/4ZXQxxjx/IMG-5945.jpg?v=20260907"
-alt="Custom tattoo artwork by Rebecca and Sheena"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="600"
-height="600">
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-</div>
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-<div class="gallery-item">
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-<img
-src="https://i.ibb.co/PzNQSMG9/IMG-5944.jpg?v=20260907"
-alt="Detailed tattoo artwork by Rebecca and Sheena"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="600"
-height="600">
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-</div>
+      <div class="gallery-item">
+        <img
+          src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
+          alt="Tattoo artwork by Rebecca and Sheena"
+          loading="lazy"
+        >
+      </div>
 
-<div class="gallery-item">
+    </div>
 
-<img
-src="https://i.ibb.co/YBgkRnxy/IMG-5935.jpg?v=20260907"
-alt="Collection of tattoo artwork"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="600"
-height="600">
-
-</div>
-
-<div class="gallery-item">
-
-<img
-src="https://i.ibb.co/bMphR8tg/IMG-5943.jpg?v=20260907"
-alt="Custom tattoo design created by Rebecca and Sheena"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="600"
-height="600">
-
-</div>
-
-<div class="gallery-item">
-
-<img
-src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
-alt="Tattoo artwork created by Rebecca and Sheena"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="600"
-height="600">
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      SERVICES
-========================= -->
+======================================================= -->
 
-<section
-class="services"
-id="services"
-aria-labelledby="services-title">
+<section class="section-soft" id="services">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div
-class="eyebrow"
-data-en="What We Do"
-data-es="Lo Que Hacemos">
-What We Do
-</div>
+      <div
+        class="section-eyebrow"
+        data-en="What We Do"
+        data-es="Lo Que Hacemos"
+      >
+        What We Do
+      </div>
 
-<h2
-id="services-title"
-data-en="Our Services"
-data-es="Nuestros Servicios">
-Our Services
-</h2>
+      <h2
+        data-en="Our Services"
+        data-es="Nuestros Servicios"
+      >
+        Our Services
+      </h2>
 
-<p
-data-en="From simple pieces to detailed custom artwork, we work with you to create something unique."
-data-es="Desde piezas sencillas hasta obras personalizadas detalladas, trabajamos contigo para crear algo único.">
-From simple pieces to detailed custom artwork, we work with you to create something unique.
-</p>
+      <p
+        data-en="From simple pieces to detailed custom artwork, we work with you to create something unique."
+        data-es="Desde piezas sencillas hasta diseños personalizados detallados, trabajamos contigo para crear algo único."
+      >
+        From simple pieces to detailed custom artwork, we work with you to create something unique.
+      </p>
 
-</div>
+    </div>
 
-<div class="service-grid">
+    <div class="services-grid">
 
-<div class="service-card">
+      <article class="service-card">
 
-<div
-class="service-icon"
-aria-hidden="true">
-🎨
-</div>
+        <div class="service-icon">🎨</div>
 
-<h3
-data-en="Custom Tattoos"
-data-es="Tatuajes Personalizados">
-Custom Tattoos
-</h3>
+        <h3
+          data-en="Custom Tattoos"
+          data-es="Tatuajes Personalizados"
+        >
+          Custom Tattoos
+        </h3>
 
-<p
-data-en="Bring your idea, reference or concept and we'll help transform it into a custom tattoo."
-data-es="Trae tu idea, referencia o concepto y te ayudaremos a transformarlo en un tatuaje personalizado.">
-Bring your idea, reference or concept and we'll help transform it into a custom tattoo.
-</p>
+        <p
+          data-en="Bring your idea, reference or concept and we'll help transform it into a custom tattoo."
+          data-es="Trae tu idea, referencia o concepto y te ayudaremos a convertirlo en un tatuaje personalizado."
+        >
+          Bring your idea, reference or concept and we'll help transform it into a custom tattoo.
+        </p>
 
-</div>
+      </article>
 
 
-<div class="service-card">
+      <article class="service-card">
 
-<div
-class="service-icon"
-aria-hidden="true">
-✍️
-</div>
+        <div class="service-icon">✍️</div>
 
-<h3
-data-en="Tattoo Design"
-data-es="Diseño de Tatuajes">
-Tattoo Design
-</h3>
+        <h3
+          data-en="Tattoo Design"
+          data-es="Diseño de Tatuajes"
+        >
+          Tattoo Design
+        </h3>
 
-<p
-data-en="We can work with your vision to create artwork that fits your body and personal style."
-data-es="Trabajamos con tu visión para crear un diseño que se adapte a tu cuerpo y estilo personal.">
-We can work with your vision to create artwork that fits your body and personal style.
-</p>
+        <p
+          data-en="We can work with your vision to create artwork that fits your body and personal style."
+          data-es="Trabajamos con tu visión para crear un diseño que se adapte a tu cuerpo y estilo personal."
+        >
+          We can work with your vision to create artwork that fits your body and personal style.
+        </p>
 
-</div>
+      </article>
 
 
-<div class="service-card">
+      <article class="service-card">
 
-<div
-class="service-icon"
-aria-hidden="true">
-🏠
-</div>
+        <div class="service-icon">🏠</div>
 
-<h3
-data-en="Home Tattoo Service"
-data-es="Servicio de Tatuajes a Domicilio">
-Home Tattoo Service
-</h3>
+        <h3
+          data-en="Home Tattoo Service"
+          data-es="Servicio de Tatuajes a Domicilio"
+        >
+          Home Tattoo Service
+        </h3>
 
-<p
-data-en="Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment."
-data-es="¿Prefieres tatuarte en casa? Solicita nuestro servicio a domicilio y revisaremos tu ubicación y disponibilidad antes de confirmar tu cita.">
-Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment.
-</p>
+        <p
+          data-en="Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment."
+          data-es="¿Prefieres tatuarte en casa? Solicita nuestro servicio a domicilio y revisaremos tu ubicación y disponibilidad antes de confirmar tu cita."
+        >
+          Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment.
+        </p>
 
-</div>
+      </article>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      ABOUT
-========================= -->
+======================================================= -->
 
-<section
-id="about"
-aria-labelledby="about-title">
+<section class="section-dark" id="about">
 
-<div class="container about-grid">
+  <div class="container about-grid">
 
-<div class="about-text">
+    <div class="about-image">
 
-<div
-class="eyebrow"
-data-en="About Us"
-data-es="Sobre Nosotros">
-About Us
-</div>
+      <img
+        src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
+        alt="Rebecca and Sheena Tattoos artwork"
+        loading="lazy"
+      >
 
-<h2
-id="about-title"
-data-en="Art With Meaning"
-data-es="Arte con Significado">
-Art With Meaning
-</h2>
-
-<p
-data-en="At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it."
-data-es="En Rebecca & Sheena Tattoos, creemos que cada tatuaje debe tener una historia detrás.">
-At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it.
-</p>
-
-<p
-data-en="Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come."
-data-es="Nuestro objetivo es crear una experiencia cómoda mientras producimos obras de tatuaje de las que puedas sentirte orgulloso durante muchos años.">
-Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come.
-</p>
-
-<ul class="about-list">
-
-<li
-data-en="Professional tattoo service"
-data-es="Servicio profesional de tatuajes">
-Professional tattoo service
-</li>
-
-<li
-data-en="Custom artwork"
-data-es="Diseños personalizados">
-Custom artwork
-</li>
-
-<li
-data-en="Studio appointments"
-data-es="Citas en el estudio">
-Studio appointments
-</li>
-
-<li
-data-en="Home tattoo service"
-data-es="Servicio de tatuajes a domicilio">
-Home tattoo service
-</li>
-
-<li
-data-en="Attention to detail"
-data-es="Atención al detalle">
-Attention to detail
-</li>
-
-<li
-data-en="Client-focused experience"
-data-es="Experiencia centrada en el cliente">
-Client-focused experience
-</li>
-
-</ul>
-
-<div style="margin-top:25px;">
-
-<a
-href="booking.html"
-class="btn btn-primary"
-data-en="Start Your Booking"
-data-es="Comenzar Reserva">
-
-Start Your Booking
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 
-<!-- ABOUT LOGO -->
+    <div class="about-content">
 
-<div
-class="gallery-item"
-style="
-display:flex;
-align-items:center;
-justify-content:center;
-background:#fff;
-padding:20px;
-">
+      <div
+        class="section-eyebrow"
+        data-en="About Us"
+        data-es="Sobre Nosotras"
+      >
+        About Us
+      </div>
 
-<img
-src="https://i.ibb.co/Zz1L6vqw/A2132795-1-C7-B-453-F-B855-8-E3-B97-F3-BB3-E.png"
-alt="Rebecca & Sheena Tattoos logo"
-width="520"
-height="520"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-style="
-width:100%;
-height:100%;
-max-width:520px;
-max-height:520px;
-object-fit:contain;
-filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
-">
+      <h2
+        data-en="Art With Meaning"
+        data-es="Arte Con Significado"
+      >
+        Art With Meaning
+      </h2>
 
-</div>
+      <p
+        data-en="At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it."
+        data-es="En Rebecca & Sheena Tattoos, creemos que cada tatuaje debe tener una historia detrás."
+      >
+        At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it.
+      </p>
 
-</div>
+      <p
+        data-en="Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come."
+        data-es="Nuestro objetivo es crear una experiencia cómoda mientras producimos tatuajes de los que puedas sentirte orgulloso durante muchos años."
+      >
+        Our goal is to create a comfortable experience while producing tattoo artwork
+        that you can be proud of for years to come.
+      </p>
+
+      <ul class="about-list">
+
+        <li
+          data-en="Professional tattoo service"
+          data-es="Servicio profesional de tatuajes"
+        >
+          Professional tattoo service
+        </li>
+
+        <li
+          data-en="Custom artwork"
+          data-es="Diseños personalizados"
+        >
+          Custom artwork
+        </li>
+
+        <li
+          data-en="Studio appointments"
+          data-es="Citas en el estudio"
+        >
+          Studio appointments
+        </li>
+
+        <li
+          data-en="Home tattoo service"
+          data-es="Servicio de tatuajes a domicilio"
+        >
+          Home tattoo service
+        </li>
+
+        <li
+          data-en="Attention to detail"
+          data-es="Atención al detalle"
+        >
+          Attention to detail
+        </li>
+
+        <li
+          data-en="Client-focused experience"
+          data-es="Experiencia centrada en el cliente"
+        >
+          Client-focused experience
+        </li>
+
+      </ul>
+
+      <a
+        href="booking.html"
+        class="btn btn-primary"
+        data-en="Start Your Booking"
+        data-es="Comenzar Tu Reserva"
+      >
+        Start Your Booking
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      REVIEWS
-========================= -->
+======================================================= -->
 
-<section
-class="reviews"
-aria-labelledby="reviews-title">
+<section class="section-soft">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<div
-class="eyebrow"
-data-en="Client Experience"
-data-es="Experiencia del Cliente">
-Client Experience
-</div>
+      <div
+        class="section-eyebrow"
+        data-en="Client Experience"
+        data-es="Experiencia del Cliente"
+      >
+        Client Experience
+      </div>
 
-<h2
-id="reviews-title"
-data-en="What Clients Love"
-data-es="Lo Que Les Encanta a Nuestros Clientes">
-What Clients Love
-</h2>
+      <h2
+        data-en="What Clients Love"
+        data-es="Lo Que Aman Nuestros Clientes"
+      >
+        What Clients Love
+      </h2>
 
-</div>
-
-<div class="review-grid">
-
-<div class="review">
-
-<div
-class="stars"
-aria-label="5 out of 5 stars">
-★★★★★
-</div>
-
-<p
-data-en="Beautiful work and very professional. I absolutely love my tattoo!"
-data-es="Un trabajo hermoso y muy profesional. ¡Me encanta absolutamente mi tatuaje!">
-Beautiful work and very professional. I absolutely love my tattoo!
-</p>
-
-<strong
-data-en="Happy Client"
-data-es="Cliente Satisfecho">
-Happy Client
-</strong>
-
-</div>
+    </div>
 
 
-<div class="review">
+    <div class="reviews-grid">
 
-<div
-class="stars"
-aria-label="5 out of 5 stars">
-★★★★★
-</div>
+      <article class="review">
 
-<p
-data-en="The attention to detail was amazing. The whole experience felt comfortable."
-data-es="La atención al detalle fue increíble. Toda la experiencia fue muy cómoda.">
-The attention to detail was amazing. The whole experience felt comfortable.
-</p>
+        <div class="stars">★★★★★</div>
 
-<strong
-data-en="Happy Client"
-data-es="Cliente Satisfecho">
-Happy Client
-</strong>
+        <p
+          data-en="Beautiful work and very professional. I absolutely love my tattoo!"
+          data-es="Hermoso trabajo y muy profesional. ¡Me encanta mi tatuaje!"
+        >
+          Beautiful work and very professional. I absolutely love my tattoo!
+        </p>
 
-</div>
+        <div
+          class="review-name"
+          data-en="Happy Client"
+          data-es="Cliente Feliz"
+        >
+          Happy Client
+        </div>
+
+      </article>
 
 
-<div class="review">
+      <article class="review">
 
-<div
-class="stars"
-aria-label="5 out of 5 stars">
-★★★★★
-</div>
+        <div class="stars">★★★★★</div>
 
-<p
-data-en="Exactly what I wanted. Great communication and beautiful artwork."
-data-es="Exactamente lo que quería. Excelente comunicación y hermoso trabajo artístico.">
-Exactly what I wanted. Great communication and beautiful artwork.
-</p>
+        <p
+          data-en="The attention to detail was amazing. The whole experience felt comfortable."
+          data-es="La atención al detalle fue increíble. Toda la experiencia fue muy cómoda."
+        >
+          The attention to detail was amazing. The whole experience felt comfortable.
+        </p>
 
-<strong
-data-en="Happy Client"
-data-es="Cliente Satisfecho">
-Happy Client
-</strong>
+        <div
+          class="review-name"
+          data-en="Happy Client"
+          data-es="Cliente Feliz"
+        >
+          Happy Client
+        </div>
 
-</div>
+      </article>
 
-</div>
 
-</div>
+      <article class="review">
+
+        <div class="stars">★★★★★</div>
+
+        <p
+          data-en="Exactly what I wanted. Great communication and beautiful artwork."
+          data-es="Exactamente lo que quería. Excelente comunicación y hermoso trabajo."
+        >
+          Exactly what I wanted. Great communication and beautiful artwork.
+        </p>
+
+        <div
+          class="review-name"
+          data-en="Happy Client"
+          data-es="Cliente Feliz"
+        >
+          Happy Client
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =======================================================
      CONTACT
-========================= -->
+======================================================= -->
 
-<section
-class="contact"
-id="contact"
-aria-labelledby="contact-title">
+<section class="section-dark" id="contact">
 
-<div class="container contact-grid">
+  <div class="container contact-grid">
 
-<div class="contact-card">
+    <div class="contact-image">
 
-<div
-class="eyebrow"
-data-en="Get In Touch"
-data-es="Contáctanos">
-Get In Touch
-</div>
+      <img
+        src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
+        alt="Tattoo artwork by Rebecca and Sheena"
+        loading="lazy"
+      >
 
-<h2
-id="contact-title"
-data-en="Contact Rebecca & Sheena"
-data-es="Contacta a Rebecca y Sheena">
-Contact Rebecca & Sheena
-</h2>
-
-<p
-data-en="Have a question before booking? Contact us directly."
-data-es="¿Tienes alguna pregunta antes de reservar? Contáctanos directamente.">
-Have a question before booking? Contact us directly.
-</p>
+    </div>
 
 
-<div class="contact-item">
+    <div class="contact-content">
 
-<h3
-data-en="Studio"
-data-es="Estudio">
-Studio
-</h3>
+      <div
+        class="section-eyebrow"
+        data-en="Get In Touch"
+        data-es="Contáctanos"
+      >
+        Get In Touch
+      </div>
 
-<p id="business-address">
-403 W ROYLE St<br>
-Richmond, MO 64085
-</p>
+      <h2
+        data-en="Contact Rebecca & Sheena"
+        data-es="Contacta a Rebecca y Sheena"
+      >
+        Contact Rebecca & Sheena
+      </h2>
 
-</div>
-
-
-<div class="contact-item">
-
-<h3
-data-en="Phone"
-data-es="Teléfono">
-Phone
-</h3>
-
-<div class="contact-line">
-
-<div
-class="contact-line-icon phone-icon"
-aria-hidden="true">
-☎
-</div>
-
-<p>
-<a
-id="business-phone"
-href="tel:+15306821175">
-+1 (530) 682-1175
-</a>
-</p>
-
-</div>
-
-</div>
+      <p
+        class="contact-intro"
+        data-en="Have a question before booking? Contact us directly."
+        data-es="¿Tienes una pregunta antes de reservar? Contáctanos directamente."
+      >
+        Have a question before booking? Contact us directly.
+      </p>
 
 
-<div class="contact-item">
+      <div class="contact-info">
 
-<h3
-data-en="Email"
-data-es="Correo Electrónico">
-Email
-</h3>
+        <div class="contact-item">
 
-<div class="contact-line">
+          <h3
+            data-en="Studio"
+            data-es="Estudio"
+          >
+            Studio
+          </h3>
 
-<div
-class="contact-line-icon email-icon"
-aria-hidden="true">
-✉
-</div>
+          <p>
+            403 W ROYLE St<br>
+            Richmond, MO 64085
+          </p>
 
-<p>
-<a
-id="business-email"
-href="mailto:Rebeccapalmer542@yahoo.com">
-Rebeccapalmer542@yahoo.com
-</a>
-</p>
-
-</div>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="contact-feature-image">
+        <div class="contact-item">
 
-<img
-src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
-alt="Tattoo artwork on a client's back"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer"
-width="800"
-height="600">
+          <h3
+            data-en="Phone"
+            data-es="Teléfono"
+          >
+            Phone
+          </h3>
 
-</div>
+          <a href="tel:+15306821175">
+            +1 (530) 682-1175
+          </a>
 
-</div>
+        </div>
+
+
+        <div class="contact-item">
+
+          <h3
+            data-en="Email"
+            data-es="Correo"
+          >
+            Email
+          </h3>
+
+          <a href="mailto:Rebeccapalmer542@yahoo.com">
+            Rebeccapalmer542@yahoo.com
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <h2
+      data-en="Ready For Your Next Tattoo?"
+      data-es="¿Lista Para Tu Próximo Tatuaje?"
+    >
+      Ready For Your Next Tattoo?
+    </h2>
+
+    <p
+      data-en="Tell us your idea and let's create something meaningful together."
+      data-es="Cuéntanos tu idea y creemos algo significativo juntos."
+    >
+      Tell us your idea and let's create something meaningful together.
+    </p>
+
+    <a
+      href="booking.html"
+      class="btn btn-primary"
+      data-en="Book Your Appointment"
+      data-es="Reserva Tu Cita"
+    >
+      Book Your Appointment
+    </a>
+
+  </div>
 
 </section>
 
 </main>
 
 
-<!-- =========================
+<!-- =======================================================
      FOOTER
-========================= -->
+======================================================= -->
 
 <footer>
 
-<div class="container">
+  <div class="container">
 
-<div class="footer-grid">
+    <div class="footer-brand">
+      Rebecca & Sheena Tattoos
+    </div>
 
-<div>
+    <p
+      class="footer-text"
+      data-en="Professional tattoo artistry with a focus on creativity, detail and a great client experience."
+      data-es="Arte profesional del tatuaje con enfoque en creatividad, detalle y una excelente experiencia para el cliente."
+    >
+      Professional tattoo artistry with a focus on creativity,
+      detail and a great client experience.
+    </p>
 
-<h3>
-Rebecca & Sheena Tattoos
-</h3>
+    <ul class="footer-links">
 
-<p
-data-en="Professional tattoo artistry with a focus on creativity, detail and a great client experience."
-data-es="Arte profesional del tatuaje con enfoque en creatividad, detalle y una excelente experiencia para el cliente.">
-Professional tattoo artistry with a focus on creativity,
-detail and a great client experience.
-</p>
+      <li>
+        <a
+          href="#home"
+          data-en="Home"
+          data-es="Inicio"
+        >
+          Home
+        </a>
+      </li>
 
-</div>
+      <li>
+        <a
+          href="#work"
+          data-en="Our Work"
+          data-es="Nuestro Trabajo"
+        >
+          Our Work
+        </a>
+      </li>
 
+      <li>
+        <a
+          href="#services"
+          data-en="Services"
+          data-es="Servicios"
+        >
+          Services
+        </a>
+      </li>
 
-<div class="footer-links">
+      <li>
+        <a
+          href="booking.html"
+          data-en="Book Appointment"
+          data-es="Reservar Cita"
+        >
+          Book Appointment
+        </a>
+      </li>
 
-<a
-href="#home"
-data-en="Home"
-data-es="Inicio">
-Home
-</a>
+      <li>
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-es="Contacto"
+        >
+          Contact
+        </a>
+      </li>
 
-<a
-href="#work"
-data-en="Our Work"
-data-es="Nuestro Trabajo">
-Our Work
-</a>
+    </ul>
 
-<a
-href="booking.html"
-data-en="Book Appointment"
-data-es="Reservar Cita">
-Book Appointment
-</a>
+    <div class="copyright">
+      © 2026 Rebecca & Sheena Tattoos. All rights reserved.
+    </div>
 
-<a
-href="#contact"
-data-en="Contact"
-data-es="Contacto">
-Contact
-</a>
-
-</div>
-
-</div>
-
-
-<div class="copyright">
-
-© <span id="year"></span>
-Rebecca & Sheena Tattoos.
-<span
-data-en="All rights reserved."
-data-es="Todos los derechos reservados.">
-All rights reserved.
-</span>
-
-</div>
-
-</div>
+  </div>
 
 </footer>
 
 
-<!-- =========================
-     BUSINESS INFORMATION
-========================= -->
+<!-- =======================================================
+     LANGUAGE SYSTEM
+======================================================= -->
 
 <script>
 
-/*
-   Centralized business information.
+(function () {
 
-   If the phone number, email or address ever changes,
-   update it here rather than searching through the
-   entire website.
-*/
+  const toggle = document.getElementById("languageToggle");
 
-const BUSINESS = {
-  phoneDisplay: "+1 (530) 682-1175",
-  phoneNumber: "+15306821175",
-  email: "Rebeccapalmer542@yahoo.com",
-  addressHTML: "403 W ROYLE St<br>Richmond, MO 64085"
-};
+  const savedLanguage =
+    localStorage.getItem("siteLanguage") || "en";
 
+  function setLanguage(language) {
 
-/* =========================
-   APPLY BUSINESS INFORMATION
-========================= */
+    document.documentElement.lang = language;
 
-const businessPhone =
-  document.getElementById("business-phone");
+    document.querySelectorAll("[data-en]").forEach(function (element) {
 
-const businessEmail =
-  document.getElementById("business-email");
+      const value =
+        element.getAttribute(
+          language === "es" ? "data-es" : "data-en"
+        );
 
-const businessAddress =
-  document.getElementById("business-address");
-
-
-if(businessPhone){
-
-  businessPhone.textContent =
-    BUSINESS.phoneDisplay;
-
-  businessPhone.href =
-    "tel:" + BUSINESS.phoneNumber;
-
-}
-
-
-if(businessEmail){
-
-  businessEmail.textContent =
-    BUSINESS.email;
-
-  businessEmail.href =
-    "mailto:" + BUSINESS.email;
-
-}
-
-
-if(businessAddress){
-
-  businessAddress.innerHTML =
-    BUSINESS.addressHTML;
-
-}
-
-
-/* =========================
-   YEAR
-========================= */
-
-const yearElement =
-  document.getElementById("year");
-
-if(yearElement){
-
-  yearElement.textContent =
-    new Date().getFullYear();
-
-}
-
-
-/* =========================
-   LANGUAGE
-========================= */
-
-const languageToggle =
-  document.getElementById("languageToggle");
-
-let currentLanguage =
-  localStorage.getItem("siteLanguage") || "en";
-
-
-function updateLanguage(){
-
-  document.documentElement.lang =
-    currentLanguage === "es"
-    ? "es"
-    : "en";
-
-
-  document.querySelectorAll("[data-en]").forEach(function(element){
-
-    const english =
-      element.getAttribute("data-en");
-
-    const spanish =
-      element.getAttribute("data-es");
-
-    if(currentLanguage === "es"){
-
-      if(spanish !== null){
-        element.textContent = spanish;
+      if (value !== null) {
+        element.textContent = value;
       }
 
-    }else{
+    });
 
-      if(english !== null){
-        element.textContent = english;
-      }
+    if (toggle) {
+
+      toggle.textContent =
+        language === "en"
+          ? "Español"
+          : "English";
 
     }
 
-  });
-
-
-  if(languageToggle){
-
-    languageToggle.textContent =
-      currentLanguage === "en"
-      ? "Español"
-      : "English";
-
-    languageToggle.setAttribute(
-      "aria-label",
-      currentLanguage === "en"
-      ? "Cambiar el sitio web a español"
-      : "Change website to English"
+    localStorage.setItem(
+      "siteLanguage",
+      language
     );
 
   }
 
+  setLanguage(savedLanguage);
 
-  localStorage.setItem(
-    "siteLanguage",
-    currentLanguage
-  );
+  if (toggle) {
 
-}
+    toggle.addEventListener("click", function () {
 
+      const current =
+        document.documentElement.lang || "en";
 
-if(languageToggle){
+      setLanguage(
+        current === "en" ? "es" : "en"
+      );
 
-  languageToggle.addEventListener(
-    "click",
-    function(){
+    });
 
-      currentLanguage =
-        currentLanguage === "en"
-        ? "es"
-        : "en";
-
-      updateLanguage();
-
-    }
-  );
-
-}
-
-
-updateLanguage();
-
-</script>
-
-
-<!-- =========================
-     TAWK.TO LIVE CHAT
-========================= -->
-
-<script type="text/javascript">
-
-var Tawk_API = Tawk_API || {};
-var Tawk_LoadStart = new Date();
-
-(function(){
-
-  var s1 = document.createElement("script");
-  var s0 = document.getElementsByTagName("script")[0];
-
-  s1.async = true;
-
-  s1.src =
-    'https://embed.tawk.to/6aa2b663f30ab7344bf4eed2/1k25pgto3';
-
-  s1.charset = 'UTF-8';
-
-  s1.setAttribute('crossorigin','*');
-
-  s0.parentNode.insertBefore(s1,s0);
+  }
 
 })();
 
 </script>
 
+
+<!-- =======================================================
+     TAWK.TO REAL LIVE CHAT
+======================================================= -->
+
+<script type="text/javascript">
+
+/*
+  Rebecca & Sheena Tattoos
+  Tawk.to Property:
+  6aa2b663f30ab7344bf4eed2
+
+  Widget:
+  1k25pgto3
+*/
+
+var Tawk_API = Tawk_API || {};
+var Tawk_LoadStart = new Date();
+
+/*
+  Make sure the widget is not intentionally hidden
+  by page-level JavaScript.
+*/
+
+Tawk_API.onLoad = function () {
+
+  try {
+
+    if (typeof Tawk_API.showWidget === "function") {
+      Tawk_API.showWidget();
+    }
+
+  } catch (error) {
+
+    console.log(
+      "Tawk widget visibility error:",
+      error
+    );
+
+  }
+
+};
+
+
+/*
+  Load the official Tawk.to widget.
+*/
+
+(function () {
+
+  var s1 = document.createElement("script");
+
+  var s0 =
+    document.getElementsByTagName("script")[0];
+
+  s1.async = true;
+
+  s1.src =
+    "https://embed.tawk.to/6aa2b663f30ab7344bf4eed2/1k25pgto3";
+
+  s1.charset = "UTF-8";
+
+  s1.setAttribute(
+    "crossorigin",
+    "*"
+  );
+
+  s0.parentNode.insertBefore(
+    s1,
+    s0
+  );
+
+})();
+
+</script>
+
+
+<!-- =======================================================
+     FINAL SAFETY CHECK
+======================================================= -->
+
+<script>
+
+/*
+  We deliberately do NOT create a fake chat button here.
+
+  If Tawk loads successfully, its own official circular
+  chat bubble will appear.
+
+  There is no:
+    - Text Us button
+    - SMS button
+    - fake chat box
+    - custom chat label
+*/
+
+window.addEventListener("load", function () {
+
+  setTimeout(function () {
+
+    try {
+
+      if (
+        window.Tawk_API &&
+        typeof window.Tawk_API.showWidget === "function"
+      ) {
+
+        window.Tawk_API.showWidget();
+
+      }
+
+    } catch (error) {
+
+      console.log(
+        "Tawk widget could not be shown:",
+        error
+      );
+
+    }
+
+  }, 2500);
+
+});
+
+</script>
 
 </body>
 </html>
