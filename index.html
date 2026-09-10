@@ -16,10 +16,7 @@
   content="Rebecca & Sheena Tattoos offers professional custom tattoos, tattoo design, studio appointments and home tattoo services in Richmond, Missouri."
 >
 
-<meta
-  name="theme-color"
-  content="#0b0b0d"
->
+<meta name="theme-color" content="#0b0b0d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,23 +60,13 @@ a {
   text-decoration: none;
 }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+button {
+  font-family: inherit;
 }
-
-.container {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-}
-
-/* =========================================================
-   COLORS
-========================================================= */
 
 :root {
   --black: #0b0b0d;
-  --black-soft: #111114;
+  --black-soft: #101014;
   --black-card: #17171b;
   --white: #f8f4f2;
   --muted: #c6bec0;
@@ -88,6 +75,11 @@ a {
   --pink: #d99aa9;
   --pink-light: #edbdc8;
   --border: rgba(255,255,255,.12);
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
 }
 
 /* =========================================================
@@ -154,7 +146,6 @@ header {
   border-radius: 30px;
   padding: 8px 13px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -169,6 +160,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+
   background:
     linear-gradient(
       90deg,
@@ -184,6 +176,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
+
   background:
     linear-gradient(
       to bottom,
@@ -191,6 +184,7 @@ header {
       transparent 50%,
       rgba(0,0,0,.65)
     );
+
   pointer-events: none;
 }
 
@@ -227,6 +221,9 @@ header {
 
 .hero h1 span {
   display: block;
+}
+
+.hero h1 .script {
   font-family: "Great Vibes", cursive;
   font-size: .63em;
   line-height: 1;
@@ -256,7 +253,6 @@ header {
   min-height: 50px;
   padding: 0 24px;
   border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -286,7 +282,7 @@ header {
 }
 
 /* =========================================================
-   SECTION BASICS
+   SECTIONS
 ========================================================= */
 
 section {
@@ -401,49 +397,49 @@ section {
 
 /* =========================================================
    ABOUT
+   NOTE:
+   The black-haired lady image is intentionally NOT here.
 ========================================================= */
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 65px;
-  align-items: center;
+.about-section {
+  background: var(--black);
 }
 
-.about-image {
-  position: relative;
-}
-
-.about-image img {
-  width: 100%;
-  max-height: 650px;
-  object-fit: cover;
+.about-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-content .section-eyebrow {
-  text-align: left;
+  text-align: center;
 }
 
 .about-content h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(43px, 5vw, 64px);
   line-height: 1;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 
 .about-content p {
+  max-width: 760px;
+  margin: 0 auto 17px;
   color: var(--muted);
   font-size: 14px;
-  margin-bottom: 17px;
 }
 
 .about-list {
   list-style: none;
-  margin: 25px 0 30px;
+  margin: 25px auto 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 25px;
+  max-width: 700px;
 }
 
 .about-list li {
-  padding: 8px 0;
   color: #e8e0df;
   font-size: 13px;
 }
@@ -451,7 +447,7 @@ section {
 .about-list li::before {
   content: "✦";
   color: var(--gold-light);
-  margin-right: 11px;
+  margin-right: 8px;
 }
 
 /* =========================================================
@@ -495,7 +491,12 @@ section {
 
 /* =========================================================
    CONTACT
+   THIS IS THE ONLY PLACE IMG-5942 APPEARS.
 ========================================================= */
+
+.contact-section {
+  background: #101014;
+}
 
 .contact-grid {
   display: grid;
@@ -504,9 +505,13 @@ section {
   align-items: center;
 }
 
+.contact-image {
+  overflow: hidden;
+}
+
 .contact-image img {
   width: 100%;
-  max-height: 600px;
+  max-height: 620px;
   object-fit: cover;
 }
 
@@ -555,6 +560,7 @@ section {
 .cta {
   text-align: center;
   padding: 90px 20px;
+
   background:
     linear-gradient(
       135deg,
@@ -562,6 +568,7 @@ section {
       rgba(217,154,169,.06)
     ),
     #0e0e11;
+
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -631,24 +638,13 @@ footer {
 
 /* =========================================================
    TAWK.TO
+   REAL WIDGET ONLY
 ========================================================= */
 
-/*
-   IMPORTANT:
-   This is the REAL Tawk.to widget.
-   There is NO fake chat button or SMS button on this page.
-*/
-
 #tawkchat-minified-container,
-#tawkchat-container,
-iframe[title*="chat"],
-iframe[title*="Chat"] {
+#tawkchat-container {
   z-index: 2147483647 !important;
 }
-
-/*
-   Keep the Tawk bubble above the website.
-*/
 
 #tawkchat-minified-container {
   bottom: 20px !important;
@@ -675,14 +671,9 @@ iframe[title*="Chat"] {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .about-image {
-    order: 2;
   }
 
 }
@@ -728,6 +719,7 @@ iframe[title*="Chat"] {
 
   .hero {
     min-height: 100svh;
+
     background:
       linear-gradient(
         90deg,
@@ -775,8 +767,8 @@ iframe[title*="Chat"] {
     aspect-ratio: 4 / 5;
   }
 
-  .about-content .section-eyebrow {
-    text-align: left;
+  .about-content {
+    text-align: center;
   }
 
   #tawkchat-minified-container {
@@ -823,37 +815,61 @@ button:focus-visible {
       <ul class="nav-links">
 
         <li>
-          <a href="#home" data-en="Home" data-es="Inicio">
+          <a
+            href="#home"
+            data-en="Home"
+            data-es="Inicio"
+          >
             Home
           </a>
         </li>
 
         <li>
-          <a href="#work" data-en="Our Work" data-es="Nuestro Trabajo">
+          <a
+            href="#work"
+            data-en="Our Work"
+            data-es="Nuestro Trabajo"
+          >
             Our Work
           </a>
         </li>
 
         <li>
-          <a href="#services" data-en="Services" data-es="Servicios">
+          <a
+            href="#services"
+            data-en="Services"
+            data-es="Servicios"
+          >
             Services
           </a>
         </li>
 
         <li>
-          <a href="#about" data-en="About" data-es="Nosotras">
+          <a
+            href="#about"
+            data-en="About"
+            data-es="Nosotras"
+          >
             About
           </a>
         </li>
 
         <li>
-          <a href="booking.html" data-en="Book" data-es="Reservar">
+          <a
+            href="booking.html"
+            data-en="Book"
+            data-es="Reservar"
+          >
             Book
           </a>
         </li>
 
         <li>
-          <a href="#contact" data-en="Contact" data-es="Contacto">
+          <a
+            href="#contact"
+            data-en="Contact"
+            data-es="Contacto"
+          >
             Contact
           </a>
         </li>
@@ -897,7 +913,9 @@ button:focus-visible {
       </div>
 
       <h1>
+
         <span
+          class="script"
           data-en="Your Story."
           data-es="Tu Historia."
         >
@@ -910,6 +928,7 @@ button:focus-visible {
         >
           Our Art.
         </span>
+
       </h1>
 
       <p
@@ -1022,14 +1041,6 @@ button:focus-visible {
       <div class="gallery-item">
         <img
           src="https://i.ibb.co/ZpKgJv6K/IMG-5940.jpg?v=20260907"
-          alt="Tattoo artwork by Rebecca and Sheena"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="gallery-item">
-        <img
-          src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
           alt="Tattoo artwork by Rebecca and Sheena"
           loading="lazy"
         >
@@ -1149,22 +1160,12 @@ button:focus-visible {
 
 <!-- =======================================================
      ABOUT
+     NO LADY IMAGE HERE
 ======================================================= -->
 
-<section class="section-dark" id="about">
+<section class="about-section" id="about">
 
-  <div class="container about-grid">
-
-    <div class="about-image">
-
-      <img
-        src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
-        alt="Rebecca and Sheena Tattoos artwork"
-        loading="lazy"
-      >
-
-    </div>
-
+  <div class="container">
 
     <div class="about-content">
 
@@ -1364,9 +1365,10 @@ button:focus-visible {
 
 <!-- =======================================================
      CONTACT
+     THE BLACK-HAIRED LADY APPEARS ONLY HERE
 ======================================================= -->
 
-<section class="section-dark" id="contact">
+<section class="contact-section" id="contact">
 
   <div class="container contact-grid">
 
@@ -1374,7 +1376,7 @@ button:focus-visible {
 
       <img
         src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
-        alt="Tattoo artwork by Rebecca and Sheena"
+        alt="Rebecca and Sheena Tattoos"
         loading="lazy"
       >
 
@@ -1596,7 +1598,8 @@ button:focus-visible {
 
 (function () {
 
-  const toggle = document.getElementById("languageToggle");
+  const toggle =
+    document.getElementById("languageToggle");
 
   const savedLanguage =
     localStorage.getItem("siteLanguage") || "en";
@@ -1605,18 +1608,22 @@ button:focus-visible {
 
     document.documentElement.lang = language;
 
-    document.querySelectorAll("[data-en]").forEach(function (element) {
+    document
+      .querySelectorAll("[data-en]")
+      .forEach(function (element) {
 
-      const value =
-        element.getAttribute(
-          language === "es" ? "data-es" : "data-en"
-        );
+        const value =
+          element.getAttribute(
+            language === "es"
+              ? "data-es"
+              : "data-en"
+          );
 
-      if (value !== null) {
-        element.textContent = value;
-      }
+        if (value !== null) {
+          element.textContent = value;
+        }
 
-    });
+      });
 
     if (toggle) {
 
@@ -1638,16 +1645,21 @@ button:focus-visible {
 
   if (toggle) {
 
-    toggle.addEventListener("click", function () {
+    toggle.addEventListener(
+      "click",
+      function () {
 
-      const current =
-        document.documentElement.lang || "en";
+        const current =
+          document.documentElement.lang || "en";
 
-      setLanguage(
-        current === "en" ? "es" : "en"
-      );
+        setLanguage(
+          current === "en"
+            ? "es"
+            : "en"
+        );
 
-    });
+      }
+    );
 
   }
 
@@ -1657,58 +1669,18 @@ button:focus-visible {
 
 
 <!-- =======================================================
-     TAWK.TO REAL LIVE CHAT
+     TAWK.TO OFFICIAL LIVE CHAT
 ======================================================= -->
 
 <script type="text/javascript">
 
-/*
-  Rebecca & Sheena Tattoos
-  Tawk.to Property:
-  6aa2b663f30ab7344bf4eed2
-
-  Widget:
-  1k25pgto3
-*/
-
 var Tawk_API = Tawk_API || {};
 var Tawk_LoadStart = new Date();
 
-/*
-  Make sure the widget is not intentionally hidden
-  by page-level JavaScript.
-*/
-
-Tawk_API.onLoad = function () {
-
-  try {
-
-    if (typeof Tawk_API.showWidget === "function") {
-      Tawk_API.showWidget();
-    }
-
-  } catch (error) {
-
-    console.log(
-      "Tawk widget visibility error:",
-      error
-    );
-
-  }
-
-};
-
-
-/*
-  Load the official Tawk.to widget.
-*/
-
-(function () {
+(function() {
 
   var s1 = document.createElement("script");
-
-  var s0 =
-    document.getElementsByTagName("script")[0];
+  var s0 = document.getElementsByTagName("script")[0];
 
   s1.async = true;
 
@@ -1728,56 +1700,6 @@ Tawk_API.onLoad = function () {
   );
 
 })();
-
-</script>
-
-
-<!-- =======================================================
-     FINAL SAFETY CHECK
-======================================================= -->
-
-<script>
-
-/*
-  We deliberately do NOT create a fake chat button here.
-
-  If Tawk loads successfully, its own official circular
-  chat bubble will appear.
-
-  There is no:
-    - Text Us button
-    - SMS button
-    - fake chat box
-    - custom chat label
-*/
-
-window.addEventListener("load", function () {
-
-  setTimeout(function () {
-
-    try {
-
-      if (
-        window.Tawk_API &&
-        typeof window.Tawk_API.showWidget === "function"
-      ) {
-
-        window.Tawk_API.showWidget();
-
-      }
-
-    } catch (error) {
-
-      console.log(
-        "Tawk widget could not be shown:",
-        error
-      );
-
-    }
-
-  }, 2500);
-
-});
 
 </script>
 
