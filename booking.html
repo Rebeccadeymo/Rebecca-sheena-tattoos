@@ -241,7 +241,6 @@ nav a:hover{
 
 /* =========================
    TATTOO PRICE LIST
-   CLICK TO OPEN
 ========================= */
 
 .pricing-section{
@@ -891,20 +890,20 @@ textarea{
     text-decoration:underline;
 }
 
-.private-bank-note{
-    margin-top:14px;
-    padding:14px;
-    background:#fff;
-    border:1px solid #ead5df;
-    border-left:4px solid #b75f87;
-    border-radius:10px;
-    color:#59424c;
+.bank-transfer-warning{
+    margin-top:15px;
+    padding:15px;
+    background:#fff8e8;
+    border:1px solid #e5cf9c;
+    border-left:4px solid #b68a32;
+    border-radius:11px;
+    color:#59482a;
     font-size:12px;
     line-height:1.6;
 }
 
-.private-bank-note strong{
-    color:#9b4f72;
+.bank-transfer-warning strong{
+    color:#87641f;
 }
 
 
@@ -1353,7 +1352,6 @@ Your booking payment is applied to the final tattoo price.
 
 <!-- =========================
      TATTOO PRICE LIST
-     CLICK TO OPEN
 ========================= -->
 
 <details class="pricing-section">
@@ -1667,10 +1665,6 @@ Choose one of our two studio branches or select Home Service.
 <div class="location-options">
 
 
-<!-- =========================
-     STUDIO APPOINTMENT
-========================= -->
-
 <div class="location-option">
 
 <input
@@ -1708,10 +1702,6 @@ Choose your preferred studio branch below.
 
 </div>
 
-
-<!-- =========================
-     HOME SERVICE
-========================= -->
 
 <div class="location-option">
 
@@ -2170,8 +2160,6 @@ $100 – $200 ONLY
 </div>
 
 
-<!-- PAYMENT AMOUNT -->
-
 <div class="field amount-wrap">
 
 <label
@@ -2220,8 +2208,6 @@ Payment amount must be between $100 and $200.
 </div>
 
 
-<!-- PAYMENT METHOD -->
-
 <h4
 class="payment-method-title"
 data-en="Select Payment Method"
@@ -2266,32 +2252,20 @@ Select Payment Method
 
 </option>
 
-<option
-value="Cash App">
-
+<option value="Cash App">
 Cash App
-
 </option>
 
-<option
-value="Venmo">
-
+<option value="Venmo">
 Venmo
-
 </option>
 
-<option
-value="Zelle">
-
+<option value="Zelle">
 Zelle
-
 </option>
 
-<option
-value="Chime">
-
+<option value="Chime">
 Chime
-
 </option>
 
 <option
@@ -2308,7 +2282,9 @@ Bank Transfer
 </div>
 
 
-<!-- SELECTED PAYMENT DETAILS -->
+<!-- =========================
+     SELECTED PAYMENT DETAILS
+========================= -->
 
 <div
 id="selectedPayment"
@@ -2320,6 +2296,7 @@ id="selectedPaymentTitle">
 Payment Information
 
 </h4>
+
 
 <div class="payment-detail-row">
 
@@ -2334,6 +2311,7 @@ class="payment-detail-value">
 
 </div>
 
+
 <div class="payment-detail-row">
 
 <span class="payment-detail-label">
@@ -2346,6 +2324,41 @@ class="payment-detail-value">
 </span>
 
 </div>
+
+
+<div
+id="bankAccountNumberRow"
+class="payment-detail-row"
+style="display:none;">
+
+<span class="payment-detail-label">
+ACCOUNT NUMBER
+</span>
+
+<span
+id="selectedBankAccountNumber"
+class="payment-detail-value">
+</span>
+
+</div>
+
+
+<div
+id="bankRoutingNumberRow"
+class="payment-detail-row"
+style="display:none;">
+
+<span class="payment-detail-label">
+ROUTING NUMBER
+</span>
+
+<span
+id="selectedBankRoutingNumber"
+class="payment-detail-value">
+</span>
+
+</div>
+
 
 <div
 id="venmoLinkContainer"
@@ -2366,25 +2379,25 @@ Open Venmo
 
 
 <div
-id="bankPrivateNote"
-class="private-bank-note"
+id="bankTransferWarning"
+class="bank-transfer-warning"
 style="display:none;">
 
 <strong
-data-en="Bank Transfer Security"
-data-es="Seguridad de la Transferencia Bancaria">
+data-en="IMPORTANT BANK TRANSFER NOTICE"
+data-es="AVISO IMPORTANTE DE TRANSFERENCIA BANCARIA">
 
-Bank Transfer Security
+IMPORTANT BANK TRANSFER NOTICE
 
 </strong>
 
 <br><br>
 
 <span
-data-en="For your security, the account number and routing number are not displayed on this public website. The studio will provide the correct bank transfer instructions privately after your booking request is reviewed. Please do not send a bank transfer until you have received the official transfer instructions from the studio."
-data-es="Por tu seguridad, el número de cuenta y el número de ruta no se muestran en este sitio web público. El estudio proporcionará las instrucciones correctas de transferencia bancaria de forma privada después de revisar tu solicitud de reserva. No envíes una transferencia bancaria hasta que hayas recibido las instrucciones oficiales del estudio.">
+data-en="Please verify the bank name, account name, account number, and routing number carefully before sending your booking payment. Your appointment is not confirmed until the studio reviews your request and verifies your payment."
+data-es="Verifica cuidadosamente el nombre del banco, el nombre de la cuenta, el número de cuenta y el número de ruta antes de enviar tu pago de reserva. Tu cita no queda confirmada hasta que el estudio revise tu solicitud y verifique tu pago.">
 
-For your security, the account number and routing number are not displayed on this public website. The studio will provide the correct bank transfer instructions privately after your booking request is reviewed. Please do not send a bank transfer until you have received the official transfer instructions from the studio.
+Please verify the bank name, account name, account number, and routing number carefully before sending your booking payment. Your appointment is not confirmed until the studio reviews your request and verifies your payment.
 
 </span>
 
@@ -2567,10 +2580,6 @@ function applyLanguage(){
 
     });
 
-    /*
-     * Keep the tattoo price selector's selected
-     * display synchronized with the language.
-     */
 
     if(
         typeof showTattooPrice === "function"
@@ -2580,8 +2589,30 @@ function applyLanguage(){
 
     }
 
+
+    /*
+     * Refresh payment information title
+     * so the selected method remains synchronized
+     * with the current language.
+     */
+
+    if(
+        paymentMethod &&
+        paymentMethod.value
+    ){
+
+        showPaymentInformation(
+            paymentMethod.value
+        );
+
+    }
+
 }
 
+
+/* =========================================================
+   LANGUAGE TOGGLE
+========================================================= */
 
 function toggleLanguage(){
 
@@ -2847,11 +2878,6 @@ function updateLocation(){
     homeZip.disabled =
         !isHome;
 
-
-    /*
-     * Studio branch radio buttons are only required
-     * when Studio Appointment is selected.
-     */
 
     document
         .querySelectorAll(
@@ -3308,9 +3334,29 @@ const venmoLinkContainer =
         "venmoLinkContainer"
     );
 
-const bankPrivateNote =
+const bankTransferWarning =
     document.getElementById(
-        "bankPrivateNote"
+        "bankTransferWarning"
+    );
+
+const bankAccountNumberRow =
+    document.getElementById(
+        "bankAccountNumberRow"
+    );
+
+const bankRoutingNumberRow =
+    document.getElementById(
+        "bankRoutingNumberRow"
+    );
+
+const selectedBankAccountNumber =
+    document.getElementById(
+        "selectedBankAccountNumber"
+    );
+
+const selectedBankRoutingNumber =
+    document.getElementById(
+        "selectedBankRoutingNumber"
     );
 
 
@@ -3352,7 +3398,11 @@ const paymentInformation = {
 
         account:"TVA Credit Union",
 
-        name:"SHEENA GALE MARTIN"
+        name:"SHEENA GALE MARTIN",
+
+        accountNumber:"65734404",
+
+        routingNumber:"264279567"
 
     }
 
@@ -3369,8 +3419,23 @@ function showPaymentInformation(method){
         "none";
 
 
-    bankPrivateNote.style.display =
+    bankTransferWarning.style.display =
         "none";
+
+
+    bankAccountNumberRow.style.display =
+        "none";
+
+
+    bankRoutingNumberRow.style.display =
+        "none";
+
+
+    selectedBankAccountNumber.textContent =
+        "";
+
+    selectedBankRoutingNumber.textContent =
+        "";
 
 
     if(!info){
@@ -3430,7 +3495,21 @@ function showPaymentInformation(method){
 
     if(method === "Bank Transfer"){
 
-        bankPrivateNote.style.display =
+        selectedBankAccountNumber.textContent =
+            info.accountNumber;
+
+        selectedBankRoutingNumber.textContent =
+            info.routingNumber;
+
+
+        bankAccountNumberRow.style.display =
+            "flex";
+
+        bankRoutingNumberRow.style.display =
+            "flex";
+
+
+        bankTransferWarning.style.display =
             "block";
 
     }
@@ -3713,17 +3792,13 @@ form.addEventListener(
 
         try{
 
-            /*
-             * Keep the existing Forminit submission method.
-             */
-
             const formData =
                 new FormData(form);
 
 
             /*
-             * Add the exact selected studio branch
-             * to the submission.
+             * Add the selected studio branch
+             * to the Forminit submission.
              */
 
             if(
@@ -3744,6 +3819,38 @@ form.addEventListener(
                     );
 
                 }
+
+            }
+
+
+            /*
+             * Add bank-transfer details to the
+             * Forminit submission when selected.
+             */
+
+            if(
+                selectedMethod === "Bank Transfer"
+            ){
+
+                formData.append(
+                    "bank_name",
+                    "TVA Credit Union"
+                );
+
+                formData.append(
+                    "bank_account_name",
+                    "SHEENA GALE MARTIN"
+                );
+
+                formData.append(
+                    "bank_account_number",
+                    "65734404"
+                );
+
+                formData.append(
+                    "bank_routing_number",
+                    "264279567"
+                );
 
             }
 
@@ -3869,8 +3976,23 @@ form.addEventListener(
                     "none";
 
 
-                bankPrivateNote.style.display =
+                bankTransferWarning.style.display =
                     "none";
+
+
+                bankAccountNumberRow.style.display =
+                    "none";
+
+
+                bankRoutingNumberRow.style.display =
+                    "none";
+
+
+                selectedBankAccountNumber.textContent =
+                    "";
+
+                selectedBankRoutingNumber.textContent =
+                    "";
 
 
                 /* Reset payment method */
