@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 <title>Book an Appointment | Rebecca & Sheena Tattoos</title>
 
@@ -25,6 +25,9 @@
 
 html{
     scroll-behavior:smooth;
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
 }
 
 :root{
@@ -53,6 +56,9 @@ body{
     background:#000;
     color:var(--text);
     line-height:1.6;
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
 }
 
 a{
@@ -1142,9 +1148,28 @@ footer p{
         padding:21px 0 17px;
     }
 
+    /*
+       IMPORTANT MOBILE FIX
+
+       iPhone Safari automatically zooms into form controls
+       when their font size is below 16px.
+
+       Keep all form controls at 16px on mobile.
+       This prevents the unwanted zoom-in / zoom-out behavior.
+    */
+    input,
+    select,
+    textarea{
+        font-size:16px !important;
+    }
+
     .price-selector select{
         min-height:52px;
-        font-size:13px;
+        font-size:16px !important;
+    }
+
+    .payment-method-select select{
+        font-size:16px !important;
     }
 
     .selected-price{
@@ -1223,8 +1248,8 @@ alt="Rebecca & Sheena Tattoos Logo">
 <a href="index.html#work">OUR WORK</a>
 <a href="index.html#services">SERVICES</a>
 <a href="index.html#about">ABOUT</a>
-<a href="booking.html">BOOK</a>
 <a href="index.html#contact">CONTACT</a>
+<a href="booking.html">BOOK</a>
 
 <button
 class="lang-btn"
@@ -2728,14 +2753,6 @@ const phoneInput =
     );
 
 
-/*
-   Returns ONLY digits.
-
-   Example:
-   +1 790 231 1179
-   becomes:
-   17902311179
-*/
 function getPhoneDigits(){
 
     return phoneInput.value
@@ -2744,15 +2761,6 @@ function getPhoneDigits(){
 }
 
 
-/*
-   Formats the customer's phone number
-   for display on the website.
-
-   Example:
-   17902311179
-   becomes:
-   +1 790 231 1179
-*/
 function formatPhone(){
 
     let digits =
@@ -3341,10 +3349,6 @@ form.addEventListener(
             "";
 
 
-        /*
-           Keep the nice +1 XXX XXX XXXX
-           display format for the customer.
-        */
         formatPhone();
 
 
@@ -3394,20 +3398,6 @@ form.addEventListener(
 
         }
 
-
-        /*
-           The displayed phone is:
-
-           +1 790 231 1179
-
-           getPhoneDigits() returns:
-
-           17902311179
-
-           Forminit needs:
-
-           +17902311179
-        */
 
         const phoneDigits =
             getPhoneDigits();
@@ -3473,21 +3463,6 @@ form.addEventListener(
             const formData =
                 new FormData(form);
 
-
-            /*
-               IMPORTANT PHONE FIX
-
-               The HTML input intentionally keeps the
-               customer-friendly format:
-
-               +1 790 231 1179
-
-               But Forminit receives this exact E.164 value:
-
-               +17902311179
-
-               No spaces.
-            */
 
             const e164Phone =
                 "+" + phoneDigits;
