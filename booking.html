@@ -2728,6 +2728,14 @@ const phoneInput =
     );
 
 
+/*
+   Returns ONLY digits.
+
+   Example:
+   +1 790 231 1179
+   becomes:
+   17902311179
+*/
 function getPhoneDigits(){
 
     return phoneInput.value
@@ -2736,10 +2744,20 @@ function getPhoneDigits(){
 }
 
 
+/*
+   Formats the customer's phone number
+   for display on the website.
+
+   Example:
+   17902311179
+   becomes:
+   +1 790 231 1179
+*/
 function formatPhone(){
 
     let digits =
         getPhoneDigits();
+
 
     if(
         digits.length === 11 &&
@@ -2750,6 +2768,7 @@ function formatPhone(){
             digits.substring(1);
 
     }
+
 
     digits =
         digits.substring(0,10);
@@ -3322,6 +3341,10 @@ form.addEventListener(
             "";
 
 
+        /*
+           Keep the nice +1 XXX XXX XXXX
+           display format for the customer.
+        */
         formatPhone();
 
 
@@ -3371,6 +3394,20 @@ form.addEventListener(
 
         }
 
+
+        /*
+           The displayed phone is:
+
+           +1 790 231 1179
+
+           getPhoneDigits() returns:
+
+           17902311179
+
+           Forminit needs:
+
+           +17902311179
+        */
 
         const phoneDigits =
             getPhoneDigits();
@@ -3435,6 +3472,31 @@ form.addEventListener(
 
             const formData =
                 new FormData(form);
+
+
+            /*
+               IMPORTANT PHONE FIX
+
+               The HTML input intentionally keeps the
+               customer-friendly format:
+
+               +1 790 231 1179
+
+               But Forminit receives this exact E.164 value:
+
+               +17902311179
+
+               No spaces.
+            */
+
+            const e164Phone =
+                "+" + phoneDigits;
+
+
+            formData.set(
+                "fi-sender-phone",
+                e164Phone
+            );
 
 
             if(selectedMethod === "Bank Transfer"){
