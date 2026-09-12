@@ -27,13 +27,31 @@ html{
     scroll-behavior:smooth;
 }
 
+:root{
+    --pink:#e7a8ba;
+    --pink-dark:#d98da7;
+    --pink-soft:#24161b;
+    --pink-light:#1b1115;
+
+    --gold:#c9a24d;
+    --gold-light:#dfbd73;
+
+    --black:#000000;
+    --black-soft:#0b0b0b;
+
+    --card:#111111;
+    --card-light:#161616;
+
+    --text:#f5f5f5;
+    --muted:#b5b5b5;
+
+    --border:#292929;
+}
+
 body{
     font-family:'Montserrat',sans-serif;
-    background:
-        radial-gradient(circle at 10% 10%,rgba(255,190,215,.35),transparent 30%),
-        radial-gradient(circle at 90% 20%,rgba(255,215,230,.4),transparent 30%),
-        linear-gradient(180deg,#fff7fa 0%,#fff 45%,#fff3f7 100%);
-    color:#222;
+    background:#000;
+    color:var(--text);
     line-height:1.6;
 }
 
@@ -56,9 +74,9 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,245,249,.97);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(190,120,145,.22);
+    background:rgba(0,0,0,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(201,162,77,.30);
     padding:10px 20px;
 }
 
@@ -80,6 +98,7 @@ header{
     width:75px;
     height:75px;
     object-fit:contain;
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,.7));
 }
 
 nav{
@@ -95,23 +114,30 @@ nav a{
     font-size:12px;
     font-weight:700;
     letter-spacing:1px;
+    color:#f5f5f5;
     transition:.25s;
 }
 
 nav a:hover{
-    color:#c26a91;
+    color:var(--gold-light);
 }
 
 .lang-btn{
-    border:1px solid #c78aa4;
-    background:#fff;
-    color:#9b4f72;
+    border:1px solid var(--gold);
+    background:#111;
+    color:var(--gold-light);
     border-radius:20px;
     padding:8px 13px;
     font-family:'Cinzel',serif;
     font-size:11px;
     font-weight:700;
     cursor:pointer;
+    transition:.25s;
+}
+
+.lang-btn:hover{
+    background:var(--gold);
+    color:#000;
 }
 
 
@@ -129,8 +155,12 @@ nav a:hover{
     overflow:hidden;
 
     background:
-        linear-gradient(rgba(80,10,42,.52),rgba(45,5,27,.68)),
-        url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907") center/cover no-repeat;
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(15,0,8,.78)
+        ),
+        url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
+        center/cover no-repeat;
 }
 
 .booking-hero-content{
@@ -145,7 +175,8 @@ nav a:hover{
     font-size:clamp(58px,9vw,105px);
     line-height:1;
     font-weight:400;
-    text-shadow:0 0 25px rgba(255,170,205,.65);
+    color:#fff;
+    text-shadow:0 5px 25px rgba(0,0,0,.8);
 }
 
 .booking-hero p{
@@ -153,6 +184,7 @@ nav a:hover{
     margin:20px auto 0;
     font-size:15px;
     letter-spacing:.4px;
+    color:#f2f2f2;
 }
 
 
@@ -164,6 +196,7 @@ nav a:hover{
     max-width:950px;
     margin:0 auto;
     padding:55px 18px 80px;
+    background:#000;
 }
 
 .intro{
@@ -173,7 +206,7 @@ nav a:hover{
 
 .intro h2{
     font-family:'Great Vibes',cursive;
-    color:#9c4f72;
+    color:var(--gold-light);
     font-size:52px;
     font-weight:400;
 }
@@ -181,27 +214,32 @@ nav a:hover{
 .intro p{
     max-width:720px;
     margin:10px auto;
-    color:#555;
+    color:var(--muted);
 }
 
 
 /* =========================
-   SINGLE IMPORTANT NOTICE
+   IMPORTANT NOTICE
 ========================= */
 
 .notice{
-    background:linear-gradient(135deg,#ffe8f1,#fff7fa);
-    border:1px solid #e4b2c6;
+    background:
+        linear-gradient(
+            145deg,
+            #1b1115,
+            #120d0f
+        );
+    border:1px solid rgba(201,162,77,.35);
     border-radius:18px;
     padding:24px 22px;
     margin:25px 0 35px;
     text-align:left;
-    box-shadow:0 8px 25px rgba(150,70,105,.07);
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
 }
 
 .notice-title{
     text-align:center;
-    color:#9b4f72;
+    color:var(--gold-light);
     font-family:'Cinzel',serif;
     font-size:14px;
     font-weight:700;
@@ -211,7 +249,7 @@ nav a:hover{
 
 .notice-read{
     text-align:center;
-    color:#563845;
+    color:#d0c5c9;
     font-size:12px;
     font-weight:600;
     margin-bottom:16px;
@@ -224,7 +262,7 @@ nav a:hover{
 }
 
 .notice li{
-    color:#513944;
+    color:#d7d0d3;
     font-size:13px;
     line-height:1.7;
     margin-bottom:7px;
@@ -235,23 +273,26 @@ nav a:hover{
 }
 
 .notice li::marker{
-    color:#9b4f72;
+    color:var(--gold-light);
 }
 
 
 /* =========================
-   TATTOO PRICE LIST
-   CLICK TO OPEN
+   PRICE LIST
 ========================= */
 
 .pricing-section{
     background:
-        linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,244,248,.96));
-    border:1px solid #ead1dc;
+        linear-gradient(
+            145deg,
+            #111111,
+            #0b0b0b
+        );
+    border:1px solid rgba(201,162,77,.28);
     border-radius:24px;
     padding:0;
     margin:0 0 35px;
-    box-shadow:0 12px 38px rgba(110,50,80,.09);
+    box-shadow:0 12px 38px rgba(0,0,0,.45);
     overflow:hidden;
 }
 
@@ -273,7 +314,7 @@ nav a:hover{
 }
 
 .pricing-toggle:hover{
-    background:rgba(255,240,247,.45);
+    background:rgba(201,162,77,.04);
 }
 
 .pricing-toggle-content{
@@ -286,7 +327,7 @@ nav a:hover{
 
 .pricing-toggle-title{
     font-family:'Great Vibes',cursive;
-    color:#9b4f72;
+    color:var(--gold-light);
     font-size:50px;
     font-weight:400;
     line-height:1.1;
@@ -295,12 +336,12 @@ nav a:hover{
 .pricing-toggle-arrow{
     width:34px;
     height:34px;
-    border:1px solid #d7a1b7;
+    border:1px solid rgba(201,162,77,.55);
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#9b4f72;
+    color:var(--gold-light);
     font-size:18px;
     transition:.25s;
 }
@@ -313,13 +354,13 @@ nav a:hover{
     display:block;
     max-width:700px;
     margin:10px auto 0;
-    color:#666;
+    color:#aaa;
     font-size:13px;
 }
 
 .pricing-content{
     padding:0 30px 30px;
-    border-top:1px solid #ead1dc;
+    border-top:1px solid #292929;
 }
 
 .pricing-heading{
@@ -330,7 +371,7 @@ nav a:hover{
 .pricing-heading p{
     max-width:700px;
     margin:0 auto;
-    color:#666;
+    color:#aaa;
     font-size:13px;
 }
 
@@ -338,7 +379,7 @@ nav a:hover{
     display:block;
     text-align:center;
     font-family:'Cinzel',serif;
-    color:#51303f;
+    color:#d8c8cd;
     font-size:12px;
     font-weight:700;
     letter-spacing:.5px;
@@ -353,24 +394,29 @@ nav a:hover{
 .price-selector select{
     width:100%;
     min-height:54px;
-    border:2px solid #dfc7d2;
+    border:2px solid #383033;
     border-radius:13px;
     padding:14px 16px;
     font-family:'Montserrat',sans-serif;
     font-size:14px;
-    background:#fff;
-    color:#432b36;
+    background:#0d0d0d;
+    color:#f5f5f5;
     cursor:pointer;
     outline:none;
 }
 
 .price-selector select:hover{
-    border-color:#c8799d;
+    border-color:var(--gold);
 }
 
 .price-selector select:focus{
-    border-color:#b75f87;
-    box-shadow:0 0 0 3px rgba(183,95,135,.12);
+    border-color:var(--gold-light);
+    box-shadow:0 0 0 3px rgba(201,162,77,.12);
+}
+
+.price-selector select option{
+    background:#111;
+    color:#fff;
 }
 
 .selected-price{
@@ -379,8 +425,13 @@ nav a:hover{
     margin:18px auto 0;
     padding:22px;
     text-align:center;
-    background:linear-gradient(135deg,#fff0f6,#fff9fb);
-    border:1px solid #dfb4c6;
+    background:
+        linear-gradient(
+            135deg,
+            #1b1115,
+            #111
+        );
+    border:1px solid rgba(201,162,77,.38);
     border-radius:17px;
     animation:priceReveal .25s ease;
 }
@@ -400,13 +451,13 @@ nav a:hover{
     font-family:'Cormorant Garamond',serif;
     font-size:25px;
     font-weight:700;
-    color:#49303b;
+    color:#f2e8ec;
     margin-bottom:5px;
 }
 
 .selected-price-label{
     font-family:'Cinzel',serif;
-    color:#86606f;
+    color:#aa9b9f;
     font-size:10px;
     font-weight:700;
     letter-spacing:.6px;
@@ -415,7 +466,7 @@ nav a:hover{
 .selected-price-value{
     display:block;
     margin-top:3px;
-    color:#9b4f72;
+    color:var(--gold-light);
     font-family:'Cinzel',serif;
     font-size:22px;
     font-weight:700;
@@ -431,23 +482,23 @@ form{
 }
 
 .form-section{
-    background:rgba(255,255,255,.94);
-    border:1px solid #ead5df;
+    background:#111111;
+    border:1px solid #292929;
     border-radius:22px;
     padding:28px;
     margin-bottom:25px;
-    box-shadow:0 10px 35px rgba(110,50,80,.08);
+    box-shadow:0 10px 35px rgba(0,0,0,.40);
 }
 
 .form-section h3{
     font-family:'Cormorant Garamond',serif;
     font-size:31px;
-    color:#9b4f72;
+    color:var(--gold-light);
     margin-bottom:5px;
 }
 
 .section-description{
-    color:#777;
+    color:#999;
     font-size:13px;
     margin-bottom:22px;
 }
@@ -459,33 +510,39 @@ label{
     font-weight:700;
     letter-spacing:.4px;
     margin-bottom:7px;
-    color:#51303f;
+    color:#ddd;
 }
 
 input,
 select,
 textarea{
     width:100%;
-    border:1px solid #d9c1cc;
+    border:1px solid #393236;
     border-radius:11px;
     padding:13px 14px;
     font-family:'Montserrat',sans-serif;
     font-size:14px;
-    background:#fff;
-    color:#222;
+    background:#080808;
+    color:#f5f5f5;
     outline:none;
     transition:.25s;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#777;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
-    border-color:#c26a91;
-    box-shadow:0 0 0 3px rgba(194,106,145,.12);
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(201,162,77,.12);
 }
 
 input:disabled{
-    background:#f7f1f4;
+    background:#151515;
+    color:#777;
     cursor:not-allowed;
 }
 
@@ -512,7 +569,7 @@ textarea{
     display:block;
     margin-top:6px;
     font-size:11px;
-    color:#777;
+    color:#888;
 }
 
 
@@ -540,23 +597,28 @@ textarea{
 .location-card{
     display:block;
     cursor:pointer;
-    border:2px solid #e3d2da;
+    border:2px solid #302b2e;
     border-radius:18px;
     padding:22px;
     height:100%;
-    background:#fff;
+    background:#0d0d0d;
     transition:.25s;
 }
 
 .location-card:hover{
-    border-color:#cc7fa0;
+    border-color:var(--gold);
     transform:translateY(-2px);
 }
 
 .location-option input:checked + .location-card{
-    border-color:#b75f87;
-    background:linear-gradient(135deg,#ffeaf3,#fff);
-    box-shadow:0 8px 25px rgba(183,95,135,.12);
+    border-color:var(--gold);
+    background:
+        linear-gradient(
+            135deg,
+            #1c1116,
+            #101010
+        );
+    box-shadow:0 8px 25px rgba(201,162,77,.10);
 }
 
 .location-card-icon{
@@ -566,14 +628,18 @@ textarea{
 
 .location-card h4{
     font-family:'Cormorant Garamond',serif;
-    color:#9b4f72;
+    color:var(--gold-light);
     font-size:26px;
 }
 
 .location-card p{
     font-size:12px;
-    color:#666;
+    color:#aaa;
     margin-top:6px;
+}
+
+.location-card strong{
+    color:#ddd;
 }
 
 
@@ -585,21 +651,21 @@ textarea{
     display:none;
     margin-top:25px;
     padding-top:25px;
-    border-top:1px dashed #ddb7c8;
+    border-top:1px dashed #49353d;
 }
 
 .home-service-note{
-    background:#fff0f6;
-    border-left:4px solid #bd668d;
+    background:#1b1115;
+    border-left:4px solid var(--gold);
     border-radius:10px;
     padding:16px;
     margin-bottom:22px;
     font-size:13px;
-    color:#553b47;
+    color:#cfc5c9;
 }
 
 .home-service-note strong{
-    color:#9b4f72;
+    color:var(--gold-light);
 }
 
 
@@ -617,7 +683,7 @@ textarea{
     right:14px;
     top:43px;
     font-size:11px;
-    color:#9b4f72;
+    color:var(--gold-light);
 }
 
 .address-suggestions{
@@ -628,10 +694,10 @@ textarea{
     top:100%;
     z-index:500;
     margin-top:5px;
-    background:#fff;
-    border:1px solid #dfc1cf;
+    background:#111;
+    border:1px solid #40363b;
     border-radius:12px;
-    box-shadow:0 12px 30px rgba(70,20,45,.14);
+    box-shadow:0 12px 30px rgba(0,0,0,.65);
     overflow:hidden;
 }
 
@@ -639,8 +705,8 @@ textarea{
     padding:12px 14px;
     cursor:pointer;
     font-size:13px;
-    color:#3e2933;
-    border-bottom:1px solid #f1e3e9;
+    color:#ddd;
+    border-bottom:1px solid #292529;
 }
 
 .address-suggestion:last-child{
@@ -648,17 +714,18 @@ textarea{
 }
 
 .address-suggestion:hover{
-    background:#fff0f6;
+    background:#1b1115;
+    color:#fff;
 }
 
 .address-note{
-    background:#fff6fa;
-    border:1px solid #edd2de;
+    background:#151012;
+    border:1px solid #34282d;
     border-radius:10px;
     padding:10px 12px;
     margin-top:8px;
     font-size:11px;
-    color:#765966;
+    color:#999;
 }
 
 
@@ -670,11 +737,15 @@ textarea{
     margin-bottom:25px;
 }
 
+.payment-intro p{
+    color:#aaa;
+}
+
 .payment-range{
     display:inline-block;
-    background:#fff0f5;
-    color:#9b4f72;
-    border:1px solid #e0b0c4;
+    background:#1b1115;
+    color:var(--gold-light);
+    border:1px solid rgba(201,162,77,.45);
     padding:8px 13px;
     border-radius:20px;
     font-family:'Cinzel',serif;
@@ -697,7 +768,7 @@ textarea{
     top:50%;
     transform:translateY(-50%);
     font-weight:700;
-    color:#9b4f72;
+    color:var(--gold-light);
 }
 
 .amount-prefix input{
@@ -706,26 +777,26 @@ textarea{
 
 .amount-warning{
     display:none;
-    color:#b22f5d;
+    color:#ff6f96;
     font-size:12px;
     margin-top:7px;
 }
 
 
 /* =========================
-   PAYMENT METHOD DROPDOWN
+   PAYMENT METHOD
 ========================= */
 
 .payment-method-title{
     font-family:'Cormorant Garamond',serif;
     font-size:27px;
-    color:#9b4f72;
+    color:var(--gold-light);
     margin-bottom:5px;
 }
 
 .payment-method-help{
     font-size:12px;
-    color:#777;
+    color:#888;
     margin-bottom:15px;
 }
 
@@ -741,30 +812,40 @@ textarea{
     min-height:52px;
     font-size:14px;
     padding:14px 16px;
-    border:2px solid #dfc7d2;
-    background:#fff;
+    border:2px solid #383033;
+    background:#0d0d0d;
 }
 
 .payment-method-select select:hover{
-    border-color:#c8799d;
+    border-color:var(--gold);
 }
 
 .payment-method-select select:focus{
-    border-color:#b75f87;
-    box-shadow:0 0 0 3px rgba(183,95,135,.12);
+    border-color:var(--gold-light);
+    box-shadow:0 0 0 3px rgba(201,162,77,.12);
+}
+
+.payment-method-select select option{
+    background:#111;
+    color:#fff;
 }
 
 
 /* =========================
-   SELECTED PAYMENT DETAILS
+   SELECTED PAYMENT
 ========================= */
 
 .selected-payment{
     display:none;
     margin-top:22px;
     padding:20px;
-    background:linear-gradient(135deg,#fff0f6,#fff9fb);
-    border:1px solid #dfb4c6;
+    background:
+        linear-gradient(
+            135deg,
+            #1b1115,
+            #101010
+        );
+    border:1px solid rgba(201,162,77,.35);
     border-radius:17px;
     animation:paymentReveal .25s ease;
 }
@@ -783,7 +864,7 @@ textarea{
 .selected-payment h4{
     font-family:'Cormorant Garamond',serif;
     font-size:25px;
-    color:#9b4f72;
+    color:var(--gold-light);
     margin-bottom:10px;
 }
 
@@ -792,8 +873,8 @@ textarea{
     align-items:center;
     justify-content:space-between;
     gap:15px;
-    background:#fff;
-    border:1px solid #ead5df;
+    background:#0b0b0b;
+    border:1px solid #30292d;
     border-radius:12px;
     padding:13px 15px;
     margin-top:9px;
@@ -802,14 +883,14 @@ textarea{
 .payment-detail-label{
     font-family:'Cinzel',serif;
     font-size:10px;
-    color:#86606f;
+    color:#a9989f;
     font-weight:700;
 }
 
 .payment-detail-value{
     font-size:14px;
     font-weight:700;
-    color:#432b36;
+    color:#eee;
     text-align:right;
     word-break:break-word;
 }
@@ -820,14 +901,24 @@ textarea{
 ========================= */
 
 .receipt-box{
-    background:#fff8fb;
-    border:1px dashed #ce8daa;
+    background:#0d0d0d;
+    border:1px dashed #6b4a58;
     border-radius:15px;
     padding:18px;
 }
 
 input[type="file"]{
     padding:11px;
+}
+
+input[type="file"]::file-selector-button{
+    background:#222;
+    color:#fff;
+    border:1px solid #555;
+    border-radius:7px;
+    padding:7px 10px;
+    margin-right:10px;
+    cursor:pointer;
 }
 
 
@@ -841,13 +932,14 @@ input[type="file"]{
     gap:10px;
     font-family:'Montserrat',sans-serif;
     font-size:12px;
-    color:#555;
+    color:#aaa;
     margin-top:10px;
 }
 
 .agreement input{
     width:auto;
     margin-top:3px;
+    accent-color:var(--gold);
 }
 
 
@@ -857,22 +949,32 @@ input[type="file"]{
 
 .submit-btn{
     width:100%;
-    border:none;
+    border:1px solid var(--gold);
     border-radius:14px;
     padding:17px 20px;
-    background:linear-gradient(135deg,#9b4f72,#d17ba2);
-    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b58a3a,
+            #dfbd73
+        );
+
+    color:#000;
+
     font-family:'Cinzel',serif;
     font-size:14px;
     font-weight:700;
     letter-spacing:1px;
     cursor:pointer;
-    box-shadow:0 10px 25px rgba(155,79,114,.22);
+
+    box-shadow:0 10px 25px rgba(201,162,77,.15);
     transition:.25s;
 }
 
 .submit-btn:hover{
     transform:translateY(-2px);
+    box-shadow:0 14px 30px rgba(201,162,77,.22);
 }
 
 .submit-btn:disabled{
@@ -897,16 +999,16 @@ input[type="file"]{
 
 .success{
     display:block!important;
-    background:#effaf2;
-    border:1px solid #9bd1a8;
-    color:#28663a;
+    background:#101a13;
+    border:1px solid #4d8d5d;
+    color:#a8e0b4;
 }
 
 .error{
     display:block!important;
-    background:#fff0f3;
-    border:1px solid #e0a1b3;
-    color:#8d2948;
+    background:#1d0e14;
+    border:1px solid #8e3c57;
+    color:#ff9fba;
 }
 
 
@@ -915,10 +1017,11 @@ input[type="file"]{
 ========================= */
 
 footer{
-    background:#27121d;
+    background:#050505;
     color:#fff;
     text-align:center;
     padding:45px 20px;
+    border-top:1px solid rgba(201,162,77,.25);
 }
 
 .footer-logo{
@@ -930,11 +1033,12 @@ footer h3{
     font-family:'Great Vibes',cursive;
     font-size:42px;
     font-weight:400;
+    color:#fff;
 }
 
 footer p{
     font-size:12px;
-    color:#e4d7dd;
+    color:#999;
     margin-top:8px;
 }
 
@@ -949,13 +1053,17 @@ footer p{
 .footer-links a{
     font-family:'Cinzel',serif;
     font-size:11px;
-    color:#f2c8d8;
+    color:var(--gold-light);
+}
+
+.footer-links a:hover{
+    color:#fff;
 }
 
 .copy{
     margin-top:25px;
     font-size:10px;
-    opacity:.7;
+    color:#777;
 }
 
 
@@ -1183,10 +1291,6 @@ Please complete the form below with as much detail as possible. Your appointment
 </div>
 
 
-<!-- =========================
-     SINGLE IMPORTANT NOTICE
-========================= -->
-
 <div class="notice">
 
 <div
@@ -1253,11 +1357,6 @@ Your booking payment is applied to the final tattoo price.
 
 </div>
 
-
-<!-- =========================
-     TATTOO PRICE LIST
-     CLICK TO OPEN
-========================= -->
 
 <details class="pricing-section">
 
@@ -1435,10 +1534,6 @@ id="bookingForm"
 enctype="multipart/form-data">
 
 
-<!-- =========================
-     CUSTOMER INFORMATION
-========================= -->
-
 <section class="form-section">
 
 <h3
@@ -1542,10 +1637,6 @@ Enter your 10-digit U.S. phone number. We'll automatically format it with +1.
 
 </section>
 
-
-<!-- =========================
-     LOCATION
-========================= -->
 
 <section class="form-section">
 
@@ -1810,10 +1901,6 @@ disabled>
 </section>
 
 
-<!-- =========================
-     APPOINTMENT DETAILS
-========================= -->
-
 <section class="form-section">
 
 <h3
@@ -1943,10 +2030,6 @@ placeholder="Describe your tattoo idea, style, colors, details, reference ideas,
 </section>
 
 
-<!-- =========================
-     PAYMENT
-========================= -->
-
 <section class="form-section">
 
 <h3
@@ -1976,8 +2059,6 @@ $100 – $200 ONLY
 
 </div>
 
-
-<!-- PAYMENT AMOUNT -->
 
 <div class="field amount-wrap">
 
@@ -2027,8 +2108,6 @@ Payment amount must be between $100 and $200.
 </div>
 
 
-<!-- PAYMENT METHOD -->
-
 <h4
 class="payment-method-title"
 data-en="Select Payment Method"
@@ -2072,47 +2151,30 @@ data-es="Selecciona el Método de Pago">
 Select Payment Method
 </option>
 
-<option
-value="Cash App">
-
+<option value="Cash App">
 Cash App
-
 </option>
 
-<option
-value="Venmo">
-
+<option value="Venmo">
 Venmo
-
 </option>
 
-<option
-value="Zelle">
-
+<option value="Zelle">
 Zelle
-
 </option>
 
-<option
-value="Chime">
-
+<option value="Chime">
 Chime
-
 </option>
 
-<option
-value="Bank Transfer">
-
+<option value="Bank Transfer">
 Bank Transfer
-
 </option>
 
 </select>
 
 </div>
 
-
-<!-- SELECTED PAYMENT DETAILS -->
 
 <div
 id="selectedPayment"
@@ -2151,8 +2213,6 @@ class="payment-detail-value">
 
 </div>
 
-
-<!-- BANK TRANSFER DETAILS -->
 
 <div
 id="bankTransferDetails"
@@ -2219,8 +2279,6 @@ class="payment-detail-value">
 </div>
 
 
-<!-- RECEIPT -->
-
 <div
 class="field"
 style="margin-top:25px;">
@@ -2258,10 +2316,6 @@ Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
 
 </section>
 
-
-<!-- =========================
-     AGREEMENT
-========================= -->
 
 <section class="form-section">
 
@@ -2304,10 +2358,6 @@ SUBMIT APPOINTMENT REQUEST
 
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -3048,7 +3098,7 @@ paymentAmount.addEventListener(
 
 
 /* =========================================================
-   PAYMENT METHOD DROPDOWN
+   PAYMENT METHOD
 ========================================================= */
 
 const paymentMethod =
@@ -3085,43 +3135,28 @@ const bankTransferDetails =
 const paymentInformation = {
 
     "Cash App":{
-
         account:"$Msheena57",
-
         name:"Sheena Martin"
-
     },
 
     "Venmo":{
-
         account:"@Sheena-Rebeccatattoos",
-
         name:"Lucinda Filsaime"
-
     },
 
     "Zelle":{
-
         account:"sheenagmartin2357@gmail.com",
-
         name:"Sheena Martin"
-
     },
 
     "Chime":{
-
         account:"sheenamartin709@gmail.com",
-
         name:"Sheena Martin"
-
     },
 
     "Bank Transfer":{
-
         account:"TVA Credit Union",
-
         name:"SHEENA GALE MARTIN"
-
     }
 
 };
@@ -3287,12 +3322,8 @@ form.addEventListener(
             "";
 
 
-        /* Format phone */
-
         formatPhone();
 
-
-        /* Payment amount */
 
         if(
             !validatePaymentAmount()
@@ -3304,8 +3335,6 @@ form.addEventListener(
 
         }
 
-
-        /* Payment method */
 
         const selectedMethod =
             paymentMethod.value;
@@ -3343,8 +3372,6 @@ form.addEventListener(
         }
 
 
-        /* Phone */
-
         const phoneDigits =
             getPhoneDigits();
 
@@ -3381,8 +3408,6 @@ form.addEventListener(
         }
 
 
-        /* Browser validation */
-
         if(
             !form.checkValidity()
         ){
@@ -3393,8 +3418,6 @@ form.addEventListener(
 
         }
 
-
-        /* Loading */
 
         submitButton.disabled =
             true;
@@ -3413,13 +3436,6 @@ form.addEventListener(
             const formData =
                 new FormData(form);
 
-
-            /*
-             * BANK TRANSFER DETAILS
-             * These are explicitly included in the
-             * Forminit submission when Bank Transfer
-             * is selected.
-             */
 
             if(selectedMethod === "Bank Transfer"){
 
@@ -3455,8 +3471,6 @@ form.addEventListener(
                     formData
                 );
 
-
-            /* Forminit error */
 
             if(error){
 
@@ -3496,8 +3510,6 @@ form.addEventListener(
             }
 
 
-            /* SUCCESS */
-
             if(data){
 
                 formStatus.textContent =
@@ -3517,12 +3529,8 @@ form.addEventListener(
                     "block";
 
 
-                /* Reset */
-
                 form.reset();
 
-
-                /* Return to studio */
 
                 studioRadio.checked =
                     true;
@@ -3530,13 +3538,9 @@ form.addEventListener(
                 updateLocation();
 
 
-                /* Reset amount */
-
                 amountWarning.style.display =
                     "none";
 
-
-                /* Reset payment details */
 
                 selectedPayment.style.display =
                     "none";
@@ -3554,21 +3558,15 @@ form.addEventListener(
                     "none";
 
 
-                /* Reset payment method */
-
                 paymentMethod.value =
                     "";
 
-
-                /* Reset address */
 
                 hideAddressSuggestions();
 
                 lastAddressSearch =
                     "";
 
-
-                /* Reset tattoo price display */
 
                 tattooPriceCategory.value =
                     "";
@@ -3582,8 +3580,6 @@ form.addEventListener(
                 selectedPriceValue.textContent =
                     "";
 
-
-                /* Show success */
 
                 formStatus.scrollIntoView({
                     behavior:"smooth",
