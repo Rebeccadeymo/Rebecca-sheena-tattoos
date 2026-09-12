@@ -71,7 +71,6 @@ img{
     display:block;
 }
 
-
 /* =========================
    HEADER
 ========================= */
@@ -146,7 +145,6 @@ nav a:hover{
     color:#000;
 }
 
-
 /* =========================
    HERO
 ========================= */
@@ -193,7 +191,6 @@ nav a:hover{
     color:#f2f2f2;
 }
 
-
 /* =========================
    MAIN
 ========================= */
@@ -222,7 +219,6 @@ nav a:hover{
     margin:10px auto;
     color:var(--muted);
 }
-
 
 /* =========================
    IMPORTANT NOTICE
@@ -281,7 +277,6 @@ nav a:hover{
 .notice li::marker{
     color:var(--gold-light);
 }
-
 
 /* =========================
    PRICE LIST
@@ -478,7 +473,6 @@ nav a:hover{
     font-weight:700;
 }
 
-
 /* =========================
    FORM
 ========================= */
@@ -578,7 +572,6 @@ textarea{
     color:#888;
 }
 
-
 /* =========================
    LOCATION
 ========================= */
@@ -648,7 +641,6 @@ textarea{
     color:#ddd;
 }
 
-
 /* =========================
    HOME SERVICE
 ========================= */
@@ -673,7 +665,6 @@ textarea{
 .home-service-note strong{
     color:var(--gold-light);
 }
-
 
 /* =========================
    ADDRESS
@@ -734,7 +725,6 @@ textarea{
     color:#999;
 }
 
-
 /* =========================
    PAYMENT AMOUNT
 ========================= */
@@ -788,7 +778,6 @@ textarea{
     margin-top:7px;
 }
 
-
 /* =========================
    PAYMENT METHOD
 ========================= */
@@ -835,7 +824,6 @@ textarea{
     background:#111;
     color:#fff;
 }
-
 
 /* =========================
    SELECTED PAYMENT
@@ -901,7 +889,6 @@ textarea{
     word-break:break-word;
 }
 
-
 /* =========================
    RECEIPT
 ========================= */
@@ -927,7 +914,6 @@ input[type="file"]::file-selector-button{
     cursor:pointer;
 }
 
-
 /* =========================
    AGREEMENT
 ========================= */
@@ -947,7 +933,6 @@ input[type="file"]::file-selector-button{
     margin-top:3px;
     accent-color:var(--gold);
 }
-
 
 /* =========================
    BUTTON
@@ -989,7 +974,6 @@ input[type="file"]::file-selector-button{
     transform:none;
 }
 
-
 /* =========================
    STATUS
 ========================= */
@@ -1016,7 +1000,6 @@ input[type="file"]::file-selector-button{
     border:1px solid #8e3c57;
     color:#ff9fba;
 }
-
 
 /* =========================
    FOOTER
@@ -1071,7 +1054,6 @@ footer p{
     font-size:10px;
     color:#777;
 }
-
 
 /* =========================
    MOBILE
@@ -1148,15 +1130,6 @@ footer p{
         padding:21px 0 17px;
     }
 
-    /*
-       IMPORTANT MOBILE FIX
-
-       iPhone Safari automatically zooms into form controls
-       when their font size is below 16px.
-
-       Keep all form controls at 16px on mobile.
-       This prevents the unwanted zoom-in / zoom-out behavior.
-    */
     input,
     select,
     textarea{
@@ -1229,7 +1202,6 @@ footer p{
 
 <body>
 
-
 <header>
 
 <div class="navbar">
@@ -1266,7 +1238,6 @@ ES / EN
 
 </header>
 
-
 <section class="booking-hero">
 
 <div class="booking-hero-content">
@@ -1291,9 +1262,7 @@ Tell us what you have in mind and choose whether you would like to visit our stu
 
 </section>
 
-
 <main class="booking-wrap">
-
 
 <div class="intro">
 
@@ -1314,7 +1283,6 @@ Please complete the form below with as much detail as possible. Your appointment
 </p>
 
 </div>
-
 
 <div class="notice">
 
@@ -1382,7 +1350,6 @@ Your booking payment is applied to the final tattoo price.
 
 </div>
 
-
 <details class="pricing-section">
 
 <summary class="pricing-toggle">
@@ -1415,7 +1382,6 @@ Tap here to view tattoo sizes and starting prices.
 
 </summary>
 
-
 <div class="pricing-content">
 
 <div class="pricing-heading">
@@ -1430,7 +1396,6 @@ Choose the tattoo size or type below. The starting price will appear after you m
 
 </div>
 
-
 <label
 class="price-selector-label"
 for="tattooPriceCategory"
@@ -1440,7 +1405,6 @@ data-es="SELECCIONA EL TAMAÑO / TIPO DE TATUAJE">
 SELECT TATTOO SIZE / TYPE
 
 </label>
-
 
 <div class="price-selector">
 
@@ -1523,7 +1487,6 @@ Large Back / Chest Pieces
 
 </div>
 
-
 <div
 id="selectedPrice"
 class="selected-price">
@@ -1553,11 +1516,9 @@ class="selected-price-value">
 
 </details>
 
-
 <form
 id="bookingForm"
 enctype="multipart/form-data">
-
 
 <section class="form-section">
 
@@ -1578,9 +1539,7 @@ Please enter your contact information so we can reach you about your appointment
 
 </p>
 
-
 <div class="grid">
-
 
 <div class="field">
 
@@ -1593,16 +1552,16 @@ Full Name *
 
 </label>
 
+<!-- FIXED: Forminit sender full name -->
 <input
 type="text"
 id="name"
-name="fi-text-name"
+name="fi-sender-fullName"
 required
 autocomplete="name"
 placeholder="Your full name">
 
 </div>
-
 
 <div class="field">
 
@@ -1615,16 +1574,16 @@ Email Address *
 
 </label>
 
+<!-- FIXED: Forminit sender email -->
 <input
 type="email"
 id="email"
-name="fi-email-email"
+name="fi-sender-email"
 required
 autocomplete="email"
 placeholder="you@example.com">
 
 </div>
-
 
 <div class="field full">
 
@@ -1662,7 +1621,6 @@ Enter your 10-digit U.S. phone number. We'll automatically format it with +1.
 
 </section>
 
-
 <section class="form-section">
 
 <h3
@@ -1682,9 +1640,7 @@ Choose where you would like your tattoo appointment.
 
 </p>
 
-
 <div class="location-options">
-
 
 <div class="location-option">
 
@@ -1741,7 +1697,6 @@ Honolulu, HI 96813
 
 </div>
 
-
 <div class="location-option">
 
 <input
@@ -1780,9 +1735,7 @@ Have our tattoo service come directly to your home. Additional home-service cons
 
 </div>
 
-
 <div id="homeServiceFields">
-
 
 <div class="home-service-note">
 
@@ -1804,9 +1757,7 @@ Type your address manually or choose an address from the suggestions. Choosing a
 
 </div>
 
-
 <div class="grid">
-
 
 <div class="field full">
 
@@ -1852,7 +1803,6 @@ class="address-suggestions">
 
 </div>
 
-
 <div class="field">
 
 <label
@@ -1874,7 +1824,6 @@ disabled>
 
 </div>
 
-
 <div class="field">
 
 <label
@@ -1895,7 +1844,6 @@ placeholder="State"
 disabled>
 
 </div>
-
 
 <div class="field">
 
@@ -1925,7 +1873,6 @@ disabled>
 
 </section>
 
-
 <section class="form-section">
 
 <h3
@@ -1945,9 +1892,7 @@ Tell us about the tattoo you would like.
 
 </p>
 
-
 <div class="grid">
-
 
 <div class="field">
 
@@ -1968,7 +1913,6 @@ required>
 
 </div>
 
-
 <div class="field">
 
 <label
@@ -1987,7 +1931,6 @@ name="fi-time-preferred-time"
 required>
 
 </div>
-
 
 <div class="field">
 
@@ -2009,7 +1952,6 @@ placeholder="Arm, leg, back, chest, etc.">
 
 </div>
 
-
 <div class="field">
 
 <label
@@ -2029,7 +1971,6 @@ required
 placeholder="Example: 4 inches">
 
 </div>
-
 
 <div class="field full">
 
@@ -2054,7 +1995,6 @@ placeholder="Describe your tattoo idea, style, colors, details, reference ideas,
 
 </section>
 
-
 <section class="form-section">
 
 <h3
@@ -2064,7 +2004,6 @@ data-es="Pago de Reserva">
 Booking Payment
 
 </h3>
-
 
 <div class="payment-intro">
 
@@ -2083,7 +2022,6 @@ $100 – $200 ONLY
 </span>
 
 </div>
-
 
 <div class="field amount-wrap">
 
@@ -2132,7 +2070,6 @@ Payment amount must be between $100 and $200.
 
 </div>
 
-
 <h4
 class="payment-method-title"
 data-en="Select Payment Method"
@@ -2150,7 +2087,6 @@ data-es="Toca el cuadro de abajo para elegir Cash App, Venmo, Zelle, Chime o Tra
 Tap the box below to choose Cash App, Venmo, Zelle, Chime, or Bank Transfer.
 
 </p>
-
 
 <div class="field payment-method-select">
 
@@ -2200,7 +2136,6 @@ Bank Transfer
 
 </div>
 
-
 <div
 id="selectedPayment"
 class="selected-payment">
@@ -2237,7 +2172,6 @@ class="payment-detail-value">
 </span>
 
 </div>
-
 
 <div
 id="bankTransferDetails"
@@ -2303,7 +2237,6 @@ class="payment-detail-value">
 
 </div>
 
-
 <div
 class="field"
 style="margin-top:25px;">
@@ -2341,7 +2274,6 @@ Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
 
 </section>
 
-
 <section class="form-section">
 
 <label class="agreement">
@@ -2365,7 +2297,6 @@ I have read and understand the Important Booking Notice above. I understand that
 
 </section>
 
-
 <button
 type="submit"
 id="submitButton"
@@ -2375,14 +2306,11 @@ SUBMIT APPOINTMENT REQUEST
 
 </button>
 
-
 <div id="formStatus"></div>
-
 
 </form>
 
 </main>
-
 
 <footer>
 
@@ -2411,7 +2339,6 @@ Rebecca & Sheena Tattoos
 Rebeccapalmer542@yahoo.com
 </p>
 
-
 <div class="footer-links">
 
 <a href="index.html">HOME</a>
@@ -2423,13 +2350,11 @@ Rebeccapalmer542@yahoo.com
 
 </div>
 
-
 <div class="copy">
 © 2026 Rebecca & Sheena Tattoos. All Rights Reserved.
 </div>
 
 </footer>
-
 
 <script>
 
@@ -2441,14 +2366,12 @@ const forminit = new Forminit();
 
 const FORMINIT_FORM_ID = "1f5pzk33x3d";
 
-
 /* =========================================================
    LANGUAGE
 ========================================================= */
 
 let currentLanguage =
     localStorage.getItem("siteLanguage") || "en";
-
 
 function applyLanguage(){
 
@@ -2470,7 +2393,6 @@ function applyLanguage(){
 
 }
 
-
 function toggleLanguage(){
 
     currentLanguage =
@@ -2486,7 +2408,6 @@ function toggleLanguage(){
     applyLanguage();
 
 }
-
 
 /* =========================================================
    TATTOO PRICE LIST
@@ -2511,7 +2432,6 @@ const selectedPriceValue =
     document.getElementById(
         "selectedPriceValue"
     );
-
 
 const tattooPrices = {
 
@@ -2559,7 +2479,6 @@ const tattooPrices = {
 
 };
 
-
 function showTattooPrice(){
 
     const selected =
@@ -2567,7 +2486,6 @@ function showTattooPrice(){
 
     const info =
         tattooPrices[selected];
-
 
     if(!info){
 
@@ -2584,30 +2502,25 @@ function showTattooPrice(){
 
     }
 
-
     selectedPriceName.textContent =
         currentLanguage === "es"
         ? info.esName
         : selected;
-
 
     selectedPriceValue.textContent =
         currentLanguage === "es"
         ? info.esPrice
         : info.price;
 
-
     selectedPrice.style.display =
         "block";
 
 }
 
-
 tattooPriceCategory.addEventListener(
     "change",
     showTattooPrice
 );
-
 
 /* =========================================================
    DATE
@@ -2634,7 +2547,6 @@ const day =
 
 dateInput.min =
     `${year}-${month}-${day}`;
-
 
 /* =========================================================
    LOCATION
@@ -2671,7 +2583,6 @@ const homeZip =
         "homeZip"
     );
 
-
 function hideAddressSuggestions(){
 
     const box =
@@ -2685,7 +2596,6 @@ function hideAddressSuggestions(){
         "none";
 
 }
-
 
 function updateLocation(){
 
@@ -2729,7 +2639,6 @@ function updateLocation(){
 
 }
 
-
 studioRadio.addEventListener(
     "change",
     updateLocation
@@ -2742,7 +2651,6 @@ homeRadio.addEventListener(
 
 updateLocation();
 
-
 /* =========================================================
    PHONE
 ========================================================= */
@@ -2752,7 +2660,6 @@ const phoneInput =
         "phone"
     );
 
-
 function getPhoneDigits(){
 
     return phoneInput.value
@@ -2760,12 +2667,10 @@ function getPhoneDigits(){
 
 }
 
-
 function formatPhone(){
 
     let digits =
         getPhoneDigits();
-
 
     if(
         digits.length === 11 &&
@@ -2777,10 +2682,8 @@ function formatPhone(){
 
     }
 
-
     digits =
         digits.substring(0,10);
-
 
     if(!digits){
 
@@ -2791,10 +2694,8 @@ function formatPhone(){
 
     }
 
-
     let formatted =
         "+1";
-
 
     if(digits.length > 0){
 
@@ -2804,7 +2705,6 @@ function formatPhone(){
 
     }
 
-
     if(digits.length >= 4){
 
         formatted +=
@@ -2812,7 +2712,6 @@ function formatPhone(){
             digits.substring(3,6);
 
     }
-
 
     if(digits.length >= 7){
 
@@ -2822,18 +2721,15 @@ function formatPhone(){
 
     }
 
-
     phoneInput.value =
         formatted;
 
 }
 
-
 phoneInput.addEventListener(
     "blur",
     formatPhone
 );
-
 
 /* =========================================================
    ADDRESS AUTOCOMPLETE
@@ -2852,7 +2748,6 @@ const addressLoading =
 let addressTimer = null;
 
 let lastAddressSearch = "";
-
 
 async function searchAddress(){
 
@@ -2884,7 +2779,6 @@ async function searchAddress(){
     addressLoading.style.display =
         "block";
 
-
     try{
 
         const url =
@@ -2903,7 +2797,6 @@ async function searchAddress(){
 
             });
 
-
         const response =
             await fetch(
                 url,
@@ -2915,7 +2808,6 @@ async function searchAddress(){
                 }
             );
 
-
         if(!response.ok){
 
             throw new Error(
@@ -2924,14 +2816,11 @@ async function searchAddress(){
 
         }
 
-
         const results =
             await response.json();
 
-
         addressSuggestions.innerHTML =
             "";
-
 
         if(!results.length){
 
@@ -2940,7 +2829,6 @@ async function searchAddress(){
             return;
 
         }
-
 
         results.forEach(
             function(result){
@@ -2956,7 +2844,6 @@ async function searchAddress(){
                 item.textContent =
                     result.display_name;
 
-
                 item.addEventListener(
                     "click",
                     function(){
@@ -2968,7 +2855,6 @@ async function searchAddress(){
                     }
                 );
 
-
                 addressSuggestions.appendChild(
                     item
                 );
@@ -2976,10 +2862,8 @@ async function searchAddress(){
             }
         );
 
-
         addressSuggestions.style.display =
             "block";
-
 
     }catch(error){
 
@@ -2990,7 +2874,6 @@ async function searchAddress(){
 
         hideAddressSuggestions();
 
-
     }finally{
 
         addressLoading.style.display =
@@ -3000,16 +2883,13 @@ async function searchAddress(){
 
 }
 
-
 function selectAddress(result){
 
     const address =
         result.address || {};
 
-
     homeAddress.value =
         result.display_name || "";
-
 
     homeCity.value =
         address.city ||
@@ -3018,19 +2898,15 @@ function selectAddress(result){
         address.municipality ||
         "";
 
-
     homeState.value =
         address.state || "";
-
 
     homeZip.value =
         address.postcode || "";
 
-
     hideAddressSuggestions();
 
 }
-
 
 homeAddress.addEventListener(
     "input",
@@ -3052,7 +2928,6 @@ homeAddress.addEventListener(
     }
 );
 
-
 document.addEventListener(
     "click",
     function(event){
@@ -3070,7 +2945,6 @@ document.addEventListener(
     }
 );
 
-
 /* =========================================================
    PAYMENT AMOUNT
 ========================================================= */
@@ -3085,7 +2959,6 @@ const amountWarning =
         "amountWarning"
     );
 
-
 function validatePaymentAmount(){
 
     const raw =
@@ -3093,7 +2966,6 @@ function validatePaymentAmount(){
 
     const value =
         Number(raw);
-
 
     if(
         raw === "" ||
@@ -3109,7 +2981,6 @@ function validatePaymentAmount(){
 
     }
 
-
     amountWarning.style.display =
         "none";
 
@@ -3117,12 +2988,10 @@ function validatePaymentAmount(){
 
 }
 
-
 paymentAmount.addEventListener(
     "input",
     validatePaymentAmount
 );
-
 
 /* =========================================================
    PAYMENT METHOD
@@ -3158,7 +3027,6 @@ const bankTransferDetails =
         "bankTransferDetails"
     );
 
-
 const paymentInformation = {
 
     "Cash App":{
@@ -3188,16 +3056,13 @@ const paymentInformation = {
 
 };
 
-
 function showPaymentInformation(method){
 
     const info =
         paymentInformation[method];
 
-
     bankTransferDetails.style.display =
         "none";
-
 
     if(!info){
 
@@ -3217,22 +3082,17 @@ function showPaymentInformation(method){
 
     }
 
-
     selectedPaymentTitle.textContent =
         method + " Payment Information";
-
 
     selectedPaymentAccount.textContent =
         info.account;
 
-
     selectedPaymentName.textContent =
         info.name;
 
-
     selectedPayment.style.display =
         "block";
-
 
     if(method === "Bank Transfer"){
 
@@ -3242,7 +3102,6 @@ function showPaymentInformation(method){
     }
 
 }
-
 
 paymentMethod.addEventListener(
     "change",
@@ -3255,7 +3114,6 @@ paymentMethod.addEventListener(
     }
 );
 
-
 /* =========================================================
    RECEIPT SIZE
 ========================================================= */
@@ -3264,7 +3122,6 @@ const receipt =
     document.getElementById(
         "receipt"
     );
-
 
 receipt.addEventListener(
     "change",
@@ -3279,14 +3136,11 @@ receipt.addEventListener(
 
         }
 
-
         const file =
             receipt.files[0];
 
-
         const maxSize =
             10 * 1024 * 1024;
-
 
         if(
             file.size > maxSize
@@ -3294,7 +3148,6 @@ receipt.addEventListener(
 
             receipt.value =
                 "";
-
 
             alert(
 
@@ -3310,7 +3163,6 @@ receipt.addEventListener(
 
     }
 );
-
 
 /* =========================================================
    FORM SUBMISSION
@@ -3331,13 +3183,11 @@ const formStatus =
         "formStatus"
     );
 
-
 form.addEventListener(
     "submit",
     async function(event){
 
         event.preventDefault();
-
 
         formStatus.className =
             "";
@@ -3348,9 +3198,7 @@ form.addEventListener(
         formStatus.textContent =
             "";
 
-
         formatPhone();
-
 
         if(
             !validatePaymentAmount()
@@ -3362,10 +3210,8 @@ form.addEventListener(
 
         }
 
-
         const selectedMethod =
             paymentMethod.value;
-
 
         if(
             !selectedMethod ||
@@ -3379,29 +3225,23 @@ form.addEventListener(
 
                 : "Please select a payment method.";
 
-
             formStatus.className =
                 "error";
 
-
             formStatus.style.display =
                 "block";
-
 
             formStatus.scrollIntoView({
                 behavior:"smooth",
                 block:"center"
             });
 
-
             return;
 
         }
 
-
         const phoneDigits =
             getPhoneDigits();
-
 
         if(
             phoneDigits.length !== 11 ||
@@ -3415,25 +3255,20 @@ form.addEventListener(
 
                 : "Please enter a valid U.S. phone number using +1.";
 
-
             formStatus.className =
                 "error";
 
-
             formStatus.style.display =
                 "block";
-
 
             formStatus.scrollIntoView({
                 behavior:"smooth",
                 block:"center"
             });
 
-
             return;
 
         }
-
 
         if(
             !form.checkValidity()
@@ -3445,10 +3280,8 @@ form.addEventListener(
 
         }
 
-
         submitButton.disabled =
             true;
-
 
         submitButton.textContent =
             currentLanguage === "es"
@@ -3457,47 +3290,78 @@ form.addEventListener(
 
             : "SUBMITTING...";
 
-
         try{
 
             const formData =
                 new FormData(form);
 
-
             const e164Phone =
                 "+" + phoneDigits;
 
+            /* =========================================
+               FORMINIT SENDER PHONE
+            ========================================= */
 
             formData.set(
                 "fi-sender-phone",
                 e164Phone
             );
 
+            /* =========================================
+               FIXED BANK TRANSFER FIELDS
+
+               These now use valid Forminit block names.
+            ========================================= */
 
             if(selectedMethod === "Bank Transfer"){
 
                 formData.set(
-                    "bank_name",
+                    "fi-text-bank-name",
                     "TVA Credit Union"
                 );
 
                 formData.set(
-                    "bank_account_name",
+                    "fi-text-bank-account-name",
                     "SHEENA GALE MARTIN"
                 );
 
                 formData.set(
-                    "bank_account_number",
+                    "fi-text-bank-account-number",
                     "65734404"
                 );
 
                 formData.set(
-                    "bank_routing_number",
+                    "fi-text-bank-routing-number",
                     "264279567"
                 );
 
             }
 
+            /* =========================================
+               DEBUG CHECK
+
+               This does not change the form.
+               It lets us verify in the browser console
+               that all fields are being sent.
+            ========================================= */
+
+            console.log(
+                "Forminit submission fields:"
+            );
+
+            for(
+                const [key,value]
+                of formData.entries()
+            ){
+
+                console.log(
+                    key,
+                    value instanceof File
+                    ? value.name
+                    : value
+                );
+
+            }
 
             const {
                 data,
@@ -3508,6 +3372,17 @@ form.addEventListener(
                     formData
                 );
 
+            /* =========================================
+               LOG FORMINIT RESPONSE
+            ========================================= */
+
+            console.log(
+                "Forminit response:",
+                {
+                    data:data,
+                    error:error
+                }
+            );
 
             if(error){
 
@@ -3515,7 +3390,6 @@ form.addEventListener(
                     "Forminit error:",
                     error
                 );
-
 
                 formStatus.textContent =
 
@@ -3527,25 +3401,20 @@ form.addEventListener(
                     : "We could not submit your appointment request. " +
                       (error.message || "");
 
-
                 formStatus.className =
                     "error";
 
-
                 formStatus.style.display =
                     "block";
-
 
                 formStatus.scrollIntoView({
                     behavior:"smooth",
                     block:"center"
                 });
 
-
                 return;
 
             }
-
 
             if(data){
 
@@ -3557,27 +3426,21 @@ form.addEventListener(
 
                     : "🎉 Your appointment request has been submitted successfully! We received your booking information and payment receipt. Your appointment is not confirmed until the studio reviews and verifies your payment.";
 
-
                 formStatus.className =
                     "success";
-
 
                 formStatus.style.display =
                     "block";
 
-
                 form.reset();
-
 
                 studioRadio.checked =
                     true;
 
                 updateLocation();
 
-
                 amountWarning.style.display =
                     "none";
-
 
                 selectedPayment.style.display =
                     "none";
@@ -3594,16 +3457,13 @@ form.addEventListener(
                 bankTransferDetails.style.display =
                     "none";
 
-
                 paymentMethod.value =
                     "";
-
 
                 hideAddressSuggestions();
 
                 lastAddressSearch =
                     "";
-
 
                 tattooPriceCategory.value =
                     "";
@@ -3617,7 +3477,6 @@ form.addEventListener(
                 selectedPriceValue.textContent =
                     "";
 
-
                 formStatus.scrollIntoView({
                     behavior:"smooth",
                     block:"center"
@@ -3625,14 +3484,12 @@ form.addEventListener(
 
             }
 
-
         }catch(error){
 
             console.error(
                 "Booking submission error:",
                 error
             );
-
 
             formStatus.textContent =
 
@@ -3642,26 +3499,21 @@ form.addEventListener(
 
                 : "We could not submit your appointment request. Please check your information and try again.";
 
-
             formStatus.className =
                 "error";
 
-
             formStatus.style.display =
                 "block";
-
 
             formStatus.scrollIntoView({
                 behavior:"smooth",
                 block:"center"
             });
 
-
         }finally{
 
             submitButton.disabled =
                 false;
-
 
             submitButton.textContent =
 
@@ -3675,7 +3527,6 @@ form.addEventListener(
 
     }
 );
-
 
 /* =========================================================
    INITIAL LANGUAGE
