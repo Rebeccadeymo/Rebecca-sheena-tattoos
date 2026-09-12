@@ -578,6 +578,74 @@ textarea{
 
 
 /* =========================
+   STUDIO BRANCHES
+========================= */
+
+.branch-options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
+}
+
+.branch-option{
+    position:relative;
+}
+
+.branch-option input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.branch-card{
+    display:block;
+    cursor:pointer;
+    border:2px solid #e3d2da;
+    border-radius:18px;
+    padding:22px;
+    height:100%;
+    background:#fff;
+    transition:.25s;
+}
+
+.branch-card:hover{
+    border-color:#cc7fa0;
+    transform:translateY(-2px);
+}
+
+.branch-option input:checked + .branch-card{
+    border-color:#b75f87;
+    background:linear-gradient(135deg,#ffeaf3,#fff);
+    box-shadow:0 8px 25px rgba(183,95,135,.12);
+}
+
+.branch-card-icon{
+    font-size:27px;
+    margin-bottom:7px;
+}
+
+.branch-card h4{
+    font-family:'Cormorant Garamond',serif;
+    color:#9b4f72;
+    font-size:25px;
+}
+
+.branch-card p{
+    font-size:12px;
+    color:#666;
+    margin-top:6px;
+}
+
+.branch-address{
+    margin-top:10px!important;
+    color:#432b36!important;
+    font-weight:700;
+    line-height:1.6;
+}
+
+
+/* =========================
    HOME SERVICE
 ========================= */
 
@@ -812,6 +880,31 @@ textarea{
     color:#432b36;
     text-align:right;
     word-break:break-word;
+}
+
+.payment-link{
+    display:inline-block;
+    margin-top:13px;
+    color:#9b4f72;
+    font-size:12px;
+    font-weight:700;
+    text-decoration:underline;
+}
+
+.private-bank-note{
+    margin-top:14px;
+    padding:14px;
+    background:#fff;
+    border:1px solid #ead5df;
+    border-left:4px solid #b75f87;
+    border-radius:10px;
+    color:#59424c;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.private-bank-note strong{
+    color:#9b4f72;
 }
 
 
@@ -1064,6 +1157,10 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .branch-options{
+        grid-template-columns:1fr;
+    }
+
     .intro h2{
         font-size:45px;
     }
@@ -1147,10 +1244,10 @@ Book Your Tattoo
 </h1>
 
 <p
-data-en="Tell us what you have in mind and choose whether you would like to visit our studio or have your tattoo artist come to you."
-data-es="Cuéntanos lo que tienes en mente y elige si deseas visitar nuestro estudio o recibir el servicio de tatuaje en tu domicilio.">
+data-en="Tell us what you have in mind and choose whether you would like to visit one of our studio branches or have your tattoo artist come to you."
+data-es="Cuéntanos lo que tienes en mente y elige si deseas visitar una de nuestras sucursales del estudio o recibir el servicio de tatuaje en tu domicilio.">
 
-Tell us what you have in mind and choose whether you would like to visit our studio or have your tattoo artist come to you.
+Tell us what you have in mind and choose whether you would like to visit one of our studio branches or have your tattoo artist come to you.
 
 </p>
 
@@ -1559,16 +1656,20 @@ Appointment Location
 
 <p
 class="section-description"
-data-en="Choose where you would like your tattoo appointment."
-data-es="Elige dónde deseas tu cita de tatuaje.">
+data-en="Choose one of our two studio branches or select Home Service."
+data-es="Elige una de nuestras dos sucursales del estudio o selecciona Servicio a Domicilio.">
 
-Choose where you would like your tattoo appointment.
+Choose one of our two studio branches or select Home Service.
 
 </p>
 
 
 <div class="location-options">
 
+
+<!-- =========================
+     STUDIO APPOINTMENT
+========================= -->
 
 <div class="location-option">
 
@@ -1596,19 +1697,10 @@ Studio Appointment
 </h4>
 
 <p
-data-en="Visit Rebecca & Sheena Tattoos at our studio in Richmond, Missouri."
-data-es="Visita Rebecca & Sheena Tattoos en nuestro estudio en Richmond, Missouri.">
+data-en="Choose your preferred studio branch below."
+data-es="Elige tu sucursal del estudio preferida a continuación.">
 
-Visit Rebecca & Sheena Tattoos at our studio in Richmond, Missouri.
-
-</p>
-
-<p>
-
-<strong>
-403 W ROYLE St<br>
-Richmond, MO 64085
-</strong>
+Choose your preferred studio branch below.
 
 </p>
 
@@ -1616,6 +1708,10 @@ Richmond, MO 64085
 
 </div>
 
+
+<!-- =========================
+     HOME SERVICE
+========================= -->
 
 <div class="location-option">
 
@@ -1655,6 +1751,112 @@ Have our tattoo service come directly to your home. Additional home-service cons
 
 </div>
 
+
+<!-- =========================
+     STUDIO BRANCH SELECTION
+========================= -->
+
+<div
+id="studioBranches"
+style="margin-top:25px;">
+
+<p
+class="section-description"
+style="margin-bottom:0;"
+data-en="Select your studio branch:"
+data-es="Selecciona tu sucursal del estudio:">
+
+Select your studio branch:
+
+</p>
+
+
+<div class="branch-options">
+
+
+<div class="branch-option">
+
+<input
+type="radio"
+id="richmondBranch"
+name="fi-radio-studio-branch"
+value="Richmond, MO - 403 W ROYLE St"
+checked>
+
+<label
+for="richmondBranch"
+class="branch-card">
+
+<div class="branch-card-icon">
+📍
+</div>
+
+<h4
+data-en="Richmond, Missouri"
+data-es="Richmond, Missouri">
+
+Richmond, Missouri
+
+</h4>
+
+<p
+class="branch-address">
+
+403 W ROYLE St<br>
+Richmond, MO 64085
+
+</p>
+
+</label>
+
+</div>
+
+
+<div class="branch-option">
+
+<input
+type="radio"
+id="honoluluBranch"
+name="fi-radio-studio-branch"
+value="Honolulu, HI - 1110 Bishop St">
+
+<label
+for="honoluluBranch"
+class="branch-card">
+
+<div class="branch-card-icon">
+📍
+</div>
+
+<h4
+data-en="Honolulu, Hawaii"
+data-es="Honolulu, Hawaii">
+
+Honolulu, Hawaii
+
+</h4>
+
+<p
+class="branch-address">
+
+1110 Bishop St<br>
+Honolulu, HI 96813
+
+</p>
+
+</label>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     HOME SERVICE FIELDS
+========================= -->
 
 <div id="homeServiceFields">
 
@@ -2031,10 +2233,10 @@ Select Payment Method
 
 <p
 class="payment-method-help"
-data-en="Tap the box below to choose Cash App, Venmo, Zelle, or Chime."
-data-es="Toca el cuadro de abajo para elegir Cash App, Venmo, Zelle o Chime.">
+data-en="Choose Cash App, Venmo, Zelle, Chime, or Bank Transfer."
+data-es="Elige Cash App, Venmo, Zelle, Chime o Transferencia Bancaria.">
 
-Tap the box below to choose Cash App, Venmo, Zelle, or Chime.
+Choose Cash App, Venmo, Zelle, Chime, or Bank Transfer.
 
 </p>
 
@@ -2061,6 +2263,7 @@ data-en="Select Payment Method"
 data-es="Selecciona el Método de Pago">
 
 Select Payment Method
+
 </option>
 
 <option
@@ -2088,6 +2291,15 @@ Zelle
 value="Chime">
 
 Chime
+
+</option>
+
+<option
+value="Bank Transfer"
+data-en="Bank Transfer"
+data-es="Transferencia Bancaria">
+
+Bank Transfer
 
 </option>
 
@@ -2131,6 +2343,49 @@ NAME
 <span
 id="selectedPaymentName"
 class="payment-detail-value">
+</span>
+
+</div>
+
+<div
+id="venmoLinkContainer"
+style="display:none;">
+
+<a
+id="venmoLink"
+class="payment-link"
+href="https://venmo.com/u/Sheena-Rebeccatattoos"
+target="_blank"
+rel="noopener noreferrer">
+
+Open Venmo
+
+</a>
+
+</div>
+
+
+<div
+id="bankPrivateNote"
+class="private-bank-note"
+style="display:none;">
+
+<strong
+data-en="Bank Transfer Security"
+data-es="Seguridad de la Transferencia Bancaria">
+
+Bank Transfer Security
+
+</strong>
+
+<br><br>
+
+<span
+data-en="For your security, the account number and routing number are not displayed on this public website. The studio will provide the correct bank transfer instructions privately after your booking request is reviewed. Please do not send a bank transfer until you have received the official transfer instructions from the studio."
+data-es="Por tu seguridad, el número de cuenta y el número de ruta no se muestran en este sitio web público. El estudio proporcionará las instrucciones correctas de transferencia bancaria de forma privada después de revisar tu solicitud de reserva. No envíes una transferencia bancaria hasta que hayas recibido las instrucciones oficiales del estudio.">
+
+For your security, the account number and routing number are not displayed on this public website. The studio will provide the correct bank transfer instructions privately after your booking request is reviewed. Please do not send a bank transfer until you have received the official transfer instructions from the studio.
+
 </span>
 
 </div>
@@ -2244,6 +2499,10 @@ Rebecca & Sheena Tattoos
 </p>
 
 <p>
+1110 Bishop St, Honolulu, HI 96813
+</p>
+
+<p>
 +1 (530) 682-1175
 </p>
 
@@ -2307,6 +2566,19 @@ function applyLanguage(){
         }
 
     });
+
+    /*
+     * Keep the tattoo price selector's selected
+     * display synchronized with the language.
+     */
+
+    if(
+        typeof showTattooPrice === "function"
+    ){
+
+        showTattooPrice();
+
+    }
 
 }
 
@@ -2486,6 +2758,11 @@ const studioRadio =
 const homeRadio =
     document.getElementById("homeService");
 
+const studioBranches =
+    document.getElementById(
+        "studioBranches"
+    );
+
 const homeFields =
     document.getElementById(
         "homeServiceFields"
@@ -2532,10 +2809,18 @@ function updateLocation(){
     const isHome =
         homeRadio.checked;
 
+
+    studioBranches.style.display =
+        isHome
+        ? "none"
+        : "block";
+
+
     homeFields.style.display =
         isHome
         ? "block"
         : "none";
+
 
     homeAddress.required =
         isHome;
@@ -2549,6 +2834,7 @@ function updateLocation(){
     homeZip.required =
         isHome;
 
+
     homeAddress.disabled =
         !isHome;
 
@@ -2560,6 +2846,24 @@ function updateLocation(){
 
     homeZip.disabled =
         !isHome;
+
+
+    /*
+     * Studio branch radio buttons are only required
+     * when Studio Appointment is selected.
+     */
+
+    document
+        .querySelectorAll(
+            'input[name="fi-radio-studio-branch"]'
+        )
+        .forEach(function(branch){
+
+            branch.required =
+                !isHome;
+
+        });
+
 
     if(!isHome){
 
@@ -2606,6 +2910,7 @@ function formatPhone(){
     let digits =
         getPhoneDigits();
 
+
     if(
         digits.length === 11 &&
         digits.charAt(0) === "1"
@@ -2615,6 +2920,7 @@ function formatPhone(){
             digits.substring(1);
 
     }
+
 
     digits =
         digits.substring(0,10);
@@ -2697,6 +3003,7 @@ async function searchAddress(){
     const query =
         homeAddress.value.trim();
 
+
     if(
         query.length < 3 ||
         !homeRadio.checked
@@ -2708,6 +3015,7 @@ async function searchAddress(){
 
     }
 
+
     if(
         query === lastAddressSearch
     ){
@@ -2716,8 +3024,10 @@ async function searchAddress(){
 
     }
 
+
     lastAddressSearch =
         query;
+
 
     addressLoading.style.display =
         "block";
@@ -2788,8 +3098,10 @@ async function searchAddress(){
                         "div"
                     );
 
+
                 item.className =
                     "address-suggestion";
+
 
                 item.textContent =
                     result.display_name;
@@ -2963,7 +3275,7 @@ paymentAmount.addEventListener(
 
 
 /* =========================================================
-   PAYMENT METHOD DROPDOWN
+   PAYMENT METHOD
 ========================================================= */
 
 const paymentMethod =
@@ -2991,6 +3303,16 @@ const selectedPaymentName =
         "selectedPaymentName"
     );
 
+const venmoLinkContainer =
+    document.getElementById(
+        "venmoLinkContainer"
+    );
+
+const bankPrivateNote =
+    document.getElementById(
+        "bankPrivateNote"
+    );
+
 
 const paymentInformation = {
 
@@ -3006,7 +3328,7 @@ const paymentInformation = {
 
         account:"@Sheena-Rebeccatattoos",
 
-        name:"Sheena Martin"
+        name:"Lucinda FILSAIME"
 
     },
 
@@ -3024,6 +3346,14 @@ const paymentInformation = {
 
         name:"Sheena Martin"
 
+    },
+
+    "Bank Transfer":{
+
+        account:"TVA Credit Union",
+
+        name:"SHEENA GALE MARTIN"
+
     }
 
 };
@@ -3033,6 +3363,14 @@ function showPaymentInformation(method){
 
     const info =
         paymentInformation[method];
+
+
+    venmoLinkContainer.style.display =
+        "none";
+
+
+    bankPrivateNote.style.display =
+        "none";
 
 
     if(!info){
@@ -3054,8 +3392,24 @@ function showPaymentInformation(method){
     }
 
 
-    selectedPaymentTitle.textContent =
-        method + " Payment Information";
+    if(method === "Bank Transfer"){
+
+        selectedPaymentTitle.textContent =
+            currentLanguage === "es"
+            ? "Información de Transferencia Bancaria"
+            : "Bank Transfer Information";
+
+    }else{
+
+        selectedPaymentTitle.textContent =
+            method +
+            (
+                currentLanguage === "es"
+                ? " - Información de Pago"
+                : " Payment Information"
+            );
+
+    }
 
 
     selectedPaymentAccount.textContent =
@@ -3064,6 +3418,22 @@ function showPaymentInformation(method){
 
     selectedPaymentName.textContent =
         info.name;
+
+
+    if(method === "Venmo"){
+
+        venmoLinkContainer.style.display =
+            "block";
+
+    }
+
+
+    if(method === "Bank Transfer"){
+
+        bankPrivateNote.style.display =
+            "block";
+
+    }
 
 
     selectedPayment.style.display =
@@ -3284,6 +3654,49 @@ form.addEventListener(
         }
 
 
+        /* Make sure studio branch exists for studio appointments */
+
+        if(
+            studioRadio.checked
+        ){
+
+            const selectedBranch =
+                document.querySelector(
+                    'input[name="fi-radio-studio-branch"]:checked'
+                );
+
+
+            if(!selectedBranch){
+
+                formStatus.textContent =
+                    currentLanguage === "es"
+
+                    ? "Por favor selecciona una sucursal del estudio."
+
+                    : "Please select a studio branch.";
+
+
+                formStatus.className =
+                    "error";
+
+
+                formStatus.style.display =
+                    "block";
+
+
+                formStatus.scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+
+                return;
+
+            }
+
+        }
+
+
         /* Loading */
 
         submitButton.disabled =
@@ -3300,8 +3713,39 @@ form.addEventListener(
 
         try{
 
+            /*
+             * Keep the existing Forminit submission method.
+             */
+
             const formData =
                 new FormData(form);
+
+
+            /*
+             * Add the exact selected studio branch
+             * to the submission.
+             */
+
+            if(
+                studioRadio.checked
+            ){
+
+                const selectedBranch =
+                    document.querySelector(
+                        'input[name="fi-radio-studio-branch"]:checked'
+                    );
+
+
+                if(selectedBranch){
+
+                    formData.append(
+                        "studio_branch",
+                        selectedBranch.value
+                    );
+
+                }
+
+            }
 
 
             const {
@@ -3385,6 +3829,15 @@ form.addEventListener(
                 studioRadio.checked =
                     true;
 
+
+                /* Restore Richmond branch */
+
+                document.getElementById(
+                    "richmondBranch"
+                ).checked =
+                    true;
+
+
                 updateLocation();
 
 
@@ -3399,14 +3852,25 @@ form.addEventListener(
                 selectedPayment.style.display =
                     "none";
 
+
                 selectedPaymentTitle.textContent =
                     "Payment Information";
+
 
                 selectedPaymentAccount.textContent =
                     "";
 
+
                 selectedPaymentName.textContent =
                     "";
+
+
+                venmoLinkContainer.style.display =
+                    "none";
+
+
+                bankPrivateNote.style.display =
+                    "none";
 
 
                 /* Reset payment method */
