@@ -6,7 +6,7 @@
 
 <title>Rebecca & Sheena Tattoos | Professional Tattoo Studio & Home Service</title>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service in Richmond, Missouri and Honolulu, Hawaii.">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Artistic Fonts -->
@@ -443,6 +443,72 @@ section:nth-child(even){
 
 
 /* =========================
+   STUDIO LOCATIONS
+========================= */
+
+.locations{
+  background:var(--pink-light) !important;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  max-width:950px;
+  margin:0 auto;
+}
+
+.location-card{
+  background:#fff;
+  border:1px solid rgba(181,138,58,.22);
+  border-radius:15px;
+  padding:32px;
+  text-align:center;
+
+  box-shadow:
+    0 8px 25px rgba(30,20,24,.06);
+
+  transition:.2s ease;
+}
+
+.location-card:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(30,20,24,.12);
+}
+
+.location-icon{
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.location-card h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:32px;
+  font-weight:600;
+  color:#241b1e;
+  margin-bottom:10px;
+}
+
+.location-card .location-state{
+  font-family:'Cinzel',Georgia,serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#8b6727;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+.location-card p{
+  color:#666;
+  font-size:14px;
+  line-height:1.7;
+}
+
+
+/* =========================
    ABOUT
 ========================= */
 
@@ -566,11 +632,6 @@ section:nth-child(even){
 
 
 /* =========================
-   TIDIO CHAT
-========================= */
-
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -643,6 +704,11 @@ footer p{
   .service-grid,
   .review-grid{
     grid-template-columns:1fr;
+  }
+
+  .location-grid{
+    grid-template-columns:1fr;
+    max-width:650px;
   }
 
 }
@@ -720,6 +786,14 @@ footer p{
     min-height:360px;
   }
 
+  .location-grid{
+    grid-template-columns:1fr;
+  }
+
+  .location-card{
+    padding:28px 22px;
+  }
+
   .contact-feature-image img{
     height:380px;
   }
@@ -769,6 +843,12 @@ Our Work
 data-en="Services"
 data-es="Servicios">
 Services
+</a>
+
+<a href="#locations"
+data-en="Locations"
+data-es="Ubicaciones">
+Locations
 </a>
 
 <a href="#about"
@@ -1043,6 +1123,96 @@ Prefer to be tattooed at home? Request our home service and we'll review your lo
 
 
 <!-- =========================
+     STUDIO LOCATIONS
+========================= -->
+
+<section class="locations" id="locations">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Our Studios
+</div>
+
+<h2>
+Studio Locations
+</h2>
+
+<p>
+Visit us at either of our studio locations. Select your preferred studio when booking your appointment.
+</p>
+
+</div>
+
+<div class="location-grid">
+
+<div class="location-card">
+
+<div class="location-icon">
+📍
+</div>
+
+<div class="location-state">
+Missouri
+</div>
+
+<h3>
+Richmond Studio
+</h3>
+
+<p>
+403 W ROYLE St<br>
+Richmond, MO 64085
+</p>
+
+</div>
+
+
+<div class="location-card">
+
+<div class="location-icon">
+📍
+</div>
+
+<div class="location-state">
+Hawaii
+</div>
+
+<h3>
+Honolulu Studio
+</h3>
+
+<p>
+1100–1110 Bishop St<br>
+Honolulu, HI 96813
+</p>
+
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:35px;">
+
+<a
+href="booking.html"
+class="btn btn-primary"
+data-en="Choose Your Studio & Book"
+data-es="Elige Tu Estudio y Reserva">
+
+Choose Your Studio & Book
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
      ABOUT
 ========================= -->
 
@@ -1231,10 +1401,11 @@ Contact Rebecca & Sheena
 Have a question before booking? Contact us directly.
 </p>
 
+
 <div class="contact-item">
 
 <h3>
-Studio
+Missouri Studio
 </h3>
 
 <p>
@@ -1243,6 +1414,21 @@ Richmond, MO 64085
 </p>
 
 </div>
+
+
+<div class="contact-item">
+
+<h3>
+Hawaii Studio
+</h3>
+
+<p>
+1100–1110 Bishop St<br>
+Honolulu, HI 96813
+</p>
+
+</div>
+
 
 <div class="contact-item">
 
@@ -1265,6 +1451,7 @@ Phone
 </div>
 
 </div>
+
 
 <div class="contact-item">
 
@@ -1340,6 +1527,10 @@ Home
 
 <a href="#work">
 Our Work
+</a>
+
+<a href="#locations">
+Locations
 </a>
 
 <a href="booking.html">
