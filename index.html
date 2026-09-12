@@ -7,7 +7,7 @@
 <title>Rebecca & Sheena Tattoos | Professional Tattoo Studio & Home Service</title>
 
 <meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service in Richmond, Missouri and Honolulu, Hawaii.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#000000">
 
 <!-- Artistic Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +33,8 @@ html{
 
 body{
   font-family:'Montserrat',Arial,Helvetica,sans-serif;
-  background:#ffffff;
-  color:#241b1e;
+  background:#000000;
+  color:#f5f5f5;
   line-height:1.6;
 }
 
@@ -61,18 +61,22 @@ img{
 
 :root{
   --pink:#e7a8ba;
-  --pink-light:#fff7fa;
-  --pink-soft:#fdf0f4;
-  --pink-dark:#c97f98;
+  --pink-light:#1b1115;
+  --pink-soft:#24161b;
+  --pink-dark:#d98da7;
 
-  --gold:#b58a3a;
+  --gold:#c9a24d;
   --gold-light:#dfbd73;
 
-  --black:#181214;
-  --text:#2b2225;
-  --muted:#706467;
+  --black:#000000;
+  --black-soft:#0b0b0b;
+  --card:#111111;
+  --card-light:#161616;
+
+  --text:#f5f5f5;
+  --muted:#b5b5b5;
   --white:#ffffff;
-  --border:#eadde1;
+  --border:#292929;
 }
 
 
@@ -90,20 +94,30 @@ footer h3{
   font-family:'Cormorant Garamond',Georgia,serif;
 }
 
+
+/* =========================
+   TOP BUSINESS NAME
+========================= */
+
 .logo{
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:.3px;
+  font-family:'Great Vibes','Cormorant Garamond',cursive;
+  font-size:35px;
+  font-weight:400;
+  letter-spacing:.5px;
+  color:#ffffff;
+  line-height:1;
+  text-shadow:0 2px 12px rgba(0,0,0,.8);
 }
 
 .logo span{
-  color:var(--gold);
-  font-style:italic;
+  color:var(--gold-light);
+  font-family:'Great Vibes','Cormorant Garamond',cursive;
+  font-style:normal;
 }
 
 .eyebrow{
   font-family:'Cinzel',Georgia,serif;
-  color:var(--gold);
+  color:var(--gold-light);
   font-size:11px;
   font-weight:700;
   text-transform:uppercase;
@@ -120,9 +134,9 @@ header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid rgba(181,138,58,.22);
-  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.94);
+  border-bottom:1px solid rgba(201,162,77,.3);
+  backdrop-filter:blur(14px);
 }
 
 .navbar{
@@ -144,24 +158,28 @@ nav a{
   font-family:'Cinzel',Georgia,serif;
   font-size:11px;
   font-weight:700;
-  color:#30272a;
+  color:#eeeeee;
   letter-spacing:.8px;
   transition:.2s ease;
 }
 
 nav a:hover{
-  color:var(--pink-dark);
+  color:var(--pink);
 }
 
 .language-btn{
   border:1px solid var(--gold);
-  background:#fff;
-  color:#8b6727;
+  background:#0b0b0b;
+  color:var(--gold-light);
   padding:8px 12px;
   border-radius:7px;
   cursor:pointer;
   font-family:'Montserrat',Arial,sans-serif;
   font-weight:700;
+}
+
+.language-btn:hover{
+  background:#1a1a1a;
 }
 
 
@@ -179,8 +197,8 @@ nav a:hover{
 
   background:
     linear-gradient(
-      rgba(34,10,18,.55),
-      rgba(34,10,18,.68)
+      rgba(0,0,0,.58),
+      rgba(20,5,12,.78)
     ),
     url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
     center center / cover no-repeat;
@@ -194,7 +212,7 @@ nav a:hover{
   background:
     radial-gradient(
       circle at 50% 50%,
-      rgba(244,176,197,.14),
+      rgba(244,176,197,.12),
       transparent 58%
     );
 
@@ -221,18 +239,13 @@ nav a:hover{
   text-align:center;
 }
 
-
-/* =========================
-   HERO LOGO REMOVED
-========================= */
-
 .hero-logo{
   display:none;
 }
 
 .hero .eyebrow{
   color:#efc979;
-  text-shadow:0 2px 8px rgba(0,0,0,.5);
+  text-shadow:0 2px 8px rgba(0,0,0,.7);
 }
 
 .hero h1{
@@ -241,7 +254,7 @@ nav a:hover{
   line-height:.9;
   margin-bottom:28px;
   color:#fff;
-  text-shadow:0 5px 25px rgba(0,0,0,.6);
+  text-shadow:0 5px 25px rgba(0,0,0,.8);
   font-weight:400;
   letter-spacing:0;
 }
@@ -252,7 +265,7 @@ nav a:hover{
   color:#fff6f8;
   max-width:700px;
   margin:0 auto 30px;
-  text-shadow:0 2px 10px rgba(0,0,0,.6);
+  text-shadow:0 2px 10px rgba(0,0,0,.8);
 }
 
 
@@ -291,16 +304,21 @@ nav a:hover{
   color:#fff;
 
   box-shadow:
-    0 7px 18px rgba(181,138,58,.2);
+    0 7px 18px rgba(201,162,77,.25);
 }
 
 .btn-primary:hover{
-  background:#9d762f;
+  background:#a88336;
 }
 
 .btn-secondary{
-  background:rgba(255,255,255,.95);
-  color:#7f5d24;
+  background:rgba(0,0,0,.78);
+  color:#fff;
+  border-color:#d8b45d;
+}
+
+.btn-secondary:hover{
+  background:#151515;
 }
 
 
@@ -310,11 +328,11 @@ nav a:hover{
 
 section{
   padding:90px 0;
-  background:#fff;
+  background:#000000;
 }
 
 section:nth-child(even){
-  background:#fff;
+  background:#000000;
 }
 
 .section-heading{
@@ -328,7 +346,8 @@ section:nth-child(even){
   line-height:1;
   font-weight:400;
   margin-bottom:14px;
-  color:#21181b;
+  color:#ffffff;
+  text-shadow:0 2px 12px rgba(0,0,0,.8);
 }
 
 .section-heading p{
@@ -360,14 +379,14 @@ section:nth-child(even){
 
 .gallery-item{
   overflow:hidden;
-  background:#fff;
+  background:#0c0c0c;
   border-radius:14px;
   min-height:300px;
 
-  border:1px solid rgba(181,138,58,.18);
+  border:1px solid rgba(201,162,77,.22);
 
   box-shadow:
-    0 8px 25px rgba(30,20,24,.08);
+    0 8px 25px rgba(0,0,0,.45);
 }
 
 .gallery-item img{
@@ -391,7 +410,7 @@ section:nth-child(even){
 .services,
 .reviews,
 .contact{
-  background:#fff !important;
+  background:#000000 !important;
 }
 
 .service-grid,
@@ -403,14 +422,14 @@ section:nth-child(even){
 
 .service-card,
 .review{
-  background:#fff;
+  background:#111111;
 
-  border:1px solid rgba(181,138,58,.18);
+  border:1px solid rgba(201,162,77,.22);
   border-radius:15px;
   padding:30px;
 
   box-shadow:
-    0 8px 25px rgba(30,20,24,.06);
+    0 8px 25px rgba(0,0,0,.4);
 }
 
 .service-card{
@@ -421,7 +440,8 @@ section:nth-child(even){
   transform:translateY(-4px);
 
   box-shadow:
-    0 14px 30px rgba(30,20,24,.12);
+    0 14px 30px rgba(0,0,0,.6);
+  border-color:rgba(223,189,115,.5);
 }
 
 .service-icon{
@@ -433,12 +453,21 @@ section:nth-child(even){
   margin-bottom:10px;
   font-size:27px;
   font-weight:600;
-  color:#241b1e;
+  color:#ffffff;
 }
 
 .service-card p,
 .review p{
-  color:#666;
+  color:#b8b8b8;
+}
+
+.review strong{
+  color:#ffffff;
+}
+
+.stars{
+  color:var(--gold-light);
+  margin-bottom:12px;
 }
 
 
@@ -447,7 +476,7 @@ section:nth-child(even){
 ========================= */
 
 .locations{
-  background:var(--pink-light) !important;
+  background:#0a0a0a !important;
 }
 
 .location-grid{
@@ -459,14 +488,14 @@ section:nth-child(even){
 }
 
 .location-card{
-  background:#fff;
-  border:1px solid rgba(181,138,58,.22);
+  background:#111111;
+  border:1px solid rgba(201,162,77,.25);
   border-radius:15px;
   padding:32px;
   text-align:center;
 
   box-shadow:
-    0 8px 25px rgba(30,20,24,.06);
+    0 8px 25px rgba(0,0,0,.5);
 
   transition:.2s ease;
 }
@@ -475,7 +504,7 @@ section:nth-child(even){
   transform:translateY(-4px);
 
   box-shadow:
-    0 14px 30px rgba(30,20,24,.12);
+    0 14px 30px rgba(0,0,0,.65);
 }
 
 .location-icon{
@@ -487,7 +516,7 @@ section:nth-child(even){
   font-family:'Cormorant Garamond',Georgia,serif;
   font-size:32px;
   font-weight:600;
-  color:#241b1e;
+  color:#ffffff;
   margin-bottom:10px;
 }
 
@@ -496,13 +525,13 @@ section:nth-child(even){
   font-size:11px;
   font-weight:700;
   letter-spacing:2px;
-  color:#8b6727;
+  color:#dfbd73;
   text-transform:uppercase;
   margin-bottom:12px;
 }
 
 .location-card p{
-  color:#666;
+  color:#b5b5b5;
   font-size:14px;
   line-height:1.7;
 }
@@ -525,10 +554,11 @@ section:nth-child(even){
   line-height:1;
   font-weight:400;
   margin-bottom:22px;
+  color:#ffffff;
 }
 
 .about-text p{
-  color:#666;
+  color:#b5b5b5;
   margin-bottom:15px;
   font-size:15px;
 }
@@ -542,12 +572,22 @@ section:nth-child(even){
   margin:10px 0;
   font-weight:600;
   font-size:14px;
+  color:#eeeeee;
 }
 
 .about-list li::before{
   content:"✦";
   color:var(--gold);
   margin-right:10px;
+}
+
+
+/* =========================
+   ABOUT LOGO CARD
+========================= */
+
+.about-grid .gallery-item{
+  background:#080808 !important;
 }
 
 
@@ -568,10 +608,11 @@ section:nth-child(even){
   line-height:1;
   font-weight:400;
   margin-bottom:18px;
+  color:#ffffff;
 }
 
 .contact-card>p{
-  color:#666;
+  color:#b5b5b5;
   margin-bottom:25px;
 }
 
@@ -582,10 +623,14 @@ section:nth-child(even){
 .contact-item h3{
   font-family:'Cinzel',Georgia,serif;
   font-size:11px;
-  color:#8b6727;
+  color:#dfbd73;
   text-transform:uppercase;
   letter-spacing:2px;
   margin-bottom:5px;
+}
+
+.contact-item p{
+  color:#eeeeee;
 }
 
 .contact-line{
@@ -609,13 +654,13 @@ section:nth-child(even){
 }
 
 .phone-icon{
-  background:#eaf8ee;
-  color:#1b9c4a;
+  background:#102015;
+  color:#54d47b;
 }
 
 .email-icon{
-  background:#fff0f6;
-  color:#d63384;
+  background:#25121b;
+  color:#e88ab0;
 }
 
 .contact-feature-image img{
@@ -624,10 +669,10 @@ section:nth-child(even){
   object-fit:cover;
 
   border-radius:14px;
-  border:1px solid rgba(181,138,58,.2);
+  border:1px solid rgba(201,162,77,.25);
 
   box-shadow:
-    0 10px 30px rgba(30,20,24,.1);
+    0 10px 30px rgba(0,0,0,.5);
 }
 
 
@@ -636,9 +681,10 @@ section:nth-child(even){
 ========================= */
 
 footer{
-  background:#171214;
+  background:#050505;
   color:#ddd;
   padding:40px 0;
+  border-top:1px solid rgba(201,162,77,.2);
 }
 
 .footer-grid{
@@ -654,7 +700,7 @@ footer h3{
 }
 
 footer p{
-  color:#aaa;
+  color:#999;
   font-size:14px;
 }
 
@@ -665,16 +711,20 @@ footer p{
   flex-wrap:wrap;
 }
 
+.footer-links a{
+  color:#cccccc;
+}
+
 .footer-links a:hover{
   color:#e2bd72;
 }
 
 .copyright{
-  border-top:1px solid #333;
+  border-top:1px solid #292929;
   margin-top:30px;
   padding-top:20px;
   font-size:13px;
-  color:#888;
+  color:#777;
 }
 
 
@@ -727,7 +777,7 @@ footer p{
   }
 
   .logo{
-    font-size:25px;
+    font-size:31px;
   }
 
   nav{
@@ -1274,12 +1324,12 @@ style="
 display:flex;
 align-items:center;
 justify-content:center;
-background:#fff;
+background:#080808;
 padding:20px;
 ">
 
 <img
-src="https://i.ibb.co/Zz1L6vqw/A2132795-1-C7-B-453-F-B855-8-E3-B97-F3-BB3-E.png"
+src="https://i.ibb.co/Zz1L6vqw/A2132795-1C7B-453F-B855-8E3B97F3BB3E.png"
 alt="Rebecca & Sheena Tattoos logo"
 width="520"
 height="520"
@@ -1292,7 +1342,7 @@ height:100%;
 max-width:520px;
 max-height:520px;
 object-fit:contain;
-filter:drop-shadow(0 8px 20px rgba(0,0,0,.25));
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.6));
 ">
 
 </div>
@@ -1620,10 +1670,21 @@ updateLanguage();
 
 
 <!-- =========================
-     TIDIO LIVE CHAT
+     CRISP LIVE CHAT
 ========================= -->
 
-<script src="//code.tidio.co/ocamtccvuqk7zphstcjhet451pjh3tlo.js" async></script>
+<script type="text/javascript">
+window.$crisp=[];
+window.CRISP_WEBSITE_ID="1e4f731e-f4e3-45a1-a3fe-dbc0524c72be";
+
+(function(){
+  d=document;
+  s=d.createElement("script");
+  s.src="https://client.crisp.chat/l.js";
+  s.async=1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+</script>
 
 </body>
 </html>
