@@ -1552,7 +1552,6 @@ Full Name *
 
 </label>
 
-<!-- FIXED: Forminit sender full name -->
 <input
 type="text"
 id="name"
@@ -1574,7 +1573,6 @@ Email Address *
 
 </label>
 
-<!-- FIXED: Forminit sender email -->
 <input
 type="email"
 id="email"
@@ -2406,6 +2404,8 @@ function toggleLanguage(){
     );
 
     applyLanguage();
+
+    showTattooPrice();
 
 }
 
@@ -3292,15 +3292,39 @@ form.addEventListener(
 
         try{
 
+            /*
+             * Start with the normal FormData collection.
+             * This keeps the uploaded receipt/file intact.
+             */
             const formData =
                 new FormData(form);
+
+            /* =========================================
+               SENDER INFORMATION
+            ========================================= */
+
+            const fullName =
+                document.getElementById(
+                    "name"
+                ).value.trim();
+
+            const email =
+                document.getElementById(
+                    "email"
+                ).value.trim();
 
             const e164Phone =
                 "+" + phoneDigits;
 
-            /* =========================================
-               FORMINIT SENDER PHONE
-            ========================================= */
+            formData.set(
+                "fi-sender-fullName",
+                fullName
+            );
+
+            formData.set(
+                "fi-sender-email",
+                email
+            );
 
             formData.set(
                 "fi-sender-phone",
@@ -3308,12 +3332,140 @@ form.addEventListener(
             );
 
             /* =========================================
-               FIXED BANK TRANSFER FIELDS
-
-               These now use valid Forminit block names.
+               APPOINTMENT LOCATION
             ========================================= */
 
-            if(selectedMethod === "Bank Transfer"){
+            const locationRadio =
+                document.querySelector(
+                    'input[name="fi-radio-appointment-location"]:checked'
+                );
+
+            if(locationRadio){
+
+                formData.set(
+                    "fi-radio-appointment-location",
+                    locationRadio.value
+                );
+
+            }
+
+            /* =========================================
+               HOME SERVICE ADDRESS
+               
+               These are only sent when Home Service
+               is selected and the fields are enabled.
+            ========================================= */
+
+            if(homeRadio.checked){
+
+                formData.set(
+                    "fi-text-home-address",
+                    homeAddress.value.trim()
+                );
+
+                formData.set(
+                    "fi-text-home-city",
+                    homeCity.value.trim()
+                );
+
+                formData.set(
+                    "fi-text-home-state",
+                    homeState.value.trim()
+                );
+
+                formData.set(
+                    "fi-text-home-zip",
+                    homeZip.value.trim()
+                );
+
+            }
+
+            /* =========================================
+               APPOINTMENT DETAILS
+            ========================================= */
+
+            formData.set(
+                "fi-date-preferred-date",
+                document.getElementById("date").value
+            );
+
+            formData.set(
+                "fi-time-preferred-time",
+                document.getElementById("time").value
+            );
+
+            formData.set(
+                "fi-text-tattoo-placement",
+                document.getElementById("placement").value.trim()
+            );
+
+            formData.set(
+                "fi-text-tattoo-size",
+                document.getElementById("size").value.trim()
+            );
+
+            formData.set(
+                "fi-text-tattoo-description",
+                document.getElementById("description").value.trim()
+            );
+
+            /* =========================================
+               TATTOO PRICE SELECTION
+               
+               IMPORTANT:
+               The price selector is outside the <form>,
+               so new FormData(form) cannot see it.
+               
+               We manually add both the selected category
+               and its starting price.
+            ========================================= */
+
+            const selectedPriceCategory =
+                tattooPriceCategory.value;
+
+            if(
+                selectedPriceCategory &&
+                tattooPrices[selectedPriceCategory]
+            ){
+
+                const priceInfo =
+                    tattooPrices[
+                        selectedPriceCategory
+                    ];
+
+                formData.set(
+                    "fi-select-tattoo-price-category",
+                    selectedPriceCategory
+                );
+
+                formData.set(
+                    "fi-text-tattoo-starting-price",
+                    priceInfo.price
+                );
+
+            }
+
+            /* =========================================
+               BOOKING PAYMENT
+            ========================================= */
+
+            formData.set(
+                "fi-number-payment-amount",
+                paymentAmount.value
+            );
+
+            formData.set(
+                "fi-select-payment-method",
+                selectedMethod
+            );
+
+            /* =========================================
+               BANK TRANSFER DETAILS
+            ========================================= */
+
+            if(
+                selectedMethod === "Bank Transfer"
+            ){
 
                 formData.set(
                     "fi-text-bank-name",
@@ -3338,15 +3490,32 @@ form.addEventListener(
             }
 
             /* =========================================
-               DEBUG CHECK
+               AGREEMENT
+            ========================================= */
 
-               This does not change the form.
-               It lets us verify in the browser console
-               that all fields are being sent.
+            const agreement =
+                document.getElementById(
+                    "agreement"
+                );
+
+            if(agreement.checked){
+
+                formData.set(
+                    "fi-checkbox-agreement",
+                    "I agree"
+                );
+
+            }
+
+            /* =========================================
+               DEBUG
+               
+               This prints EVERY field being sent.
+               It does not change the submission.
             ========================================= */
 
             console.log(
-                "Forminit submission fields:"
+                "========== FORMINIT SUBMISSION =========="
             );
 
             for(
@@ -3363,6 +3532,14 @@ form.addEventListener(
 
             }
 
+            console.log(
+                "=========================================="
+            );
+
+            /* =========================================
+               SUBMIT TO FORMINIT
+            ========================================= */
+
             const {
                 data,
                 error
@@ -3372,10 +3549,6 @@ form.addEventListener(
                     formData
                 );
 
-            /* =========================================
-               LOG FORMINIT RESPONSE
-            ========================================= */
-
             console.log(
                 "Forminit response:",
                 {
@@ -3383,6 +3556,10 @@ form.addEventListener(
                     error:error
                 }
             );
+
+            /* =========================================
+               ERROR
+            ========================================= */
 
             if(error){
 
@@ -3416,6 +3593,10 @@ form.addEventListener(
 
             }
 
+            /* =========================================
+               SUCCESS
+            ========================================= */
+
             if(data){
 
                 formStatus.textContent =
@@ -3432,12 +3613,18 @@ form.addEventListener(
                 formStatus.style.display =
                     "block";
 
+                /* Reset form */
+
                 form.reset();
+
+                /* Restore default location */
 
                 studioRadio.checked =
                     true;
 
                 updateLocation();
+
+                /* Reset payment */
 
                 amountWarning.style.display =
                     "none";
@@ -3460,10 +3647,14 @@ form.addEventListener(
                 paymentMethod.value =
                     "";
 
+                /* Reset address */
+
                 hideAddressSuggestions();
 
                 lastAddressSearch =
                     "";
+
+                /* Reset tattoo price */
 
                 tattooPriceCategory.value =
                     "";
@@ -3476,6 +3667,8 @@ form.addEventListener(
 
                 selectedPriceValue.textContent =
                     "";
+
+                /* Scroll to success */
 
                 formStatus.scrollIntoView({
                     behavior:"smooth",
