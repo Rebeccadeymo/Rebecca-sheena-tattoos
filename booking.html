@@ -600,6 +600,7 @@ textarea{
     height:100%;
     background:#0d0d0d;
     transition:.25s;
+    position:relative;
 }
 
 .location-card:hover{
@@ -616,6 +617,24 @@ textarea{
             #101010
         );
     box-shadow:0 8px 25px rgba(201,162,77,.10);
+}
+
+.location-option input:checked + .location-card::after{
+    content:"✓";
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:27px;
+    height:27px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--gold);
+    color:#000;
+    font-size:15px;
+    font-weight:700;
+    box-shadow:0 4px 12px rgba(201,162,77,.25);
 }
 
 .location-card-icon{
@@ -637,6 +656,21 @@ textarea{
 
 .location-card strong{
     color:#ddd;
+}
+
+.location-selection-note{
+    margin-top:15px;
+    padding:12px 15px;
+    border:1px solid #30282c;
+    border-radius:11px;
+    background:#0b0b0b;
+    color:#999;
+    font-size:11px;
+    text-align:center;
+}
+
+.location-selection-note strong{
+    color:var(--gold-light);
 }
 
 /* =========================
@@ -1000,6 +1034,262 @@ input[type="file"]::file-selector-button{
 }
 
 /* =========================
+   BOOKING CONFIRMATION
+========================= */
+
+.booking-confirmation-overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    overflow-y:auto;
+}
+
+.booking-confirmation-overlay.show{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.booking-confirmation-card{
+    width:100%;
+    max-width:650px;
+    background:
+        linear-gradient(
+            145deg,
+            #181012,
+            #090909
+        );
+    border:1px solid rgba(201,162,77,.55);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 25px 70px rgba(0,0,0,.75);
+    animation:confirmationReveal .3s ease;
+}
+
+@keyframes confirmationReveal{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.confirmation-icon{
+    width:68px;
+    height:68px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    background:#120e10;
+}
+
+.confirmation-title{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:48px;
+    font-weight:400;
+    color:var(--gold-light);
+    line-height:1.1;
+}
+
+.confirmation-subtitle{
+    text-align:center;
+    color:#aaa;
+    font-size:13px;
+    margin:10px auto 22px;
+    max-width:500px;
+}
+
+.booking-reference{
+    background:#0a0a0a;
+    border:1px solid rgba(201,162,77,.35);
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    margin-bottom:22px;
+}
+
+.booking-reference-label{
+    display:block;
+    font-family:'Cinzel',serif;
+    font-size:10px;
+    letter-spacing:1px;
+    color:#988b90;
+    margin-bottom:5px;
+}
+
+.booking-reference-value{
+    display:block;
+    font-family:'Cinzel',serif;
+    font-size:20px;
+    font-weight:700;
+    color:var(--gold-light);
+    letter-spacing:1px;
+}
+
+.confirmation-summary{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.confirmation-summary-item{
+    background:#0d0d0d;
+    border:1px solid #2c2729;
+    border-radius:13px;
+    padding:13px;
+}
+
+.confirmation-summary-label{
+    display:block;
+    font-family:'Cinzel',serif;
+    font-size:9px;
+    letter-spacing:.6px;
+    color:#8e8588;
+    margin-bottom:4px;
+}
+
+.confirmation-summary-value{
+    display:block;
+    color:#eee;
+    font-size:12px;
+    font-weight:600;
+    word-break:break-word;
+}
+
+.confirmation-status-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+    color:var(--gold-light);
+    margin-bottom:14px;
+}
+
+.booking-status{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.booking-status-step{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 14px;
+    border:1px solid #292629;
+    border-radius:12px;
+    background:#0b0b0b;
+}
+
+.booking-status-dot{
+    width:12px;
+    height:12px;
+    min-width:12px;
+    border-radius:50%;
+    border:1px solid #555;
+    background:#171717;
+}
+
+.booking-status-step.active{
+    border-color:rgba(201,162,77,.5);
+    background:#171114;
+}
+
+.booking-status-step.active .booking-status-dot{
+    background:var(--gold);
+    border-color:var(--gold-light);
+    box-shadow:0 0 12px rgba(201,162,77,.35);
+}
+
+.booking-status-step.completed .booking-status-dot{
+    background:#6ca879;
+    border-color:#8fd39d;
+}
+
+.booking-status-text strong{
+    display:block;
+    color:#eee;
+    font-size:12px;
+}
+
+.booking-status-text span{
+    display:block;
+    color:#777;
+    font-size:10px;
+    margin-top:2px;
+}
+
+.confirmation-notice{
+    background:#1b1115;
+    border-left:4px solid var(--gold);
+    border-radius:10px;
+    padding:15px;
+    color:#cfc5c9;
+    font-size:12px;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.confirmation-notice strong{
+    color:var(--gold-light);
+}
+
+.confirmation-actions{
+    display:flex;
+    gap:12px;
+}
+
+.confirmation-whatsapp{
+    flex:1;
+    border:1px solid #4b8c5a;
+    border-radius:13px;
+    padding:15px;
+    background:#18351f;
+    color:#b9edc5;
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.confirmation-whatsapp:hover{
+    transform:translateY(-2px);
+    background:#20482a;
+}
+
+.confirmation-close{
+    border:1px solid #40383b;
+    border-radius:13px;
+    padding:15px 20px;
+    background:#111;
+    color:#aaa;
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.confirmation-close:hover{
+    color:#fff;
+    border-color:#666;
+}
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -1200,6 +1490,32 @@ footer p{
 
     .notice li{
         font-size:12px;
+    }
+
+    .booking-confirmation-overlay{
+        padding:12px;
+    }
+
+    .booking-confirmation-card{
+        padding:22px 17px;
+        border-radius:20px;
+    }
+
+    .confirmation-title{
+        font-size:42px;
+    }
+
+    .confirmation-summary{
+        grid-template-columns:1fr;
+    }
+
+    .confirmation-actions{
+        flex-direction:column;
+    }
+
+    .confirmation-whatsapp,
+    .confirmation-close{
+        width:100%;
     }
 
 }
@@ -1737,6 +2053,15 @@ Have our tattoo service come directly to your home. Additional home-service cons
 </label>
 
 </div>
+
+</div>
+
+<div
+class="location-selection-note"
+data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> We'll review your address and contact you regarding availability."
+data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Revisaremos tu dirección y nos comunicaremos contigo sobre la disponibilidad.">
+
+<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> We'll review your address and contact you regarding availability.
 
 </div>
 
@@ -2361,6 +2686,297 @@ Rebeccapalmer542@yahoo.com
 
 </footer>
 
+<!-- =========================================================
+     BOOKING CONFIRMATION
+========================================================= -->
+
+<div
+id="bookingConfirmation"
+class="booking-confirmation-overlay">
+
+<div
+class="booking-confirmation-card">
+
+<div class="confirmation-icon">
+✓
+</div>
+
+<div
+class="confirmation-title"
+data-en="Request Ready"
+data-es="Solicitud Lista">
+
+Request Ready
+
+</div>
+
+<p
+class="confirmation-subtitle"
+data-en="Your appointment request has been prepared. Your appointment is not confirmed yet."
+data-es="Tu solicitud de cita ha sido preparada. Tu cita aún no está confirmada.">
+
+Your appointment request has been prepared. Your appointment is not confirmed yet.
+
+</p>
+
+<div class="booking-reference">
+
+<span
+class="booking-reference-label"
+data-en="BOOKING REFERENCE"
+data-es="REFERENCIA DE RESERVA">
+
+BOOKING REFERENCE
+
+</span>
+
+<span
+id="bookingReference"
+class="booking-reference-value">
+
+</span>
+
+</div>
+
+<div class="confirmation-summary">
+
+<div class="confirmation-summary-item">
+
+<span
+class="confirmation-summary-label"
+data-en="CUSTOMER"
+data-es="CLIENTE">
+
+CUSTOMER
+
+</span>
+
+<span
+id="confirmationCustomer"
+class="confirmation-summary-value">
+</span>
+
+</div>
+
+<div class="confirmation-summary-item">
+
+<span
+class="confirmation-summary-label"
+data-en="LOCATION"
+data-es="UBICACIÓN">
+
+LOCATION
+
+</span>
+
+<span
+id="confirmationLocation"
+class="confirmation-summary-value">
+</span>
+
+</div>
+
+<div class="confirmation-summary-item">
+
+<span
+class="confirmation-summary-label"
+data-en="DATE"
+data-es="FECHA">
+
+DATE
+
+</span>
+
+<span
+id="confirmationDate"
+class="confirmation-summary-value">
+</span>
+
+</div>
+
+<div class="confirmation-summary-item">
+
+<span
+class="confirmation-summary-label"
+data-en="PAYMENT"
+data-es="PAGO">
+
+PAYMENT
+
+</span>
+
+<span
+id="confirmationPayment"
+class="confirmation-summary-value">
+</span>
+
+</div>
+
+</div>
+
+<div
+class="confirmation-status-title"
+data-en="Booking Status"
+data-es="Estado de la Reserva">
+
+Booking Status
+
+</div>
+
+<div class="booking-status">
+
+<div class="booking-status-step completed">
+
+<div class="booking-status-dot"></div>
+
+<div class="booking-status-text">
+
+<strong
+data-en="Request Prepared"
+data-es="Solicitud Preparada">
+
+Request Prepared
+
+</strong>
+
+<span
+data-en="Your appointment information has been collected."
+data-es="La información de tu cita ha sido recopilada.">
+
+Your appointment information has been collected.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="booking-status-step active">
+
+<div class="booking-status-dot"></div>
+
+<div class="booking-status-text">
+
+<strong
+data-en="Awaiting Studio Review"
+data-es="Esperando Revisión del Estudio">
+
+Awaiting Studio Review
+
+</strong>
+
+<span
+data-en="The studio must review your request and verify your payment."
+data-es="El estudio debe revisar tu solicitud y verificar tu pago.">
+
+The studio must review your request and verify your payment.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="booking-status-step">
+
+<div class="booking-status-dot"></div>
+
+<div class="booking-status-text">
+
+<strong
+data-en="Payment Verified"
+data-es="Pago Verificado">
+
+Payment Verified
+
+</strong>
+
+<span
+data-en="This step happens after the studio verifies your payment."
+data-es="Este paso ocurre después de que el estudio verifique tu pago.">
+
+This step happens after the studio verifies your payment.
+
+</span>
+
+</div>
+
+</div>
+
+<div class="booking-status-step">
+
+<div class="booking-status-dot"></div>
+
+<div class="booking-status-text">
+
+<strong
+data-en="Appointment Confirmed"
+data-es="Cita Confirmada">
+
+Appointment Confirmed
+
+</strong>
+
+<span
+data-en="Your appointment is confirmed only after studio approval."
+data-es="Tu cita se confirma únicamente después de la aprobación del estudio.">
+
+Your appointment is confirmed only after studio approval.
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="confirmation-notice">
+
+<strong
+data-en="One more important step:"
+data-es="Un paso más importante:">
+
+One more important step:
+
+</strong>
+
+<span
+data-en=" WhatsApp will open after you continue. Send your payment receipt in that WhatsApp chat. The studio will review your request, verify the payment, contact you for any additional details, and provide the final tattoo price."
+data-es=" WhatsApp se abrirá después de continuar. Envía tu recibo de pago en ese chat de WhatsApp. El estudio revisará tu solicitud, verificará el pago, se comunicará contigo si necesita más detalles y proporcionará el precio final del tatuaje.">
+
+ WhatsApp will open after you continue. Send your payment receipt in that WhatsApp chat. The studio will review your request, verify the payment, contact you for any additional details, and provide the final tattoo price.
+
+</span>
+
+</div>
+
+<div class="confirmation-actions">
+
+<button
+type="button"
+id="confirmationWhatsApp"
+class="confirmation-whatsapp">
+
+📱 CONTINUE TO WHATSAPP
+
+</button>
+
+<button
+type="button"
+id="confirmationClose"
+class="confirmation-close">
+
+EDIT
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 <script>
 
 /* =========================================================
@@ -2381,12 +2997,14 @@ function applyLanguage(){
 
         if(translation){
 
-            element.textContent =
+            element.innerHTML =
                 translation;
 
         }
 
     });
+
+    showTattooPrice();
 
 }
 
@@ -3162,6 +3780,220 @@ receipt.addEventListener(
 );
 
 /* =========================================================
+   BOOKING CONFIRMATION ELEMENTS
+========================================================= */
+
+const bookingConfirmation =
+    document.getElementById(
+        "bookingConfirmation"
+    );
+
+const bookingReference =
+    document.getElementById(
+        "bookingReference"
+    );
+
+const confirmationCustomer =
+    document.getElementById(
+        "confirmationCustomer"
+    );
+
+const confirmationLocation =
+    document.getElementById(
+        "confirmationLocation"
+    );
+
+const confirmationDate =
+    document.getElementById(
+        "confirmationDate"
+    );
+
+const confirmationPayment =
+    document.getElementById(
+        "confirmationPayment"
+    );
+
+const confirmationWhatsApp =
+    document.getElementById(
+        "confirmationWhatsApp"
+    );
+
+const confirmationClose =
+    document.getElementById(
+        "confirmationClose"
+    );
+
+let pendingWhatsAppURL = "";
+
+/* =========================================================
+   BOOKING REFERENCE
+========================================================= */
+
+function generateBookingReference(){
+
+    const now =
+        new Date();
+
+    const year =
+        String(
+            now.getFullYear()
+        ).slice(-2);
+
+    const month =
+        String(
+            now.getMonth()+1
+        ).padStart(2,"0");
+
+    const day =
+        String(
+            now.getDate()
+        ).padStart(2,"0");
+
+    const random =
+        Math.floor(
+            1000 +
+            Math.random() * 9000
+        );
+
+    return "RST-" +
+        year +
+        month +
+        day +
+        "-" +
+        random;
+
+}
+
+/* =========================================================
+   SHOW BOOKING CONFIRMATION
+========================================================= */
+
+function showBookingConfirmation(
+    reference,
+    customer,
+    location,
+    preferredDate,
+    payment
+){
+
+    bookingReference.textContent =
+        reference;
+
+    confirmationCustomer.textContent =
+        customer;
+
+    confirmationLocation.textContent =
+        location;
+
+    confirmationDate.textContent =
+        preferredDate;
+
+    confirmationPayment.textContent =
+        "$" + payment;
+
+    bookingConfirmation.classList.add(
+        "show"
+    );
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+/* =========================================================
+   CLOSE CONFIRMATION
+========================================================= */
+
+confirmationClose.addEventListener(
+    "click",
+    function(){
+
+        bookingConfirmation.classList.remove(
+            "show"
+        );
+
+        document.body.style.overflow =
+            "";
+
+        submitButton.disabled =
+            false;
+
+        submitButton.textContent =
+            currentLanguage === "es"
+
+            ? "ENVIAR SOLICITUD DE CITA"
+
+            : "SUBMIT APPOINTMENT REQUEST";
+
+    }
+);
+
+/* =========================================================
+   CONTINUE TO WHATSAPP
+========================================================= */
+
+confirmationWhatsApp.addEventListener(
+    "click",
+    function(){
+
+        if(!pendingWhatsAppURL){
+
+            return;
+
+        }
+
+        confirmationWhatsApp.disabled =
+            true;
+
+        confirmationWhatsApp.textContent =
+            currentLanguage === "es"
+
+            ? "ABRIENDO WHATSAPP..."
+
+            : "OPENING WHATSAPP...";
+
+        window.location.href =
+            pendingWhatsAppURL;
+
+    }
+);
+
+/* =========================================================
+   CLOSE MODAL BY BACKGROUND CLICK
+========================================================= */
+
+bookingConfirmation.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target ===
+            bookingConfirmation
+        ){
+
+            bookingConfirmation.classList.remove(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "";
+
+            submitButton.disabled =
+                false;
+
+            submitButton.textContent =
+                currentLanguage === "es"
+
+                ? "ENVIAR SOLICITUD DE CITA"
+
+                : "SUBMIT APPOINTMENT REQUEST";
+
+        }
+
+    }
+);
+
+/* =========================================================
    WHATSAPP BOOKING SUBMISSION
 ========================================================= */
 
@@ -3422,11 +4254,24 @@ form.addEventListener(
 
         }
 
+        /*
+           Generate a unique customer-side booking reference.
+           This reference is included in WhatsApp so the studio
+           can also see it in the request.
+        */
+
+        const reference =
+            generateBookingReference();
+
         const whatsappMessage =
 
 `🖤 NEW TATTOO APPOINTMENT REQUEST
 
 ━━━━━━━━━━━━━━━━━━
+
+BOOKING REFERENCE
+
+${reference}
 
 CUSTOMER INFORMATION
 
@@ -3482,9 +4327,11 @@ I have read and understand the Important Booking Notice. I understand that submi
 
 ━━━━━━━━━━━━━━━━━━
 
-Please review my appointment request and contact me regarding the next steps.`;
+Please review my appointment request and contact me regarding the next steps.
 
-        const whatsappURL =
+Booking Reference: ${reference}`;
+
+        pendingWhatsAppURL =
             "https://wa.me/" +
             WHATSAPP_NUMBER +
             "?text=" +
@@ -3492,22 +4339,49 @@ Please review my appointment request and contact me regarding the next steps.`;
                 whatsappMessage
             );
 
+        /*
+           Save the latest booking reference locally
+           on the customer's device. This does not claim
+           to be a live studio database.
+        */
+
+        try{
+
+            localStorage.setItem(
+                "latestBookingReference",
+                reference
+            );
+
+            localStorage.setItem(
+                "latestBookingStatus",
+                "Awaiting Studio Review"
+            );
+
+        }catch(error){
+
+            console.log(
+                "Local booking status unavailable:",
+                error
+            );
+
+        }
+
         submitButton.disabled =
             true;
 
         submitButton.textContent =
             currentLanguage === "es"
 
-            ? "ABRIENDO WHATSAPP..."
+            ? "SOLICITUD PREPARADA"
 
-            : "OPENING WHATSAPP...";
+            : "REQUEST READY";
 
         formStatus.textContent =
             currentLanguage === "es"
 
-            ? "📱 Abriendo WhatsApp con tu solicitud de cita..."
+            ? "✓ Tu solicitud está lista. Revisa la confirmación antes de continuar."
 
-            : "📱 Opening WhatsApp with your appointment request.";
+            : "✓ Your request is ready. Review the confirmation before continuing.";
 
         formStatus.className =
             "success";
@@ -3515,19 +4389,12 @@ Please review my appointment request and contact me regarding the next steps.`;
         formStatus.style.display =
             "block";
 
-        formStatus.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
-
-        setTimeout(
-            function(){
-
-                window.location.href =
-                    whatsappURL;
-
-            },
-            300
+        showBookingConfirmation(
+            reference,
+            fullName,
+            appointmentLocation,
+            preferredDate,
+            bookingPayment
         );
 
     }
