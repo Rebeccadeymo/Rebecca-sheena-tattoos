@@ -935,12 +935,108 @@ footer p{
   color:#e2bd72;
 }
 
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-media{
+  margin-top:35px;
+  padding-top:30px;
+  border-top:1px solid #292929;
+  text-align:center;
+}
+
+.social-title{
+  font-family:'Cinzel',Georgia,serif;
+  color:#dfbd73;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:18px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+}
+
+.social-icon{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid rgba(201,162,77,.45);
+  background:#0c0c0c;
+
+  color:#ffffff;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.social-icon svg{
+  width:25px;
+  height:25px;
+  fill:currentColor;
+}
+
+.social-icon:hover{
+  transform:translateY(-4px);
+  background:#181818;
+  border-color:#dfbd73;
+  color:#dfbd73;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.5);
+}
+
+.social-icon:active{
+  transform:translateY(-1px);
+}
+
+.social-label{
+  margin-top:12px;
+  color:#777;
+  font-size:12px;
+}
+
+
+/* FACEBOOK */
+
+.facebook-icon:hover{
+  color:#1877f2;
+  border-color:#1877f2;
+}
+
+
+/* TIKTOK */
+
+.tiktok-icon:hover{
+  color:#ffffff;
+  border-color:#ffffff;
+}
+
+
+/* COPYRIGHT */
+
 .copyright{
   border-top:1px solid #292929;
   margin-top:30px;
   padding-top:20px;
   font-size:13px;
   color:#777;
+  text-align:center;
 }
 
 
@@ -1094,6 +1190,20 @@ footer p{
 
   .footer-links{
     justify-content:flex-start;
+  }
+
+  .social-media{
+    margin-top:30px;
+    padding-top:25px;
+  }
+
+  .social-icons{
+    gap:15px;
+  }
+
+  .social-icon{
+    width:50px;
+    height:50px;
   }
 
 }
@@ -2180,6 +2290,71 @@ Contact
 
 </div>
 
+
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
+<div class="social-media">
+
+<div class="social-title">
+Follow Rebecca & Sheena Tattoos
+</div>
+
+<div class="social-icons">
+
+<!-- FACEBOOK -->
+
+<a
+href="https://www.facebook.com/share/1GQ3xwLLfy/?mibextid=wwXIfr"
+class="social-icon facebook-icon"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Facebook"
+title="Follow us on Facebook">
+
+<svg
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true">
+
+<path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.696 4.533-4.696 1.312 0 2.686.235 2.686.235v2.98h-1.514c-1.491 0-1.956.93-1.956 1.886v2.265h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+
+</svg>
+
+</a>
+
+
+<!-- TIKTOK -->
+
+<a
+href="https://www.tiktok.com/@r_s_tattoo?_r=1&_t=ZP-99hKA2t50ZT"
+class="social-icon tiktok-icon"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="TikTok"
+title="Follow us on TikTok">
+
+<svg
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg"
+aria-hidden="true">
+
+<path d="M19.59 6.69a4.83 4.83 0 0 1-4.22-2.62A4.83 4.83 0 0 1 15 2h-3.5v13.67a2.91 2.91 0 1 1-2-2.76V9.34a6.41 6.41 0 1 0 5.5 6.33V9.6a8.25 8.25 0 0 0 4.83 1.55V7.66a4.84 4.84 0 0 1-.24-.97z"/>
+
+</svg>
+
+</a>
+
+</div>
+
+<div class="social-label">
+Tap an icon to visit our social media page
+</div>
+
+</div>
+
+
 <div class="copyright">
 
 © <span id="year"></span>
@@ -2259,16 +2434,25 @@ updateLanguage();
 ========================= -->
 
 <script type="text/javascript">
+
 window.$crisp=[];
+
 window.CRISP_WEBSITE_ID="1e4f731e-f4e3-45a1-a3fe-dbc0524c72be";
 
 (function(){
+
   d=document;
+
   s=d.createElement("script");
+
   s.src="https://client.crisp.chat/l.js";
+
   s.async=1;
+
   d.getElementsByTagName("head")[0].appendChild(s);
+
 })();
+
 </script>
 
 </body>
