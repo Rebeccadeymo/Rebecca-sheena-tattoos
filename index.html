@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio & Home Service</title>
+<title>Rebecca & Sheena Tattoos | Professional Tattoo Studio, Piercing & Home Service</title>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo studio offering creative, detailed tattoo artwork, studio appointments and home tattoo service in Richmond, Missouri and Honolulu, Hawaii.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo and piercing services, studio appointments, home tattoo service and interstate travel service in Richmond, Missouri and Honolulu, Hawaii.">
 <meta name="theme-color" content="#000000">
 
 <!-- Artistic Fonts -->
@@ -472,6 +472,167 @@ section:nth-child(even){
 
 
 /* =========================
+   PRICE SECTION
+========================= */
+
+.prices{
+  background:
+    linear-gradient(
+      180deg,
+      #000000 0%,
+      #090607 100%
+    ) !important;
+}
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  max-width:1050px;
+  margin:0 auto;
+}
+
+.price-card{
+  background:#111111;
+  border:1px solid rgba(201,162,77,.25);
+  border-radius:15px;
+  padding:24px 22px;
+  text-align:center;
+  transition:.2s ease;
+}
+
+.price-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(223,189,115,.55);
+  box-shadow:0 14px 30px rgba(0,0,0,.55);
+}
+
+.price-card h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:25px;
+  font-weight:600;
+  color:#ffffff;
+  margin-bottom:7px;
+}
+
+.price{
+  font-family:'Cinzel',Georgia,serif;
+  color:var(--gold-light);
+  font-size:17px;
+  font-weight:700;
+}
+
+.price-note{
+  max-width:760px;
+  margin:30px auto 0;
+  text-align:center;
+  color:#999;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.price-note strong{
+  color:#dfbd73;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works{
+  background:#000000 !important;
+}
+
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.step{
+  text-align:center;
+  background:#111111;
+  border:1px solid rgba(201,162,77,.22);
+  border-radius:15px;
+  padding:28px 20px;
+}
+
+.step-number{
+  font-family:'Cinzel',Georgia,serif;
+  font-size:13px;
+  color:var(--gold-light);
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.step h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:25px;
+  color:#ffffff;
+  margin-bottom:8px;
+}
+
+.step p{
+  color:#a9a9a9;
+  font-size:13px;
+}
+
+
+/* =========================
+   HOME / INTERSTATE SERVICE
+========================= */
+
+.travel-section{
+  background:#080808 !important;
+}
+
+.travel-box{
+  max-width:950px;
+  margin:0 auto;
+  padding:45px 35px;
+  text-align:center;
+  border:1px solid rgba(201,162,77,.3);
+  border-radius:18px;
+  background:
+    linear-gradient(
+      135deg,
+      #111111,
+      #080808
+    );
+  box-shadow:0 10px 35px rgba(0,0,0,.55);
+}
+
+.travel-icons{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.travel-box h2{
+  font-family:'Great Vibes','Cormorant Garamond',cursive;
+  font-size:55px;
+  font-weight:400;
+  color:#ffffff;
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.travel-box p{
+  max-width:760px;
+  margin:0 auto 12px;
+  color:#b8b8b8;
+  font-size:14px;
+}
+
+.travel-highlight{
+  color:#dfbd73 !important;
+  font-weight:700;
+}
+
+
+/* =========================
    STUDIO LOCATIONS
 ========================= */
 
@@ -756,6 +917,14 @@ footer p{
     grid-template-columns:1fr;
   }
 
+  .price-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   .location-grid{
     grid-template-columns:1fr;
     max-width:650px;
@@ -834,6 +1003,22 @@ footer p{
   .gallery-item,
   .gallery-item img{
     min-height:360px;
+  }
+
+  .price-grid{
+    grid-template-columns:1fr;
+  }
+
+  .steps-grid{
+    grid-template-columns:1fr;
+  }
+
+  .travel-box{
+    padding:35px 22px;
+  }
+
+  .travel-box h2{
+    font-size:48px;
   }
 
   .location-grid{
@@ -949,10 +1134,10 @@ Español
 
 <div
 class="eyebrow"
-data-en="Professional Tattoo Studio & Home Service"
-data-es="Estudio Profesional de Tatuajes y Servicio a Domicilio">
+data-en="Professional Tattoo Studio • Piercing • Home Service"
+data-es="Estudio Profesional • Tatuajes • Piercing • Servicio a Domicilio">
 
-Professional Tattoo Studio & Home Service
+Professional Tattoo Studio • Piercing • Home Service
 
 </div>
 
@@ -962,11 +1147,12 @@ Our Art.
 </h1>
 
 <p
-data-en="Custom tattoos created with creativity, precision and attention to detail. Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear."
-data-es="Tatuajes personalizados creados con creatividad, precisión y atención al detalle. Visita nuestro estudio o solicita nuestro servicio de tatuajes a domicilio y convirtamos tu idea en algo que te enorgullezca llevar.">
+data-en="Custom tattoos, professional piercing and personalized service. Visit our studio or request our home tattoo service. We also travel interstate for home service."
+data-es="Tatuajes personalizados, piercing profesional y servicio personalizado. Visita nuestro estudio o solicita nuestro servicio de tatuajes a domicilio. También viajamos a otros estados para servicios a domicilio.">
 
-Custom tattoos created with creativity, precision and attention to detail.
-Visit our studio or request our home tattoo service and let us turn your idea into something you'll be proud to wear.
+Custom tattoos, professional piercing and personalized service.
+Visit our studio or request our home tattoo service.
+We also travel interstate for home service.
 
 </p>
 
@@ -1086,6 +1272,20 @@ referrerpolicy="no-referrer">
 
 </div>
 
+<div style="text-align:center;margin-top:35px;">
+
+<a
+href="booking.html"
+class="btn btn-primary"
+data-en="Start Your Tattoo Booking"
+data-es="Comenzar Reserva de Tatuaje">
+
+Start Your Tattoo Booking
+
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -1110,7 +1310,7 @@ Our Services
 </h2>
 
 <p>
-From simple pieces to detailed custom artwork, we work with you to create something unique.
+Professional tattooing, piercing and personalized services designed around your vision.
 </p>
 
 </div>
@@ -1152,6 +1352,22 @@ We can work with your vision to create artwork that fits your body and personal 
 <div class="service-card">
 
 <div class="service-icon">
+💎
+</div>
+
+<h3>
+Professional Piercing
+</h3>
+
+<p>
+Professional piercing with attention to precision, cleanliness and a comfortable client experience.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
 🏠
 </div>
 
@@ -1162,6 +1378,278 @@ Home Tattoo Service
 <p>
 Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment.
 </p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+🚗
+</div>
+
+<h3>
+Interstate Travel</h3>
+
+<p>
+We travel interstate for home tattoo services. Contact us with your location so we can review travel availability and details.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">
+💬
+</div>
+
+<h3>
+Personal Consultation
+</h3>
+
+<p>
+Have questions about your tattoo, piercing, design or service location? Talk with us before booking.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TATTOO PRICES
+========================= -->
+
+<section class="prices">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Starting Prices
+</div>
+
+<h2>
+Tattoo Price Guide
+</h2>
+
+<p>
+Get an idea of our starting prices before submitting your booking.
+</p>
+
+</div>
+
+<div class="price-grid">
+
+<div class="price-card">
+<h3>Small / Simple Tattoo</h3>
+<div class="price">From $250</div>
+</div>
+
+<div class="price-card">
+<h3>Medium Tattoo</h3>
+<div class="price">From $600</div>
+</div>
+
+<div class="price-card">
+<h3>Large Tattoo</h3>
+<div class="price">From $900</div>
+</div>
+
+<div class="price-card">
+<h3>Custom Detailed Tattoo</h3>
+<div class="price">From $1,200</div>
+</div>
+
+<div class="price-card">
+<h3>Half Sleeve</h3>
+<div class="price">From $1,500</div>
+</div>
+
+<div class="price-card">
+<h3>Full Sleeve</h3>
+<div class="price">From $2,500</div>
+</div>
+
+<div class="price-card">
+<h3>Large Back / Chest Pieces</h3>
+<div class="price">From $3,000</div>
+</div>
+
+</div>
+
+<p class="price-note">
+<strong>Important:</strong> These are starting prices only and are not the final price of your tattoo.
+The actual price may be lower or higher depending on the size, design, detail, placement and amount of work.
+The studio reviews your booking and payment before contacting you with the details and final tattoo price.
+Your booking payment is applied toward your final tattoo bill.
+</p>
+
+<div style="text-align:center;margin-top:30px;">
+
+<a
+href="booking.html"
+class="btn btn-primary"
+data-en="View Full Price List & Book"
+data-es="Ver Lista Completa y Reservar">
+
+View Full Price List & Book
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="how-it-works">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="eyebrow">
+Simple Booking Process
+</div>
+
+<h2>
+How It Works
+</h2>
+
+<p>
+Getting started is simple. Submit your request and we'll take it from there.
+</p>
+
+</div>
+
+<div class="steps-grid">
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>
+Tell Us Your Idea
+</h3>
+
+<p>
+Choose your service and provide the details of the tattoo or piercing you want.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+We Review It
+</h3>
+
+<p>
+The studio reviews your request, location and project details.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+Payment Verification
+</h3>
+
+<p>
+Your required booking payment is reviewed and verified by the studio.
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Get Confirmed
+</h3>
+
+<p>
+We'll contact you with the final details, price and appointment confirmation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HOME / INTERSTATE SERVICE
+========================= -->
+
+<section class="travel-section">
+
+<div class="container">
+
+<div class="travel-box">
+
+<div class="travel-icons">
+🏠 🚗
+</div>
+
+<div class="eyebrow">
+We Come To You
+</div>
+
+<h2>
+Home Tattoo Service
+</h2>
+
+<p>
+Don't want to visit the studio? We offer professional home tattoo services for clients who prefer to be tattooed in the comfort of their own space.
+</p>
+
+<p class="travel-highlight">
+Yes — we travel interstate for home tattoo services.
+</p>
+
+<p>
+Send us your location and booking details so we can review availability and any applicable travel arrangements before confirming your appointment.
+</p>
+
+<div style="margin-top:25px;">
+
+<a
+href="booking.html"
+class="btn btn-primary"
+data-en="Request Home Service"
+data-es="Solicitar Servicio a Domicilio">
+
+Request Home Service
+
+</a>
 
 </div>
 
@@ -1291,9 +1779,11 @@ Our goal is to create a comfortable experience while producing tattoo artwork th
 <ul class="about-list">
 
 <li>Professional tattoo service</li>
+<li>Professional piercing</li>
 <li>Custom artwork</li>
 <li>Studio appointments</li>
 <li>Home tattoo service</li>
+<li>Interstate travel available</li>
 <li>Attention to detail</li>
 <li>Client-focused experience</li>
 
@@ -1370,6 +1860,10 @@ Client Experience
 What Clients Love
 </h2>
 
+<p>
+A great tattoo experience starts with great communication, comfort and attention to detail.
+</p>
+
 </div>
 
 <div class="review-grid">
@@ -1424,6 +1918,24 @@ Happy Client
 
 </div>
 
+<div style="text-align:center;margin-top:35px;">
+
+<p style="color:#999;font-size:13px;margin-bottom:18px;">
+Already worked with us? We'd love to hear about your experience.
+</p>
+
+<a
+href="#contact"
+class="btn btn-secondary"
+data-en="Share Your Experience"
+data-es="Comparte Tu Experiencia">
+
+Share Your Experience
+
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -1448,7 +1960,7 @@ Contact Rebecca & Sheena
 </h2>
 
 <p>
-Have a question before booking? Contact us directly.
+Have a question before booking? Contact us directly about tattoos, piercing, home service or interstate travel.
 </p>
 
 
@@ -1519,9 +2031,24 @@ Email
 <a href="mailto:Rebeccapalmer542@yahoo.com">
 Rebeccapalmer542@yahoo.com
 </a>
+
 </p>
 
 </div>
+
+</div>
+
+<div style="margin-top:28px;">
+
+<a
+href="booking.html"
+class="btn btn-primary"
+data-en="Book Your Appointment"
+data-es="Reserva Tu Cita">
+
+Book Your Appointment
+
+</a>
 
 </div>
 
@@ -1563,8 +2090,7 @@ Rebecca & Sheena Tattoos
 </h3>
 
 <p>
-Professional tattoo artistry with a focus on creativity,
-detail and a great client experience.
+Professional tattoo artistry, piercing and personalized service with a focus on creativity, detail and a great client experience.
 </p>
 
 </div>
@@ -1577,6 +2103,10 @@ Home
 
 <a href="#work">
 Our Work
+</a>
+
+<a href="#services">
+Services
 </a>
 
 <a href="#locations">
