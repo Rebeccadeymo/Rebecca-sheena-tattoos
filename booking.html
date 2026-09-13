@@ -51,7 +51,16 @@ html{
 
 body{
     font-family:'Montserrat',sans-serif;
-    background:#000;
+    background:
+        linear-gradient(
+            135deg,
+            #241a08 0%,
+            #4a3712 35%,
+            #6b511b 55%,
+            #3a2a0c 75%,
+            #1d1507 100%
+        );
+    background-attachment:fixed;
     color:var(--text);
     line-height:1.6;
     width:100%;
@@ -158,8 +167,8 @@ nav a:hover{
 
     background:
         linear-gradient(
-            rgba(0,0,0,.55),
-            rgba(15,0,8,.78)
+            rgba(0,0,0,.52),
+            rgba(36,26,8,.78)
         ),
         url("https://i.ibb.co/v6B4B36q/IMG-5941.jpg?v=20260907")
         center/cover no-repeat;
@@ -197,7 +206,16 @@ nav a:hover{
     max-width:950px;
     margin:0 auto;
     padding:55px 18px 80px;
-    background:#000;
+
+    background:
+        linear-gradient(
+            135deg,
+            #241a08 0%,
+            #4a3712 35%,
+            #6b511b 55%,
+            #3a2a0c 75%,
+            #1d1507 100%
+        );
 }
 
 .intro{
@@ -215,7 +233,7 @@ nav a:hover{
 .intro p{
     max-width:720px;
     margin:10px auto;
-    color:var(--muted);
+    color:#e0d5bd;
 }
 
 /* =========================
@@ -226,10 +244,10 @@ nav a:hover{
     background:
         linear-gradient(
             145deg,
-            #1b1115,
-            #120d0f
+            #2d210b,
+            #171107
         );
-    border:1px solid rgba(201,162,77,.35);
+    border:1px solid rgba(201,162,77,.45);
     border-radius:18px;
     padding:24px 22px;
     margin:25px 0 35px;
@@ -249,7 +267,7 @@ nav a:hover{
 
 .notice-read{
     text-align:center;
-    color:#d0c5c9;
+    color:#d8cdb7;
     font-size:12px;
     font-weight:600;
     margin-bottom:16px;
@@ -262,7 +280,7 @@ nav a:hover{
 }
 
 .notice li{
-    color:#d7d0d3;
+    color:#ded5c5;
     font-size:13px;
     line-height:1.7;
     margin-bottom:7px;
@@ -284,10 +302,10 @@ nav a:hover{
     background:
         linear-gradient(
             145deg,
-            #111111,
+            #191306,
             #0b0b0b
         );
-    border:1px solid rgba(201,162,77,.28);
+    border:1px solid rgba(201,162,77,.35);
     border-radius:24px;
     padding:0;
     margin:0 0 35px;
@@ -313,7 +331,7 @@ nav a:hover{
 }
 
 .pricing-toggle:hover{
-    background:rgba(201,162,77,.04);
+    background:rgba(201,162,77,.05);
 }
 
 .pricing-toggle-content{
@@ -359,7 +377,7 @@ nav a:hover{
 
 .pricing-content{
     padding:0 30px 30px;
-    border-top:1px solid #292929;
+    border-top:1px solid #40341d;
 }
 
 .pricing-heading{
@@ -378,7 +396,7 @@ nav a:hover{
     display:block;
     text-align:center;
     font-family:'Cinzel',serif;
-    color:#d8c8cd;
+    color:#d8c8b0;
     font-size:12px;
     font-weight:700;
     letter-spacing:.5px;
@@ -427,7 +445,7 @@ nav a:hover{
     background:
         linear-gradient(
             135deg,
-            #1b1115,
+            #241a08,
             #111
         );
     border:1px solid rgba(201,162,77,.38);
@@ -450,13 +468,13 @@ nav a:hover{
     font-family:'Cormorant Garamond',serif;
     font-size:25px;
     font-weight:700;
-    color:#f2e8ec;
+    color:#f2e8d5;
     margin-bottom:5px;
 }
 
 .selected-price-label{
     font-family:'Cinzel',serif;
-    color:#aa9b9f;
+    color:#aa9b8a;
     font-size:10px;
     font-weight:700;
     letter-spacing:.6px;
@@ -613,7 +631,7 @@ textarea{
     background:
         linear-gradient(
             135deg,
-            #1c1116,
+            #241a08,
             #101010
         );
     box-shadow:0 8px 25px rgba(201,162,77,.10);
@@ -661,7 +679,7 @@ textarea{
 .location-selection-note{
     margin-top:15px;
     padding:12px 15px;
-    border:1px solid #30282c;
+    border:1px solid #40351e;
     border-radius:11px;
     background:#0b0b0b;
     color:#999;
@@ -681,17 +699,22 @@ textarea{
     display:none;
     margin-top:25px;
     padding-top:25px;
-    border-top:1px dashed #49353d;
+    border-top:1px dashed #5b4824;
 }
 
 .home-service-note{
-    background:#1b1115;
+    background:
+        linear-gradient(
+            145deg,
+            #2d210b,
+            #171107
+        );
     border-left:4px solid var(--gold);
     border-radius:10px;
     padding:16px;
     margin-bottom:22px;
     font-size:13px;
-    color:#cfc5c9;
+    color:#d2c8b6;
 }
 
 .home-service-note strong{
@@ -699,57 +722,12 @@ textarea{
 }
 
 /* =========================
-   ADDRESS
+   MANUAL ADDRESS
 ========================= */
 
-.address-autocomplete{
-    position:relative;
-}
-
-.address-loading{
-    display:none;
-    position:absolute;
-    right:14px;
-    top:43px;
-    font-size:11px;
-    color:var(--gold-light);
-}
-
-.address-suggestions{
-    display:none;
-    position:absolute;
-    left:0;
-    right:0;
-    top:100%;
-    z-index:500;
-    margin-top:5px;
-    background:#111;
-    border:1px solid #40363b;
-    border-radius:12px;
-    box-shadow:0 12px 30px rgba(0,0,0,.65);
-    overflow:hidden;
-}
-
-.address-suggestion{
-    padding:12px 14px;
-    cursor:pointer;
-    font-size:13px;
-    color:#ddd;
-    border-bottom:1px solid #292529;
-}
-
-.address-suggestion:last-child{
-    border-bottom:none;
-}
-
-.address-suggestion:hover{
-    background:#1b1115;
-    color:#fff;
-}
-
 .address-note{
-    background:#151012;
-    border:1px solid #34282d;
+    background:#15120c;
+    border:1px solid #44371f;
     border-radius:10px;
     padding:10px 12px;
     margin-top:8px;
@@ -771,7 +749,7 @@ textarea{
 
 .payment-range{
     display:inline-block;
-    background:#1b1115;
+    background:#241a08;
     color:var(--gold-light);
     border:1px solid rgba(201,162,77,.45);
     padding:8px 13px;
@@ -868,7 +846,7 @@ textarea{
     background:
         linear-gradient(
             135deg,
-            #1b1115,
+            #241a08,
             #101010
         );
     border:1px solid rgba(201,162,77,.35);
@@ -927,7 +905,7 @@ textarea{
 
 .receipt-box{
     background:#0d0d0d;
-    border:1px dashed #6b4a58;
+    border:1px dashed #6b542a;
     border-radius:15px;
     padding:18px;
 }
@@ -1031,262 +1009,6 @@ input[type="file"]::file-selector-button{
     background:#1d0e14;
     border:1px solid #8e3c57;
     color:#ff9fba;
-}
-
-/* =========================
-   BOOKING CONFIRMATION
-========================= */
-
-.booking-confirmation-overlay{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:5000;
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(10px);
-    padding:20px;
-    overflow-y:auto;
-}
-
-.booking-confirmation-overlay.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.booking-confirmation-card{
-    width:100%;
-    max-width:650px;
-    background:
-        linear-gradient(
-            145deg,
-            #181012,
-            #090909
-        );
-    border:1px solid rgba(201,162,77,.55);
-    border-radius:24px;
-    padding:30px;
-    box-shadow:0 25px 70px rgba(0,0,0,.75);
-    animation:confirmationReveal .3s ease;
-}
-
-@keyframes confirmationReveal{
-    from{
-        opacity:0;
-        transform:translateY(20px) scale(.98);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-.confirmation-icon{
-    width:68px;
-    height:68px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    border:1px solid var(--gold);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:31px;
-    background:#120e10;
-}
-
-.confirmation-title{
-    text-align:center;
-    font-family:'Great Vibes',cursive;
-    font-size:48px;
-    font-weight:400;
-    color:var(--gold-light);
-    line-height:1.1;
-}
-
-.confirmation-subtitle{
-    text-align:center;
-    color:#aaa;
-    font-size:13px;
-    margin:10px auto 22px;
-    max-width:500px;
-}
-
-.booking-reference{
-    background:#0a0a0a;
-    border:1px solid rgba(201,162,77,.35);
-    border-radius:15px;
-    padding:15px;
-    text-align:center;
-    margin-bottom:22px;
-}
-
-.booking-reference-label{
-    display:block;
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    letter-spacing:1px;
-    color:#988b90;
-    margin-bottom:5px;
-}
-
-.booking-reference-value{
-    display:block;
-    font-family:'Cinzel',serif;
-    font-size:20px;
-    font-weight:700;
-    color:var(--gold-light);
-    letter-spacing:1px;
-}
-
-.confirmation-summary{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-    margin-bottom:25px;
-}
-
-.confirmation-summary-item{
-    background:#0d0d0d;
-    border:1px solid #2c2729;
-    border-radius:13px;
-    padding:13px;
-}
-
-.confirmation-summary-label{
-    display:block;
-    font-family:'Cinzel',serif;
-    font-size:9px;
-    letter-spacing:.6px;
-    color:#8e8588;
-    margin-bottom:4px;
-}
-
-.confirmation-summary-value{
-    display:block;
-    color:#eee;
-    font-size:12px;
-    font-weight:600;
-    word-break:break-word;
-}
-
-.confirmation-status-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:26px;
-    color:var(--gold-light);
-    margin-bottom:14px;
-}
-
-.booking-status{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin-bottom:22px;
-}
-
-.booking-status-step{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:12px 14px;
-    border:1px solid #292629;
-    border-radius:12px;
-    background:#0b0b0b;
-}
-
-.booking-status-dot{
-    width:12px;
-    height:12px;
-    min-width:12px;
-    border-radius:50%;
-    border:1px solid #555;
-    background:#171717;
-}
-
-.booking-status-step.active{
-    border-color:rgba(201,162,77,.5);
-    background:#171114;
-}
-
-.booking-status-step.active .booking-status-dot{
-    background:var(--gold);
-    border-color:var(--gold-light);
-    box-shadow:0 0 12px rgba(201,162,77,.35);
-}
-
-.booking-status-step.completed .booking-status-dot{
-    background:#6ca879;
-    border-color:#8fd39d;
-}
-
-.booking-status-text strong{
-    display:block;
-    color:#eee;
-    font-size:12px;
-}
-
-.booking-status-text span{
-    display:block;
-    color:#777;
-    font-size:10px;
-    margin-top:2px;
-}
-
-.confirmation-notice{
-    background:#1b1115;
-    border-left:4px solid var(--gold);
-    border-radius:10px;
-    padding:15px;
-    color:#cfc5c9;
-    font-size:12px;
-    line-height:1.7;
-    margin-bottom:20px;
-}
-
-.confirmation-notice strong{
-    color:var(--gold-light);
-}
-
-.confirmation-actions{
-    display:flex;
-    gap:12px;
-}
-
-.confirmation-whatsapp{
-    flex:1;
-    border:1px solid #4b8c5a;
-    border-radius:13px;
-    padding:15px;
-    background:#18351f;
-    color:#b9edc5;
-    font-family:'Cinzel',serif;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.5px;
-    cursor:pointer;
-    transition:.25s;
-}
-
-.confirmation-whatsapp:hover{
-    transform:translateY(-2px);
-    background:#20482a;
-}
-
-.confirmation-close{
-    border:1px solid #40383b;
-    border-radius:13px;
-    padding:15px 20px;
-    background:#111;
-    color:#aaa;
-    font-family:'Cinzel',serif;
-    font-size:12px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
-}
-
-.confirmation-close:hover{
-    color:#fff;
-    border-color:#666;
 }
 
 /* =========================
@@ -1427,6 +1149,7 @@ footer p{
        Keep all form controls at 16px on mobile.
        This prevents the unwanted zoom-in / zoom-out behavior.
     */
+
     input,
     select,
     textarea{
@@ -1490,32 +1213,6 @@ footer p{
 
     .notice li{
         font-size:12px;
-    }
-
-    .booking-confirmation-overlay{
-        padding:12px;
-    }
-
-    .booking-confirmation-card{
-        padding:22px 17px;
-        border-radius:20px;
-    }
-
-    .confirmation-title{
-        font-size:42px;
-    }
-
-    .confirmation-summary{
-        grid-template-columns:1fr;
-    }
-
-    .confirmation-actions{
-        flex-direction:column;
-    }
-
-    .confirmation-whatsapp,
-    .confirmation-close{
-        width:100%;
     }
 
 }
@@ -1598,10 +1295,10 @@ Let's Create Something Beautiful
 </h2>
 
 <p
-data-en="Please complete the form below with as much detail as possible. Your appointment is not confirmed until we review your request and verify your payment."
-data-es="Completa el formulario a continuación con todos los detalles posibles. Tu cita no queda confirmada hasta que revisemos tu solicitud y verifiquemos tu pago.">
+data-en="Please complete the form below with as much detail as possible. After you submit your request, WhatsApp will open so you can send your appointment details directly to us."
+data-es="Completa el formulario a continuación con todos los detalles posibles. Después de enviar tu solicitud, WhatsApp se abrirá para que puedas enviarnos directamente los detalles de tu cita.">
 
-Please complete the form below with as much detail as possible. Your appointment is not confirmed until we review your request and verify your payment.
+Please complete the form below with as much detail as possible. After you submit your request, WhatsApp will open so you can send your appointment details directly to us.
 
 </p>
 
@@ -1654,10 +1351,10 @@ You only pay the $100–$200 booking payment when submitting the request.
 </li>
 
 <li
-data-en="After reviewing your request, the studio will contact you for more details and give you the actual tattoo price."
-data-es="Después de revisar tu solicitud, el estudio se comunicará contigo para obtener más detalles y darte el precio real del tatuaje.">
+data-en="We will use WhatsApp to communicate with you about any additional details and the final tattoo price."
+data-es="Usaremos WhatsApp para comunicarnos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
 
-After reviewing your request, the studio will contact you for more details and give you the actual tattoo price.
+We will use WhatsApp to communicate with you about any additional details and the final tattoo price.
 
 </li>
 
@@ -2058,10 +1755,10 @@ Have our tattoo service come directly to your home. Additional home-service cons
 
 <div
 class="location-selection-note"
-data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> We'll review your address and contact you regarding availability."
-data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Revisaremos tu dirección y nos comunicaremos contigo sobre la disponibilidad.">
+data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can discuss availability with you on WhatsApp."
+data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Introduce tu dirección manualmente para que podamos hablar contigo sobre la disponibilidad por WhatsApp.">
 
-<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> We'll review your address and contact you regarding availability.
+<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can discuss availability with you on WhatsApp.
 
 </div>
 
@@ -2078,10 +1775,10 @@ HOME SERVICE
 </strong>
 
 <p
-data-en="Type your address manually or choose an address from the suggestions. Choosing a suggestion is optional."
-data-es="Escribe tu dirección manualmente o elige una dirección de las sugerencias. Elegir una sugerencia es opcional.">
+data-en="Please enter your complete home address manually. This helps us know where you would like the tattoo service."
+data-es="Introduce manualmente la dirección completa de tu domicilio. Esto nos ayuda a saber dónde deseas recibir el servicio de tatuaje.">
 
-Type your address manually or choose an address from the suggestions. Choosing a suggestion is optional.
+Please enter your complete home address manually. This helps us know where you would like the tattoo service.
 
 </p>
 
@@ -2100,34 +1797,17 @@ Home Address *
 
 </label>
 
-<div class="address-autocomplete">
-
 <input
 type="text"
 id="homeAddress"
 name="fi-text-home-address"
 autocomplete="street-address"
-placeholder="Start typing your street address..."
+placeholder="Enter your complete street address"
 disabled>
-
-<span
-id="addressLoading"
-class="address-loading">
-
-Searching...
-
-</span>
-
-<div
-id="addressSuggestions"
-class="address-suggestions">
-</div>
-
-</div>
 
 <div class="address-note">
 
-💡 You can type the complete address yourself. Suggestions are only there to make entering the address easier.
+💡 Please enter your complete address manually.
 
 </div>
 
@@ -2616,10 +2296,10 @@ value="I agree"
 required>
 
 <span
-data-en="I have read and understand the Important Booking Notice above. I understand that submitting this form does not automatically confirm my appointment and that my appointment will only be confirmed after Rebecca & Sheena Tattoos reviews my request and verifies my booking payment."
-data-es="He leído y entiendo el Aviso Importante de Reserva anterior. Entiendo que enviar este formulario no confirma automáticamente mi cita y que mi cita solo será confirmada después de que Rebecca & Sheena Tattoos revise mi solicitud y verifique mi pago de reserva.">
+data-en="I have read and understand the Important Booking Notice above. I understand that after submitting this form, WhatsApp will open so I can send my appointment request directly to Rebecca & Sheena Tattoos."
+data-es="He leído y entiendo el Aviso Importante de Reserva anterior. Entiendo que después de enviar este formulario, WhatsApp se abrirá para que pueda enviar mi solicitud de cita directamente a Rebecca & Sheena Tattoos.">
 
-I have read and understand the Important Booking Notice above. I understand that submitting this form does not automatically confirm my appointment and that my appointment will only be confirmed after Rebecca & Sheena Tattoos reviews my request and verifies my booking payment.
+I have read and understand the Important Booking Notice above. I understand that after submitting this form, WhatsApp will open so I can send my appointment request directly to Rebecca & Sheena Tattoos.
 
 </span>
 
@@ -2685,297 +2365,6 @@ Rebeccapalmer542@yahoo.com
 </div>
 
 </footer>
-
-<!-- =========================================================
-     BOOKING CONFIRMATION
-========================================================= -->
-
-<div
-id="bookingConfirmation"
-class="booking-confirmation-overlay">
-
-<div
-class="booking-confirmation-card">
-
-<div class="confirmation-icon">
-✓
-</div>
-
-<div
-class="confirmation-title"
-data-en="Request Ready"
-data-es="Solicitud Lista">
-
-Request Ready
-
-</div>
-
-<p
-class="confirmation-subtitle"
-data-en="Your appointment request has been prepared. Your appointment is not confirmed yet."
-data-es="Tu solicitud de cita ha sido preparada. Tu cita aún no está confirmada.">
-
-Your appointment request has been prepared. Your appointment is not confirmed yet.
-
-</p>
-
-<div class="booking-reference">
-
-<span
-class="booking-reference-label"
-data-en="BOOKING REFERENCE"
-data-es="REFERENCIA DE RESERVA">
-
-BOOKING REFERENCE
-
-</span>
-
-<span
-id="bookingReference"
-class="booking-reference-value">
-
-</span>
-
-</div>
-
-<div class="confirmation-summary">
-
-<div class="confirmation-summary-item">
-
-<span
-class="confirmation-summary-label"
-data-en="CUSTOMER"
-data-es="CLIENTE">
-
-CUSTOMER
-
-</span>
-
-<span
-id="confirmationCustomer"
-class="confirmation-summary-value">
-</span>
-
-</div>
-
-<div class="confirmation-summary-item">
-
-<span
-class="confirmation-summary-label"
-data-en="LOCATION"
-data-es="UBICACIÓN">
-
-LOCATION
-
-</span>
-
-<span
-id="confirmationLocation"
-class="confirmation-summary-value">
-</span>
-
-</div>
-
-<div class="confirmation-summary-item">
-
-<span
-class="confirmation-summary-label"
-data-en="DATE"
-data-es="FECHA">
-
-DATE
-
-</span>
-
-<span
-id="confirmationDate"
-class="confirmation-summary-value">
-</span>
-
-</div>
-
-<div class="confirmation-summary-item">
-
-<span
-class="confirmation-summary-label"
-data-en="PAYMENT"
-data-es="PAGO">
-
-PAYMENT
-
-</span>
-
-<span
-id="confirmationPayment"
-class="confirmation-summary-value">
-</span>
-
-</div>
-
-</div>
-
-<div
-class="confirmation-status-title"
-data-en="Booking Status"
-data-es="Estado de la Reserva">
-
-Booking Status
-
-</div>
-
-<div class="booking-status">
-
-<div class="booking-status-step completed">
-
-<div class="booking-status-dot"></div>
-
-<div class="booking-status-text">
-
-<strong
-data-en="Request Prepared"
-data-es="Solicitud Preparada">
-
-Request Prepared
-
-</strong>
-
-<span
-data-en="Your appointment information has been collected."
-data-es="La información de tu cita ha sido recopilada.">
-
-Your appointment information has been collected.
-
-</span>
-
-</div>
-
-</div>
-
-<div class="booking-status-step active">
-
-<div class="booking-status-dot"></div>
-
-<div class="booking-status-text">
-
-<strong
-data-en="Awaiting Studio Review"
-data-es="Esperando Revisión del Estudio">
-
-Awaiting Studio Review
-
-</strong>
-
-<span
-data-en="The studio must review your request and verify your payment."
-data-es="El estudio debe revisar tu solicitud y verificar tu pago.">
-
-The studio must review your request and verify your payment.
-
-</span>
-
-</div>
-
-</div>
-
-<div class="booking-status-step">
-
-<div class="booking-status-dot"></div>
-
-<div class="booking-status-text">
-
-<strong
-data-en="Payment Verified"
-data-es="Pago Verificado">
-
-Payment Verified
-
-</strong>
-
-<span
-data-en="This step happens after the studio verifies your payment."
-data-es="Este paso ocurre después de que el estudio verifique tu pago.">
-
-This step happens after the studio verifies your payment.
-
-</span>
-
-</div>
-
-</div>
-
-<div class="booking-status-step">
-
-<div class="booking-status-dot"></div>
-
-<div class="booking-status-text">
-
-<strong
-data-en="Appointment Confirmed"
-data-es="Cita Confirmada">
-
-Appointment Confirmed
-
-</strong>
-
-<span
-data-en="Your appointment is confirmed only after studio approval."
-data-es="Tu cita se confirma únicamente después de la aprobación del estudio.">
-
-Your appointment is confirmed only after studio approval.
-
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="confirmation-notice">
-
-<strong
-data-en="One more important step:"
-data-es="Un paso más importante:">
-
-One more important step:
-
-</strong>
-
-<span
-data-en=" WhatsApp will open after you continue. Send your payment receipt in that WhatsApp chat. The studio will review your request, verify the payment, contact you for any additional details, and provide the final tattoo price."
-data-es=" WhatsApp se abrirá después de continuar. Envía tu recibo de pago en ese chat de WhatsApp. El estudio revisará tu solicitud, verificará el pago, se comunicará contigo si necesita más detalles y proporcionará el precio final del tatuaje.">
-
- WhatsApp will open after you continue. Send your payment receipt in that WhatsApp chat. The studio will review your request, verify the payment, contact you for any additional details, and provide the final tattoo price.
-
-</span>
-
-</div>
-
-<div class="confirmation-actions">
-
-<button
-type="button"
-id="confirmationWhatsApp"
-class="confirmation-whatsapp">
-
-📱 CONTINUE TO WHATSAPP
-
-</button>
-
-<button
-type="button"
-id="confirmationClose"
-class="confirmation-close">
-
-EDIT
-
-</button>
-
-</div>
-
-</div>
-
-</div>
 
 <script>
 
@@ -3198,20 +2587,6 @@ const homeZip =
         "homeZip"
     );
 
-function hideAddressSuggestions(){
-
-    const box =
-        document.getElementById(
-            "addressSuggestions"
-        );
-
-    box.innerHTML = "";
-
-    box.style.display =
-        "none";
-
-}
-
 function updateLocation(){
 
     const isHome =
@@ -3245,12 +2620,6 @@ function updateLocation(){
 
     homeZip.disabled =
         !isHome;
-
-    if(!isHome){
-
-        hideAddressSuggestions();
-
-    }
 
 }
 
@@ -3344,220 +2713,6 @@ function formatPhone(){
 phoneInput.addEventListener(
     "blur",
     formatPhone
-);
-
-/* =========================================================
-   ADDRESS AUTOCOMPLETE
-========================================================= */
-
-const addressSuggestions =
-    document.getElementById(
-        "addressSuggestions"
-    );
-
-const addressLoading =
-    document.getElementById(
-        "addressLoading"
-    );
-
-let addressTimer = null;
-
-let lastAddressSearch = "";
-
-async function searchAddress(){
-
-    const query =
-        homeAddress.value.trim();
-
-    if(
-        query.length < 3 ||
-        !homeRadio.checked
-    ){
-
-        hideAddressSuggestions();
-
-        return;
-
-    }
-
-    if(
-        query === lastAddressSearch
-    ){
-
-        return;
-
-    }
-
-    lastAddressSearch =
-        query;
-
-    addressLoading.style.display =
-        "block";
-
-    try{
-
-        const url =
-            "https://nominatim.openstreetmap.org/search?" +
-            new URLSearchParams({
-
-                q:query,
-
-                format:"json",
-
-                addressdetails:"1",
-
-                limit:"5",
-
-                countrycodes:"us"
-
-            });
-
-        const response =
-            await fetch(
-                url,
-                {
-                    headers:{
-                        "Accept":
-                            "application/json"
-                    }
-                }
-            );
-
-        if(!response.ok){
-
-            throw new Error(
-                "Address search failed"
-            );
-
-        }
-
-        const results =
-            await response.json();
-
-        addressSuggestions.innerHTML =
-            "";
-
-        if(!results.length){
-
-            hideAddressSuggestions();
-
-            return;
-
-        }
-
-        results.forEach(
-            function(result){
-
-                const item =
-                    document.createElement(
-                        "div"
-                    );
-
-                item.className =
-                    "address-suggestion";
-
-                item.textContent =
-                    result.display_name;
-
-                item.addEventListener(
-                    "click",
-                    function(){
-
-                        selectAddress(
-                            result
-                        );
-
-                    }
-                );
-
-                addressSuggestions.appendChild(
-                    item
-                );
-
-            }
-        );
-
-        addressSuggestions.style.display =
-            "block";
-
-    }catch(error){
-
-        console.log(
-            "Address suggestions unavailable:",
-            error
-        );
-
-        hideAddressSuggestions();
-
-    }finally{
-
-        addressLoading.style.display =
-            "none";
-
-    }
-
-}
-
-function selectAddress(result){
-
-    const address =
-        result.address || {};
-
-    homeAddress.value =
-        result.display_name || "";
-
-    homeCity.value =
-        address.city ||
-        address.town ||
-        address.village ||
-        address.municipality ||
-        "";
-
-    homeState.value =
-        address.state || "";
-
-    homeZip.value =
-        address.postcode || "";
-
-    hideAddressSuggestions();
-
-}
-
-homeAddress.addEventListener(
-    "input",
-    function(){
-
-        lastAddressSearch =
-            "";
-
-        clearTimeout(
-            addressTimer
-        );
-
-        addressTimer =
-            setTimeout(
-                searchAddress,
-                600
-            );
-
-    }
-);
-
-document.addEventListener(
-    "click",
-    function(event){
-
-        if(
-            !event.target.closest(
-                ".address-autocomplete"
-            )
-        ){
-
-            hideAddressSuggestions();
-
-        }
-
-    }
 );
 
 /* =========================================================
@@ -3773,220 +2928,6 @@ receipt.addEventListener(
                 : "Your payment receipt is larger than 10MB. Please choose a smaller file."
 
             );
-
-        }
-
-    }
-);
-
-/* =========================================================
-   BOOKING CONFIRMATION ELEMENTS
-========================================================= */
-
-const bookingConfirmation =
-    document.getElementById(
-        "bookingConfirmation"
-    );
-
-const bookingReference =
-    document.getElementById(
-        "bookingReference"
-    );
-
-const confirmationCustomer =
-    document.getElementById(
-        "confirmationCustomer"
-    );
-
-const confirmationLocation =
-    document.getElementById(
-        "confirmationLocation"
-    );
-
-const confirmationDate =
-    document.getElementById(
-        "confirmationDate"
-    );
-
-const confirmationPayment =
-    document.getElementById(
-        "confirmationPayment"
-    );
-
-const confirmationWhatsApp =
-    document.getElementById(
-        "confirmationWhatsApp"
-    );
-
-const confirmationClose =
-    document.getElementById(
-        "confirmationClose"
-    );
-
-let pendingWhatsAppURL = "";
-
-/* =========================================================
-   BOOKING REFERENCE
-========================================================= */
-
-function generateBookingReference(){
-
-    const now =
-        new Date();
-
-    const year =
-        String(
-            now.getFullYear()
-        ).slice(-2);
-
-    const month =
-        String(
-            now.getMonth()+1
-        ).padStart(2,"0");
-
-    const day =
-        String(
-            now.getDate()
-        ).padStart(2,"0");
-
-    const random =
-        Math.floor(
-            1000 +
-            Math.random() * 9000
-        );
-
-    return "RST-" +
-        year +
-        month +
-        day +
-        "-" +
-        random;
-
-}
-
-/* =========================================================
-   SHOW BOOKING CONFIRMATION
-========================================================= */
-
-function showBookingConfirmation(
-    reference,
-    customer,
-    location,
-    preferredDate,
-    payment
-){
-
-    bookingReference.textContent =
-        reference;
-
-    confirmationCustomer.textContent =
-        customer;
-
-    confirmationLocation.textContent =
-        location;
-
-    confirmationDate.textContent =
-        preferredDate;
-
-    confirmationPayment.textContent =
-        "$" + payment;
-
-    bookingConfirmation.classList.add(
-        "show"
-    );
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-/* =========================================================
-   CLOSE CONFIRMATION
-========================================================= */
-
-confirmationClose.addEventListener(
-    "click",
-    function(){
-
-        bookingConfirmation.classList.remove(
-            "show"
-        );
-
-        document.body.style.overflow =
-            "";
-
-        submitButton.disabled =
-            false;
-
-        submitButton.textContent =
-            currentLanguage === "es"
-
-            ? "ENVIAR SOLICITUD DE CITA"
-
-            : "SUBMIT APPOINTMENT REQUEST";
-
-    }
-);
-
-/* =========================================================
-   CONTINUE TO WHATSAPP
-========================================================= */
-
-confirmationWhatsApp.addEventListener(
-    "click",
-    function(){
-
-        if(!pendingWhatsAppURL){
-
-            return;
-
-        }
-
-        confirmationWhatsApp.disabled =
-            true;
-
-        confirmationWhatsApp.textContent =
-            currentLanguage === "es"
-
-            ? "ABRIENDO WHATSAPP..."
-
-            : "OPENING WHATSAPP...";
-
-        window.location.href =
-            pendingWhatsAppURL;
-
-    }
-);
-
-/* =========================================================
-   CLOSE MODAL BY BACKGROUND CLICK
-========================================================= */
-
-bookingConfirmation.addEventListener(
-    "click",
-    function(event){
-
-        if(
-            event.target ===
-            bookingConfirmation
-        ){
-
-            bookingConfirmation.classList.remove(
-                "show"
-            );
-
-            document.body.style.overflow =
-                "";
-
-            submitButton.disabled =
-                false;
-
-            submitButton.textContent =
-                currentLanguage === "es"
-
-                ? "ENVIAR SOLICITUD DE CITA"
-
-                : "SUBMIT APPOINTMENT REQUEST";
 
         }
 
@@ -4254,24 +3195,11 @@ form.addEventListener(
 
         }
 
-        /*
-           Generate a unique customer-side booking reference.
-           This reference is included in WhatsApp so the studio
-           can also see it in the request.
-        */
-
-        const reference =
-            generateBookingReference();
-
         const whatsappMessage =
 
 `🖤 NEW TATTOO APPOINTMENT REQUEST
 
 ━━━━━━━━━━━━━━━━━━
-
-BOOKING REFERENCE
-
-${reference}
 
 CUSTOMER INFORMATION
 
@@ -4281,11 +3209,9 @@ Email: ${email}
 
 Phone: ${customerPhone}
 
-
 APPOINTMENT LOCATION
 
 ${appointmentLocation}${homeServiceDetails}
-
 
 APPOINTMENT DETAILS
 
@@ -4302,7 +3228,6 @@ Tattoo Price Category: ${tattooPriceDetails}
 Tattoo Description:
 ${tattooDescription}
 
-
 BOOKING PAYMENT
 
 Amount Paid: $${bookingPayment}
@@ -4313,25 +3238,23 @@ Payment Account: ${paymentInfo.account}
 
 Payment Name: ${paymentInfo.name}${bankDetails}
 
-
 PAYMENT RECEIPT
 
 Receipt File: ${receiptName}
 
 ⚠️ I will send the payment receipt file separately in this WhatsApp chat.
 
+BOOKING NOTE
 
-BOOKING AGREEMENT
+I have read and understand the Important Booking Notice.
 
-I have read and understand the Important Booking Notice. I understand that submitting this request does not automatically confirm my appointment and that the appointment must be reviewed and approved by Rebecca & Sheena Tattoos.
+I am sending my appointment request directly through WhatsApp so Rebecca & Sheena Tattoos can communicate with me about my appointment details and final tattoo price.
 
 ━━━━━━━━━━━━━━━━━━
 
-Please review my appointment request and contact me regarding the next steps.
+Please review my appointment request and contact me here on WhatsApp regarding the next steps.`;
 
-Booking Reference: ${reference}`;
-
-        pendingWhatsAppURL =
+        const whatsappURL =
             "https://wa.me/" +
             WHATSAPP_NUMBER +
             "?text=" +
@@ -4339,63 +3262,25 @@ Booking Reference: ${reference}`;
                 whatsappMessage
             );
 
-        /*
-           Save the latest booking reference locally
-           on the customer's device. This does not claim
-           to be a live studio database.
-        */
-
-        try{
-
-            localStorage.setItem(
-                "latestBookingReference",
-                reference
-            );
-
-            localStorage.setItem(
-                "latestBookingStatus",
-                "Awaiting Studio Review"
-            );
-
-        }catch(error){
-
-            console.log(
-                "Local booking status unavailable:",
-                error
-            );
-
-        }
-
         submitButton.disabled =
             true;
 
         submitButton.textContent =
             currentLanguage === "es"
 
-            ? "SOLICITUD PREPARADA"
+            ? "ABRIENDO WHATSAPP..."
 
-            : "REQUEST READY";
+            : "OPENING WHATSAPP...";
 
-        formStatus.textContent =
-            currentLanguage === "es"
+        /*
+           Open WhatsApp immediately.
+           There is no confirmation screen,
+           booking status screen, or pending
+           payment workflow.
+        */
 
-            ? "✓ Tu solicitud está lista. Revisa la confirmación antes de continuar."
-
-            : "✓ Your request is ready. Review the confirmation before continuing.";
-
-        formStatus.className =
-            "success";
-
-        formStatus.style.display =
-            "block";
-
-        showBookingConfirmation(
-            reference,
-            fullName,
-            appointmentLocation,
-            preferredDate,
-            bookingPayment
-        );
+        window.location.href =
+            whatsappURL;
 
     }
 );
