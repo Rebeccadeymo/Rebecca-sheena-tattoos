@@ -589,35 +589,6 @@ textarea{
 }
 
 /* =========================
-   DESIGN UPLOAD
-========================= */
-
-.design-upload-box{
-    background:#0d0d0d;
-    border:1px dashed #6b542a;
-    border-radius:15px;
-    padding:20px;
-}
-
-.design-upload-box input[type="file"]{
-    background:#080808;
-}
-
-.design-upload-title{
-    font-family:'Cormorant Garamond',serif;
-    color:var(--gold-light);
-    font-size:22px;
-    margin-bottom:6px;
-}
-
-.design-upload-description{
-    color:#aaa;
-    font-size:12px;
-    line-height:1.6;
-    margin-bottom:14px;
-}
-
-/* =========================
    LOCATION
 ========================= */
 
@@ -1323,72 +1294,6 @@ Please complete the form below with as much detail as possible. After you submit
 
 </div>
 
-<div class="notice">
-
-<div
-class="notice-title"
-data-en="IMPORTANT BOOKING NOTICE"
-data-es="AVISO IMPORTANTE DE RESERVA">
-
-IMPORTANT BOOKING NOTICE
-
-</div>
-
-<p
-class="notice-read"
-data-en="Please read this notice before going ahead with your appointment request."
-data-es="Lee este aviso antes de continuar con tu solicitud de cita.">
-
-Please read this notice before going ahead with your appointment request.
-
-</p>
-
-<ul>
-
-<li
-data-en="You are not paying for the tattoo today."
-data-es="No estás pagando el tatuaje hoy.">
-
-You are not paying for the tattoo today.
-
-</li>
-
-<li
-data-en="The prices shown are starting prices only."
-data-es="Los precios mostrados son solo precios iniciales.">
-
-The prices shown are starting prices only.
-
-</li>
-
-<li
-data-en="You only pay the $100–$200 booking payment when submitting the request."
-data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
-
-You only pay the $100–$200 booking payment when submitting the request.
-
-</li>
-
-<li
-data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
-data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
-
-We will review your appointment request and contact you about any additional details and the final tattoo price.
-
-</li>
-
-<li
-data-en="Your booking payment is applied to the final tattoo price."
-data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
-
-Your booking payment is applied to the final tattoo price.
-
-</li>
-
-</ul>
-
-</div>
-
 <details class="pricing-section">
 
 <summary class="pricing-toggle">
@@ -2026,51 +1931,31 @@ placeholder="Describe your tattoo idea, style, colors, details, reference ideas,
 
 </div>
 
-<!-- NEW: OPTIONAL TATTOO DESIGN / REFERENCE UPLOAD -->
-
 <div class="field full">
 
 <label
 for="tattooDesign"
-data-en="Tattoo Design / Reference Image"
-data-es="Diseño / Imagen de Referencia del Tatuaje">
+data-en="Tattoo Design / Reference Image (Optional)"
+data-es="Imagen de Diseño / Referencia del Tatuaje (Opcional)">
 
-Tattoo Design / Reference Image
+Tattoo Design / Reference Image (Optional)
 
 </label>
 
-<div class="design-upload-box">
-
-<div
-class="design-upload-title"
-data-en="Upload Your Design or Quote"
-data-es="Carga Tu Diseño o Cotización">
-
-Upload Your Design or Quote
-
-</div>
-
-<p
-class="design-upload-description"
-data-en="If you already have a picture, screenshot, inspiration image, custom design, or tattoo quote you would like us to see, you can upload it here. This is optional."
-data-es="Si ya tienes una foto, captura de pantalla, imagen de inspiración, diseño personalizado o cotización del tatuaje que deseas que veamos, puedes cargarla aquí. Esto es opcional.">
-
-If you already have a picture, screenshot, inspiration image, custom design, or tattoo quote you would like us to see, you can upload it here. This is optional.
-
-</p>
+<div class="receipt-box">
 
 <input
 type="file"
 id="tattooDesign"
 name="tattoo_design_reference"
-accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif,.pdf">
+accept="image/*,.pdf">
 
 <span
 class="help"
-data-en="Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB."
-data-es="Opcional. JPG, JPEG, PNG, WEBP, GIF o PDF. Tamaño máximo: 10 MB.">
+data-en="Upload a picture, drawing, screenshot, quote, or PDF of the custom tattoo design you are considering. Maximum file size: 10MB."
+data-es="Carga una imagen, dibujo, captura de pantalla, cotización o PDF del diseño de tatuaje personalizado que estás considerando. Tamaño máximo: 10 MB.">
 
-Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB.
+Upload a picture, drawing, screenshot, quote, or PDF of the custom tattoo design you are considering. Maximum file size: 10MB.
 
 </span>
 
@@ -2091,6 +1976,72 @@ data-es="Pago de Reserva">
 Booking Payment
 
 </h3>
+
+<div class="notice">
+
+<div
+class="notice-title"
+data-en="IMPORTANT BOOKING NOTICE"
+data-es="AVISO IMPORTANTE DE RESERVA">
+
+IMPORTANT BOOKING NOTICE
+
+</div>
+
+<p
+class="notice-read"
+data-en="Please read this notice before going ahead with your appointment request."
+data-es="Lee este aviso antes de continuar con tu solicitud de cita.">
+
+Please read this notice before going ahead with your appointment request.
+
+</p>
+
+<ul>
+
+<li
+data-en="You are not paying for the tattoo today."
+data-es="No estás pagando el tatuaje hoy.">
+
+You are not paying for the tattoo today.
+
+</li>
+
+<li
+data-en="The prices shown are starting prices only."
+data-es="Los precios mostrados son solo precios iniciales.">
+
+The prices shown are starting prices only.
+
+</li>
+
+<li
+data-en="You only pay the $100–$200 booking payment when submitting the request."
+data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
+
+You only pay the $100–$200 booking payment when submitting the request.
+
+</li>
+
+<li
+data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
+data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
+
+We will review your appointment request and contact you about any additional details and the final tattoo price.
+
+</li>
+
+<li
+data-en="Your booking payment is applied to the final tattoo price."
+data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
+
+Your booking payment is applied to the final tattoo price.
+
+</li>
+
+</ul>
+
+</div>
 
 <div class="payment-intro">
 
@@ -2968,7 +2919,7 @@ paymentMethod.addEventListener(
 );
 
 /* =========================================================
-   PAYMENT RECEIPT SIZE
+   RECEIPT SIZE
 ========================================================= */
 
 const receipt =
@@ -3018,7 +2969,7 @@ receipt.addEventListener(
 );
 
 /* =========================================================
-   TATTOO DESIGN / REFERENCE IMAGE SIZE
+   TATTOO DESIGN / REFERENCE FILE SIZE
 ========================================================= */
 
 const tattooDesign =
@@ -3056,9 +3007,9 @@ tattooDesign.addEventListener(
 
                 currentLanguage === "es"
 
-                ? "La imagen o archivo del diseño supera los 10 MB. Elige un archivo más pequeño."
+                ? "La imagen o PDF del diseño supera los 10 MB. Elige un archivo más pequeño."
 
-                : "Your tattoo design/reference file is larger than 10MB. Please choose a smaller file."
+                : "Your tattoo design image or PDF is larger than 10MB. Please choose a smaller file."
 
             );
 
