@@ -589,6 +589,35 @@ textarea{
 }
 
 /* =========================
+   DESIGN UPLOAD
+========================= */
+
+.design-upload-box{
+    background:#0d0d0d;
+    border:1px dashed #6b542a;
+    border-radius:15px;
+    padding:20px;
+}
+
+.design-upload-box input[type="file"]{
+    background:#080808;
+}
+
+.design-upload-title{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--gold-light);
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.design-upload-description{
+    color:#aaa;
+    font-size:12px;
+    line-height:1.6;
+    margin-bottom:14px;
+}
+
+/* =========================
    LOCATION
 ========================= */
 
@@ -1997,6 +2026,58 @@ placeholder="Describe your tattoo idea, style, colors, details, reference ideas,
 
 </div>
 
+<!-- NEW: OPTIONAL TATTOO DESIGN / REFERENCE UPLOAD -->
+
+<div class="field full">
+
+<label
+for="tattooDesign"
+data-en="Tattoo Design / Reference Image"
+data-es="Diseño / Imagen de Referencia del Tatuaje">
+
+Tattoo Design / Reference Image
+
+</label>
+
+<div class="design-upload-box">
+
+<div
+class="design-upload-title"
+data-en="Upload Your Design or Quote"
+data-es="Carga Tu Diseño o Cotización">
+
+Upload Your Design or Quote
+
+</div>
+
+<p
+class="design-upload-description"
+data-en="If you already have a picture, screenshot, inspiration image, custom design, or tattoo quote you would like us to see, you can upload it here. This is optional."
+data-es="Si ya tienes una foto, captura de pantalla, imagen de inspiración, diseño personalizado o cotización del tatuaje que deseas que veamos, puedes cargarla aquí. Esto es opcional.">
+
+If you already have a picture, screenshot, inspiration image, custom design, or tattoo quote you would like us to see, you can upload it here. This is optional.
+
+</p>
+
+<input
+type="file"
+id="tattooDesign"
+name="tattoo_design_reference"
+accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif,.pdf">
+
+<span
+class="help"
+data-en="Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB."
+data-es="Opcional. JPG, JPEG, PNG, WEBP, GIF o PDF. Tamaño máximo: 10 MB.">
+
+Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB.
+
+</span>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -2887,7 +2968,7 @@ paymentMethod.addEventListener(
 );
 
 /* =========================================================
-   RECEIPT SIZE
+   PAYMENT RECEIPT SIZE
 ========================================================= */
 
 const receipt =
@@ -2928,6 +3009,56 @@ receipt.addEventListener(
                 ? "Tu recibo de pago supera los 10 MB. Elige un archivo más pequeño."
 
                 : "Your payment receipt is larger than 10MB. Please choose a smaller file."
+
+            );
+
+        }
+
+    }
+);
+
+/* =========================================================
+   TATTOO DESIGN / REFERENCE IMAGE SIZE
+========================================================= */
+
+const tattooDesign =
+    document.getElementById(
+        "tattooDesign"
+    );
+
+tattooDesign.addEventListener(
+    "change",
+    function(){
+
+        if(
+            !tattooDesign.files ||
+            !tattooDesign.files.length
+        ){
+
+            return;
+
+        }
+
+        const file =
+            tattooDesign.files[0];
+
+        const maxSize =
+            10 * 1024 * 1024;
+
+        if(
+            file.size > maxSize
+        ){
+
+            tattooDesign.value =
+                "";
+
+            alert(
+
+                currentLanguage === "es"
+
+                ? "La imagen o archivo del diseño supera los 10 MB. Elige un archivo más pequeño."
+
+                : "Your tattoo design/reference file is larger than 10MB. Please choose a smaller file."
 
             );
 
