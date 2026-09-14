@@ -1140,16 +1140,6 @@ footer p{
         padding:21px 0 17px;
     }
 
-    /*
-       IMPORTANT MOBILE FIX
-
-       iPhone Safari automatically zooms into form controls
-       when their font size is below 16px.
-
-       Keep all form controls at 16px on mobile.
-       This prevents the unwanted zoom-in / zoom-out behavior.
-    */
-
     input,
     select,
     textarea{
@@ -1295,10 +1285,10 @@ Let's Create Something Beautiful
 </h2>
 
 <p
-data-en="Please complete the form below with as much detail as possible. After you submit your request, WhatsApp will open so you can send your appointment details directly to us."
-data-es="Completa el formulario a continuación con todos los detalles posibles. Después de enviar tu solicitud, WhatsApp se abrirá para que puedas enviarnos directamente los detalles de tu cita.">
+data-en="Please complete the form below with as much detail as possible. After you submit your request, your appointment information will be sent securely to our booking system for review."
+data-es="Completa el formulario a continuación con todos los detalles posibles. Después de enviar tu solicitud, la información de tu cita se enviará de forma segura a nuestro sistema de reservas para su revisión.">
 
-Please complete the form below with as much detail as possible. After you submit your request, WhatsApp will open so you can send your appointment details directly to us.
+Please complete the form below with as much detail as possible. After you submit your request, your appointment information will be sent securely to our booking system for review.
 
 </p>
 
@@ -1351,10 +1341,10 @@ You only pay the $100–$200 booking payment when submitting the request.
 </li>
 
 <li
-data-en="We will use WhatsApp to communicate with you about any additional details and the final tattoo price."
-data-es="Usaremos WhatsApp para comunicarnos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
+data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
+data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
 
-We will use WhatsApp to communicate with you about any additional details and the final tattoo price.
+We will review your appointment request and contact you about any additional details and the final tattoo price.
 
 </li>
 
@@ -1429,7 +1419,8 @@ SELECT TATTOO SIZE / TYPE
 <div class="price-selector">
 
 <select
-id="tattooPriceCategory">
+id="tattooPriceCategory"
+name="tattoo-price-category">
 
 <option
 value=""
@@ -1538,7 +1529,12 @@ class="selected-price-value">
 
 <form
 id="bookingForm"
-enctype="multipart/form-data">
+action="https://usebasin.com/f/29ed4ec70a66"
+method="POST"
+accept-charset="UTF-8"
+enctype="multipart/form-data"
+data-basin-form
+data-basin-success-action="render">
 
 <section class="form-section">
 
@@ -1575,7 +1571,7 @@ Full Name *
 <input
 type="text"
 id="name"
-name="fi-text-name"
+name="full_name"
 required
 autocomplete="name"
 placeholder="Your full name">
@@ -1596,7 +1592,7 @@ Email Address *
 <input
 type="email"
 id="email"
-name="fi-email-email"
+name="email"
 required
 autocomplete="email"
 placeholder="you@example.com">
@@ -1617,7 +1613,7 @@ Phone Number *
 <input
 type="tel"
 id="phone"
-name="fi-sender-phone"
+name="phone"
 required
 autocomplete="tel"
 inputmode="tel"
@@ -1665,7 +1661,7 @@ Choose where you would like your tattoo appointment.
 <input
 type="radio"
 id="studio"
-name="fi-radio-appointment-location"
+name="appointment_location"
 value="Studio Appointment"
 checked>
 
@@ -1720,7 +1716,7 @@ Honolulu, HI 96813
 <input
 type="radio"
 id="homeService"
-name="fi-radio-appointment-location"
+name="appointment_location"
 value="Home Service">
 
 <label
@@ -1755,10 +1751,10 @@ Have our tattoo service come directly to your home. Additional home-service cons
 
 <div
 class="location-selection-note"
-data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can discuss availability with you on WhatsApp."
-data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Introduce tu dirección manualmente para que podamos hablar contigo sobre la disponibilidad por WhatsApp.">
+data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can review availability with you."
+data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Introduce tu dirección manualmente para que podamos revisar la disponibilidad contigo.">
 
-<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can discuss availability with you on WhatsApp.
+<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can review availability with you.
 
 </div>
 
@@ -1800,7 +1796,7 @@ Home Address *
 <input
 type="text"
 id="homeAddress"
-name="fi-text-home-address"
+name="home_address"
 autocomplete="street-address"
 placeholder="Enter your complete street address"
 disabled>
@@ -1827,7 +1823,7 @@ City *
 <input
 type="text"
 id="homeCity"
-name="fi-text-home-city"
+name="home_city"
 autocomplete="address-level2"
 placeholder="City"
 disabled>
@@ -1848,7 +1844,7 @@ State *
 <input
 type="text"
 id="homeState"
-name="fi-text-home-state"
+name="home_state"
 autocomplete="address-level1"
 placeholder="State"
 disabled>
@@ -1869,7 +1865,7 @@ ZIP Code *
 <input
 type="text"
 id="homeZip"
-name="fi-text-home-zip"
+name="home_zip"
 autocomplete="postal-code"
 inputmode="numeric"
 placeholder="ZIP Code"
@@ -1918,7 +1914,7 @@ Preferred Date *
 <input
 type="date"
 id="date"
-name="fi-date-preferred-date"
+name="preferred_date"
 required>
 
 </div>
@@ -1937,7 +1933,7 @@ Preferred Time *
 <input
 type="time"
 id="time"
-name="fi-time-preferred-time"
+name="preferred_time"
 required>
 
 </div>
@@ -1956,7 +1952,7 @@ Tattoo Placement *
 <input
 type="text"
 id="placement"
-name="fi-text-tattoo-placement"
+name="tattoo_placement"
 required
 placeholder="Arm, leg, back, chest, etc.">
 
@@ -1976,7 +1972,7 @@ Approximate Size *
 <input
 type="text"
 id="size"
-name="fi-text-tattoo-size"
+name="tattoo_size"
 required
 placeholder="Example: 4 inches">
 
@@ -1995,7 +1991,7 @@ Tattoo Description *
 
 <textarea
 id="description"
-name="fi-text-tattoo-description"
+name="tattoo_description"
 required
 placeholder="Describe your tattoo idea, style, colors, details, reference ideas, etc."></textarea>
 
@@ -2051,7 +2047,7 @@ Payment Amount *
 <input
 type="number"
 id="paymentAmount"
-name="fi-number-payment-amount"
+name="payment_amount"
 required
 min="100"
 max="200"
@@ -2111,7 +2107,7 @@ Payment Method *
 
 <select
 id="paymentMethod"
-name="fi-select-payment-method"
+name="payment_method"
 required>
 
 <option
@@ -2265,7 +2261,7 @@ Payment Receipt *
 <input
 type="file"
 id="receipt"
-name="fi-file-payment-receipt"
+name="payment_receipt"
 accept="image/*,.pdf"
 required>
 
@@ -2291,15 +2287,15 @@ Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
 <input
 type="checkbox"
 id="agreement"
-name="fi-checkbox-agreement"
+name="booking_agreement"
 value="I agree"
 required>
 
 <span
-data-en="I have read and understand the Important Booking Notice above. I understand that after submitting this form, WhatsApp will open so I can send my appointment request directly to Rebecca & Sheena Tattoos."
-data-es="He leído y entiendo el Aviso Importante de Reserva anterior. Entiendo que después de enviar este formulario, WhatsApp se abrirá para que pueda enviar mi solicitud de cita directamente a Rebecca & Sheena Tattoos.">
+data-en="I have read and understand the Important Booking Notice above. I understand that my appointment request will be sent securely to Rebecca & Sheena Tattoos for review."
+data-es="He leído y entiendo el Aviso Importante de Reserva anterior. Entiendo que mi solicitud de cita se enviará de forma segura a Rebecca & Sheena Tattoos para su revisión.">
 
-I have read and understand the Important Booking Notice above. I understand that after submitting this form, WhatsApp will open so I can send my appointment request directly to Rebecca & Sheena Tattoos.
+I have read and understand the Important Booking Notice above. I understand that my appointment request will be sent securely to Rebecca & Sheena Tattoos for review.
 
 </span>
 
@@ -2365,6 +2361,12 @@ Rebeccapalmer542@yahoo.com
 </div>
 
 </footer>
+
+<!-- BasinJS -->
+<script
+src="https://js.usebasin.com/v2.11.1.min.js"
+defer>
+</script>
 
 <script>
 
@@ -2935,7 +2937,7 @@ receipt.addEventListener(
 );
 
 /* =========================================================
-   WHATSAPP BOOKING SUBMISSION
+   BASIN FORM SUBMISSION
 ========================================================= */
 
 const form =
@@ -2953,29 +2955,35 @@ const formStatus =
         "formStatus"
     );
 
-const WHATSAPP_NUMBER =
-    "15306821175";
+function showFormError(message){
+
+    formStatus.textContent =
+        message;
+
+    formStatus.className =
+        "error";
+
+    formStatus.style.display =
+        "block";
+
+    formStatus.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+}
 
 form.addEventListener(
     "submit",
     function(event){
-
-        event.preventDefault();
-
-        formStatus.className =
-            "";
-
-        formStatus.style.display =
-            "none";
-
-        formStatus.textContent =
-            "";
 
         formatPhone();
 
         if(
             !validatePaymentAmount()
         ){
+
+            event.preventDefault();
 
             paymentAmount.focus();
 
@@ -2991,23 +2999,17 @@ form.addEventListener(
             !paymentInformation[selectedMethod]
         ){
 
-            formStatus.textContent =
+            event.preventDefault();
+
+            showFormError(
+
                 currentLanguage === "es"
 
                 ? "Por favor selecciona un método de pago."
 
-                : "Please select a payment method.";
+                : "Please select a payment method."
 
-            formStatus.className =
-                "error";
-
-            formStatus.style.display =
-                "block";
-
-            formStatus.scrollIntoView({
-                behavior:"smooth",
-                block:"center"
-            });
+            );
 
             return;
 
@@ -3021,23 +3023,19 @@ form.addEventListener(
             phoneDigits.charAt(0) !== "1"
         ){
 
-            formStatus.textContent =
+            event.preventDefault();
+
+            showFormError(
+
                 currentLanguage === "es"
 
                 ? "Por favor introduce un número de teléfono válido de EE. UU. con +1."
 
-                : "Please enter a valid U.S. phone number using +1.";
+                : "Please enter a valid U.S. phone number using +1."
 
-            formStatus.className =
-                "error";
+            );
 
-            formStatus.style.display =
-                "block";
-
-            formStatus.scrollIntoView({
-                behavior:"smooth",
-                block:"center"
-            });
+            phoneInput.focus();
 
             return;
 
@@ -3047,220 +3045,18 @@ form.addEventListener(
             !form.checkValidity()
         ){
 
+            event.preventDefault();
+
             form.reportValidity();
 
             return;
 
         }
 
-        const fullName =
-            document.getElementById(
-                "name"
-            ).value.trim();
-
-        const email =
-            document.getElementById(
-                "email"
-            ).value.trim();
-
-        const customerPhone =
-            "+" + phoneDigits;
-
-        const selectedLocation =
-            document.querySelector(
-                'input[name="fi-radio-appointment-location"]:checked'
-            );
-
-        const appointmentLocation =
-            selectedLocation
-            ? selectedLocation.value
-            : "Not selected";
-
-        let homeServiceDetails =
-            "";
-
-        if(
-            appointmentLocation === "Home Service"
-        ){
-
-            homeServiceDetails =
-
-                "\n\nHOME SERVICE ADDRESS" +
-
-                "\nAddress: " +
-                homeAddress.value.trim() +
-
-                "\nCity: " +
-                homeCity.value.trim() +
-
-                "\nState: " +
-                homeState.value.trim() +
-
-                "\nZIP Code: " +
-                homeZip.value.trim();
-
-        }
-
-        const preferredDate =
-            dateInput.value;
-
-        const preferredTime =
-            document.getElementById(
-                "time"
-            ).value;
-
-        const tattooPlacement =
-            document.getElementById(
-                "placement"
-            ).value.trim();
-
-        const tattooSize =
-            document.getElementById(
-                "size"
-            ).value.trim();
-
-        const tattooDescription =
-            document.getElementById(
-                "description"
-            ).value.trim();
-
-        const selectedPriceCategory =
-            tattooPriceCategory.value;
-
-        const selectedPriceInfo =
-            tattooPrices[
-                selectedPriceCategory
-            ];
-
-        let tattooPriceDetails =
-            "Not selected";
-
-        if(
-            selectedPriceCategory &&
-            selectedPriceInfo
-        ){
-
-            tattooPriceDetails =
-
-                selectedPriceCategory +
-                " — " +
-
-                (
-                    currentLanguage === "es"
-
-                    ? selectedPriceInfo.esPrice
-
-                    : selectedPriceInfo.price
-                );
-
-        }
-
-        const bookingPayment =
-            paymentAmount.value;
-
-        const paymentInfo =
-            paymentInformation[
-                selectedMethod
-            ];
-
-        let bankDetails =
-            "";
-
-        if(
-            selectedMethod === "Bank Transfer"
-        ){
-
-            bankDetails =
-
-                "\nBank Name: TVA Credit Union" +
-
-                "\nAccount Name: SHEENA GALE MARTIN" +
-
-                "\nChecking Account: 65734404" +
-
-                "\nRouting Number: 264279567";
-
-        }
-
-        let receiptName =
-            "No receipt selected";
-
-        if(
-            receipt.files &&
-            receipt.files.length
-        ){
-
-            receiptName =
-                receipt.files[0].name;
-
-        }
-
-        const whatsappMessage =
-
-`🖤 NEW TATTOO APPOINTMENT REQUEST
-
-━━━━━━━━━━━━━━━━━━
-
-CUSTOMER INFORMATION
-
-Name: ${fullName}
-
-Email: ${email}
-
-Phone: ${customerPhone}
-
-APPOINTMENT LOCATION
-
-${appointmentLocation}${homeServiceDetails}
-
-APPOINTMENT DETAILS
-
-Preferred Date: ${preferredDate}
-
-Preferred Time: ${preferredTime}
-
-Tattoo Placement: ${tattooPlacement}
-
-Approximate Size: ${tattooSize}
-
-Tattoo Price Category: ${tattooPriceDetails}
-
-Tattoo Description:
-${tattooDescription}
-
-BOOKING PAYMENT
-
-Amount Paid: $${bookingPayment}
-
-Payment Method: ${selectedMethod}
-
-Payment Account: ${paymentInfo.account}
-
-Payment Name: ${paymentInfo.name}${bankDetails}
-
-PAYMENT RECEIPT
-
-Receipt File: ${receiptName}
-
-⚠️ I will send the payment receipt file separately in this WhatsApp chat.
-
-BOOKING NOTE
-
-I have read and understand the Important Booking Notice.
-
-I am sending my appointment request directly through WhatsApp so Rebecca & Sheena Tattoos can communicate with me about my appointment details and final tattoo price.
-
-━━━━━━━━━━━━━━━━━━
-
-Please review my appointment request and contact me here on WhatsApp regarding the next steps.`;
-
-        const whatsappURL =
-            "https://wa.me/" +
-            WHATSAPP_NUMBER +
-            "?text=" +
-            encodeURIComponent(
-                whatsappMessage
-            );
+        /*
+           BasinJS handles the actual POST submission.
+           The form action points directly to the Basin endpoint.
+        */
 
         submitButton.disabled =
             true;
@@ -3268,19 +3064,48 @@ Please review my appointment request and contact me here on WhatsApp regarding t
         submitButton.textContent =
             currentLanguage === "es"
 
-            ? "ABRIENDO WHATSAPP..."
+            ? "ENVIANDO SOLICITUD..."
 
-            : "OPENING WHATSAPP...";
+            : "SUBMITTING REQUEST...";
 
-        /*
-           Open WhatsApp immediately.
-           There is no confirmation screen,
-           booking status screen, or pending
-           payment workflow.
-        */
+    }
+);
 
-        window.location.href =
-            whatsappURL;
+/* =========================================================
+   BASIN SUCCESS EVENT
+========================================================= */
+
+document.addEventListener(
+    "basin:form:success",
+    function(){
+
+        submitButton.disabled =
+            false;
+
+        submitButton.textContent =
+            currentLanguage === "es"
+
+            ? "SOLICITUD ENVIADA"
+
+            : "REQUEST SENT";
+
+        formStatus.textContent =
+            currentLanguage === "es"
+
+            ? "¡Tu solicitud de cita se envió correctamente! Revisaremos tus datos y nos pondremos en contacto contigo."
+
+            : "Your appointment request was submitted successfully! We will review your information and contact you.";
+
+        formStatus.className =
+            "success";
+
+        formStatus.style.display =
+            "block";
+
+        formStatus.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
 
     }
 );
