@@ -816,6 +816,49 @@ textarea{
 }
 
 /* =========================
+   STUDIO STATE
+========================= */
+
+#studioStateFields{
+    margin-top:25px;
+    padding-top:25px;
+    border-top:1px dashed #5b4824;
+}
+
+.studio-state-box{
+    background:
+        linear-gradient(
+            145deg,
+            #2d210b,
+            #171107
+        );
+    border-left:4px solid var(--gold);
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#d2c8b6;
+}
+
+.studio-state-box strong{
+    color:var(--gold-light);
+}
+
+.studio-state-select{
+    max-width:650px;
+}
+
+.studio-state-select select{
+    min-height:54px;
+    cursor:pointer;
+}
+
+.studio-state-select select option{
+    background:#111;
+    color:#fff;
+}
+
+/* =========================
    HOME SERVICE
 ========================= */
 
@@ -1826,28 +1869,10 @@ Studio Appointment
 </h4>
 
 <p
-data-en="Visit Rebecca & Sheena Tattoos at our studios in Richmond, Missouri or Honolulu, Hawaii."
-data-es="Visita Rebecca & Sheena Tattoos en nuestros estudios en Richmond, Missouri o Honolulu, Hawaii.">
+data-en="Please select the state where you would like your studio appointment. The full studio address is provided through the booking process."
+data-es="Selecciona el estado donde deseas tu cita en el estudio. La dirección completa del estudio se proporcionará durante el proceso de reserva.">
 
-Visit Rebecca & Sheena Tattoos at our studios in Richmond, Missouri or Honolulu, Hawaii.
-
-</p>
-
-<p style="margin-top:10px;">
-
-<strong>
-403 W ROYLE St<br>
-Richmond, MO 64085
-</strong>
-
-</p>
-
-<p style="margin-top:10px;">
-
-<strong>
-1100–1110 Bishop St<br>
-Honolulu, HI 96813
-</strong>
+Please select the state where you would like your studio appointment. The full studio address is provided through the booking process.
 
 </p>
 
@@ -1895,10 +1920,134 @@ Have our tattoo service come directly to your home. Additional home-service cons
 
 <div
 class="location-selection-note"
-data-en="<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can review availability with you."
-data-es="<strong>Estudio:</strong> Visita una de nuestras ubicaciones. <strong>Servicio a domicilio:</strong> Introduce tu dirección manualmente para que podamos revisar la disponibilidad contigo.">
+data-en="<strong>Studio:</strong> Select the state where you would like your studio appointment. The studio address near you will be sent together with your appointment confirmation after you submit your request. <strong>Home Service:</strong> Enter your address manually so we can review availability with you."
+data-es="<strong>Estudio:</strong> Selecciona el estado donde deseas tu cita. La dirección del estudio cerca de ti se enviará junto con la confirmación de tu cita después de enviar tu solicitud. <strong>Servicio a domicilio:</strong> Introduce tu dirección manualmente para que podamos revisar la disponibilidad contigo.">
 
-<strong>Studio:</strong> Visit one of our studio locations. <strong>Home Service:</strong> Enter your address manually so we can review availability with you.
+<strong>Studio:</strong> Select the state where you would like your studio appointment. The studio address near you will be sent together with your appointment confirmation after you submit your request. <strong>Home Service:</strong> Enter your address manually so we can review availability with you.
+
+</div>
+
+<!-- STUDIO STATE SELECTION -->
+
+<div id="studioStateFields">
+
+<div class="studio-state-box">
+
+<strong
+data-en="VISIT THE STUDIO"
+data-es="VISITA EL ESTUDIO">
+
+VISIT THE STUDIO
+
+</strong>
+
+<p
+data-en="Please select the state where you would like your studio appointment. The full studio address is provided through the booking process."
+data-es="Selecciona el estado donde deseas tu cita en el estudio. La dirección completa del estudio se proporcionará durante el proceso de reserva.">
+
+Please select the state where you would like your studio appointment. The full studio address is provided through the booking process.
+
+</p>
+
+<p
+style="margin-top:10px;"
+data-en="Studio locations are not publicly displayed on this page. Select your state and continue with your booking. The studio address near you will be sent together with your appointment confirmation after you submit your appointment request."
+data-es="Las ubicaciones de los estudios no se muestran públicamente en esta página. Selecciona tu estado y continúa con tu reserva. La dirección del estudio cerca de ti se enviará junto con la confirmación de tu cita después de enviar tu solicitud.">
+
+Studio locations are not publicly displayed on this page. Select your state and continue with your booking. The studio address near you will be sent together with your appointment confirmation after you submit your appointment request.
+
+</p>
+
+</div>
+
+<div class="field studio-state-select">
+
+<label
+for="studioState"
+data-en="SELECT STATE *"
+data-es="SELECCIONA EL ESTADO *">
+
+SELECT STATE *
+
+</label>
+
+<select
+id="studioState"
+name="studio_state"
+required>
+
+<option
+value=""
+data-en="Click to SELECT STATE"
+data-es="Haz clic para SELECCIONAR EL ESTADO">
+
+Click to SELECT STATE
+
+</option>
+
+<option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option>
+
+</select>
+
+<span
+class="help"
+data-en="Your selected state will be included with your appointment request."
+data-es="El estado seleccionado se incluirá con tu solicitud de cita.">
+
+Your selected state will be included with your appointment request.
+
+</span>
+
+</div>
 
 </div>
 
@@ -2857,6 +3006,16 @@ const studioRadio =
 const homeRadio =
     document.getElementById("homeService");
 
+const studioStateFields =
+    document.getElementById(
+        "studioStateFields"
+    );
+
+const studioState =
+    document.getElementById(
+        "studioState"
+    );
+
 const homeFields =
     document.getElementById(
         "homeServiceFields"
@@ -2886,6 +3045,24 @@ function updateLocation(){
 
     const isHome =
         homeRadio.checked;
+
+    const isStudio =
+        studioRadio.checked;
+
+    studioStateFields.style.display =
+        isStudio
+        ? "block"
+        : "none";
+
+    studioState.required =
+        isStudio;
+
+    if(!isStudio){
+
+        studioState.value =
+            "";
+
+    }
 
     homeFields.style.display =
         isHome
