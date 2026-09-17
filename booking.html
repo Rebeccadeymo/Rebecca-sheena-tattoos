@@ -1481,72 +1481,6 @@ Please complete the form below with as much detail as possible. After you submit
 
 </div>
 
-<div class="notice">
-
-<div
-class="notice-title"
-data-en="IMPORTANT BOOKING NOTICE"
-data-es="AVISO IMPORTANTE DE RESERVA">
-
-IMPORTANT BOOKING NOTICE
-
-</div>
-
-<p
-class="notice-read"
-data-en="Please read this notice before going ahead with your appointment request."
-data-es="Lee este aviso antes de continuar con tu solicitud de cita.">
-
-Please read this notice before going ahead with your appointment request.
-
-</p>
-
-<ul>
-
-<li
-data-en="You are not paying for the tattoo today."
-data-es="No estás pagando el tatuaje hoy.">
-
-You are not paying for the tattoo today.
-
-</li>
-
-<li
-data-en="The prices shown are starting prices only."
-data-es="Los precios mostrados son solo precios iniciales.">
-
-The prices shown are starting prices only.
-
-</li>
-
-<li
-data-en="You only pay the $100–$200 booking payment when submitting the request."
-data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
-
-You only pay the $100–$200 booking payment when submitting the request.
-
-</li>
-
-<li
-data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
-data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
-
-We will review your appointment request and contact you about any additional details and the final tattoo price.
-
-</li>
-
-<li
-data-en="Your booking payment is applied to the final tattoo price."
-data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
-
-Your booking payment is applied to the final tattoo price.
-
-</li>
-
-</ul>
-
-</div>
-
 <details class="pricing-section">
 
 <summary class="pricing-toggle">
@@ -1722,6 +1656,104 @@ accept-charset="UTF-8"
 enctype="multipart/form-data"
 data-basin-form
 data-basin-success-action="render">
+
+<!-- =========================
+     ARTIST SELECTION
+     MOVED TO TOP
+========================= -->
+
+<section class="form-section">
+
+<h3
+data-en="Choose Your Artist"
+data-es="Elige Tu Artista">
+
+Choose Your Artist
+
+</h3>
+
+<p
+class="section-description"
+data-en="Choose the artist you would like to request for your appointment."
+data-es="Elige el artista que deseas solicitar para tu cita.">
+
+Choose the artist you would like to request for your appointment.
+
+</p>
+
+<div class="artist-selection">
+
+<div class="artist-option">
+
+<input
+type="radio"
+id="femaleArtist"
+name="artist_selection"
+value="Female Artist"
+required>
+
+<label
+for="femaleArtist"
+class="artist-card">
+
+<div class="artist-photo-ring">
+
+<img
+src="https://i.ibb.co/KjVNhhBN/IMG-6246.jpg"
+alt="Female Artist">
+
+</div>
+
+<span
+class="artist-name"
+data-en="Female Artist"
+data-es="Artista Femenina">
+
+Female Artist
+
+</span>
+
+</label>
+
+</div>
+
+<div class="artist-option">
+
+<input
+type="radio"
+id="maleArtist"
+name="artist_selection"
+value="Male Artist"
+required>
+
+<label
+for="maleArtist"
+class="artist-card">
+
+<div class="artist-photo-ring">
+
+<img
+src="https://i.ibb.co/JRkdFY1S/IMG-6245.png"
+alt="Male Artist">
+
+</div>
+
+<span
+class="artist-name"
+data-en="Male Artist"
+data-es="Artista Masculino">
+
+Male Artist
+
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+</section>
 
 <section class="form-section">
 
@@ -2347,101 +2379,75 @@ Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB.
 </section>
 
 <!-- =========================
-     ARTIST SELECTION
+     IMPORTANT NOTICE
+     MOVED BEFORE PAYMENT
 ========================= -->
 
-<section class="form-section">
+<div class="notice">
 
-<h3
-data-en="Choose Your Artist"
-data-es="Elige Tu Artista">
+<div
+class="notice-title"
+data-en="IMPORTANT BOOKING NOTICE"
+data-es="AVISO IMPORTANTE DE RESERVA">
 
-Choose Your Artist
+IMPORTANT BOOKING NOTICE
 
-</h3>
+</div>
 
 <p
-class="section-description"
-data-en="Choose the artist you would like to request for your appointment."
-data-es="Elige el artista que deseas solicitar para tu cita.">
+class="notice-read"
+data-en="Please read this notice before going ahead with your appointment request."
+data-es="Lee este aviso antes de continuar con tu solicitud de cita.">
 
-Choose the artist you would like to request for your appointment.
+Please read this notice before going ahead with your appointment request.
 
 </p>
 
-<div class="artist-selection">
+<ul>
 
-<div class="artist-option">
+<li
+data-en="You are not paying for the tattoo today."
+data-es="No estás pagando el tatuaje hoy.">
 
-<input
-type="radio"
-id="femaleArtist"
-name="artist_selection"
-value="Female Artist"
-required>
+You are not paying for the tattoo today.
 
-<label
-for="femaleArtist"
-class="artist-card">
+</li>
 
-<div class="artist-photo-ring">
+<li
+data-en="The prices shown are starting prices only."
+data-es="Los precios mostrados son solo precios iniciales.">
 
-<img
-src="https://i.ibb.co/KjVNhhBN/IMG-6246.jpg"
-alt="Female Artist">
+The prices shown are starting prices only.
 
-</div>
+</li>
 
-<span
-class="artist-name"
-data-en="Female Artist"
-data-es="Artista Femenina">
+<li
+data-en="You only pay the $100–$200 booking payment when submitting the request."
+data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
 
-Female Artist
+You only pay the $100–$200 booking payment when submitting the request.
 
-</span>
+</li>
 
-</label>
+<li
+data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
+data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
 
-</div>
+We will review your appointment request and contact you about any additional details and the final tattoo price.
 
-<div class="artist-option">
+</li>
 
-<input
-type="radio"
-id="maleArtist"
-name="artist_selection"
-value="Male Artist"
-required>
+<li
+data-en="Your booking payment is applied to the final tattoo price."
+data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
 
-<label
-for="maleArtist"
-class="artist-card">
+Your booking payment is applied to the final tattoo price.
 
-<div class="artist-photo-ring">
+</li>
 
-<img
-src="https://i.ibb.co/JRkdFY1S/IMG-6245.png"
-alt="Male Artist">
+</ul>
 
 </div>
-
-<span
-class="artist-name"
-data-en="Male Artist"
-data-es="Artista Masculino">
-
-Male Artist
-
-</span>
-
-</label>
-
-</div>
-
-</div>
-
-</section>
 
 <section class="form-section">
 
@@ -2558,6 +2564,7 @@ data-en="Select Payment Method"
 data-es="Selecciona el Método de Pago">
 
 Select Payment Method
+
 </option>
 
 <option value="Cash App">
