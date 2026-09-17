@@ -599,6 +599,91 @@ textarea{
 }
 
 /* =========================
+   ARTIST SELECTION
+========================= */
+
+.artist-selection{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:20px;
+}
+
+.artist-option{
+    position:relative;
+}
+
+.artist-option input{
+    position:absolute;
+    opacity:0;
+    pointer-events:none;
+}
+
+.artist-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    padding:25px 18px 22px;
+    background:#0d0d0d;
+    border:2px solid #302b2e;
+    border-radius:20px;
+    transition:.25s;
+}
+
+.artist-card:hover{
+    border-color:var(--gold);
+    transform:translateY(-2px);
+}
+
+.artist-option input:checked + .artist-card{
+    border-color:var(--gold);
+    background:
+        linear-gradient(
+            135deg,
+            #241a08,
+            #101010
+        );
+    box-shadow:0 8px 25px rgba(201,162,77,.12);
+}
+
+.artist-photo-ring{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    padding:5px;
+    border:2px solid var(--gold);
+    background:#080808;
+    box-shadow:
+        0 0 0 4px rgba(201,162,77,.10),
+        0 10px 25px rgba(0,0,0,.55);
+    overflow:hidden;
+}
+
+.artist-photo-ring img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.artist-name{
+    margin-top:16px;
+    font-family:'Cinzel',serif;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.5px;
+    color:#f1e6d2;
+    text-align:center;
+}
+
+.artist-option input:checked + .artist-card .artist-name{
+    color:var(--gold-light);
+}
+
+/* =========================
    DESIGN UPLOAD
 ========================= */
 
@@ -1219,6 +1304,26 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .artist-selection{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .artist-card{
+        padding:17px 8px 18px;
+        border-radius:17px;
+    }
+
+    .artist-photo-ring{
+        width:125px;
+        height:125px;
+    }
+
+    .artist-name{
+        font-size:11px;
+        letter-spacing:.3px;
+    }
+
     .intro h2{
         font-size:45px;
     }
@@ -1728,7 +1833,7 @@ Visit Rebecca & Sheena Tattoos at our studios in Richmond, Missouri or Honolulu,
 
 </p>
 
-<p>
+<p style="margin-top:10px;">
 
 <strong>
 403 W ROYLE St<br>
@@ -2036,7 +2141,7 @@ placeholder="Describe your tattoo idea, style, colors, details, reference ideas,
 
 </div>
 
-<!-- NEW: OPTIONAL TATTOO DESIGN / REFERENCE UPLOAD -->
+<!-- OPTIONAL TATTOO DESIGN / REFERENCE UPLOAD -->
 
 <div class="field full">
 
@@ -2085,6 +2190,103 @@ Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB.
 </span>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     ARTIST SELECTION
+========================= -->
+
+<section class="form-section">
+
+<h3
+data-en="Choose Your Artist"
+data-es="Elige Tu Artista">
+
+Choose Your Artist
+
+</h3>
+
+<p
+class="section-description"
+data-en="Choose the artist you would like to request for your appointment."
+data-es="Elige el artista que deseas solicitar para tu cita.">
+
+Choose the artist you would like to request for your appointment.
+
+</p>
+
+<div class="artist-selection">
+
+<div class="artist-option">
+
+<input
+type="radio"
+id="femaleArtist"
+name="artist_selection"
+value="Female Artist"
+required>
+
+<label
+for="femaleArtist"
+class="artist-card">
+
+<div class="artist-photo-ring">
+
+<img
+src="https://i.ibb.co/KjVNhhBN/IMG-6246.jpg"
+alt="Female Artist">
+
+</div>
+
+<span
+class="artist-name"
+data-en="Female Artist"
+data-es="Artista Femenina">
+
+Female Artist
+
+</span>
+
+</label>
+
+</div>
+
+<div class="artist-option">
+
+<input
+type="radio"
+id="maleArtist"
+name="artist_selection"
+value="Male Artist"
+required>
+
+<label
+for="maleArtist"
+class="artist-card">
+
+<div class="artist-photo-ring">
+
+<img
+src="https://i.ibb.co/JRkdFY1S/IMG-6245.png"
+alt="Male Artist">
+
+</div>
+
+<span
+class="artist-name"
+data-en="Male Artist"
+data-es="Artista Masculino">
+
+Male Artist
+
+</span>
+
+</label>
 
 </div>
 
