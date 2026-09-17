@@ -88,10 +88,26 @@
         },
         {
             "@type":"Question",
-            "name":"How does the booking payment work?",
+            "name":"Do I need to make a payment when I submit my booking request?",
             "acceptedAnswer":{
                 "@type":"Answer",
-                "text":"A booking payment of $100 to $200 is required when submitting an appointment request. The booking payment is applied toward the final tattoo price. The appointment request is reviewed before the appointment is confirmed."
+                "text":"No. No payment is collected when you submit your appointment request. You will select your preferred payment method during the booking process. After an appointment date is confirmed, a deposit invoice will be sent to the phone number or email address you provided."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"What payment methods can I choose?",
+            "acceptedAnswer":{
+                "@type":"Answer",
+                "text":"You can select Cash App, Venmo, Zelle, Chime Pay, Bank Transfer, or Apple Pay as your preferred payment method. Selecting a payment method during booking does not collect a payment."
+            }
+        },
+        {
+            "@type":"Question",
+            "name":"When will I receive the deposit invoice?",
+            "acceptedAnswer":{
+                "@type":"Answer",
+                "text":"The deposit invoice will be sent to the phone number or email address you provided after the studio confirms an appointment date."
             }
         },
         {
@@ -977,85 +993,31 @@ textarea{
 }
 
 /* =========================
-   PAYMENT AMOUNT
-========================= */
-
-.payment-intro{
-    margin-bottom:25px;
-}
-
-.payment-intro p{
-    color:#666;
-}
-
-.payment-range{
-    display:inline-block;
-    background:#fff8e9;
-    color:var(--gold-dark);
-    border:1px solid rgba(181,138,50,.45);
-    padding:8px 13px;
-    border-radius:20px;
-    font-family:'Cinzel',serif;
-    font-size:11px;
-    font-weight:700;
-}
-
-.amount-wrap{
-    max-width:430px;
-    margin-bottom:30px;
-}
-
-.amount-prefix{
-    position:relative;
-}
-
-.amount-prefix span{
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-    font-weight:700;
-    color:var(--gold-dark);
-}
-
-.amount-prefix input{
-    padding-left:30px;
-}
-
-.amount-warning{
-    display:none;
-    color:#c53c65;
-    font-size:12px;
-    margin-top:7px;
-}
-
-/* =========================
    PAYMENT METHOD
 ========================= */
 
 .payment-method-title{
     font-family:'Cormorant Garamond',serif;
-    font-size:27px;
+    font-size:30px;
     color:#302719;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .payment-method-help{
-    font-size:12px;
-    color:#777;
-    margin-bottom:15px;
+    font-size:13px;
+    color:#666;
+    margin-bottom:18px;
 }
 
 .payment-method-select{
-    position:relative;
-    max-width:520px;
+    max-width:650px;
 }
 
 .payment-method-select select{
     appearance:auto;
     -webkit-appearance:auto;
     cursor:pointer;
-    min-height:52px;
+    min-height:54px;
     font-size:14px;
     padding:14px 16px;
     border:2px solid #ddd6cc;
@@ -1076,88 +1038,22 @@ textarea{
     color:#222;
 }
 
-/* =========================
-   SELECTED PAYMENT
-========================= */
-
-.selected-payment{
-    display:none;
+.payment-policy-box{
     margin-top:22px;
-    padding:20px;
+    padding:18px 20px;
     background:linear-gradient(135deg,#fffaf0,#f6f2e9);
     border:1px solid rgba(181,138,50,.35);
-    border-radius:17px;
-    animation:paymentReveal .25s ease;
+    border-radius:16px;
 }
 
-@keyframes paymentReveal{
-    from{
-        opacity:0;
-        transform:translateY(-5px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+.payment-policy-box strong{
+    color:var(--gold-dark);
 }
 
-.selected-payment h4{
-    font-family:'Cormorant Garamond',serif;
-    font-size:25px;
-    color:#4a3510;
-    margin-bottom:10px;
-}
-
-.payment-detail-row{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    background:#fff;
-    border:1px solid #ded8d0;
-    border-radius:12px;
-    padding:13px 15px;
-    margin-top:9px;
-}
-
-.payment-detail-label{
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    color:#777;
-    font-weight:700;
-}
-
-.payment-detail-value{
-    font-size:14px;
-    font-weight:700;
-    color:#222;
-    text-align:right;
-    word-break:break-word;
-}
-
-/* =========================
-   RECEIPT
-========================= */
-
-.receipt-box{
-    background:#faf9f6;
-    border:1px dashed #c8ad72;
-    border-radius:15px;
-    padding:18px;
-}
-
-input[type="file"]{
-    padding:11px;
-}
-
-input[type="file"]::file-selector-button{
-    background:#171717;
-    color:#fff;
-    border:1px solid #444;
-    border-radius:7px;
-    padding:7px 10px;
-    margin-right:10px;
-    cursor:pointer;
+.payment-policy-box p{
+    color:#555;
+    font-size:12px;
+    line-height:1.7;
 }
 
 /* =========================
@@ -1498,10 +1394,6 @@ footer p{
         font-size:16px !important;
     }
 
-    .payment-method-select select{
-        font-size:16px !important;
-    }
-
     .selected-price{
         padding:19px 15px;
     }
@@ -1563,17 +1455,12 @@ footer p{
         font-size:12px;
     }
 
-    .payment-detail-row{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .payment-detail-value{
-        text-align:left;
-    }
-
     .payment-method-select{
         max-width:100%;
+    }
+
+    .payment-method-select select{
+        font-size:16px !important;
     }
 
     .notice{
@@ -2006,10 +1893,10 @@ class="faq-question"
 aria-expanded="false">
 
 <span
-data-en="How does the booking payment work?"
-data-es="¿Cómo funciona el pago de reserva?">
+data-en="Do I need to make a payment when I submit my booking request?"
+data-es="¿Necesito realizar un pago al enviar mi solicitud de cita?">
 
-How does the booking payment work?
+Do I need to make a payment when I submit my booking request?
 
 </span>
 
@@ -2021,10 +1908,74 @@ How does the booking payment work?
 
 <div
 class="faq-answer"
-data-en="A booking payment of $100 to $200 is required when submitting an appointment request. The booking payment is applied toward the final tattoo price. Your request is reviewed before the appointment is confirmed."
-data-es="Se requiere un pago de reserva de $100 a $200 al enviar una solicitud de cita. El pago de reserva se aplica al precio final del tatuaje. Tu solicitud se revisa antes de confirmar la cita.">
+data-en="No. No payment is collected when you submit your appointment request. You will select your preferred payment method during the booking process. After an appointment date is confirmed, a deposit invoice will be sent to the phone number or email address you provided."
+data-es="No. No se cobra ningún pago al enviar tu solicitud de cita. Seleccionarás tu método de pago preferido durante el proceso de reserva. Después de confirmar una fecha de cita, se enviará una factura de depósito al número de teléfono o correo electrónico que proporcionaste.">
 
-A booking payment of $100 to $200 is required when submitting an appointment request. The booking payment is applied toward the final tattoo price. Your request is reviewed before the appointment is confirmed.
+No. No payment is collected when you submit your appointment request. You will select your preferred payment method during the booking process. After an appointment date is confirmed, a deposit invoice will be sent to the phone number or email address you provided.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button
+type="button"
+class="faq-question"
+aria-expanded="false">
+
+<span
+data-en="What payment methods can I choose?"
+data-es="¿Qué métodos de pago puedo elegir?">
+
+What payment methods can I choose?
+
+</span>
+
+<span class="faq-icon">
++
+</span>
+
+</button>
+
+<div
+class="faq-answer"
+data-en="You can select Cash App, Venmo, Zelle, Chime Pay, Bank Transfer, or Apple Pay as your preferred payment method. Selecting a payment method during booking does not collect a payment."
+data-es="Puedes seleccionar Cash App, Venmo, Zelle, Chime Pay, Transferencia Bancaria o Apple Pay como tu método de pago preferido. Seleccionar un método de pago durante la reserva no realiza ningún cobro.">
+
+You can select Cash App, Venmo, Zelle, Chime Pay, Bank Transfer, or Apple Pay as your preferred payment method. Selecting a payment method during booking does not collect a payment.
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button
+type="button"
+class="faq-question"
+aria-expanded="false">
+
+<span
+data-en="When will I receive the deposit invoice?"
+data-es="¿Cuándo recibiré la factura de depósito?">
+
+When will I receive the deposit invoice?
+
+</span>
+
+<span class="faq-icon">
++
+</span>
+
+</button>
+
+<div
+class="faq-answer"
+data-en="The deposit invoice will be sent to the phone number or email address you provided after the studio confirms an appointment date."
+data-es="La factura de depósito se enviará al número de teléfono o correo electrónico que proporcionaste después de que el estudio confirme una fecha de cita.">
+
+The deposit invoice will be sent to the phone number or email address you provided after the studio confirms an appointment date.
 
 </div>
 
@@ -2690,336 +2641,129 @@ Upload a picture, drawing, screenshot, quote, or PDF of the custom tattoo design
 
 </section>
 
+<!-- =========================
+     PAYMENT METHOD / DEPOSIT INVOICE
+========================= -->
+
 <section class="form-section">
 
 <h3
-data-en="Booking Payment"
-data-es="Pago de Reserva">
+data-en="Payment Method"
+data-es="Método de Pago">
 
-Booking Payment
+Payment Method
 
 </h3>
 
-<div class="notice">
-
-<div
-class="notice-title"
-data-en="IMPORTANT BOOKING NOTICE"
-data-es="AVISO IMPORTANTE DE RESERVA">
-
-IMPORTANT BOOKING NOTICE
-
-</div>
-
 <p
-class="notice-read"
-data-en="Please read this notice before going ahead with your appointment request."
-data-es="Lee este aviso antes de continuar con tu solicitud de cita.">
+class="section-description"
+data-en="Select how you would like to pay your deposit if your appointment date is confirmed. No payment is collected when you submit this booking form."
+data-es="Selecciona cómo te gustaría pagar tu depósito si se confirma tu fecha de cita. No se realiza ningún pago al enviar este formulario de reserva.">
 
-Please read this notice before going ahead with your appointment request.
+Select how you would like to pay your deposit if your appointment date is confirmed. No payment is collected when you submit this booking form.
 
 </p>
 
-<ul>
-
-<li
-data-en="You are not paying for the tattoo today."
-data-es="No estás pagando el tatuaje hoy.">
-
-You are not paying for the tattoo today.
-
-</li>
-
-<li
-data-en="The prices shown are starting prices only."
-data-es="Los precios mostrados son solo precios iniciales.">
-
-The prices shown are starting prices only.
-
-</li>
-
-<li
-data-en="You only pay the $100–$200 booking payment when submitting the request."
-data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
-
-You only pay the $100–$200 booking payment when submitting the request.
-
-</li>
-
-<li
-data-en="We will review your appointment request and contact you about any additional details and the final tattoo price."
-data-es="Revisaremos tu solicitud de cita y nos comunicaremos contigo sobre cualquier detalle adicional y el precio final del tatuaje.">
-
-We will review your appointment request and contact you about any additional details and the final tattoo price.
-
-</li>
-
-<li
-data-en="Your booking payment is applied to the final tattoo price."
-data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
-
-Your booking payment is applied to the final tattoo price.
-
-</li>
-
-</ul>
-
-</div>
-
-<div class="payment-intro">
-
-<p
-data-en="First enter the amount you are paying. Then select your preferred payment method. Payment information will appear only after you choose a method."
-data-es="Primero introduce la cantidad que vas a pagar. Luego selecciona tu método de pago preferido. La información de pago aparecerá únicamente después de seleccionar un método.">
-
-First enter the amount you are paying. Then select your preferred payment method. Payment information will appear only after you choose a method.
-
-</p>
-
-<br>
-
-<span class="payment-range">
-$100 – $200 ONLY
-</span>
-
-</div>
-
-<div class="field amount-wrap">
-
-<label
-for="paymentAmount"
-data-en="Payment Amount *"
-data-es="Monto del Pago *">
-
-Payment Amount *
-
-</label>
-
-<div class="amount-prefix">
-
-<span>$</span>
-
-<input
-type="number"
-id="paymentAmount"
-name="payment_amount"
-required
-min="100"
-max="200"
-step="1"
-inputmode="numeric"
-placeholder="100">
-
-</div>
-
-<span
-class="help"
-data-en="Enter an amount from $100 to $200 only."
-data-es="Introduce solamente una cantidad entre $100 y $200.">
-
-Enter an amount from $100 to $200 only.
-
-</span>
-
-<div
-id="amountWarning"
-class="amount-warning">
-
-Payment amount must be between $100 and $200.
-
-</div>
-
-</div>
-
-<h4
-class="payment-method-title"
-data-en="Select Payment Method"
-data-es="Selecciona el Método de Pago">
-
-Select Payment Method
-
-</h4>
-
-<p
-class="payment-method-help"
-data-en="Tap the box below to choose Cash App, Venmo, Zelle, Chime, or Bank Transfer."
-data-es="Toca el cuadro de abajo para elegir Cash App, Venmo, Zelle, Chime o Transferencia Bancaria.">
-
-Tap the box below to choose Cash App, Venmo, Zelle, Chime, or Bank Transfer.
-
-</p>
-
-<div class="field payment-method-select">
+<div class="payment-method-select">
 
 <label
 for="paymentMethod"
-data-en="Payment Method *"
-data-es="Método de Pago *">
+data-en="Preferred Payment Method *"
+data-es="Método de Pago Preferido *">
 
-Payment Method *
+Preferred Payment Method *
 
 </label>
 
 <select
 id="paymentMethod"
-name="payment_method"
+name="preferred_payment_method"
 required>
 
 <option
 value=""
-data-en="Select Payment Method"
-data-es="Selecciona el Método de Pago">
+data-en="Select your preferred payment method"
+data-es="Selecciona tu método de pago preferido">
 
-Select Payment Method
+Select your preferred payment method
+
 </option>
 
-<option value="Cash App">Cash App</option>
-<option value="Venmo">Venmo</option>
-<option value="Zelle">Zelle</option>
-<option value="Chime">Chime</option>
-<option value="Bank Transfer">Bank Transfer</option>
+<option
+value="Cash App"
+data-en="Cash App"
+data-es="Cash App">
+
+Cash App
+
+</option>
+
+<option
+value="Venmo"
+data-en="Venmo"
+data-es="Venmo">
+
+Venmo
+
+</option>
+
+<option
+value="Zelle"
+data-en="Zelle"
+data-es="Zelle">
+
+Zelle
+
+</option>
+
+<option
+value="Chime Pay"
+data-en="Chime Pay"
+data-es="Chime Pay">
+
+Chime Pay
+
+</option>
+
+<option
+value="Bank Transfer"
+data-en="Bank Transfer"
+data-es="Transferencia Bancaria">
+
+Bank Transfer
+
+</option>
+
+<option
+value="Apple Pay"
+data-en="Apple Pay"
+data-es="Apple Pay">
+
+Apple Pay
+
+</option>
 
 </select>
 
 </div>
 
-<div
-id="selectedPayment"
-class="selected-payment">
+<div class="payment-policy-box">
 
-<h4
-id="selectedPaymentTitle">
+<p
+data-en="<strong>No payment is collected during this booking request.</strong> Selecting a payment method only tells the studio which payment method you prefer to use. After the studio confirms an appointment date, a deposit invoice will be sent to the phone number or email address you provided."
+data-es="<strong>No se realiza ningún pago durante esta solicitud de reserva.</strong> Seleccionar un método de pago solo informa al estudio qué método de pago prefieres utilizar. Después de que el estudio confirme una fecha de cita, se enviará una factura de depósito al número de teléfono o correo electrónico que proporcionaste.">
 
-Payment Information
+<strong>No payment is collected during this booking request.</strong> Selecting a payment method only tells the studio which payment method you prefer to use. After the studio confirms an appointment date, a deposit invoice will be sent to the phone number or email address you provided.
 
-</h4>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ACCOUNT
-</span>
-
-<span
-id="selectedPaymentAccount"
-class="payment-detail-value">
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-NAME
-</span>
-
-<span
-id="selectedPaymentName"
-class="payment-detail-value">
-</span>
-
-</div>
-
-<div
-id="bankTransferDetails"
-style="display:none;">
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-BANK NAME
-</span>
-
-<span
-id="bankName"
-class="payment-detail-value">
-TVA Credit Union
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ACCOUNT NAME
-</span>
-
-<span
-id="bankAccountName"
-class="payment-detail-value">
-SHEENA GALE MARTIN
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-CHECKING ACCOUNT NUMBER
-</span>
-
-<span
-id="bankAccountNumber"
-class="payment-detail-value">
-65734404
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ROUTING NUMBER
-</span>
-
-<span
-id="bankRoutingNumber"
-class="payment-detail-value">
-264279567
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<div
-class="field"
-style="margin-top:25px;">
-
-<label
-for="receipt"
-data-en="Payment Receipt *"
-data-es="Recibo de Pago *">
-
-Payment Receipt *
-
-</label>
-
-<div class="receipt-box">
-
-<input
-type="file"
-id="receipt"
-name="payment_receipt"
-accept="image/*,.pdf"
-required>
-
-<span
-class="help"
-data-en="Upload a screenshot or receipt showing your payment. Maximum file size: 10MB."
-data-es="Carga una captura de pantalla o recibo que muestre tu pago. Máximo: 10 MB.">
-
-Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
-
-</span>
-
-</div>
+</p>
 
 </div>
 
 </section>
+
+<!-- =========================
+     AGREEMENT
+========================= -->
 
 <section class="form-section">
 
@@ -3028,15 +2772,15 @@ Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
 <input
 type="checkbox"
 id="agreement"
-name="booking_agreement"
-value="I agree"
+name="deposit_invoice_acknowledgement"
+value="I acknowledge that a deposit invoice will be sent to the phone number or email I provided after confirming an appointment date."
 required>
 
 <span
-data-en="I have read and understand the Important Booking Notice above. I understand that my appointment request will be sent securely to Rebecca & Sheena Tattoos for review."
-data-es="He leído y entiendo el Aviso Importante de Reserva anterior. Entiendo que mi solicitud de cita se enviará de forma segura a Rebecca & Sheena Tattoos para su revisión.">
+data-en="I acknowledge that a deposit invoice will be sent to the phone number or email I provided after confirming an appointment date. Please mark to approve."
+data-es="Reconozco que se enviará una factura de depósito al número de teléfono o correo electrónico que proporcioné después de confirmar una fecha de cita. Por favor, marca para aprobar.">
 
-I have read and understand the Important Booking Notice above. I understand that my appointment request will be sent securely to Rebecca & Sheena Tattoos for review.
+I acknowledge that a deposit invoice will be sent to the phone number or email I provided after confirming an appointment date. Please mark to approve.
 
 </span>
 
@@ -3478,202 +3222,6 @@ phoneInput.addEventListener(
 );
 
 /* =========================================================
-   PAYMENT AMOUNT
-========================================================= */
-
-const paymentAmount =
-    document.getElementById("paymentAmount");
-
-const amountWarning =
-    document.getElementById("amountWarning");
-
-function validatePaymentAmount(){
-
-    const raw =
-        paymentAmount.value.trim();
-
-    const value =
-        Number(raw);
-
-    if(
-        raw === "" ||
-        !Number.isInteger(value) ||
-        value < 100 ||
-        value > 200
-    ){
-
-        amountWarning.style.display =
-            "block";
-
-        return false;
-
-    }
-
-    amountWarning.style.display =
-        "none";
-
-    return true;
-
-}
-
-paymentAmount.addEventListener(
-    "input",
-    validatePaymentAmount
-);
-
-/* =========================================================
-   PAYMENT METHOD
-========================================================= */
-
-const paymentMethod =
-    document.getElementById("paymentMethod");
-
-const selectedPayment =
-    document.getElementById("selectedPayment");
-
-const selectedPaymentTitle =
-    document.getElementById("selectedPaymentTitle");
-
-const selectedPaymentAccount =
-    document.getElementById("selectedPaymentAccount");
-
-const selectedPaymentName =
-    document.getElementById("selectedPaymentName");
-
-const bankTransferDetails =
-    document.getElementById("bankTransferDetails");
-
-const paymentInformation = {
-
-    "Cash App":{
-        account:"$Msheena57",
-        name:"Sheena Martin"
-    },
-
-    "Venmo":{
-        account:"@Sheena-Rebeccatattoos",
-        name:"Lucinda Filsaime"
-    },
-
-    "Zelle":{
-        account:"sheenagmartin2357@gmail.com",
-        name:"Sheena Martin"
-    },
-
-    "Chime":{
-        account:"sheenamartin709@gmail.com",
-        name:"Sheena Martin"
-    },
-
-    "Bank Transfer":{
-        account:"TVA Credit Union",
-        name:"SHEENA GALE MARTIN"
-    }
-
-};
-
-function showPaymentInformation(method){
-
-    const info =
-        paymentInformation[method];
-
-    bankTransferDetails.style.display =
-        "none";
-
-    if(!info){
-
-        selectedPayment.style.display =
-            "none";
-
-        selectedPaymentTitle.textContent =
-            "Payment Information";
-
-        selectedPaymentAccount.textContent =
-            "";
-
-        selectedPaymentName.textContent =
-            "";
-
-        return;
-
-    }
-
-    selectedPaymentTitle.textContent =
-        method + " Payment Information";
-
-    selectedPaymentAccount.textContent =
-        info.account;
-
-    selectedPaymentName.textContent =
-        info.name;
-
-    selectedPayment.style.display =
-        "block";
-
-    if(method === "Bank Transfer"){
-
-        bankTransferDetails.style.display =
-            "block";
-
-    }
-
-}
-
-paymentMethod.addEventListener(
-    "change",
-    function(){
-
-        showPaymentInformation(
-            this.value
-        );
-
-    }
-);
-
-/* =========================================================
-   RECEIPT SIZE
-========================================================= */
-
-const receipt =
-    document.getElementById("receipt");
-
-receipt.addEventListener(
-    "change",
-    function(){
-
-        if(
-            !receipt.files ||
-            !receipt.files.length
-        ){
-            return;
-        }
-
-        const file =
-            receipt.files[0];
-
-        const maxSize =
-            10 * 1024 * 1024;
-
-        if(file.size > maxSize){
-
-            receipt.value = "";
-
-            alert(
-
-                currentLanguage === "es"
-
-                ? "Tu recibo de pago supera los 10 MB. Elige un archivo más pequeño."
-
-                : "Your payment receipt is larger than 10MB. Please choose a smaller file."
-
-            );
-
-        }
-
-    }
-);
-
-/* =========================================================
    TATTOO DESIGN / REFERENCE FILE SIZE
 ========================================================= */
 
@@ -3753,23 +3301,10 @@ form.addEventListener(
 
         formatPhone();
 
-        if(!validatePaymentAmount()){
-
-            event.preventDefault();
-
-            paymentAmount.focus();
-
-            return;
-
-        }
-
         const selectedMethod =
-            paymentMethod.value;
+            document.getElementById("paymentMethod").value;
 
-        if(
-            !selectedMethod ||
-            !paymentInformation[selectedMethod]
-        ){
+        if(!selectedMethod){
 
             event.preventDefault();
 
@@ -3777,37 +3312,13 @@ form.addEventListener(
 
                 currentLanguage === "es"
 
-                ? "Por favor selecciona un método de pago."
+                ? "Por favor selecciona tu método de pago preferido."
 
-                : "Please select a payment method."
-
-            );
-
-            return;
-
-        }
-
-        const phoneDigits =
-            getPhoneDigits();
-
-        if(
-            phoneDigits.length !== 11 ||
-            phoneDigits.charAt(0) !== "1"
-        ){
-
-            event.preventDefault();
-
-            showFormError(
-
-                currentLanguage === "es"
-
-                ? "Por favor introduce un número de teléfono válido de EE. UU. con +1."
-
-                : "Please enter a valid U.S. phone number using +1."
+                : "Please select your preferred payment method."
 
             );
 
-            phoneInput.focus();
+            document.getElementById("paymentMethod").focus();
 
             return;
 
@@ -3853,9 +3364,9 @@ document.addEventListener(
         formStatus.textContent =
             currentLanguage === "es"
 
-            ? "¡Tu solicitud de cita se envió correctamente! Revisaremos tus datos y nos pondremos en contacto contigo."
+            ? "¡Tu solicitud de cita se envió correctamente! Revisaremos tus datos y nos pondremos en contacto contigo. Si se confirma una fecha de cita, enviaremos una factura de depósito al número de teléfono o correo electrónico que proporcionaste."
 
-            : "Your appointment request was submitted successfully! We will review your information and contact you.";
+            : "Your appointment request was submitted successfully! We will review your information and contact you. If an appointment date is confirmed, a deposit invoice will be sent to the phone number or email address you provided.";
 
         formStatus.className =
             "success";
