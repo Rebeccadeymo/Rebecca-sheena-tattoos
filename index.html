@@ -6,7 +6,7 @@
 
 <title>Rebecca & Sheena Tattoos | Professional Tattoo Studio, Piercing & Home Service</title>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo and piercing services, studio appointments, home tattoo service and interstate travel service. Serving clients across Hawaii, Richmond, Virginia, Indiana, North Carolina, Pennsylvania, Maryland and Michigan.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo and piercing services, studio appointments, home tattoo service and interstate travel service. Choose to visit the studio or request home service.">
 <meta name="theme-color" content="#000000">
 
 <!-- Artistic Fonts -->
@@ -52,7 +52,9 @@ img{
   max-width:100%;
 }
 
-button{
+button,
+select,
+input{
   font-family:inherit;
 }
 
@@ -720,101 +722,144 @@ section:nth-child(even){
 
 
 /* =========================
-   SERVICE AREAS
+   APPOINTMENT LOCATION
 ========================= */
 
-.service-areas{
-  margin:28px auto 0;
-  max-width:850px;
-  padding:22px 25px;
-
-  background:#fff8fa;
-  border:1px solid rgba(181,138,50,.35);
-  border-radius:14px;
-
-  text-align:center;
-}
-
-.service-areas-title{
-  font-family:'Cinzel',Georgia,serif;
-  color:var(--gold-dark);
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  margin-bottom:9px;
-}
-
-.service-areas-list{
-  color:#444444;
-  font-size:14px;
-  font-weight:600;
-  line-height:1.8;
-}
-
-
-/* =========================
-   STUDIO LOCATIONS
-========================= */
-
-.locations{
+.appointment-location{
   background:#f8f7f4 !important;
 }
 
-.location-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
-  max-width:950px;
+.location-choice-wrapper{
+  max-width:900px;
   margin:0 auto;
 }
 
-.location-card{
+.location-choice-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-bottom:28px;
+}
+
+.location-choice{
+  position:relative;
+}
+
+.location-choice input{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.location-choice-card{
+  display:block;
   background:#ffffff;
   border:1px solid var(--border);
-  border-radius:15px;
-  padding:32px;
+  border-radius:16px;
+  padding:32px 25px;
   text-align:center;
+  cursor:pointer;
+  transition:.25s ease;
+  height:100%;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
 
+.location-choice-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(181,138,50,.55);
+}
+
+.location-choice input:checked + .location-choice-card{
+  border-color:var(--gold);
   box-shadow:
-    0 8px 25px rgba(0,0,0,.08);
+    0 12px 30px rgba(181,138,50,.18);
+  background:#fffaf0;
+}
 
+.location-choice-icon{
+  font-size:42px;
+  margin-bottom:12px;
+}
+
+.location-choice-card h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:30px;
+  color:#171717;
+  margin-bottom:8px;
+}
+
+.location-choice-card p{
+  color:#666666;
+  font-size:13px;
+}
+
+.location-details{
+  display:none;
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:28px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.location-details.active{
+  display:block;
+}
+
+.location-details h3{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:29px;
+  margin-bottom:8px;
+  color:#171717;
+}
+
+.location-details p{
+  color:#666666;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.location-field{
+  margin-bottom:18px;
+}
+
+.location-field label{
+  display:block;
+  font-family:'Cinzel',Georgia,serif;
+  color:var(--gold-dark);
+  font-size:10px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:7px;
+}
+
+.location-field select,
+.location-field input{
+  width:100%;
+  padding:13px 14px;
+  border:1px solid #d8d2ca;
+  border-radius:8px;
+  background:#fff;
+  color:#222;
+  font-size:14px;
+  outline:none;
   transition:.2s ease;
 }
 
-.location-card:hover{
-  transform:translateY(-4px);
-
-  box-shadow:
-    0 14px 30px rgba(0,0,0,.14);
+.location-field select:focus,
+.location-field input:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(181,138,50,.10);
 }
 
-.location-icon{
-  font-size:34px;
-  margin-bottom:12px;
-}
-
-.location-card h3{
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:32px;
-  font-weight:600;
-  color:#171717;
-  margin-bottom:10px;
-}
-
-.location-card .location-state{
-  font-family:'Cinzel',Georgia,serif;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:2px;
-  color:var(--gold-dark);
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.location-card p{
-  color:#666666;
-  font-size:14px;
+.location-note{
+  background:#fff8fa;
+  border:1px solid rgba(181,138,50,.3);
+  border-radius:10px;
+  padding:14px;
+  color:#666;
+  font-size:12px;
   line-height:1.7;
 }
 
@@ -1073,10 +1118,7 @@ section:nth-child(even){
 .whatsapp-float{
   position:fixed;
   right:20px;
-
-  /* Moved above the Crisp live-chat button */
   bottom:95px;
-
   z-index:2500;
 
   width:60px;
@@ -1327,11 +1369,6 @@ footer p{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .location-grid{
-    grid-template-columns:1fr;
-    max-width:650px;
-  }
-
 }
 
 
@@ -1423,20 +1460,12 @@ footer p{
     font-size:48px;
   }
 
-  .service-areas{
-    padding:20px 17px;
-  }
-
-  .service-areas-list{
-    font-size:13px;
-  }
-
-  .location-grid{
+  .location-choice-grid{
     grid-template-columns:1fr;
   }
 
-  .location-card{
-    padding:28px 22px;
+  .location-details{
+    padding:22px 18px;
   }
 
   .contact-feature-image img{
@@ -1494,8 +1523,6 @@ footer p{
     width:56px;
     height:56px;
     right:16px;
-
-    /* Keeps WhatsApp clearly above Crisp on mobile */
     bottom:88px;
   }
 
@@ -1547,10 +1574,10 @@ data-es="Servicios">
 Services
 </a>
 
-<a href="#locations"
-data-en="Locations"
-data-es="Ubicaciones">
-Locations
+<a href="#appointment-location"
+data-en="Appointment"
+data-es="Cita">
+Appointment
 </a>
 
 <a href="#about"
@@ -1872,20 +1899,6 @@ Have questions about your tattoo, piercing, design or service location? Talk wit
 
 </div>
 
-<!-- SERVICE AREAS -->
-
-<div class="service-areas">
-
-<div class="service-areas-title">
-Serving Clients Across These Locations
-</div>
-
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
-
-</div>
-
 </div>
 
 </section>
@@ -2112,27 +2125,15 @@ Yes — we travel interstate for home tattoo services.
 Send us your location and booking details so we can review availability and any applicable travel arrangements before confirming your appointment.
 </p>
 
-<div class="service-areas">
-
-<div class="service-areas-title">
-Serving Clients Across These Locations
-</div>
-
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
-
-</div>
-
 <div style="margin-top:25px;">
 
 <a
-href="booking.html"
+href="#appointment-location"
 class="btn btn-primary"
-data-en="Request Home Service"
-data-es="Solicitar Servicio a Domicilio">
+data-en="Choose Home Service"
+data-es="Elegir Servicio a Domicilio">
 
-Request Home Service
+Choose Home Service
 
 </a>
 
@@ -2146,101 +2147,293 @@ Request Home Service
 
 
 <!-- =========================
-     STUDIO LOCATIONS
+     APPOINTMENT LOCATION
 ========================= -->
 
-<section class="locations" id="locations">
+<section class="appointment-location" id="appointment-location">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
-Our Studios
+<div class="eyebrow"
+data-en="Choose Your Appointment Location"
+data-es="Elige la Ubicación de Tu Cita">
+
+Choose Your Appointment Location
+
 </div>
 
-<h2>
-Studio Locations
+<h2
+data-en="Where Would You Like Your Appointment?"
+data-es="¿Dónde Te Gustaría Tu Cita?">
+
+Where Would You Like Your Appointment?
+
 </h2>
 
-<p>
-Visit us at either of our studio locations. We also serve clients across additional locations through home and travel services.
+<p
+data-en="Choose whether you would like to visit the studio or request our home service."
+data-es="Elige si deseas visitar el estudio o solicitar nuestro servicio a domicilio.">
+
+Choose whether you would like to visit the studio or request our home service.
+
 </p>
 
 </div>
 
-<div class="location-grid">
 
-<div class="location-card">
+<div class="location-choice-wrapper">
 
-<div class="location-icon">
-📍
+<div class="location-choice-grid">
+
+<label class="location-choice">
+
+<input
+type="radio"
+name="appointmentLocation"
+value="studio"
+id="homepageStudioChoice">
+
+<span class="location-choice-card">
+
+<div class="location-choice-icon">
+🏢
 </div>
 
-<div class="location-state">
-Missouri
-</div>
+<h3
+data-en="Visit the Studio"
+data-es="Visitar el Estudio">
 
-<h3>
-Richmond Studio
+Visit the Studio
+
 </h3>
 
-<p>
-403 W ROYLE St<br>
-Richmond, MO 64085
+<p
+data-en="Choose the state where you would like your studio appointment."
+data-es="Elige el estado donde deseas tu cita en el estudio.">
+
+Choose the state where you would like your studio appointment.
+
 </p>
 
+</span>
+
+</label>
+
+
+<label class="location-choice">
+
+<input
+type="radio"
+name="appointmentLocation"
+value="home"
+id="homepageHomeChoice">
+
+<span class="location-choice-card">
+
+<div class="location-choice-icon">
+🏠
 </div>
 
+<h3
+data-en="Home Service"
+data-es="Servicio a Domicilio">
 
-<div class="location-card">
+Home Service
 
-<div class="location-icon">
-📍
-</div>
-
-<div class="location-state">
-Hawaii
-</div>
-
-<h3>
-Honolulu Studio
 </h3>
 
-<p>
-1100–1110 Bishop St<br>
-Honolulu, HI 96813
+<p
+data-en="Request professional tattoo service at your preferred location."
+data-es="Solicita un servicio profesional de tatuaje en tu ubicación.">
+
+Request professional tattoo service at your preferred location.
+
 </p>
 
+</span>
+
+</label>
+
+</div>
+
+
+<!-- STUDIO OPTION -->
+
+<div
+class="location-details"
+id="studioLocationDetails">
+
+<h3
+data-en="Visit the Studio"
+data-es="Visitar el Estudio">
+
+Visit the Studio
+
+</h3>
+
+<p
+data-en="Please select the state where you would like your studio appointment. The full studio address is provided through the booking process."
+data-es="Selecciona el estado donde deseas tu cita en el estudio. La dirección completa del estudio se proporciona durante el proceso de reserva.">
+
+Please select the state where you would like your studio appointment. The full studio address is provided through the booking process.
+
+</p>
+
+<div class="location-field">
+
+<label
+for="homepageStudioState"
+data-en="Select State"
+data-es="Seleccionar Estado">
+
+Select State
+
+</label>
+
+<select id="homepageStudioState">
+
+<option value=""
+data-en="Choose a state"
+data-es="Elige un estado">
+Choose a state
+</option>
+
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+
+</select>
+
+</div>
+
+<div class="location-note"
+data-en="Studio locations are not publicly displayed on this page. Select your state and continue to booking to provide the requested appointment details."
+data-es="Las ubicaciones de los estudios no se muestran públicamente en esta página. Selecciona tu estado y continúa con la reserva para proporcionar los detalles solicitados.">
+
+Studio locations are not publicly displayed on this page. Select your state and continue to booking to provide the requested appointment details.
+
 </div>
 
 </div>
 
 
-<div class="service-areas">
+<!-- HOME OPTION -->
 
-<div class="service-areas-title">
-Serving Clients Across These Locations
+<div
+class="location-details"
+id="homeLocationDetails">
+
+<h3
+data-en="Home Service"
+data-es="Servicio a Domicilio">
+
+Home Service
+
+</h3>
+
+<p
+data-en="Enter the address where you would like the tattoo service. Your location will be reviewed before the appointment is confirmed."
+data-es="Introduce la dirección donde deseas recibir el servicio de tatuaje. Tu ubicación será revisada antes de confirmar la cita.">
+
+Enter the address where you would like the tattoo service. Your location will be reviewed before the appointment is confirmed.
+
+</p>
+
+<div class="location-field">
+
+<label
+for="homepageHomeAddress"
+data-en="Full Home Service Address"
+data-es="Dirección Completa del Servicio">
+
+Full Home Service Address
+
+</label>
+
+<input
+type="text"
+id="homepageHomeAddress"
+placeholder="Enter your full address"
+data-placeholder-en="Enter your full address"
+data-placeholder-es="Introduce tu dirección completa"
+autocomplete="street-address">
+
 </div>
 
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
+<div class="location-note"
+data-en="Home service availability depends on the requested location, project details and schedule. Interstate travel may also be available."
+data-es="La disponibilidad del servicio a domicilio depende de la ubicación solicitada, los detalles del proyecto y el horario. También puede haber viajes interestatales disponibles.">
+
+Home service availability depends on the requested location, project details and schedule. Interstate travel may also be available.
 
 </div>
 
+</div>
 
-<div style="text-align:center;margin-top:35px;">
+
+<div style="text-align:center;margin-top:25px;">
 
 <a
 href="booking.html"
 class="btn btn-primary"
-data-en="Choose Your Studio & Book"
-data-es="Elige Tu Estudio y Reserva">
+id="homepageContinueBooking"
+data-en="Continue to Booking"
+data-es="Continuar con la Reserva">
 
-Choose Your Studio & Book
+Continue to Booking
 
 </a>
+
+</div>
 
 </div>
 
@@ -2287,18 +2480,6 @@ Our goal is to create a comfortable experience while producing tattoo artwork th
 <li>Client-focused experience</li>
 
 </ul>
-
-<div class="service-areas">
-
-<div class="service-areas-title">
-Serving Clients Across These Locations
-</div>
-
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
-
-</div>
 
 <div style="margin-top:25px;">
 
@@ -2740,7 +2921,7 @@ class="faq-question"
 aria-expanded="false">
 
 <span>
-Where are your studios located?
+Where can I choose my appointment location?
 </span>
 
 <span class="faq-icon">
@@ -2752,7 +2933,7 @@ Where are your studios located?
 <div class="faq-answer">
 
 <p>
-Rebecca & Sheena Tattoos currently lists physical studio locations in Richmond, Missouri and Honolulu, Hawaii. The business also serves clients across Hawaii, Richmond, Virginia, Indiana, North Carolina, Pennsylvania, Maryland and Michigan through available home and travel services.
+When booking, you can choose between visiting the studio or requesting home service. If you choose to visit the studio, select the state where you would like your appointment. If you choose home service, provide your full service address so the studio can review availability.
 </p>
 
 </div>
@@ -2807,40 +2988,12 @@ Have a question before booking? Contact us directly about tattoos, piercing, hom
 <div class="contact-item">
 
 <h3>
-Missouri Studio
+Appointment Location
 </h3>
 
 <p>
-403 W ROYLE St<br>
-Richmond, MO 64085
+Choose between visiting the studio or requesting home service when booking.
 </p>
-
-</div>
-
-
-<div class="contact-item">
-
-<h3>
-Hawaii Studio
-</h3>
-
-<p>
-1100–1110 Bishop St<br>
-Honolulu, HI 96813
-</p>
-
-</div>
-
-
-<div class="service-areas">
-
-<div class="service-areas-title">
-Serving Clients Across These Locations
-</div>
-
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
 
 </div>
 
@@ -3061,17 +3214,9 @@ Rebecca & Sheena Tattoos
 Professional tattoo artistry, piercing and personalized service with a focus on creativity, detail and a great client experience.
 </p>
 
-<div class="service-areas">
-
-<div class="service-areas-title">
-Serving Clients Across These Locations
-</div>
-
-<div class="service-areas-list">
-Hawaii • Richmond, Virginia • Indiana • North Carolina • Pennsylvania • Maryland • Michigan
-</div>
-
-</div>
+<p style="margin-top:12px;">
+Choose between visiting the studio or requesting home service when you book your appointment.
+</p>
 
 </div>
 
@@ -3089,8 +3234,8 @@ Our Work
 Services
 </a>
 
-<a href="#locations">
-Locations
+<a href="#appointment-location">
+Appointment
 </a>
 
 <a href="#faq">
@@ -3218,6 +3363,17 @@ currentLanguage === "es"
 
 });
 
+/* Update placeholders */
+
+document.querySelectorAll("[data-placeholder-en]").forEach(function(element){
+
+element.placeholder =
+currentLanguage === "es"
+? element.getAttribute("data-placeholder-es")
+: element.getAttribute("data-placeholder-en");
+
+});
+
 languageToggle.textContent =
 currentLanguage === "en"
 ? "Español"
@@ -3244,6 +3400,131 @@ updateLanguage();
 });
 
 updateLanguage();
+
+
+/* =========================
+   APPOINTMENT LOCATION
+========================= */
+
+const studioChoice =
+document.getElementById("homepageStudioChoice");
+
+const homeChoice =
+document.getElementById("homepageHomeChoice");
+
+const studioLocationDetails =
+document.getElementById("studioLocationDetails");
+
+const homeLocationDetails =
+document.getElementById("homeLocationDetails");
+
+const studioState =
+document.getElementById("homepageStudioState");
+
+const homeAddress =
+document.getElementById("homepageHomeAddress");
+
+const continueBooking =
+document.getElementById("homepageContinueBooking");
+
+
+function updateAppointmentLocation(){
+
+studioLocationDetails.classList.remove("active");
+homeLocationDetails.classList.remove("active");
+
+if(studioChoice.checked){
+
+studioLocationDetails.classList.add("active");
+
+}
+
+if(homeChoice.checked){
+
+homeLocationDetails.classList.add("active");
+
+}
+
+}
+
+
+studioChoice.addEventListener(
+"change",
+updateAppointmentLocation
+);
+
+homeChoice.addEventListener(
+"change",
+updateAppointmentLocation
+);
+
+
+/* =========================
+   SEND LOCATION CHOICE
+   TO BOOKING PAGE
+========================= */
+
+continueBooking.addEventListener(
+"click",
+function(event){
+
+if(studioChoice.checked){
+
+if(!studioState.value){
+
+event.preventDefault();
+
+alert(
+currentLanguage === "es"
+? "Selecciona un estado antes de continuar."
+: "Please select a state before continuing."
+);
+
+return;
+
+}
+
+continueBooking.href =
+"booking.html?location=studio&state=" +
+encodeURIComponent(studioState.value);
+
+}
+
+else if(homeChoice.checked){
+
+if(!homeAddress.value.trim()){
+
+event.preventDefault();
+
+alert(
+currentLanguage === "es"
+? "Introduce tu dirección completa antes de continuar."
+: "Please enter your full home service address before continuing."
+);
+
+return;
+
+}
+
+continueBooking.href =
+"booking.html?location=home&address=" +
+encodeURIComponent(homeAddress.value.trim());
+
+}
+
+else{
+
+event.preventDefault();
+
+alert(
+currentLanguage === "es"
+? "Selecciona Visit the Studio o Home Service antes de continuar."
+: "Please choose Visit the Studio or Home Service before continuing."
+);
+
+}
+
+});
 
 
 /* =========================
