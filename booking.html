@@ -885,181 +885,6 @@ textarea{
     color:#999;
 }
 
-/* =========================
-   PAYMENT AMOUNT
-========================= */
-
-.payment-intro{
-    margin-bottom:25px;
-}
-
-.payment-intro p{
-    color:#aaa;
-}
-
-.payment-range{
-    display:inline-block;
-    background:#241a08;
-    color:var(--gold-light);
-    border:1px solid rgba(201,162,77,.45);
-    padding:8px 13px;
-    border-radius:20px;
-    font-family:'Cinzel',serif;
-    font-size:11px;
-    font-weight:700;
-}
-
-.amount-wrap{
-    max-width:430px;
-    margin-bottom:30px;
-}
-
-.amount-prefix{
-    position:relative;
-}
-
-.amount-prefix span{
-    position:absolute;
-    left:15px;
-    top:50%;
-    transform:translateY(-50%);
-    font-weight:700;
-    color:var(--gold-light);
-}
-
-.amount-prefix input{
-    padding-left:30px;
-}
-
-.amount-warning{
-    display:none;
-    color:#ff6f96;
-    font-size:12px;
-    margin-top:7px;
-}
-
-/* =========================
-   PAYMENT METHOD
-========================= */
-
-.payment-method-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:27px;
-    color:var(--gold-light);
-    margin-bottom:5px;
-}
-
-.payment-method-help{
-    font-size:12px;
-    color:#888;
-    margin-bottom:15px;
-}
-
-.payment-method-select{
-    position:relative;
-    max-width:520px;
-}
-
-.payment-method-select select{
-    appearance:auto;
-    -webkit-appearance:auto;
-    cursor:pointer;
-    min-height:52px;
-    font-size:14px;
-    padding:14px 16px;
-    border:2px solid #383033;
-    background:#0d0d0d;
-}
-
-.payment-method-select select:hover{
-    border-color:var(--gold);
-}
-
-.payment-method-select select:focus{
-    border-color:var(--gold-light);
-    box-shadow:0 0 0 3px rgba(201,162,77,.12);
-}
-
-.payment-method-select select option{
-    background:#111;
-    color:#fff;
-}
-
-/* =========================
-   SELECTED PAYMENT
-========================= */
-
-.selected-payment{
-    display:none;
-    margin-top:22px;
-    padding:20px;
-    background:
-        linear-gradient(
-            135deg,
-            #241a08,
-            #101010
-        );
-    border:1px solid rgba(201,162,77,.35);
-    border-radius:17px;
-    animation:paymentReveal .25s ease;
-}
-
-@keyframes paymentReveal{
-    from{
-        opacity:0;
-        transform:translateY(-5px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.selected-payment h4{
-    font-family:'Cormorant Garamond',serif;
-    font-size:25px;
-    color:var(--gold-light);
-    margin-bottom:10px;
-}
-
-.payment-detail-row{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    background:#0b0b0b;
-    border:1px solid #30292d;
-    border-radius:12px;
-    padding:13px 15px;
-    margin-top:9px;
-}
-
-.payment-detail-label{
-    font-family:'Cinzel',serif;
-    font-size:10px;
-    color:#a9989f;
-    font-weight:700;
-}
-
-.payment-detail-value{
-    font-size:14px;
-    font-weight:700;
-    color:#eee;
-    text-align:right;
-    word-break:break-word;
-}
-
-/* =========================
-   RECEIPT
-========================= */
-
-.receipt-box{
-    background:#0d0d0d;
-    border:1px dashed #6b542a;
-    border-radius:15px;
-    padding:18px;
-}
-
 input[type="file"]{
     padding:11px;
 }
@@ -1301,10 +1126,6 @@ footer p{
         font-size:16px !important;
     }
 
-    .payment-method-select select{
-        font-size:16px !important;
-    }
-
     .selected-price{
         padding:19px 15px;
     }
@@ -1352,19 +1173,6 @@ footer p{
 
     .intro h2{
         font-size:45px;
-    }
-
-    .payment-detail-row{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .payment-detail-value{
-        text-align:left;
-    }
-
-    .payment-method-select{
-        max-width:100%;
     }
 
     .notice{
@@ -1729,8 +1537,6 @@ data-es="Artista Masculino">
 Male Artist
 
 </span>
-
-</label>
 
 </div>
 
@@ -2363,7 +2169,6 @@ Optional. JPG, JPEG, PNG, WEBP, GIF or PDF. Maximum file size: 10MB.
 
 <!-- =========================
      IMPORTANT NOTICE
-     MOVED BEFORE PAYMENT
 ========================= -->
 
 <div class="notice">
@@ -2389,14 +2194,6 @@ Please read this notice before going ahead with your appointment request.
 <ul>
 
 <li
-data-en="You are not paying for the tattoo today."
-data-es="No estás pagando el tatuaje hoy.">
-
-You are not paying for the tattoo today.
-
-</li>
-
-<li
 data-en="The prices shown are starting prices only."
 data-es="Los precios mostrados son solo precios iniciales.">
 
@@ -2405,10 +2202,10 @@ The prices shown are starting prices only.
 </li>
 
 <li
-data-en="You only pay the $100–$200 booking payment when submitting the request."
-data-es="Solo pagas el pago de reserva de $100–$200 al enviar la solicitud.">
+data-en="We will reach out to you immediately after we receive your booking submission."
+data-es="Nos comunicaremos contigo inmediatamente después de recibir tu solicitud de reserva.">
 
-You only pay the $100–$200 booking payment when submitting the request.
+We will reach out to you immediately after we receive your booking submission.
 
 </li>
 
@@ -2420,297 +2217,9 @@ We will review your appointment request and contact you about any additional det
 
 </li>
 
-<li
-data-en="Your booking payment is applied to the final tattoo price."
-data-es="Tu pago de reserva se aplica al precio final del tatuaje.">
-
-Your booking payment is applied to the final tattoo price.
-
-</li>
-
 </ul>
 
 </div>
-
-<section class="form-section">
-
-<h3
-data-en="Booking Payment"
-data-es="Pago de Reserva">
-
-Booking Payment
-
-</h3>
-
-<div class="payment-intro">
-
-<p
-data-en="First enter the amount you are paying. Then select your preferred payment method. Payment information will appear only after you choose a method."
-data-es="Primero introduce la cantidad que vas a pagar. Luego selecciona tu método de pago preferido. La información de pago aparecerá únicamente después de seleccionar un método.">
-
-First enter the amount you are paying. Then select your preferred payment method. Payment information will appear only after you choose a method.
-
-</p>
-
-<br>
-
-<span class="payment-range">
-$100 – $200 ONLY
-</span>
-
-</div>
-
-<div class="field amount-wrap">
-
-<label
-for="paymentAmount"
-data-en="Payment Amount *"
-data-es="Monto del Pago *">
-
-Payment Amount *
-
-</label>
-
-<div class="amount-prefix">
-
-<span>$</span>
-
-<input
-type="number"
-id="paymentAmount"
-name="payment_amount"
-required
-min="100"
-max="200"
-step="1"
-inputmode="numeric"
-placeholder="100">
-
-</div>
-
-<span
-class="help"
-data-en="Enter an amount from $100 to $200 only."
-data-es="Introduce solamente una cantidad entre $100 y $200.">
-
-Enter an amount from $100 to $200 only.
-
-</span>
-
-<div
-id="amountWarning"
-class="amount-warning">
-
-Payment amount must be between $100 and $200.
-
-</div>
-
-</div>
-
-<h4
-class="payment-method-title"
-data-en="Select Payment Method"
-data-es="Selecciona el Método de Pago">
-
-Select Payment Method
-
-</h4>
-
-<p
-class="payment-method-help"
-data-en="Tap the box below to choose Cash App, Venmo, Zelle, Chime, or Bank Transfer."
-data-es="Toca el cuadro de abajo para elegir Cash App, Venmo, Zelle, Chime o Transferencia Bancaria.">
-
-Tap the box below to choose Cash App, Venmo, Zelle, Chime, or Bank Transfer.
-
-</p>
-
-<div class="field payment-method-select">
-
-<label
-for="paymentMethod"
-data-en="Payment Method *"
-data-es="Método de Pago *">
-
-Payment Method *
-
-</label>
-
-<select
-id="paymentMethod"
-name="payment_method"
-required>
-
-<option
-value=""
-data-en="Select Payment Method"
-data-es="Selecciona el Método de Pago">
-
-Select Payment Method
-
-</option>
-
-<option value="Cash App">
-Cash App
-</option>
-
-<option value="Venmo">
-Venmo
-</option>
-
-<option value="Zelle">
-Zelle
-</option>
-
-<option value="Chime">
-Chime
-</option>
-
-<option value="Bank Transfer">
-Bank Transfer
-</option>
-
-</select>
-
-</div>
-
-<div
-id="selectedPayment"
-class="selected-payment">
-
-<h4
-id="selectedPaymentTitle">
-
-Payment Information
-
-</h4>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ACCOUNT
-</span>
-
-<span
-id="selectedPaymentAccount"
-class="payment-detail-value">
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-NAME
-</span>
-
-<span
-id="selectedPaymentName"
-class="payment-detail-value">
-</span>
-
-</div>
-
-<div
-id="bankTransferDetails"
-style="display:none;">
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-BANK NAME
-</span>
-
-<span
-id="bankName"
-class="payment-detail-value">
-TVA Credit Union
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ACCOUNT NAME
-</span>
-
-<span
-id="bankAccountName"
-class="payment-detail-value">
-SHEENA GALE MARTIN
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-CHECKING ACCOUNT NUMBER
-</span>
-
-<span
-id="bankAccountNumber"
-class="payment-detail-value">
-65734404
-</span>
-
-</div>
-
-<div class="payment-detail-row">
-
-<span class="payment-detail-label">
-ROUTING NUMBER
-</span>
-
-<span
-id="bankRoutingNumber"
-class="payment-detail-value">
-264279567
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-<div
-class="field"
-style="margin-top:25px;">
-
-<label
-for="receipt"
-data-en="Payment Receipt *"
-data-es="Recibo de Pago *">
-
-Payment Receipt *
-
-</label>
-
-<div class="receipt-box">
-
-<input
-type="file"
-id="receipt"
-name="payment_receipt"
-accept="image/*,.pdf"
-required>
-
-<span
-class="help"
-data-en="Upload a screenshot or receipt showing your payment. Maximum file size: 10MB."
-data-es="Carga una captura de pantalla o recibo que muestre tu pago. Tamaño máximo: 10 MB.">
-
-Upload a screenshot or receipt showing your payment. Maximum file size: 10MB.
-
-</span>
-
-</div>
-
-</div>
-
-</section>
 
 <section class="form-section">
 
@@ -3178,225 +2687,6 @@ phoneInput.addEventListener(
 );
 
 /* =========================================================
-   PAYMENT AMOUNT
-========================================================= */
-
-const paymentAmount =
-    document.getElementById(
-        "paymentAmount"
-    );
-
-const amountWarning =
-    document.getElementById(
-        "amountWarning"
-    );
-
-function validatePaymentAmount(){
-
-    const raw =
-        paymentAmount.value.trim();
-
-    const value =
-        Number(raw);
-
-    if(
-        raw === "" ||
-        !Number.isInteger(value) ||
-        value < 100 ||
-        value > 200
-    ){
-
-        amountWarning.style.display =
-            "block";
-
-        return false;
-
-    }
-
-    amountWarning.style.display =
-        "none";
-
-    return true;
-
-}
-
-paymentAmount.addEventListener(
-    "input",
-    validatePaymentAmount
-);
-
-/* =========================================================
-   PAYMENT METHOD
-========================================================= */
-
-const paymentMethod =
-    document.getElementById(
-        "paymentMethod"
-    );
-
-const selectedPayment =
-    document.getElementById(
-        "selectedPayment"
-    );
-
-const selectedPaymentTitle =
-    document.getElementById(
-        "selectedPaymentTitle"
-    );
-
-const selectedPaymentAccount =
-    document.getElementById(
-        "selectedPaymentAccount"
-    );
-
-const selectedPaymentName =
-    document.getElementById(
-        "selectedPaymentName"
-    );
-
-const bankTransferDetails =
-    document.getElementById(
-        "bankTransferDetails"
-    );
-
-const paymentInformation = {
-
-    "Cash App":{
-        account:"$Msheena57",
-        name:"Sheena Martin"
-    },
-
-    "Venmo":{
-        account:"@Sheena-Rebeccatattoos",
-        name:"Lucinda Filsaime"
-    },
-
-    "Zelle":{
-        account:"sheenagmartin2357@gmail.com",
-        name:"Sheena Martin"
-    },
-
-    "Chime":{
-        account:"sheenamartin709@gmail.com",
-        name:"Sheena Martin"
-    },
-
-    "Bank Transfer":{
-        account:"TVA Credit Union",
-        name:"SHEENA GALE MARTIN"
-    }
-
-};
-
-function showPaymentInformation(method){
-
-    const info =
-        paymentInformation[method];
-
-    bankTransferDetails.style.display =
-        "none";
-
-    if(!info){
-
-        selectedPayment.style.display =
-            "none";
-
-        selectedPaymentTitle.textContent =
-            "Payment Information";
-
-        selectedPaymentAccount.textContent =
-            "";
-
-        selectedPaymentName.textContent =
-            "";
-
-        return;
-
-    }
-
-    selectedPaymentTitle.textContent =
-        method + " Payment Information";
-
-    selectedPaymentAccount.textContent =
-        info.account;
-
-    selectedPaymentName.textContent =
-        info.name;
-
-    selectedPayment.style.display =
-        "block";
-
-    if(method === "Bank Transfer"){
-
-        bankTransferDetails.style.display =
-            "block";
-
-    }
-
-}
-
-paymentMethod.addEventListener(
-    "change",
-    function(){
-
-        showPaymentInformation(
-            this.value
-        );
-
-    }
-);
-
-/* =========================================================
-   PAYMENT RECEIPT SIZE
-========================================================= */
-
-const receipt =
-    document.getElementById(
-        "receipt"
-    );
-
-receipt.addEventListener(
-    "change",
-    function(){
-
-        if(
-            !receipt.files ||
-            !receipt.files.length
-        ){
-
-            return;
-
-        }
-
-        const file =
-            receipt.files[0];
-
-        const maxSize =
-            10 * 1024 * 1024;
-
-        if(
-            file.size > maxSize
-        ){
-
-            receipt.value =
-                "";
-
-            alert(
-
-                currentLanguage === "es"
-
-                ? "Tu recibo de pago supera los 10 MB. Elige un archivo más pequeño."
-
-                : "Your payment receipt is larger than 10MB. Please choose a smaller file."
-
-            );
-
-        }
-
-    }
-);
-
-/* =========================================================
    TATTOO DESIGN / REFERENCE IMAGE SIZE
 ========================================================= */
 
@@ -3489,42 +2779,6 @@ form.addEventListener(
 
         formatPhone();
 
-        if(
-            !validatePaymentAmount()
-        ){
-
-            event.preventDefault();
-
-            paymentAmount.focus();
-
-            return;
-
-        }
-
-        const selectedMethod =
-            paymentMethod.value;
-
-        if(
-            !selectedMethod ||
-            !paymentInformation[selectedMethod]
-        ){
-
-            event.preventDefault();
-
-            showFormError(
-
-                currentLanguage === "es"
-
-                ? "Por favor selecciona un método de pago."
-
-                : "Please select a payment method."
-
-            );
-
-            return;
-
-        }
-
         const phoneDigits =
             getPhoneDigits();
 
@@ -3604,7 +2858,7 @@ document.addEventListener(
 
             ? "¡Tu solicitud de cita se envió correctamente! Revisaremos tus datos y nos pondremos en contacto contigo."
 
-            : "Your appointment request was submitted successfully! We will review your information and contact you.";
+            : "Your appointment request was submitted successfully! We received your booking submission and will reach out to you immediately.";
 
         formStatus.className =
             "success";
