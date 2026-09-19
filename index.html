@@ -1089,7 +1089,7 @@ section:nth-child(even){
 
 .contact-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   gap:40px;
   align-items:center;
 }
@@ -1164,22 +1164,6 @@ section:nth-child(even){
 .whatsapp-contact-icon{
   background:#eafaf0;
   color:#20a85a;
-}
-
-.contact-feature-image{
-  min-width:0;
-}
-
-.contact-feature-image img{
-  width:100%;
-  height:500px;
-  object-fit:cover;
-
-  border-radius:14px;
-  border:1px solid var(--border);
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.12);
 }
 
 /* =========================================================
@@ -1437,8 +1421,7 @@ footer p{
     gap:25px;
   }
 
-  .about-grid,
-  .contact-grid{
+  .about-grid{
     grid-template-columns:1fr;
   }
 
@@ -1592,10 +1575,6 @@ footer p{
 
   .location-details{
     padding:22px 18px;
-  }
-
-  .contact-feature-image img{
-    height:380px;
   }
 
   .footer-grid{
@@ -2740,6 +2719,8 @@ Start Your Booking
 
 </div>
 
+<!-- NEW PIERCING IMAGE REPLACES THE LARGE LOGO -->
+
 <div
 class="gallery-item"
 style="
@@ -2747,25 +2728,23 @@ display:flex;
 align-items:center;
 justify-content:center;
 background:#320308;
-padding:20px;
+padding:0;
 cursor:default;
 ">
 
 <img
-src="https://i.ibb.co/Zz1L6vqw/A2132795-1C7B-453F-B855-8E3B97F3BB3E.png"
-alt="Rebecca & Sheena Tattoos logo"
-width="520"
-height="520"
+src="https://i.ibb.co/W4BnqpMx/IMG-6332.jpg"
+alt="Professional piercing work by Rebecca & Sheena Tattoos"
+width="640"
+height="640"
 loading="lazy"
 decoding="async"
 referrerpolicy="no-referrer"
 style="
 width:100%;
 height:100%;
-max-width:520px;
-max-height:520px;
-object-fit:contain;
-filter:drop-shadow(0 8px 20px rgba(0,0,0,.6));
+min-height:520px;
+object-fit:cover;
 ">
 
 </div>
@@ -3306,17 +3285,6 @@ WhatsApp Us
 
 </div>
 
-<div class="contact-feature-image">
-
-<img
-src="https://i.ibb.co/svmjmWrS/IMG-5942.jpg?v=20260907"
-alt="Tattoo artwork on a client's back"
-loading="lazy"
-decoding="async"
-referrerpolicy="no-referrer">
-
-</div>
-
 </div>
 
 </section>
@@ -3593,50 +3561,6 @@ currentLanguage === "es"
 ? element.getAttribute("data-title-es")
 : element.getAttribute("data-title-en")
 );
-
-});
-
-/* Translate gallery image alt text */
-document.querySelectorAll(".gallery-item img").forEach(function(image){
-
-image.alt =
-currentLanguage === "es"
-? "Obra de tatuaje de Rebecca & Sheena Tattoos"
-: "Tattoo artwork by Rebecca and Sheena";
-
-});
-
-/* Translate contact image alt text */
-const contactImage =
-document.querySelector(".contact-feature-image img");
-
-if(contactImage){
-
-contactImage.alt =
-currentLanguage === "es"
-? "Obra de tatuaje en la espalda de un cliente"
-: "Tattoo artwork on a client's back";
-
-}
-
-/* Translate logo alt text */
-document.querySelectorAll(".brand-logo, .about-grid img").forEach(function(image){
-
-image.alt =
-"Rebecca & Sheena Tattoos logo";
-
-});
-
-/* Translate gallery lightbox caption if currently open */
-if(
-lightbox &&
-lightbox.classList.contains("active") &&
-currentLightboxItem
-){
-
-updateLightboxCaption(currentLightboxItem);
-
-}
 
 /* Keep toggle available in both languages */
 languageToggle.textContent = "ES/EN";
