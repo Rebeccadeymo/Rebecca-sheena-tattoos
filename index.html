@@ -2,25 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Rebecca & Sheena Tattoos | Professional Tattoo Studio, Piercing & Home Service</title>
 
-<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo and piercing services, studio appointments, home tattoo service and interstate travel service. Choose to visit the studio or request home service.">
+<meta name="description" content="Rebecca & Sheena Tattoos — professional custom tattoo and piercing services, studio appointments, home tattoo service and interstate travel service.">
 <meta name="theme-color" content="#5c0710">
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QT2D891607"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-  gtag('config', 'G-QT2D891607');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QT2D891607');
 </script>
 
-<!-- Artistic Fonts -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -36,13 +34,21 @@
 
 html{
   scroll-behavior:smooth;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
 }
 
 body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
   font-family:'Montserrat',Arial,Helvetica,sans-serif;
   background:#f8f7f4;
   color:#171717;
   line-height:1.6;
+  -webkit-text-size-adjust:100%;
 }
 
 body.lightbox-open{
@@ -63,12 +69,18 @@ button,
 select,
 input{
   font-family:inherit;
+  max-width:100%;
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
 }
 
 .container{
   width:92%;
   max-width:1180px;
-  margin:auto;
+  margin:0 auto;
 }
 
 :root{
@@ -81,7 +93,6 @@ input{
   --gold-light:#c9a24d;
   --gold-dark:#8e6a20;
 
-  /* Deep Red Theme */
   --black:#5c0710;
   --black-soft:#320308;
   --red:#8f101c;
@@ -102,6 +113,107 @@ input{
   --border:#e4dfd8;
 }
 
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  width:100%;
+  background:rgba(91,7,16,.97);
+  border-bottom:1px solid rgba(201,162,77,.45);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:10px 20px;
+}
+
+.navbar{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.header-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.header-logo{
+  width:75px;
+  height:75px;
+  min-width:75px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#ffffff;
+  border:2px solid var(--gold-light);
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.55);
+}
+
+.header-brand-name{
+  font-family:'Great Vibes','Cormorant Garamond',cursive;
+  font-size:31px;
+  line-height:1;
+  color:#ffffff;
+  white-space:nowrap;
+}
+
+.header-brand-name span{
+  color:var(--gold-light);
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-family:'Cinzel',Georgia,serif;
+  font-size:11px;
+  font-weight:700;
+  color:#ffffff;
+  letter-spacing:.7px;
+  transition:.2s ease;
+  white-space:nowrap;
+}
+
+nav a:hover{
+  color:var(--gold-light);
+}
+
+.language-btn{
+  border:1px solid var(--gold);
+  background:#6e0b15;
+  color:var(--gold-light);
+  border-radius:20px;
+  padding:8px 13px;
+  cursor:pointer;
+  font-family:'Cinzel',Georgia,serif;
+  font-size:10px;
+  font-weight:700;
+  white-space:nowrap;
+  transition:.2s ease;
+}
+
+.language-btn:hover{
+  background:#4a080f;
+}
+
+/* =========================
+   GENERAL TYPOGRAPHY
+========================= */
+
 .logo,
 .hero h1,
 .section-heading h2,
@@ -110,21 +222,6 @@ input{
 .contact-card h2,
 footer h3{
   font-family:'Cormorant Garamond',Georgia,serif;
-}
-
-.logo{
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-size:35px;
-  font-weight:400;
-  letter-spacing:.5px;
-  color:#ffffff;
-  line-height:1;
-}
-
-.logo span{
-  color:var(--gold-light);
-  font-family:'Great Vibes','Cormorant Garamond',cursive;
-  font-style:normal;
 }
 
 .eyebrow{
@@ -137,57 +234,9 @@ footer h3{
   margin-bottom:12px;
 }
 
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(92,7,16,.96);
-  border-bottom:1px solid rgba(201,162,77,.3);
-  backdrop-filter:blur(14px);
-}
-
-.navbar{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-nav{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-nav a{
-  font-family:'Cinzel',Georgia,serif;
-  font-size:11px;
-  font-weight:700;
-  color:#eeeeee;
-  letter-spacing:.8px;
-  transition:.2s ease;
-}
-
-nav a:hover{
-  color:var(--pink);
-}
-
-.language-btn{
-  border:1px solid var(--gold);
-  background:#320308;
-  color:var(--gold-light);
-  padding:8px 12px;
-  border-radius:7px;
-  cursor:pointer;
-  font-family:'Montserrat',Arial,sans-serif;
-  font-weight:700;
-}
-
-.language-btn:hover{
-  background:#4a080f;
-}
+/* =========================
+   HERO
+========================= */
 
 .hero{
   position:relative;
@@ -318,6 +367,10 @@ nav a:hover{
   background:#4a080f;
 }
 
+/* =========================
+   SECTIONS
+========================= */
+
 section{
   padding:90px 0;
   background:#f8f7f4;
@@ -357,6 +410,10 @@ section:nth-child(even){
   margin:16px auto 0;
 }
 
+/* =========================
+   GALLERY
+========================= */
+
 .gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -368,7 +425,6 @@ section:nth-child(even){
   background:#ffffff;
   border-radius:14px;
   min-height:300px;
-
   border:1px solid var(--border);
 
   box-shadow:
@@ -382,13 +438,16 @@ section:nth-child(even){
   height:100%;
   min-height:300px;
   object-fit:cover;
-
   transition:transform .35s ease;
 }
 
 .gallery-item:hover img{
   transform:scale(1.04);
 }
+
+/* =========================
+   LIGHTBOX
+========================= */
 
 .lightbox{
   position:fixed;
@@ -403,6 +462,7 @@ section:nth-child(even){
 
   background:rgba(50,3,8,.96);
   backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
 }
 
 .lightbox.active{
@@ -414,9 +474,7 @@ section:nth-child(even){
   max-height:88vh;
   width:auto;
   height:auto;
-
   object-fit:contain;
-
   border-radius:10px;
 
   box-shadow:
@@ -470,6 +528,10 @@ section:nth-child(even){
   border-radius:20px;
 }
 
+/* =========================
+   SERVICES / REVIEWS
+========================= */
+
 .services,
 .reviews,
 .contact{
@@ -486,7 +548,6 @@ section:nth-child(even){
 .service-card,
 .review{
   background:#ffffff;
-
   border:1px solid var(--border);
   border-radius:15px;
   padding:30px;
@@ -504,6 +565,7 @@ section:nth-child(even){
 
   box-shadow:
     0 14px 30px rgba(0,0,0,.14);
+
   border-color:rgba(181,138,50,.5);
 }
 
@@ -532,6 +594,10 @@ section:nth-child(even){
   color:var(--gold);
   margin-bottom:12px;
 }
+
+/* =========================
+   PRICES
+========================= */
 
 .prices{
   background:#ffffff !important;
@@ -588,6 +654,10 @@ section:nth-child(even){
   color:var(--gold-dark);
 }
 
+/* =========================
+   HOW IT WORKS
+========================= */
+
 .how-it-works{
   background:#f8f7f4 !important;
 }
@@ -629,6 +699,10 @@ section:nth-child(even){
   font-size:13px;
 }
 
+/* =========================
+   HOME SERVICE
+========================= */
+
 .travel-section{
   background:#ffffff !important;
 }
@@ -669,6 +743,10 @@ section:nth-child(even){
   color:var(--gold-dark) !important;
   font-weight:700;
 }
+
+/* =========================
+   APPOINTMENT LOCATION
+========================= */
 
 .appointment-location{
   background:#f8f7f4 !important;
@@ -716,8 +794,7 @@ section:nth-child(even){
 
 .location-choice input:checked + .location-choice-card{
   border-color:var(--gold);
-  box-shadow:
-    0 12px 30px rgba(181,138,50,.18);
+  box-shadow:0 12px 30px rgba(181,138,50,.18);
   background:#fffaf0;
 }
 
@@ -787,7 +864,7 @@ section:nth-child(even){
   border-radius:8px;
   background:#fff;
   color:#222;
-  font-size:14px;
+  font-size:16px;
   outline:none;
   transition:.2s ease;
 }
@@ -807,6 +884,10 @@ section:nth-child(even){
   font-size:12px;
   line-height:1.7;
 }
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
   display:grid;
@@ -851,6 +932,10 @@ section:nth-child(even){
 .about-grid .gallery-item{
   background:#320308 !important;
 }
+
+/* =========================
+   FAQ
+========================= */
 
 .faq-section{
   background:#ffffff !important;
@@ -933,7 +1018,6 @@ section:nth-child(even){
 .faq-answer{
   max-height:0;
   overflow:hidden;
-
   padding:0 22px;
 
   color:#666666;
@@ -949,6 +1033,10 @@ section:nth-child(even){
   max-height:500px;
   padding:0 22px 22px;
 }
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-grid{
   display:grid;
@@ -1035,6 +1123,10 @@ section:nth-child(even){
     0 10px 30px rgba(0,0,0,.12);
 }
 
+/* =========================
+   WHATSAPP
+========================= */
+
 .whatsapp-float{
   position:fixed;
   right:20px;
@@ -1103,6 +1195,10 @@ section:nth-child(even){
   opacity:1;
   transform:translateX(0);
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#320308;
@@ -1233,6 +1329,30 @@ footer p{
   text-align:center;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1050px){
+
+  .navbar{
+    gap:14px;
+  }
+
+  nav{
+    gap:12px 14px;
+  }
+
+  nav a{
+    font-size:10px;
+  }
+
+  .header-brand-name{
+    font-size:27px;
+  }
+
+}
+
 @media(max-width:900px){
 
   .hero{
@@ -1267,26 +1387,54 @@ footer p{
 
 }
 
+/* =========================
+   MOBILE HEADER / STABILITY
+========================= */
+
 @media(max-width:650px){
 
-  .navbar{
-    padding:12px 0;
-    align-items:flex-start;
-    flex-direction:column;
+  header{
+    padding:8px 12px;
   }
 
-  .logo{
-    font-size:31px;
+  .navbar{
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:auto;
+  }
+
+  .header-brand{
+    width:100%;
+    justify-content:center;
+  }
+
+  .header-logo{
+    width:65px;
+    height:65px;
+    min-width:65px;
+  }
+
+  .header-brand-name{
+    font-size:28px;
   }
 
   nav{
     width:100%;
-    justify-content:flex-start;
-    gap:12px 16px;
+    justify-content:center;
+    align-items:center;
+    gap:9px 13px;
   }
 
   nav a{
-    font-size:10px;
+    font-size:9px;
+    letter-spacing:.45px;
+  }
+
+  .language-btn{
+    font-size:9px;
+    padding:7px 10px;
   }
 
   section{
@@ -1428,6 +1576,49 @@ footer p{
 
 }
 
+/* Extra-small phones */
+@media(max-width:390px){
+
+  .header-logo{
+    width:58px;
+    height:58px;
+    min-width:58px;
+  }
+
+  .header-brand-name{
+    font-size:24px;
+  }
+
+  nav{
+    gap:8px 10px;
+  }
+
+  nav a{
+    font-size:8.5px;
+  }
+
+  .language-btn{
+    font-size:8.5px;
+    padding:6px 9px;
+  }
+
+  .container{
+    width:90%;
+  }
+
+}
+
+/* Prevent accidental horizontal movement */
+html,
+body,
+main,
+header,
+footer,
+section,
+.container{
+  max-width:100%;
+}
+
 </style>
 </head>
 
@@ -1435,60 +1626,77 @@ footer p{
 
 <header>
 
-<div class="container navbar">
+<div class="navbar">
 
-<a href="#home" class="logo">
-Rebecca & Sheena <span>Tattoos</span>
+<div class="header-brand">
+
+<a href="#home" aria-label="Rebecca & Sheena Tattoos">
+
+<img
+class="header-logo"
+src="https://i.ibb.co/Zz1L6vqw/A2132795-1C7B-453F-B855-8E3B97F3BB3E.png"
+alt="Rebecca & Sheena Tattoos logo">
+
 </a>
+
+<a
+href="#home"
+class="header-brand-name">
+
+Rebecca & Sheena <span>Tattoos</span>
+
+</a>
+
+</div>
 
 <nav>
 
 <a href="#home"
-data-en="Home"
-data-es="Inicio">
-Home
+data-en="HOME"
+data-es="INICIO">
+HOME
 </a>
 
 <a href="#work"
-data-en="Our Work"
-data-es="Nuestro Trabajo">
-Our Work
+data-en="OUR WORK"
+data-es="NUESTRO TRABAJO">
+OUR WORK
 </a>
 
 <a href="#services"
-data-en="Services"
-data-es="Servicios">
-Services
+data-en="SERVICES"
+data-es="SERVICIOS">
+SERVICES
 </a>
 
 <a href="#appointment-location"
-data-en="Appointment"
-data-es="Cita">
-Appointment
+data-en="APPOINTMENT"
+data-es="CITA">
+APPOINTMENT
 </a>
 
 <a href="#about"
-data-en="About"
-data-es="Nosotros">
-About
+data-en="ABOUT"
+data-es="NOSOTROS">
+ABOUT
 </a>
 
 <a href="booking.html"
-data-en="Book"
-data-es="Reservar">
-Book
+data-en="BOOK"
+data-es="RESERVAR">
+BOOK
 </a>
 
 <a href="#faq"
 data-en="FAQ"
-data-es="Preguntas">
+data-es="PREGUNTAS">
 FAQ
 </a>
 
 <a href="#contact"
-data-en="Contact"
-data-es="Contacto">
-Contact
+data-en="CONTACT"
+data-es="CONTACTO">
+CONTACT
 </a>
 
 <button
@@ -1506,6 +1714,10 @@ Español
 
 <main>
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
 
 <div class="container hero-grid">
@@ -1517,15 +1729,18 @@ Español
 <div
 class="eyebrow"
 data-en="Professional Tattoo Studio • Piercing • Home Service"
-data-es="Estudio Profesional • Tatuajes • Piercing • Servicio a Domicilio">
+data-es="Estudio Profesional de Tatuajes • Piercing • Servicio a Domicilio">
 
 Professional Tattoo Studio • Piercing • Home Service
 
 </div>
 
-<h1>
-Your Story.<br>
-Our Art.
+<h1
+data-en="Your Story. Our Art."
+data-es="Tu Historia. Nuestro Arte.">
+
+Your Story. Our Art.
+
 </h1>
 
 <p
@@ -1570,29 +1785,41 @@ View Our Work
 
 </section>
 
+<!-- =========================
+     OUR WORK
+========================= -->
+
 <section id="work">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Our Work"
+data-es="Nuestro Trabajo">
 Our Work
 </div>
 
-<h2>
+<h2
+data-en="Tattoo Art That Speaks"
+data-es="Arte de Tatuaje que Habla">
 Tattoo Art That Speaks
 </h2>
 
-<p>
+<p
+data-en="Take a look at some of our tattoo work and get inspired for your next piece."
+data-es="Mira algunos de nuestros trabajos de tatuaje e inspírate para tu próxima pieza.">
+
 Take a look at some of our tattoo work and get inspired for your next piece.
+
 </p>
 
 </div>
 
 <div class="gallery">
 
-<!-- NEW IMAGE 1 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/RpSsFxdK/IMG-6331.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1606,7 +1833,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-<!-- NEW IMAGE 2 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/SX2Mqjd0/IMG-6329.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1620,7 +1846,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-<!-- NEW IMAGE 3 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/f74Hs8p/IMG-6328.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1634,7 +1859,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-<!-- NEW IMAGE 4 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/FMZJ35S/IMG-6327.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1648,7 +1872,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-<!-- NEW IMAGE 5 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/XxGvsw7m/IMG-6326.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1662,7 +1885,6 @@ referrerpolicy="no-referrer">
 
 </div>
 
-<!-- NEW IMAGE 6 -->
 <div class="gallery-item"
 data-lightbox-image="https://i.ibb.co/hxDMSt1H/IMG-6325.jpg"
 data-lightbox-caption="Tattoo artwork by Rebecca & Sheena Tattoos">
@@ -1696,22 +1918,35 @@ Start Your Tattoo Booking
 
 </section>
 
+<!-- =========================
+     SERVICES
+========================= -->
+
 <section class="services" id="services">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="What We Do"
+data-es="Lo Que Hacemos">
 What We Do
 </div>
 
-<h2>
+<h2
+data-en="Our Services"
+data-es="Nuestros Servicios">
 Our Services
 </h2>
 
-<p>
+<p
+data-en="Professional tattooing, piercing and personalized services designed around your vision."
+data-es="Tatuajes profesionales, piercing y servicios personalizados diseñados según tu visión.">
+
 Professional tattooing, piercing and personalized services designed around your vision.
+
 </p>
 
 </div>
@@ -1720,96 +1955,120 @@ Professional tattooing, piercing and personalized services designed around your 
 
 <div class="service-card">
 
-<div class="service-icon">
-🎨
-</div>
+<div class="service-icon">🎨</div>
 
-<h3>
+<h3
+data-en="Custom Tattoos"
+data-es="Tatuajes Personalizados">
 Custom Tattoos
 </h3>
 
-<p>
+<p
+data-en="Bring your idea, reference or concept and we'll help transform it into a custom tattoo."
+data-es="Trae tu idea, referencia o concepto y te ayudaremos a convertirlo en un tatuaje personalizado.">
+
 Bring your idea, reference or concept and we'll help transform it into a custom tattoo.
+
 </p>
 
 </div>
 
 <div class="service-card">
 
-<div class="service-icon">
-✍️
-</div>
+<div class="service-icon">✍️</div>
 
-<h3>
+<h3
+data-en="Tattoo Design"
+data-es="Diseño de Tatuajes">
 Tattoo Design
 </h3>
 
-<p>
+<p
+data-en="We can work with your vision to create artwork that fits your body and personal style."
+data-es="Trabajamos con tu visión para crear un diseño que se adapte a tu cuerpo y estilo personal.">
+
 We can work with your vision to create artwork that fits your body and personal style.
+
 </p>
 
 </div>
 
 <div class="service-card">
 
-<div class="service-icon">
-💎
-</div>
+<div class="service-icon">💎</div>
 
-<h3>
+<h3
+data-en="Professional Piercing"
+data-es="Piercing Profesional">
 Professional Piercing
 </h3>
 
-<p>
+<p
+data-en="Professional piercing with attention to precision, cleanliness and a comfortable client experience."
+data-es="Piercing profesional con atención a la precisión, limpieza y una experiencia cómoda para el cliente.">
+
 Professional piercing with attention to precision, cleanliness and a comfortable client experience.
+
 </p>
 
 </div>
 
 <div class="service-card">
 
-<div class="service-icon">
-🏠
-</div>
+<div class="service-icon">🏠</div>
 
-<h3>
+<h3
+data-en="Home Tattoo Service"
+data-es="Servicio de Tatuaje a Domicilio">
 Home Tattoo Service
 </h3>
 
-<p>
+<p
+data-en="Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment."
+data-es="¿Prefieres tatuarte en casa? Solicita nuestro servicio a domicilio y revisaremos tu ubicación y disponibilidad antes de confirmar tu cita.">
+
 Prefer to be tattooed at home? Request our home service and we'll review your location and availability before confirming your appointment.
+
 </p>
 
 </div>
 
 <div class="service-card">
 
-<div class="service-icon">
-🚗
-</div>
+<div class="service-icon">🚗</div>
 
-<h3>
+<h3
+data-en="Interstate Travel"
+data-es="Viajes Interestatales">
 Interstate Travel
 </h3>
 
-<p>
+<p
+data-en="We travel interstate for home tattoo services. Contact us with your location so we can review travel availability and details."
+data-es="Viajamos a otros estados para servicios de tatuaje a domicilio. Contáctanos con tu ubicación para revisar la disponibilidad y los detalles del viaje.">
+
 We travel interstate for home tattoo services. Contact us with your location so we can review travel availability and details.
+
 </p>
 
 </div>
 
 <div class="service-card">
 
-<div class="service-icon">
-💬
-</div>
+<div class="service-icon">💬</div>
 
-<h3>
+<h3
+data-en="Personal Consultation"
+data-es="Consulta Personal">
 Personal Consultation
 </h3>
 
-<p>
+<p
+data-en="Have questions about your tattoo, piercing, design or service location? Talk with us before booking."
+data-es="¿Tienes preguntas sobre tu tatuaje, piercing, diseño o ubicación del servicio? Habla con nosotros antes de reservar.">
+
 Have questions about your tattoo, piercing, design or service location? Talk with us before booking.
+
 </p>
 
 </div>
@@ -1820,22 +2079,35 @@ Have questions about your tattoo, piercing, design or service location? Talk wit
 
 </section>
 
+<!-- =========================
+     PRICES
+========================= -->
+
 <section class="prices">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Starting Prices"
+data-es="Precios Iniciales">
 Starting Prices
 </div>
 
-<h2>
+<h2
+data-en="Tattoo Price Guide"
+data-es="Guía de Precios de Tatuajes">
 Tattoo Price Guide
 </h2>
 
-<p>
+<p
+data-en="Get an idea of our starting prices before submitting your booking."
+data-es="Conoce nuestros precios iniciales antes de enviar tu reserva.">
+
 Get an idea of our starting prices before submitting your booking.
+
 </p>
 
 </div>
@@ -1843,47 +2115,80 @@ Get an idea of our starting prices before submitting your booking.
 <div class="price-grid">
 
 <div class="price-card">
-<h3>Small / Simple Tattoo</h3>
+<h3
+data-en="Small / Simple Tattoo"
+data-es="Tatuaje Pequeño / Sencillo">
+Small / Simple Tattoo
+</h3>
 <div class="price">From $250</div>
 </div>
 
 <div class="price-card">
-<h3>Medium Tattoo</h3>
+<h3
+data-en="Medium Tattoo"
+data-es="Tatuaje Mediano">
+Medium Tattoo
+</h3>
 <div class="price">From $600</div>
 </div>
 
 <div class="price-card">
-<h3>Large Tattoo</h3>
+<h3
+data-en="Large Tattoo"
+data-es="Tatuaje Grande">
+Large Tattoo
+</h3>
 <div class="price">From $900</div>
 </div>
 
 <div class="price-card">
-<h3>Custom Detailed Tattoo</h3>
+<h3
+data-en="Custom Detailed Tattoo"
+data-es="Tatuaje Personalizado Detallado">
+Custom Detailed Tattoo
+</h3>
 <div class="price">From $1,200</div>
 </div>
 
 <div class="price-card">
-<h3>Half Sleeve</h3>
+<h3
+data-en="Half Sleeve"
+data-es="Media Manga">
+Half Sleeve
+</h3>
 <div class="price">From $1,500</div>
 </div>
 
 <div class="price-card">
-<h3>Full Sleeve</h3>
+<h3
+data-en="Full Sleeve"
+data-es="Manga Completa">
+Full Sleeve
+</h3>
 <div class="price">From $2,500</div>
 </div>
 
 <div class="price-card">
-<h3>Large Back / Chest Pieces</h3>
+<h3
+data-en="Large Back / Chest Pieces"
+data-es="Piezas Grandes de Espalda / Pecho">
+Large Back / Chest Pieces
+</h3>
 <div class="price">From $3,000</div>
 </div>
 
 </div>
 
-<p class="price-note">
+<p
+class="price-note"
+data-en="Important: These are starting prices only and are not the final price of your tattoo. The actual price may be lower or higher depending on the size, design, detail, placement and amount of work. The studio will review your booking request and project details, then contact you with the appointment information and applicable tattoo price. No payment is required when you submit the booking form."
+data-es="Importante: Estos son únicamente precios iniciales y no representan el precio final de tu tatuaje. El precio real puede ser menor o mayor dependiendo del tamaño, diseño, nivel de detalle, ubicación y cantidad de trabajo. El estudio revisará tu solicitud de reserva y los detalles del proyecto, y luego se pondrá en contacto contigo con la información de la cita y el precio correspondiente. No se requiere ningún pago al enviar el formulario de reserva.">
+
 <strong>Important:</strong> These are starting prices only and are not the final price of your tattoo.
 The actual price may be lower or higher depending on the size, design, detail, placement and amount of work.
 The studio will review your booking request and project details, then contact you with the appointment information and applicable tattoo price.
 <strong>No payment is required when you submit the booking form.</strong>
+
 </p>
 
 <div style="text-align:center;margin-top:30px;">
@@ -1904,22 +2209,35 @@ View Full Price List & Book
 
 </section>
 
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
 <section class="how-it-works">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Simple Booking Process"
+data-es="Proceso de Reserva Sencillo">
 Simple Booking Process
 </div>
 
-<h2>
+<h2
+data-en="How It Works"
+data-es="Cómo Funciona">
 How It Works
 </h2>
 
-<p>
+<p
+data-en="Getting started is simple. Submit your request and we'll take it from there."
+data-es="Empezar es sencillo. Envía tu solicitud y nosotros nos encargaremos del resto.">
+
 Getting started is simple. Submit your request and we'll take it from there.
+
 </p>
 
 </div>
@@ -1928,64 +2246,80 @@ Getting started is simple. Submit your request and we'll take it from there.
 
 <div class="step">
 
-<div class="step-number">
-01
-</div>
+<div class="step-number">01</div>
 
-<h3>
+<h3
+data-en="Tell Us Your Idea"
+data-es="Cuéntanos Tu Idea">
 Tell Us Your Idea
 </h3>
 
-<p>
+<p
+data-en="Choose your service and provide the details of the tattoo or piercing you want."
+data-es="Elige tu servicio y proporciona los detalles del tatuaje o piercing que deseas.">
+
 Choose your service and provide the details of the tattoo or piercing you want.
+
 </p>
 
 </div>
 
 <div class="step">
 
-<div class="step-number">
-02
-</div>
+<div class="step-number">02</div>
 
-<h3>
+<h3
+data-en="Submit Your Request"
+data-es="Envía Tu Solicitud">
 Submit Your Request
 </h3>
 
-<p>
+<p
+data-en="Complete the booking form with your contact information, project details and preferred appointment location."
+data-es="Completa el formulario de reserva con tus datos de contacto, detalles del proyecto y ubicación preferida para la cita.">
+
 Complete the booking form with your contact information, project details and preferred appointment location.
+
 </p>
 
 </div>
 
 <div class="step">
 
-<div class="step-number">
-03
-</div>
+<div class="step-number">03</div>
 
-<h3>
+<h3
+data-en="We Review Your Booking"
+data-es="Revisamos Tu Reserva">
 We Review Your Booking
 </h3>
 
-<p>
+<p
+data-en="Our team will review your submission, project details, location and availability."
+data-es="Nuestro equipo revisará tu solicitud, los detalles del proyecto, la ubicación y la disponibilidad.">
+
 Our team will review your submission, project details, location and availability.
+
 </p>
 
 </div>
 
 <div class="step">
 
-<div class="step-number">
-04
-</div>
+<div class="step-number">04</div>
 
-<h3>
+<h3
+data-en="We Contact You"
+data-es="Nos Ponemos en Contacto Contigo">
 We Contact You
 </h3>
 
-<p>
+<p
+data-en="We will reach out to you immediately after we receive your booking submission to discuss the next steps and appointment details."
+data-es="Nos pondremos en contacto contigo inmediatamente después de recibir tu solicitud para hablar sobre los próximos pasos y los detalles de tu cita.">
+
 We will reach out to you immediately after we receive your booking submission to discuss the next steps and appointment details.
+
 </p>
 
 </div>
@@ -1996,34 +2330,54 @@ We will reach out to you immediately after we receive your booking submission to
 
 </section>
 
+<!-- =========================
+     HOME SERVICE
+========================= -->
+
 <section class="travel-section">
 
 <div class="container">
 
 <div class="travel-box">
 
-<div class="travel-icons">
-🏠 🚗
-</div>
+<div class="travel-icons">🏠 🚗</div>
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="We Come To You"
+data-es="Vamos Hasta Ti">
 We Come To You
 </div>
 
-<h2>
+<h2
+data-en="Home Tattoo Service"
+data-es="Servicio de Tatuaje a Domicilio">
 Home Tattoo Service
 </h2>
 
-<p>
+<p
+data-en="Don't want to visit the studio? We offer professional home tattoo services for clients who prefer to be tattooed in the comfort of their own space."
+data-es="¿No quieres visitar el estudio? Ofrecemos servicios profesionales de tatuaje a domicilio para clientes que prefieren tatuarse en la comodidad de su propio espacio.">
+
 Don't want to visit the studio? We offer professional home tattoo services for clients who prefer to be tattooed in the comfort of their own space.
+
 </p>
 
-<p class="travel-highlight">
+<p
+class="travel-highlight"
+data-en="Yes — we travel interstate for home tattoo services."
+data-es="Sí — viajamos a otros estados para servicios de tatuaje a domicilio.">
+
 Yes — we travel interstate for home tattoo services.
+
 </p>
 
-<p>
+<p
+data-en="Send us your location and booking details so we can review availability and any applicable travel arrangements before confirming your appointment."
+data-es="Envíanos tu ubicación y los detalles de tu reserva para que podamos revisar la disponibilidad y cualquier acuerdo de viaje aplicable antes de confirmar tu cita.">
+
 Send us your location and booking details so we can review availability and any applicable travel arrangements before confirming your appointment.
+
 </p>
 
 <div style="margin-top:25px;">
@@ -2046,26 +2400,27 @@ Choose Home Service
 
 </section>
 
+<!-- =========================
+     APPOINTMENT LOCATION
+========================= -->
+
 <section class="appointment-location" id="appointment-location">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow"
+<div
+class="eyebrow"
 data-en="Choose Your Appointment Location"
 data-es="Elige la Ubicación de Tu Cita">
-
 Choose Your Appointment Location
-
 </div>
 
 <h2
 data-en="Where Would You Like Your Appointment?"
 data-es="¿Dónde Te Gustaría Tu Cita?">
-
 Where Would You Like Your Appointment?
-
 </h2>
 
 <p
@@ -2092,16 +2447,12 @@ id="homepageStudioChoice">
 
 <span class="location-choice-card">
 
-<div class="location-choice-icon">
-🏢
-</div>
+<div class="location-choice-icon">🏢</div>
 
 <h3
 data-en="Visit the Studio"
 data-es="Visitar el Estudio">
-
 Visit the Studio
-
 </h3>
 
 <p
@@ -2126,21 +2477,17 @@ id="homepageHomeChoice">
 
 <span class="location-choice-card">
 
-<div class="location-choice-icon">
-🏠
-</div>
+<div class="location-choice-icon">🏠</div>
 
 <h3
 data-en="Home Service"
 data-es="Servicio a Domicilio">
-
 Home Service
-
 </h3>
 
 <p
 data-en="Request professional tattoo service at your preferred location."
-data-es="Solicita un servicio profesional de tatuaje en tu ubicación.">
+data-es="Solicita un servicio profesional de tatuaje en la ubicación que prefieras.">
 
 Request professional tattoo service at your preferred location.
 
@@ -2159,9 +2506,7 @@ id="studioLocationDetails">
 <h3
 data-en="Visit the Studio"
 data-es="Visitar el Estudio">
-
 Visit the Studio
-
 </h3>
 
 <p
@@ -2178,14 +2523,13 @@ Please select the state where you would like your studio appointment. The full s
 for="homepageStudioState"
 data-en="Select State"
 data-es="Seleccionar Estado">
-
 Select State
-
 </label>
 
 <select id="homepageStudioState">
 
-<option value=""
+<option
+value=""
 data-en="Choose a state"
 data-es="Elige un estado">
 Choose a state
@@ -2246,7 +2590,8 @@ Choose a state
 
 </div>
 
-<div class="location-note"
+<div
+class="location-note"
 data-en="Studio locations are not publicly displayed on this page. Select your state and continue to booking to provide the requested appointment details."
 data-es="Las ubicaciones de los estudios no se muestran públicamente en esta página. Selecciona tu estado y continúa con la reserva para proporcionar los detalles solicitados.">
 
@@ -2263,9 +2608,7 @@ id="homeLocationDetails">
 <h3
 data-en="Home Service"
 data-es="Servicio a Domicilio">
-
 Home Service
-
 </h3>
 
 <p
@@ -2282,9 +2625,7 @@ Enter the address where you would like the tattoo service. Your location will be
 for="homepageHomeAddress"
 data-en="Full Home Service Address"
 data-es="Dirección Completa del Servicio">
-
 Full Home Service Address
-
 </label>
 
 <input
@@ -2297,7 +2638,8 @@ autocomplete="street-address">
 
 </div>
 
-<div class="location-note"
+<div
+class="location-note"
 data-en="Home service availability depends on the requested location, project details and schedule. Interstate travel may also be available."
 data-es="La disponibilidad del servicio a domicilio depende de la ubicación solicitada, los detalles del proyecto y el horario. También puede haber viajes interestatales disponibles.">
 
@@ -2328,38 +2670,94 @@ Continue to Booking
 
 </section>
 
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
 
 <div class="container about-grid">
 
 <div class="about-text">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="About Us"
+data-es="Sobre Nosotros">
 About Us
 </div>
 
-<h2>
+<h2
+data-en="Art With Meaning"
+data-es="Arte con Significado">
 Art With Meaning
 </h2>
 
-<p>
+<p
+data-en="At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it."
+data-es="En Rebecca & Sheena Tattoos, creemos que cada tatuaje debe tener una historia detrás.">
+
 At Rebecca & Sheena Tattoos, we believe every tattoo should have a story behind it.
+
 </p>
 
-<p>
+<p
+data-en="Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come."
+data-es="Nuestro objetivo es crear una experiencia cómoda mientras realizamos obras de tatuaje de las que puedas sentirte orgulloso durante muchos años.">
+
 Our goal is to create a comfortable experience while producing tattoo artwork that you can be proud of for years to come.
+
 </p>
 
 <ul class="about-list">
 
-<li>Professional tattoo service</li>
-<li>Professional piercing</li>
-<li>Custom artwork</li>
-<li>Studio appointments</li>
-<li>Home tattoo service</li>
-<li>Interstate travel available</li>
-<li>Attention to detail</li>
-<li>Client-focused experience</li>
+<li
+data-en="Professional tattoo service"
+data-es="Servicio profesional de tatuajes">
+Professional tattoo service
+</li>
+
+<li
+data-en="Professional piercing"
+data-es="Piercing profesional">
+Professional piercing
+</li>
+
+<li
+data-en="Custom artwork"
+data-es="Diseños personalizados">
+Custom artwork
+</li>
+
+<li
+data-en="Studio appointments"
+data-es="Citas en el estudio">
+Studio appointments
+</li>
+
+<li
+data-en="Home tattoo service"
+data-es="Servicio de tatuaje a domicilio">
+Home tattoo service
+</li>
+
+<li
+data-en="Interstate travel available"
+data-es="Viajes interestatales disponibles">
+Interstate travel available
+</li>
+
+<li
+data-en="Attention to detail"
+data-es="Atención al detalle">
+Attention to detail
+</li>
+
+<li
+data-en="Client-focused experience"
+data-es="Experiencia centrada en el cliente">
+Client-focused experience
+</li>
 
 </ul>
 
@@ -2413,22 +2811,35 @@ filter:drop-shadow(0 8px 20px rgba(0,0,0,.6));
 
 </section>
 
+<!-- =========================
+     REVIEWS
+========================= -->
+
 <section class="reviews">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Client Experience"
+data-es="Experiencia del Cliente">
 Client Experience
 </div>
 
-<h2>
+<h2
+data-en="What Clients Love"
+data-es="Lo Que Les Encanta a Nuestros Clientes">
 What Clients Love
 </h2>
 
-<p>
+<p
+data-en="A great tattoo experience starts with great communication, comfort and attention to detail."
+data-es="Una gran experiencia de tatuaje comienza con buena comunicación, comodidad y atención al detalle.">
+
 A great tattoo experience starts with great communication, comfort and attention to detail.
+
 </p>
 
 </div>
@@ -2437,15 +2848,19 @@ A great tattoo experience starts with great communication, comfort and attention
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-en="Beautiful work and very professional. I absolutely love my tattoo!"
+data-es="Trabajo hermoso y muy profesional. ¡Me encanta absolutamente mi tatuaje!">
+
 Beautiful work and very professional. I absolutely love my tattoo!
+
 </p>
 
-<strong>
+<strong
+data-en="Happy Client"
+data-es="Cliente Satisfecho">
 Happy Client
 </strong>
 
@@ -2453,15 +2868,19 @@ Happy Client
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-en="The attention to detail was amazing. The whole experience felt comfortable."
+data-es="La atención al detalle fue increíble. Toda la experiencia fue muy cómoda.">
+
 The attention to detail was amazing. The whole experience felt comfortable.
+
 </p>
 
-<strong>
+<strong
+data-en="Happy Client"
+data-es="Cliente Satisfecho">
 Happy Client
 </strong>
 
@@ -2469,15 +2888,19 @@ Happy Client
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-en="Exactly what I wanted. Great communication and beautiful artwork."
+data-es="Exactamente lo que quería. Excelente comunicación y un diseño hermoso.">
+
 Exactly what I wanted. Great communication and beautiful artwork.
+
 </p>
 
-<strong>
+<strong
+data-en="Happy Client"
+data-es="Cliente Satisfecho">
 Happy Client
 </strong>
 
@@ -2487,8 +2910,13 @@ Happy Client
 
 <div style="text-align:center;margin-top:35px;">
 
-<p style="color:#666;font-size:13px;margin-bottom:18px;">
+<p
+style="color:#666;font-size:13px;margin-bottom:18px;"
+data-en="Already worked with us? We'd love to hear about your experience."
+data-es="¿Ya has trabajado con nosotros? Nos encantaría conocer tu experiencia.">
+
 Already worked with us? We'd love to hear about your experience.
+
 </p>
 
 <a
@@ -2507,22 +2935,35 @@ Share Your Experience
 
 </section>
 
+<!-- =========================
+     FAQ
+========================= -->
+
 <section class="faq-section" id="faq">
 
 <div class="container">
 
 <div class="section-heading">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Frequently Asked Questions"
+data-es="Preguntas Frecuentes">
 Frequently Asked Questions
 </div>
 
-<h2>
+<h2
+data-en="Questions & Answers"
+data-es="Preguntas y Respuestas">
 Questions & Answers
 </h2>
 
-<p>
+<p
+data-en="Find quick answers to some of the questions clients commonly ask before booking."
+data-es="Encuentra respuestas rápidas a algunas de las preguntas que los clientes suelen hacer antes de reservar.">
+
 Find quick answers to some of the questions clients commonly ask before booking.
+
 </p>
 
 </div>
@@ -2536,20 +2977,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="How do I book an appointment?"
+data-es="¿Cómo reservo una cita?">
 How do I book an appointment?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Click any “Book an Appointment” button on the website and complete the booking form. After we receive your submission, we will review the information and contact you immediately with the next steps and appointment details."
+data-es="Haz clic en cualquier botón de “Reservar una Cita” en el sitio web y completa el formulario de reserva. Después de recibir tu solicitud, revisaremos la información y nos pondremos en contacto contigo inmediatamente con los próximos pasos y los detalles de la cita.">
+
 Click any “Book an Appointment” button on the website and complete the booking form. After we receive your submission, we will review the information and contact you immediately with the next steps and appointment details.
+
 </p>
 
 </div>
@@ -2563,20 +3008,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="What happens after I submit my booking?"
+data-es="¿Qué sucede después de enviar mi reserva?">
 What happens after I submit my booking?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Once we receive your booking submission, we will review your project details, preferred appointment location and availability. We will reach out to you immediately after receiving your submission to discuss the appointment and next steps."
+data-es="Una vez que recibamos tu solicitud de reserva, revisaremos los detalles de tu proyecto, la ubicación preferida para la cita y la disponibilidad. Nos pondremos en contacto contigo inmediatamente después de recibir tu solicitud para hablar sobre la cita y los próximos pasos.">
+
 Once we receive your booking submission, we will review your project details, preferred appointment location and availability. We will reach out to you immediately after receiving your submission to discuss the appointment and next steps.
+
 </p>
 
 </div>
@@ -2590,20 +3039,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="When will you contact me?"
+data-es="¿Cuándo se pondrán en contacto conmigo?">
 When will you contact me?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="We will reach out to you immediately after we receive your booking submission using the contact information you provide in the booking form."
+data-es="Nos pondremos en contacto contigo inmediatamente después de recibir tu solicitud utilizando la información de contacto que proporciones en el formulario de reserva.">
+
 We will reach out to you immediately after we receive your booking submission using the contact information you provide in the booking form.
+
 </p>
 
 </div>
@@ -2617,20 +3070,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="Do you offer home tattoo services?"
+data-es="¿Ofrecen servicios de tatuaje a domicilio?">
 Do you offer home tattoo services?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Yes. Clients can request a home tattoo service. Your location and appointment details will be reviewed before the home service is confirmed."
+data-es="Sí. Los clientes pueden solicitar un servicio de tatuaje a domicilio. Tu ubicación y los detalles de la cita serán revisados antes de confirmar el servicio a domicilio.">
+
 Yes. Clients can request a home tattoo service. Your location and appointment details will be reviewed before the home service is confirmed.
+
 </p>
 
 </div>
@@ -2644,20 +3101,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="Do you travel to other states?"
+data-es="¿Viajan a otros estados?">
 Do you travel to other states?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Yes. Interstate travel may be available for home tattoo services. Send your location and project details through the booking form so the studio can review the request."
+data-es="Sí. Puede haber viajes interestatales disponibles para servicios de tatuaje a domicilio. Envía tu ubicación y los detalles de tu proyecto mediante el formulario de reserva para que el estudio pueda revisar la solicitud.">
+
 Yes. Interstate travel may be available for home tattoo services. Send your location and project details through the booking form so the studio can review the request.
+
 </p>
 
 </div>
@@ -2671,20 +3132,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="Do you offer piercing?"
+data-es="¿Ofrecen piercing?">
 Do you offer piercing?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Yes. Professional piercing is one of the services offered by Rebecca & Sheena Tattoos. Contact the studio if you have questions about the piercing you are interested in."
+data-es="Sí. El piercing profesional es uno de los servicios ofrecidos por Rebecca & Sheena Tattoos. Contacta con el estudio si tienes preguntas sobre el piercing que te interesa.">
+
 Yes. Professional piercing is one of the services offered by Rebecca & Sheena Tattoos. Contact the studio if you have questions about the piercing you are interested in.
+
 </p>
 
 </div>
@@ -2698,20 +3163,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="Can I contact you before booking?"
+data-es="¿Puedo contactarles antes de reservar?">
 Can I contact you before booking?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="Absolutely. You can contact the studio by phone, email or WhatsApp if you have questions about tattoos, piercing, home service or interstate travel."
+data-es="Por supuesto. Puedes contactar con el estudio por teléfono, correo electrónico o WhatsApp si tienes preguntas sobre tatuajes, piercing, servicio a domicilio o viajes interestatales.">
+
 Absolutely. You can contact the studio by phone, email or WhatsApp if you have questions about tattoos, piercing, home service or interstate travel.
+
 </p>
 
 </div>
@@ -2725,20 +3194,24 @@ type="button"
 class="faq-question"
 aria-expanded="false">
 
-<span>
+<span
+data-en="Where can I choose my appointment location?"
+data-es="¿Dónde puedo elegir la ubicación de mi cita?">
 Where can I choose my appointment location?
 </span>
 
-<span class="faq-icon">
-+
-</span>
+<span class="faq-icon">+</span>
 
 </button>
 
 <div class="faq-answer">
 
-<p>
+<p
+data-en="When booking, you can choose between visiting the studio or requesting home service. If you choose to visit the studio, select the state where you would like your appointment. If you choose home service, provide your full service address so the studio can review availability."
+data-es="Al reservar, puedes elegir entre visitar el estudio o solicitar el servicio a domicilio. Si eliges visitar el estudio, selecciona el estado donde deseas tu cita. Si eliges el servicio a domicilio, proporciona tu dirección completa para que el estudio pueda revisar la disponibilidad.">
+
 When booking, you can choose between visiting the studio or requesting home service. If you choose to visit the studio, select the state where you would like your appointment. If you choose home service, provide your full service address so the studio can review availability.
+
 </p>
 
 </div>
@@ -2765,47 +3238,66 @@ Still Have Questions? Book Here
 
 </section>
 
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact" id="contact">
 
 <div class="container contact-grid">
 
 <div class="contact-card">
 
-<div class="eyebrow">
+<div
+class="eyebrow"
+data-en="Get In Touch"
+data-es="Ponte en Contacto">
 Get In Touch
 </div>
 
-<h2>
+<h2
+data-en="Contact Rebecca & Sheena"
+data-es="Contacta con Rebecca & Sheena">
 Contact Rebecca & Sheena
 </h2>
 
-<p>
+<p
+data-en="Have a question before booking? Contact us directly about tattoos, piercing, home service or interstate travel."
+data-es="¿Tienes alguna pregunta antes de reservar? Contáctanos directamente sobre tatuajes, piercing, servicio a domicilio o viajes interestatales.">
+
 Have a question before booking? Contact us directly about tattoos, piercing, home service or interstate travel.
+
 </p>
 
 <div class="contact-item">
 
-<h3>
+<h3
+data-en="Appointment Location"
+data-es="Ubicación de la Cita">
 Appointment Location
 </h3>
 
-<p>
+<p
+data-en="Choose between visiting the studio or requesting home service when booking."
+data-es="Elige entre visitar el estudio o solicitar el servicio a domicilio al reservar.">
+
 Choose between visiting the studio or requesting home service when booking.
+
 </p>
 
 </div>
 
 <div class="contact-item">
 
-<h3>
+<h3
+data-en="Phone"
+data-es="Teléfono">
 Phone
 </h3>
 
 <div class="contact-line">
 
-<div class="contact-line-icon phone-icon">
-☎
-</div>
+<div class="contact-line-icon phone-icon">☎</div>
 
 <p>
 <a href="tel:+15306821175">
@@ -2819,7 +3311,9 @@ Phone
 
 <div class="contact-item">
 
-<h3>
+<h3
+data-en="WhatsApp"
+data-es="WhatsApp">
 WhatsApp
 </h3>
 
@@ -2843,7 +3337,9 @@ style="width:22px;height:22px;fill:currentColor;">
 <a
 href="https://wa.me/15306821175?text=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%20have%20a%20question%20about%20your%20services."
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+data-en="Chat with us on WhatsApp"
+data-es="Chatea con nosotros por WhatsApp">
 
 Chat with us on WhatsApp
 
@@ -2857,15 +3353,15 @@ Chat with us on WhatsApp
 
 <div class="contact-item">
 
-<h3>
+<h3
+data-en="Email"
+data-es="Correo Electrónico">
 Email
 </h3>
 
 <div class="contact-line">
 
-<div class="contact-line-icon email-icon">
-✉
-</div>
+<div class="contact-line-icon email-icon">✉</div>
 
 <p>
 
@@ -2924,6 +3420,10 @@ referrerpolicy="no-referrer">
 
 </main>
 
+<!-- =========================
+     WHATSAPP FLOAT
+========================= -->
+
 <a
 href="https://wa.me/15306821175?text=Hello%20Rebecca%20%26%20Sheena%20Tattoos%2C%20I%20would%20like%20to%20ask%20about%20your%20tattoo%20services."
 class="whatsapp-float"
@@ -2932,7 +3432,10 @@ rel="noopener noreferrer"
 aria-label="Chat with Rebecca and Sheena Tattoos on WhatsApp"
 title="Chat with us on WhatsApp">
 
-<span class="whatsapp-tooltip">
+<span
+class="whatsapp-tooltip"
+data-en="Chat with us on WhatsApp"
+data-es="Chatea con nosotros por WhatsApp">
 Chat with us on WhatsApp
 </span>
 
@@ -2946,6 +3449,10 @@ aria-hidden="true">
 </svg>
 
 </a>
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
 <div
 class="lightbox"
@@ -2977,6 +3484,10 @@ id="lightboxCaption">
 
 </div>
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <div class="container">
@@ -2989,43 +3500,73 @@ id="lightboxCaption">
 Rebecca & Sheena Tattoos
 </h3>
 
-<p>
+<p
+data-en="Professional tattoo artistry, piercing and personalized service with a focus on creativity, detail and a great client experience."
+data-es="Arte profesional de tatuajes, piercing y servicio personalizado con enfoque en creatividad, detalle y una excelente experiencia para el cliente.">
+
 Professional tattoo artistry, piercing and personalized service with a focus on creativity, detail and a great client experience.
+
 </p>
 
-<p style="margin-top:12px;">
+<p
+style="margin-top:12px;"
+data-en="Choose between visiting the studio or requesting home service when you book your appointment."
+data-es="Elige entre visitar el estudio o solicitar el servicio a domicilio cuando reserves tu cita.">
+
 Choose between visiting the studio or requesting home service when you book your appointment.
+
 </p>
 
 </div>
 
 <div class="footer-links">
 
-<a href="#home">
+<a
+href="#home"
+data-en="Home"
+data-es="Inicio">
 Home
 </a>
 
-<a href="#work">
+<a
+href="#work"
+data-en="Our Work"
+data-es="Nuestro Trabajo">
 Our Work
 </a>
 
-<a href="#services">
+<a
+href="#services"
+data-en="Services"
+data-es="Servicios">
 Services
 </a>
 
-<a href="#appointment-location">
+<a
+href="#appointment-location"
+data-en="Appointment"
+data-es="Cita">
 Appointment
 </a>
 
-<a href="#faq">
+<a
+href="#faq"
+data-en="FAQ"
+data-es="Preguntas">
 FAQ
 </a>
 
-<a href="booking.html">
+<a
+href="booking.html"
+data-en="Book Appointment"
+data-es="Reservar Cita">
 Book Appointment
 </a>
 
-<a href="#contact">
+<a
+href="#contact"
+data-en="Contact"
+data-es="Contacto">
 Contact
 </a>
 
@@ -3035,7 +3576,10 @@ Contact
 
 <div class="social-media">
 
-<div class="social-title">
+<div
+class="social-title"
+data-en="Follow Rebecca & Sheena Tattoos"
+data-es="Sigue a Rebecca & Sheena Tattoos">
 Follow Rebecca & Sheena Tattoos
 </div>
 
@@ -3081,7 +3625,10 @@ aria-hidden="true">
 
 </div>
 
-<div class="social-label">
+<div
+class="social-label"
+data-en="Tap an icon to visit our social media page"
+data-es="Toca un icono para visitar nuestra página de redes sociales">
 Tap an icon to visit our social media page
 </div>
 
@@ -3091,7 +3638,11 @@ Tap an icon to visit our social media page
 
 © <span id="year"></span>
 Rebecca & Sheena Tattoos.
+<span
+data-en="All rights reserved."
+data-es="Todos los derechos reservados.">
 All rights reserved.
+</span>
 
 </div>
 
@@ -3101,8 +3652,16 @@ All rights reserved.
 
 <script>
 
+/* =========================
+   YEAR
+========================= */
+
 document.getElementById("year").textContent =
 new Date().getFullYear();
+
+/* =========================
+   LANGUAGE SYSTEM
+========================= */
 
 const languageToggle =
 document.getElementById("languageToggle");
@@ -3112,14 +3671,25 @@ localStorage.getItem("siteLanguage") || "en";
 
 function updateLanguage(){
 
+document.documentElement.lang =
+currentLanguage === "es" ? "es" : "en";
+
 document.querySelectorAll("[data-en]").forEach(function(element){
 
-element.textContent =
+const translation =
 currentLanguage === "es"
 ? element.getAttribute("data-es")
 : element.getAttribute("data-en");
 
+if(translation !== null){
+
+element.textContent = translation;
+
+}
+
 });
+
+/* Translate input placeholders */
 
 document.querySelectorAll("[data-placeholder-en]").forEach(function(element){
 
@@ -3129,6 +3699,19 @@ currentLanguage === "es"
 : element.getAttribute("data-placeholder-en");
 
 });
+
+/* Translate select options */
+
+document.querySelectorAll("option[data-en]").forEach(function(option){
+
+option.textContent =
+currentLanguage === "es"
+? option.getAttribute("data-es")
+: option.getAttribute("data-en");
+
+});
+
+/* Language button */
 
 languageToggle.textContent =
 currentLanguage === "en"
@@ -3157,6 +3740,10 @@ updateLanguage();
 
 updateLanguage();
 
+/* =========================
+   APPOINTMENT LOCATION
+========================= */
+
 const studioChoice =
 document.getElementById("homepageStudioChoice");
 
@@ -3184,15 +3771,11 @@ studioLocationDetails.classList.remove("active");
 homeLocationDetails.classList.remove("active");
 
 if(studioChoice.checked){
-
 studioLocationDetails.classList.add("active");
-
 }
 
 if(homeChoice.checked){
-
 homeLocationDetails.classList.add("active");
-
 }
 
 }
@@ -3206,6 +3789,10 @@ homeChoice.addEventListener(
 "change",
 updateAppointmentLocation
 );
+
+/* =========================
+   CONTINUE TO BOOKING
+========================= */
 
 continueBooking.addEventListener(
 "click",
@@ -3261,13 +3848,17 @@ event.preventDefault();
 
 alert(
 currentLanguage === "es"
-? "Selecciona Visit the Studio o Home Service antes de continuar."
+? "Selecciona Visitar el Estudio o Servicio a Domicilio antes de continuar."
 : "Please choose Visit the Studio or Home Service before continuing."
 );
 
 }
 
 });
+
+/* =========================
+   FAQ
+========================= */
 
 const faqItems =
 document.querySelectorAll(".faq-item");
@@ -3310,6 +3901,10 @@ question.setAttribute(
 });
 
 });
+
+/* =========================
+   LIGHTBOX
+========================= */
 
 const galleryItems =
 document.querySelectorAll(
@@ -3424,8 +4019,10 @@ document.addEventListener(
 "keydown",
 function(event){
 
-if(event.key === "Escape" &&
-lightbox.classList.contains("active")){
+if(
+event.key === "Escape" &&
+lightbox.classList.contains("active")
+){
 
 closeLightbox();
 
@@ -3443,23 +4040,27 @@ event.stopPropagation();
 
 </script>
 
+<!-- Crisp Chat -->
+
 <script type="text/javascript">
 
 window.$crisp=[];
 
-window.CRISP_WEBSITE_ID="1e4f731e-f4e3-45a1-a3fe-dbc0524c72be";
+window.CRISP_WEBSITE_ID=
+"1e4f731e-f4e3-45a1-a3fe-dbc0524c72be";
 
 (function(){
 
-  d=document;
+d=document;
 
-  s=d.createElement("script");
+s=d.createElement("script");
 
-  s.src="https://client.crisp.chat/l.js";
+s.src="https://client.crisp.chat/l.js";
 
-  s.async=1;
+s.async=1;
 
-  d.getElementsByTagName("head")[0].appendChild(s);
+d.getElementsByTagName("head")[0]
+.appendChild(s);
 
 })();
 
