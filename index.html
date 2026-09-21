@@ -3407,6 +3407,22 @@ data-es="Sigue a Rebecca & Sheena Tattoos">
 Follow Rebecca & Sheena Tattoos
 </div>
 
+<!-- United States -->
+<div
+style="
+text-align:center;
+margin-bottom:18px;
+color:#dfbd73;
+font-family:'Cinzel',Georgia,serif;
+font-size:12px;
+font-weight:700;
+letter-spacing:1.5px;
+"
+data-en="United States 🇺🇸"
+data-es="United States 🇺🇸">
+United States 🇺🇸
+</div>
+
 <div class="social-icons">
 
 <a
@@ -3562,12 +3578,37 @@ currentLanguage === "es"
 : element.getAttribute("data-title-en")
 );
 
+});
+
 /* Keep toggle available in both languages */
+if(languageToggle){
+
 languageToggle.textContent = "ES/EN";
+
+}
 
 localStorage.setItem(
 "siteLanguage",
 currentLanguage
+);
+
+}
+
+/* Language toggle */
+if(languageToggle){
+
+languageToggle.addEventListener(
+"click",
+function(){
+
+currentLanguage =
+currentLanguage === "en"
+? "es"
+: "en";
+
+updateLanguage();
+
+}
 );
 
 }
